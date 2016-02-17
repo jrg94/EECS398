@@ -37,7 +37,7 @@
             android:layout_marginBottom="53dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="false"
-            android:text="           Please Enter Your 4 Digit Pin:"
+            android:text="hjdfdhj"
             android:layout_centerInParent="true"
             android:textAlignment="center"
             android:width="@dimen/activity_horizontal_margin"
