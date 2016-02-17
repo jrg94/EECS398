@@ -2,8 +2,10 @@ package com.example.christen.eecs398_ui;
 
 /**
  * Created by JRG94 on 2/17/2016.
- * The representation of the behavior of the SmartLock
- * in code
+ * The representation of the SmartLock in code
+ * All data for each lock will be held in this class
+ * Functionality to interface between the physical lock
+ * and the app will also be held in this class
  */
 public class SmartLock {
 
@@ -13,6 +15,8 @@ public class SmartLock {
     private String address;
     private GPSLocation location;
     private boolean isLocked;
+    private boolean isInLowPowerMode;
+    // Possible list field for owners
 
     // CONSTRUCTORS //
 
@@ -79,12 +83,18 @@ public class SmartLock {
      * @return the state of the lock after the toggle
      */
     public boolean toggleLock() {
-        /**
-         * TODO: Add functionality to the UI so users can visually see the state of the lock
-         * TODO: This code may not get added here, but be aware that it will need to be added
-         */
-        isLocked = !isLocked;
+         // TODO: Signal the circuit to flip the state of the lock
+         // TODO: Set the state of isLocked after the signal
         return isLocked;
+    }
+
+    /**
+     * Toggles the low power mode for the BlueTooth Shield
+     * @return the state of the low power mode after the toggle
+     */
+    public boolean toggleLowPowerMode() {
+        // TODO: Signal the circuit to flip the state of its low power mode
+        return isInLowPowerMode;
     }
 
     /**
@@ -113,5 +123,16 @@ public class SmartLock {
         double d = radius * c;
 
         return d;
+    }
+
+    /**
+     * This method should interface directly with the physical lock circuit through BlueTooth
+     * @return true if the update was successful
+     */
+    public boolean updateLockData() {
+        // TODO: Establish connection with lock circuit
+        // TODO: Update GPSLocation field to ensure the lock hasn't moved
+        // TODO: Update isLocked field to ensure lock is in the expected state
+        return true;
     }
 }
