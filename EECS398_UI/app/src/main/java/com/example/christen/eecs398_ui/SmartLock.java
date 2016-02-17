@@ -86,4 +86,32 @@ public class SmartLock {
         isLocked = !isLocked;
         return isLocked;
     }
+
+    /**
+     * Computes the haversine distance between the lock
+     * and the key (device holding the key)
+     * @param keyLoc the location of the key
+     * @return the distance between the lock and the key
+     */
+    public double computeDistanceFromKey(GPSLocation keyLoc) {
+        // The radius of the earth in meters
+        double radius = 6371000;
+
+        // Converts the coordinates in degrees to radians
+        double phi1 = Math.toRadians(this.location.getLatitude());
+        double phi2 = Math.toRadians(keyLoc.getLatitude());
+
+        double deltaPhi = Math.toRadians(keyLoc.getLatitude() - this.location.getLatitude());
+        double deltaLambda = Math.toRadians(keyLoc.getLongitude() - this.location.getLongitude());
+
+        double a = Math.sin(deltaPhi/2) * Math.sin(deltaPhi/2) +
+                   Math.cos(phi1) * Math.cos(phi2) *
+                   Math.sin(deltaLambda/2) * Math.sin(deltaLambda/2);
+
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+        double d = radius * c;
+
+        return d;
+    }
 }

@@ -6,11 +6,20 @@ package com.example.christen.eecs398_ui;
  */
 public class GPSLocation {
 
+    // The latitude and longitude values are in degrees
     private double latitude;
     private double longitude;
 
     public GPSLocation(double latitude, double longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return this.latitude;
+    }
+
+    public double getLongitude() {
+        return this.longitude;
     }
 }
