@@ -1,4 +1,4 @@
-package com.example.christen.eecs398_ui;
+package eecs398_lock;
 
 /**
  * Created by JRG94 on 2/17/2016.

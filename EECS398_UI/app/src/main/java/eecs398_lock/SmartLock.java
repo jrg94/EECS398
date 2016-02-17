@@ -1,4 +1,4 @@
-package com.example.christen.eecs398_ui;
+package eecs398_lock;
 
 /**
  * Created by JRG94 on 2/17/2016.
@@ -83,8 +83,9 @@ public class SmartLock {
      * @return the state of the lock after the toggle
      */
     public boolean toggleLock() {
-         // TODO: Signal the circuit to flip the state of the lock
-         // TODO: Set the state of isLocked after the signal
+        // TODO: Signal the circuit to flip the state of the lock
+        // TODO: Set the state of isLocked after the signal
+        // TODO: Test to see if the lock has changed state - Report an error if not (exception?)
         return isLocked;
     }
 
@@ -94,6 +95,8 @@ public class SmartLock {
      */
     public boolean toggleLowPowerMode() {
         // TODO: Signal the circuit to flip the state of its low power mode
+        // TODO: Set the state of isInLowPowerMode after the signal
+        // TODO: Test to see if the lock has changed state - Report an error if not (exception?)
         return isInLowPowerMode;
     }
 
@@ -133,6 +136,7 @@ public class SmartLock {
         // TODO: Establish connection with lock circuit
         // TODO: Update GPSLocation field to ensure the lock hasn't moved
         // TODO: Update isLocked field to ensure lock is in the expected state
+        // TODO: Update isInLowPowerMode field to ensure lock is in expected state
         return true;
     }
 }
