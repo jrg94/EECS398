@@ -2,15 +2,32 @@ package com.example.christen.eecs398_ui;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Set;
+
 
 public class MainActivity extends Activity {
 
     private final static int REQUEST_ENABLE_BT = 1;
+    private final BroadcastReceiver receiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            // When discovery finds a device
+            if (BluetoothDevice.ACTION_FOUND.equals(action)) {
+                // Get the bluetooth object from the intent
+                BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                // TODO: Do something with the list of devices (See Android.Bluetooth documentation)
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +81,16 @@ public class MainActivity extends Activity {
             System.out.println("The adapter is not enabled");
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+        }
+
+        // Query list of paired devices
+        Set<BluetoothDevice> pairedDevices = adapter.getBondedDevices();
+        // If there are paired devices
+        if (pairedDevices.size() > 0) {
+            // Loop through list of devices
+            for (BluetoothDevice device : pairedDevices) {
+                // TODO: Do something with the list of devices (See Android.Bluetooth documentation
+            }
         }
 
         return true;
