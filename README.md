@@ -1,5 +1,5 @@
 # EECS398
-This directory contains an Android Studio project for an application that will be used to operated bluetooth locks.
+This directory contains an Android Studio project for an application that will be used to operate bluetooth locks.
 
 # Authors 
 * Jeremy Griffith
