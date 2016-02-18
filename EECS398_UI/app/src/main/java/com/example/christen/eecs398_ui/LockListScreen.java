@@ -11,7 +11,7 @@ public class LockListScreen extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.LockListScreen);
+        setContentView(R.layout.lock_list_screen);
     }
 
     @Override

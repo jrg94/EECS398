@@ -50,7 +50,7 @@ public class SplashScreen extends Activity {
         }
 
         // Sets up the window layout
-        setContentView(R.layout.SplashScreen);
+        setContentView(R.layout.splash_screen);
 
         // Retrieves the local bluetooth adapter
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
