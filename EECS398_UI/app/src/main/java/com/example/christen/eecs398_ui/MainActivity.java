@@ -13,16 +13,24 @@ import android.widget.Toast;
 
 import java.util.Set;
 
+import eecs398_lock.BluetoothLockService;
+
 public class MainActivity extends Activity {
 
     // Debug tools
     private static final boolean DEBUG = true;
     private static final String TAG = "MainActivity";
 
+    // Intent request codes
+    private static final int REQUEST_CONNECT_DEVICE_SECURE = 1;
+    private static final int REQUEST_CONNECT_DEVICE_INSECURE = 2;
+    private static final int REQUEST_ENABLE_BT = 3;
+
     private BluetoothAdapter mBluetoothAdapter = null;
+    private BluetoothLockService mLockService = null;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         if (DEBUG) {
@@ -40,6 +48,26 @@ public class MainActivity extends Activity {
             Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
             finish();
             return;
+        }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        if (DEBUG) {
+            Log.e(TAG, ">> ON START <<");
+        }
+
+        // If Bluetooth is not enabled, request that it be enabled
+        if (!mBluetoothAdapter.isEnabled()) {
+            Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
+        }
+        else {
+            if (mLockService == null) {
+                // TODO: Create setupLockService method
+            }
         }
     }
 
