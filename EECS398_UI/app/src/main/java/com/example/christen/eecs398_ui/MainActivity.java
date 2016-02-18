@@ -16,6 +16,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setupBluetooth();
     }
 
     @Override
@@ -46,16 +47,21 @@ public class MainActivity extends Activity {
      * @return true if bluetooth setup was successful
      */
     public boolean setupBluetooth() {
+        System.out.println("Setting up Bluetooth");
         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
+        System.out.println("Acquired the default adapter");
 
         // Checks to see if bluetooth is supported by this device
+        // Emulator cannot test this
         if (adapter == null) {
             // TODO: Throw an exception
+            System.out.println("The adapter is null");
             return false;
         }
 
         // Checks to see if bluetooth is enabled
         if (!adapter.isEnabled()) {
+            System.out.println("The adapter is not enabled");
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
         }
