@@ -1,6 +1,6 @@
 package eecs398_lock;
 
-//import android.bluetooth.*;
+import android.bluetooth.*;
 
 /**
  * Created by JRG94 on 2/17/2016.

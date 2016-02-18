@@ -6,6 +6,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -92,6 +93,11 @@ public class MainActivity extends Activity {
                 // TODO: Do something with the list of devices (See Android.Bluetooth documentation
             }
         }
+
+        // Register the BroadcastReceiver
+        IntentFilter filter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
+        registerReceiver(receiver, filter);
+        // TODO: Unregister during OnDestroy
 
         return true;
     }
