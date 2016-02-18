@@ -72,6 +72,23 @@ public class MainActivity extends Activity {
     }
 
     @Override
+    public synchronized void onResume() {
+        super.onResume();
+
+        if (DEBUG) {
+            Log.e(TAG, "> ON RESUME <");
+        }
+
+        // The serves to handle the case where onStart has to start bluetooth
+        if (mLockService != null) {
+            // Service hasn't begun yet
+            if (mLockService.getState() == BluetoothLockService.STATE_NONE) {
+                mLockService.start();
+            }
+        }
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
