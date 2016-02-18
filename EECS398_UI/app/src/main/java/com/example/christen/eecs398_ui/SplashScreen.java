@@ -57,7 +57,7 @@ public class SplashScreen extends Activity {
 
         // If bluetooth is not supported
         if (mBluetoothAdapter == null) {
-            Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Bluetooth is not available\nApp is now closing", Toast.LENGTH_LONG).show();
             finish();
             return;
         }
