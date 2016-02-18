@@ -1,5 +1,7 @@
 package eecs398_lock;
 
+//import android.bluetooth.*;
+
 /**
  * Created by JRG94 on 2/17/2016.
  * The representation of the SmartLock in code

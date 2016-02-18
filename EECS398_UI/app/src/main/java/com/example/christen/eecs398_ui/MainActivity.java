@@ -69,6 +69,7 @@ public class MainActivity extends Activity {
         return true;
     }
 
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_ENABLE_BT && resultCode == Activity.RESULT_OK) {
             //BluetoothAdapter BT = BluetoothAdapter.getDefaultAdapter();
