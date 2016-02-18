@@ -2,9 +2,7 @@ package com.example.christen.eecs398_ui;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -12,8 +10,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-
-import java.util.Set;
 
 import eecs398_lock.BluetoothLockService;
 
@@ -54,7 +50,7 @@ public class SplashScreen extends Activity {
         }
 
         // Sets up the window layout
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.SplashScreen);
 
         // Retrieves the local bluetooth adapter
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
