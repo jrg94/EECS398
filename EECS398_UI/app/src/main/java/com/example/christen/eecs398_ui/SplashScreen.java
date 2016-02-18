@@ -187,6 +187,8 @@ public class SplashScreen extends Activity {
     private void setupLockService() {
         Log.e(TAG, "setupLockService");
 
+        // TODO: Do things
+
         mLockService = new BluetoothLockService(this, mHandler);
     }
 
