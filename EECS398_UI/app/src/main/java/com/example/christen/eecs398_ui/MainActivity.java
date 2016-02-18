@@ -1,12 +1,16 @@
 package com.example.christen.eecs398_ui;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
 public class MainActivity extends Activity {
+
+    private final static int REQUEST_ENABLE_BT = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +38,27 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Sets up the bluetooth on this device
+     * @return true if bluetooth setup was successful
+     */
+    public boolean setupBluetooth() {
+        BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
+
+        // Checks to see if bluetooth is supported by this device
+        if (adapter == null) {
+            // TODO: Throw an exception
+            return false;
+        }
+
+        // Checks to see if bluetooth is enabled
+        if (!adapter.isEnabled()) {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+        }
+
+        return true;
     }
 }
