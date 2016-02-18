@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
 
     /**
      * Sets up the bluetooth on this device
+     *
      * @return true if bluetooth setup was successful
      */
     public boolean setupBluetooth() {
@@ -60,5 +61,15 @@ public class MainActivity extends Activity {
         }
 
         return true;
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_ENABLE_BT && resultCode == Activity.RESULT_OK) {
+            //BluetoothAdapter BT = BluetoothAdapter.getDefaultAdapter();
+            //String address = BT.getAddress();
+            //String name = BT.getName();
+            //String toastText = name + " : " + address;
+            //Toast.makeText(this, toastText, Toast.LENGTH_LONG).show();
+        }
     }
 }
