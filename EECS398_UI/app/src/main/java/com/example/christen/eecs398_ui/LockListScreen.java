@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class Activity2 extends Activity {
+public class LockListScreen extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
