@@ -42,15 +42,19 @@ import android.widget.AdapterView.OnItemClickListener;
  * Activity in the result Intent.
  */
 public class DeviceListActivity extends Activity {
+
     // Debugging
     private static final String TAG = "DeviceListActivity";
     private static final boolean D = true;
+
     // Return Intent extra
     public static String EXTRA_DEVICE_ADDRESS = "device_address";
+
     // Member fields
     private BluetoothAdapter mBtAdapter;
     private ArrayAdapter<String> mPairedDevicesArrayAdapter;
     private ArrayAdapter<String> mNewDevicesArrayAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,6 +104,7 @@ public class DeviceListActivity extends Activity {
             mPairedDevicesArrayAdapter.add(noDevices);
         }
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -110,6 +115,7 @@ public class DeviceListActivity extends Activity {
         // Unregister broadcast listeners
         this.unregisterReceiver(mReceiver);
     }
+
     /**
      * Start device discover with the BluetoothAdapter
      */
@@ -127,6 +133,7 @@ public class DeviceListActivity extends Activity {
         // Request discover from BluetoothAdapter
         mBtAdapter.startDiscovery();
     }
+
     // The on-click listener for all devices in the ListViews
     private OnItemClickListener mDeviceClickListener = new OnItemClickListener() {
         public void onItemClick(AdapterView<?> av, View v, int arg2, long arg3) {
@@ -143,6 +150,7 @@ public class DeviceListActivity extends Activity {
             finish();
         }
     };
+
     // The BroadcastReceiver that listens for discovered devices and
     // changes the title when discovery is finished
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
