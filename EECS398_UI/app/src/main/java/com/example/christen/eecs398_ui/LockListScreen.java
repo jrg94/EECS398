@@ -50,8 +50,8 @@ public class LockListScreen extends Activity {
     private static final String TAG = "BluetoothChat";
     private static final boolean D = true;
 
-    // Message types sent from the BluetoothChatService Handler
-    public static final int MESSAGE_STATE_CHANGE = 1;
+    // Message types sent from the BluetoothLockService Handler
+    public static final int LOCK_STATE_CHANGE = 1;
     public static final int MESSAGE_READ = 2;
     public static final int MESSAGE_WRITE = 3;
     public static final int MESSAGE_DEVICE_NAME = 4;
@@ -146,6 +146,7 @@ public class LockListScreen extends Activity {
         }
     }
 
+    // TODO: Set this up to initiate lock screen
     private void setupChat() {
         Log.d(TAG, "setupChat()");
 
@@ -253,8 +254,12 @@ public class LockListScreen extends Activity {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
-                case MESSAGE_STATE_CHANGE:
-                    if(D) Log.i(TAG, "MESSAGE_STATE_CHANGE: " + msg.arg1);
+                case LOCK_STATE_CHANGE:
+
+                    if(D) {
+                        Log.i(TAG, "LOCK_STATE_CHANGE: " + msg.arg1);
+                    }
+
                     switch (msg.arg1) {
                         case BluetoothLockService.STATE_CONNECTED:
                             mTitle.setText(R.string.title_connected_to);
