@@ -1,5 +1,21 @@
 package com.example.christen.eecs398_ui;
 
+/*
+ * Copyright (C) 2009 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
@@ -9,26 +25,37 @@ import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import eecs398_lock.BluetoothLockService;
 
-
+/**
+ * This activity will display the locks available to the user
+ *
+ * The apache license is attached above because a majority of this code was
+ * borrowed from the BluetoothChat class in the sample provided through Android.
+ */
 public class LockListScreen extends Activity {
 
     // FIELDS //
 
     // Debug tools
     private static final boolean DEBUG = true;
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "LockListScreen";
 
     // Intent request codes
     private static final int REQUEST_CONNECT_DEVICE_SECURE = 1;
     private static final int REQUEST_CONNECT_DEVICE_INSECURE = 2;
     private static final int REQUEST_ENABLE_BT = 3;
 
+    // Member fields
     private BluetoothAdapter mBluetoothAdapter = null;
     private BluetoothLockService mLockService = null;
+    private ArrayAdapter<String> mPairedDevicesArrayAdapter;
+    private ArrayAdapter<String> mNewDevicesArrayAdapter;
+
 
     // The Handler that gets information back from the BluetoothLockService
     private final Handler mHandler = new Handler() {
@@ -51,7 +78,11 @@ public class LockListScreen extends Activity {
         }
 
         // Sets up the window layout
+        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         setContentView(R.layout.splash_screen);
+
+        // Set result CANCELED incase the user backs out
+        setResult(Activity.RESULT_CANCELED);
 
         // Retrieves the local bluetooth adapter
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -79,7 +110,7 @@ public class LockListScreen extends Activity {
         }
         else {
             if (mLockService == null) {
-                // TODO: Create setupLockService method
+                setupLockService();
             }
         }
     }
@@ -164,7 +195,7 @@ public class LockListScreen extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_splash_screen, menu);
         return true;
     }
 
@@ -190,6 +221,7 @@ public class LockListScreen extends Activity {
 
         // TODO: Do things
 
+        // Initialize BluetoothLockService to handle bluetooth connections
         mLockService = new BluetoothLockService(this, mHandler);
     }
 

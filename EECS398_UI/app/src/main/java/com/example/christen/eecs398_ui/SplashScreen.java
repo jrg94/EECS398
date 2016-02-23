@@ -1,17 +1,9 @@
 package com.example.christen.eecs398_ui;
 
 import android.app.Activity;
-import android.bluetooth.BluetoothAdapter;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
-
-import eecs398_lock.BluetoothLockService;
 
 /**
  * The main activity for the application
@@ -33,7 +25,7 @@ public class SplashScreen extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_splash_screen, menu);
         return true;
     }
 
