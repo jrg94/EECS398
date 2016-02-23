@@ -131,13 +131,24 @@ public class BluetoothLockService {
      * @param device  The BluetoothDevice to connect
      */
     public synchronized void connect(BluetoothDevice device) {
-        if (D) Log.d(TAG, "connect to: " + device);
+        if (D) {
+            Log.d(TAG, "connect to: " + device);
+        }
+
         // Cancel any thread attempting to make a connection
         if (mState == STATE_CONNECTING) {
-            if (mConnectThread != null) {mConnectThread.cancel(); mConnectThread = null;}
+            if (mConnectThread != null) {
+                mConnectThread.cancel();
+                mConnectThread = null;
+            }
         }
+
         // Cancel any thread currently running a connection
-        if (mConnectedThread != null) {mConnectedThread.cancel(); mConnectedThread = null;}
+        if (mConnectedThread != null) {
+            mConnectedThread.cancel();
+            mConnectedThread = null;
+        }
+
         // Start the thread to connect with the given device
         mConnectThread = new ConnectThread(device);
         mConnectThread.start();
@@ -154,7 +165,8 @@ public class BluetoothLockService {
 
         // Cancel the thread that completed the connection
         if (mConnectThread != null) {
-            mConnectThread.cancel(); mConnectThread = null;
+            mConnectThread.cancel();
+            mConnectThread = null;
         }
 
         // Cancel any thread currently running a connection
@@ -174,7 +186,7 @@ public class BluetoothLockService {
         mConnectedThread.start();
 
         // Send the name of the connected device back to the UI Activity
-        Message msg = mHandler.obtainMessage(LockListScreen.MESSAGE_DEVICE_NAME);
+        Message msg = mHandler.obtainMessage(LockListScreen.LOCK_DEVICE_NAME);
         Bundle bundle = new Bundle();
         bundle.putString(LockListScreen.DEVICE_NAME, device.getName());
         msg.setData(bundle);
@@ -186,10 +198,25 @@ public class BluetoothLockService {
      * Stop all threads
      */
     public synchronized void stop() {
-        if (D) Log.d(TAG, "stop");
-        if (mConnectThread != null) {mConnectThread.cancel(); mConnectThread = null;}
-        if (mConnectedThread != null) {mConnectedThread.cancel(); mConnectedThread = null;}
-        if (mAcceptThread != null) {mAcceptThread.cancel(); mAcceptThread = null;}
+        if (D) {
+            Log.d(TAG, "stop");
+        }
+
+        if (mConnectThread != null) {
+            mConnectThread.cancel();
+            mConnectThread = null;
+        }
+
+        if (mConnectedThread != null) {
+            mConnectedThread.cancel();
+            mConnectedThread = null;
+        }
+
+        if (mAcceptThread != null) {
+            mAcceptThread.cancel();
+            mAcceptThread = null;
+        }
+
         setState(STATE_NONE);
     }
 
@@ -201,11 +228,13 @@ public class BluetoothLockService {
     public void write(byte[] out) {
         // Create temporary object
         ConnectedThread r;
+
         // Synchronize a copy of the ConnectedThread
         synchronized (this) {
             if (mState != STATE_CONNECTED) return;
             r = mConnectedThread;
         }
+
         // Perform the write unsynchronized
         r.write(out);
     }
@@ -215,8 +244,9 @@ public class BluetoothLockService {
      */
     private void connectionFailed() {
         setState(STATE_LISTEN);
+
         // Send a failure message back to the Activity
-        Message msg = mHandler.obtainMessage(LockListScreen.MESSAGE_TOAST);
+        Message msg = mHandler.obtainMessage(LockListScreen.LOCK_TOAST);
         Bundle bundle = new Bundle();
         bundle.putString(LockListScreen.TOAST, "Unable to connect device");
         msg.setData(bundle);
@@ -228,8 +258,9 @@ public class BluetoothLockService {
      */
     private void connectionLost() {
         setState(STATE_LISTEN);
+
         // Send a failure message back to the Activity
-        Message msg = mHandler.obtainMessage(LockListScreen.MESSAGE_TOAST);
+        Message msg = mHandler.obtainMessage(LockListScreen.LOCK_TOAST);
         Bundle bundle = new Bundle();
         bundle.putString(LockListScreen.TOAST, "Device connection was lost");
         msg.setData(bundle);
@@ -242,22 +273,30 @@ public class BluetoothLockService {
      * (or until cancelled).
      */
     private class AcceptThread extends Thread {
+
         // The local server socket
         private final BluetoothServerSocket mmServerSocket;
         public AcceptThread() {
             BluetoothServerSocket tmp = null;
+
             // Create a new listening server socket
             try {
                 tmp = mAdapter.listenUsingRfcommWithServiceRecord(NAME, MY_UUID);
             } catch (IOException e) {
                 Log.e(TAG, "listen() failed", e);
             }
+
             mmServerSocket = tmp;
         }
+
         public void run() {
-            if (D) Log.d(TAG, "BEGIN mAcceptThread" + this);
+            if (D) {
+                Log.d(TAG, "BEGIN mAcceptThread" + this);
+            }
+
             setName("AcceptThread");
             BluetoothSocket socket = null;
+
             // Listen to the server socket if we're not connected
             while (mState != STATE_CONNECTED) {
                 try {
@@ -268,6 +307,7 @@ public class BluetoothLockService {
                     Log.e(TAG, "accept() failed", e);
                     break;
                 }
+
                 // If a connection was accepted
                 if (socket != null) {
                     synchronized (BluetoothLockService.this) {
@@ -290,8 +330,12 @@ public class BluetoothLockService {
                     }
                 }
             }
-            if (D) Log.i(TAG, "END mAcceptThread");
+
+            if (D) {
+                Log.i(TAG, "END mAcceptThread");
+            }
         }
+
         public void cancel() {
             if (D) Log.d(TAG, "cancel " + this);
             try {
@@ -327,8 +371,10 @@ public class BluetoothLockService {
         public void run() {
             Log.i(TAG, "BEGIN mConnectThread");
             setName("ConnectThread");
+
             // Always cancel discovery because it will slow down a connection
             mAdapter.cancelDiscovery();
+
             // Make a connection to the BluetoothSocket
             try {
                 // This is a blocking call and will only return on a
@@ -346,10 +392,12 @@ public class BluetoothLockService {
                 BluetoothLockService.this.start();
                 return;
             }
+
             // Reset the ConnectThread because we're done
             synchronized (BluetoothLockService.this) {
                 mConnectThread = null;
             }
+
             // Start the connected thread
             connected(mmSocket, mmDevice);
         }
@@ -399,10 +447,9 @@ public class BluetoothLockService {
             while (true) {
                 try {
                     // Read from the InputStream
-                    // TODO: Make this viable for lock screen
                     bytes = mmInStream.read(buffer);
                     // Send the obtained bytes to the UI Activity
-                    // mHandler.obtainMessage(BluetoothChat.MESSAGE_READ, bytes, -1, buffer).sendToTarget();
+                    mHandler.obtainMessage(LockListScreen.LOCK_READ, bytes, -1, buffer).sendToTarget();
                 } catch (IOException e) {
                     Log.e(TAG, "disconnected", e);
                     connectionLost();
@@ -417,10 +464,9 @@ public class BluetoothLockService {
          */
         public void write(byte[] buffer) {
             try {
-                // TODO: Make this viable for lock screen
                 mmOutStream.write(buffer);
                 // Share the sent message back to the UI Activity
-                // mHandler.obtainMessage(BluetoothChat.MESSAGE_WRITE, -1, -1, buffer).sendToTarget();
+                mHandler.obtainMessage(LockListScreen.LOCK_WRITE, -1, -1, buffer).sendToTarget();
             } catch (IOException e) {
                 Log.e(TAG, "Exception during write", e);
             }

@@ -52,10 +52,10 @@ public class LockListScreen extends Activity {
 
     // Message types sent from the BluetoothLockService Handler
     public static final int LOCK_STATE_CHANGE = 1;
-    public static final int MESSAGE_READ = 2;
-    public static final int MESSAGE_WRITE = 3;
-    public static final int MESSAGE_DEVICE_NAME = 4;
-    public static final int MESSAGE_TOAST = 5;
+    public static final int LOCK_READ = 2;
+    public static final int LOCK_WRITE = 3;
+    public static final int LOCK_DEVICE_NAME = 4;
+    public static final int LOCK_TOAST = 5;
 
     // Key names received from the BluetoothChatService Handler
     public static final String DEVICE_NAME = "device_name";
@@ -275,25 +275,25 @@ public class LockListScreen extends Activity {
                             break;
                     }
                     break;
-                case MESSAGE_WRITE:
+                case LOCK_WRITE:
                     byte[] writeBuf = (byte[]) msg.obj;
                     // construct a string from the buffer
                     String writeMessage = new String(writeBuf);
                     mConversationArrayAdapter.add("Me:  " + writeMessage);
                     break;
-                case MESSAGE_READ:
+                case LOCK_READ:
                     byte[] readBuf = (byte[]) msg.obj;
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
                     mConversationArrayAdapter.add(mConnectedDeviceName+":  " + readMessage);
                     break;
-                case MESSAGE_DEVICE_NAME:
+                case LOCK_DEVICE_NAME:
                     // save the connected device's name
                     mConnectedDeviceName = msg.getData().getString(DEVICE_NAME);
                     Toast.makeText(getApplicationContext(), "Connected to "
                             + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
                     break;
-                case MESSAGE_TOAST:
+                case LOCK_TOAST:
                     Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST),
                             Toast.LENGTH_SHORT).show();
                     break;
