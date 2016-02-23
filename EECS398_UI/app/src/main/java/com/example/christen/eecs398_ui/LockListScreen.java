@@ -118,7 +118,11 @@ public class LockListScreen extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-        if(D) Log.e(TAG, "++ ON START ++");
+        
+        if(D) {
+            Log.e(TAG, "++ ON START ++");
+        }
+
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
         if (!mBluetoothAdapter.isEnabled()) {
@@ -126,14 +130,20 @@ public class LockListScreen extends Activity {
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
             // Otherwise, setup the chat session
         } else {
-            if (mLockService == null) setupChat();
+            if (mLockService == null) {
+                setupLockScreenAndService();
+            }
         }
     }
 
     @Override
     public synchronized void onResume() {
         super.onResume();
-        if(D) Log.e(TAG, "+ ON RESUME +");
+
+        if(D) {
+            Log.e(TAG, "+ ON RESUME +");
+        }
+
         // Performing this check in onResume() covers the case in which BT was
         // not enabled during onStart(), so we were paused to enable it...
         // onResume() will be called when ACTION_REQUEST_ENABLE activity returns.
@@ -146,9 +156,10 @@ public class LockListScreen extends Activity {
         }
     }
 
-    // TODO: Set this up to initiate lock screen
-    private void setupChat() {
-        Log.d(TAG, "setupChat()");
+    private void setupLockScreenAndService() {
+        Log.d(TAG, "setupLockScreenAndService()");
+
+        // TODO: Initialize the list of locks available to the user
 
         // Initialize the array adapter for the conversation thread
         // mConversationArrayAdapter = new ArrayAdapter<String>(this, R.layout.message);
@@ -205,7 +216,10 @@ public class LockListScreen extends Activity {
     }
 
     private void ensureDiscoverable() {
-        if(D) Log.d(TAG, "ensure discoverable");
+        if(D) {
+            Log.d(TAG, "ensure discoverable");
+        }
+
         if (mBluetoothAdapter.getScanMode() !=
                 BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
             Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
@@ -219,16 +233,20 @@ public class LockListScreen extends Activity {
      * @param message  A string of text to send.
      */
     private void sendMessage(String message) {
+
         // Check that we're actually connected before trying anything
         if (mLockService.getState() != BluetoothLockService.STATE_CONNECTED) {
             Toast.makeText(this, R.string.not_connected, Toast.LENGTH_SHORT).show();
             return;
         }
+
         // Check that there's actually something to send
         if (message.length() > 0) {
+
             // Get the message bytes and tell the BluetoothChatService to write
             byte[] send = message.getBytes();
             mLockService.write(send);
+
             // Reset out string buffer to zero and clear the edit text field
             mOutStringBuffer.setLength(0);
             mOutEditText.setText(mOutStringBuffer);
@@ -239,18 +257,23 @@ public class LockListScreen extends Activity {
     private TextView.OnEditorActionListener mWriteListener =
             new TextView.OnEditorActionListener() {
                 public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
+
                     // If the action is a key-up event on the return key, send the message
                     if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_UP) {
                         String message = view.getText().toString();
                         sendMessage(message);
                     }
-                    if(D) Log.i(TAG, "END onEditorAction");
+
+                    if(D) {
+                        Log.i(TAG, "END onEditorAction");
+                    }
                     return true;
                 }
             };
 
     // The Handler that gets information back from the BluetoothChatService
     private final Handler mHandler = new Handler() {
+
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
@@ -266,33 +289,39 @@ public class LockListScreen extends Activity {
                             mTitle.append(mConnectedDeviceName);
                             mConversationArrayAdapter.clear();
                             break;
+
                         case BluetoothLockService.STATE_CONNECTING:
                             mTitle.setText(R.string.title_connecting);
                             break;
+
                         case BluetoothLockService.STATE_LISTEN:
                         case BluetoothLockService.STATE_NONE:
                             mTitle.setText(R.string.title_not_connected);
                             break;
                     }
                     break;
+
                 case LOCK_WRITE:
                     byte[] writeBuf = (byte[]) msg.obj;
                     // construct a string from the buffer
                     String writeMessage = new String(writeBuf);
                     mConversationArrayAdapter.add("Me:  " + writeMessage);
                     break;
+
                 case LOCK_READ:
                     byte[] readBuf = (byte[]) msg.obj;
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
                     mConversationArrayAdapter.add(mConnectedDeviceName+":  " + readMessage);
                     break;
+
                 case LOCK_DEVICE_NAME:
                     // save the connected device's name
                     mConnectedDeviceName = msg.getData().getString(DEVICE_NAME);
                     Toast.makeText(getApplicationContext(), "Connected to "
                             + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
                     break;
+
                 case LOCK_TOAST:
                     Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST),
                             Toast.LENGTH_SHORT).show();
@@ -302,8 +331,13 @@ public class LockListScreen extends Activity {
     };
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(D) Log.d(TAG, "onActivityResult " + resultCode);
+
+        if(D) {
+            Log.d(TAG, "onActivityResult " + resultCode);
+        }
+
         switch (requestCode) {
+
             case REQUEST_CONNECT_DEVICE:
                 // When DeviceListActivity returns with a device to connect
                 if (resultCode == Activity.RESULT_OK) {
@@ -316,11 +350,12 @@ public class LockListScreen extends Activity {
                     mLockService.connect(device);
                 }
                 break;
+
             case REQUEST_ENABLE_BT:
                 // When the request to enable Bluetooth returns
                 if (resultCode == Activity.RESULT_OK) {
                     // Bluetooth is now enabled, so set up a chat session
-                    setupChat();
+                    setupLockScreenAndService();
                 } else {
                     // User did not enable Bluetooth or an error occured
                     Log.d(TAG, "BT not enabled");
@@ -340,11 +375,13 @@ public class LockListScreen extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+
             case R.id.scan:
                 // Launch the DeviceListActivity to see devices and do scan
                 Intent serverIntent = new Intent(this, DeviceListActivity.class);
                 startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE);
                 return true;
+
             case R.id.discoverable:
                 // Ensure this device is discoverable by others
                 ensureDiscoverable();
