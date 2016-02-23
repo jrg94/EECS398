@@ -118,7 +118,7 @@ public class LockListScreen extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-        
+
         if(D) {
             Log.e(TAG, "++ ON START ++");
         }
@@ -160,6 +160,7 @@ public class LockListScreen extends Activity {
         Log.d(TAG, "setupLockScreenAndService()");
 
         // TODO: Initialize the list of locks available to the user
+        // TODO: Allow buttons to do something like lock door on click
 
         // Initialize the array adapter for the conversation thread
         // mConversationArrayAdapter = new ArrayAdapter<String>(this, R.layout.message);
