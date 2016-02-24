@@ -22,38 +22,60 @@
             android:layout_marginBottom="132dp">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="279dp"
+                android:layout_height="218dp"
                 android:id="@+id/imageView"
                 android:src="@drawable/key_image"
-                android:layout_gravity="center"
+                android:layout_gravity="center_horizontal|top"
                 android:contentDescription="Logo" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="53dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="false"
+                android:text="Please enter your passcode"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:width="@dimen/activity_horizontal_margin"
+                android:elegantTextHeight="false"
+                android:typeface="normal"
+                android:layout_gravity="center_horizontal|bottom" />
         </FrameLayout>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="53dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="false"
-            android:text="hjdfdhj"
-            android:layout_centerInParent="true"
-            android:textAlignment="center"
-            android:width="@dimen/activity_horizontal_margin"
-            android:elegantTextHeight="false"
-            android:typeface="normal" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText2"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="true"
-            android:text="                         __  __  __  __" />
-
     </RelativeLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button android:text="1" />
+
+        <Button android:text="2" />
+
+        <Button android:text="3" />
+
+        <Button android:text="4" />
+
+        <Button android:text="5" />
+
+        <Button android:text="6" />
+
+        <Button android:text="7" />
+
+        <Button android:text="8" />
+
+        <Button android:text="9" />
+
+    </GridLayout>
 
 </RelativeLayout>
