@@ -69,6 +69,8 @@ public class SplashScreen extends Activity {
 
                         // Test that the two passcodes match
                         for (int i = 0; i < passcode.length; i++) {
+
+                            // If at any point they don't match, return
                             if (passcode[i] != attemptedLogin[i]) {
                                 Toast.makeText(SplashScreen.this, "Failed to enter the correct passcode", Toast.LENGTH_SHORT).show();
                                 return;
