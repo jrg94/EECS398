@@ -1,9 +1,17 @@
 package com.example.christen.eecs398_ui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The main activity for the application
@@ -11,6 +19,28 @@ import android.view.MenuItem;
  * Login is achieved through this screen
  */
 public class SplashScreen extends Activity {
+
+    // FIELDS //
+
+    // Variables
+    private List<Button> keypad;
+    private int pressCount = 0;
+    private int[] attemptedLogin = new int[4];
+
+    // Constants
+    private static final int[] passcode = {1, 2, 3, 4};
+
+    private static final int[] BUTTON_IDS = {
+            R.id.buttonOne,
+            R.id.buttonTwo,
+            R.id.buttonThree,
+            R.id.buttonFour,
+            R.id.buttonFive,
+            R.id.buttonSix,
+            R.id.buttonSeven,
+            R.id.buttonEight,
+            R.id.buttonNine
+    };
 
     // OVERRIDDEN METHODS //
 
@@ -20,6 +50,38 @@ public class SplashScreen extends Activity {
 
         // Sets up the window layout
         setContentView(R.layout.splash_screen);
+
+        keypad = new ArrayList<Button>(BUTTON_IDS.length);
+
+        for (int id : BUTTON_IDS) {
+            Button b = (Button)findViewById(id);
+            b.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    attemptedLogin[pressCount] = Integer.parseInt(((Button)v).getText().toString());
+                    pressCount++;
+
+                    // We have reached the required number of digits
+                    if (pressCount == passcode.length) {
+
+                        // Reset pressCount
+                        pressCount = 0;
+
+                        // Test that the two passcodes match
+                        for (int i = 0; i < passcode.length; i++) {
+                            if (passcode[i] != attemptedLogin[i]) {
+                                Toast.makeText(SplashScreen.this, "Failed to enter the correct passcode", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                        }
+
+                        // If so, change to the next activity (lock list screen)
+                        startActivity(new Intent(SplashScreen.this, LockListScreen.class));
+                    }
+                }
+            });
+            keypad.add(b);
+        }
     }
 
     @Override
