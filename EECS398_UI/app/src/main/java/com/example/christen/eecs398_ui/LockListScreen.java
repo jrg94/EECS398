@@ -97,11 +97,6 @@ public class LockListScreen extends Activity {
         // Set up the window layout
         setContentView(R.layout.lock_list_screen);
 
-        // Set up the custom title
-        mTitle = (TextView) findViewById(R.id.title_left_text);
-        mTitle.setText(R.string.app_name);
-        mTitle = (TextView) findViewById(R.id.title_right_text);
-
         // Get local Bluetooth adapter
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
