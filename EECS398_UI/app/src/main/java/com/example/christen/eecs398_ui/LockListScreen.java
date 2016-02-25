@@ -65,17 +65,11 @@ public class LockListScreen extends Activity {
     private static final int REQUEST_CONNECT_DEVICE = 1;
     private static final int REQUEST_ENABLE_BT = 2;
 
-    // Layout Views
-    private TextView mTitle;
-    private ListView mConversationView;
-    private EditText mOutEditText;
-    private Button mSendButton;
-
     // Name of the connected device
     private String mConnectedDeviceName = null;
 
     // Array adapter for the conversation thread
-    private ArrayAdapter<String> mConversationArrayAdapter;
+    private ArrayAdapter<String> mLockArrayAdapter;
 
     // String buffer for outgoing messages
     private StringBuffer mOutStringBuffer;
