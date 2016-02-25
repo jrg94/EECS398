@@ -51,7 +51,7 @@ public class LockListScreen extends Activity {
     // Debugging
     private static final String TAG = "BluetoothChat";
     private static final boolean D = true;
-    private static final boolean USING_EMULATOR = true;
+    private static final boolean USING_EMULATOR = false;
 
     // Message types sent from the BluetoothLockService Handler
     public static final int LOCK_STATE_CHANGE = 1;
@@ -105,8 +105,9 @@ public class LockListScreen extends Activity {
 
         // Initialize our lock manager
         lockManager = new SmartLockManager();
+        // TODO: pull locks from a save file
         lockManager.getLocks().add(new SmartLock(0,5.2, 5.3));
-        lockManager.getLocks().add(new SmartLock(1,6.3, 7.2));
+        lockManager.getLocks().add(new SmartLock(1, 6.3, 7.2));
 
         // For development purposes, lets app keep running despite lack of bluetooth support
         if (!USING_EMULATOR) {
@@ -152,7 +153,7 @@ public class LockListScreen extends Activity {
         }
 
         // For development purposes, lets app keep running despite lack of bluetooth support
-        if (USING_EMULATOR) {
+        if (!USING_EMULATOR) {
             // Performing this check in onResume() covers the case in which BT was
             // not enabled during onStart(), so we were paused to enable it...
             // onResume() will be called when ACTION_REQUEST_ENABLE activity returns.
@@ -169,7 +170,6 @@ public class LockListScreen extends Activity {
     private void setupLockScreenAndService() {
         Log.d(TAG, "setupLockScreenAndService()");
 
-        // TODO: Initialize the list of locks available to the user
         // TODO: Allow buttons to do something like lock door on click
 
         // Initialize the array adapter for the lock list
@@ -226,16 +226,23 @@ public class LockListScreen extends Activity {
         }
     }
 
+    /**
+     * Enables discoverability for 300 seconds
+     */
     private void ensureDiscoverable() {
+
         if(D) {
             Log.d(TAG, "ensure discoverable");
         }
 
-        if (mBluetoothAdapter.getScanMode() !=
-                BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
-            Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-            discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
-            startActivity(discoverableIntent);
+        // For development purposes, lets app keep running despite lack of bluetooth support
+        if (!USING_EMULATOR) {
+            if (mBluetoothAdapter.getScanMode() !=
+                    BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
+                Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+                discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+                startActivity(discoverableIntent);
+            }
         }
     }
 
