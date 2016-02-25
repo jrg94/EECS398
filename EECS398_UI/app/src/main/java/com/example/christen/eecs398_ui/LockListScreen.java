@@ -40,6 +40,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import eecs398_lock.BluetoothLockService;
+import eecs398_lock.SmartLock;
+import eecs398_lock.SmartLockManager;
 
 /**
  * This is the main Activity that displays the current chat session.
@@ -70,7 +72,7 @@ public class LockListScreen extends Activity {
     private String mConnectedDeviceName = null;
 
     // Array adapter for the conversation thread
-    private ArrayAdapter<String> mLockArrayAdapter;
+    private ArrayAdapter<SmartLock> mLockArrayAdapter;
 
     // The listview component containing all the locks
     private ListView mLockView;
@@ -83,6 +85,9 @@ public class LockListScreen extends Activity {
 
     // Member object for the chat services
     private BluetoothLockService mLockService = null;
+
+    // The manager of all the locks
+    private SmartLockManager lockManager = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -97,6 +102,11 @@ public class LockListScreen extends Activity {
 
         // Get local Bluetooth adapter
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
+        // Initialize our lock manager
+        lockManager = new SmartLockManager();
+        lockManager.getLocks().add(new SmartLock(0,5.2, 5.3));
+        lockManager.getLocks().add(new SmartLock(1,6.3, 7.2));
 
         // For development purposes, lets app keep running despite lack of bluetooth support
         if (!USING_EMULATOR) {
@@ -163,10 +173,10 @@ public class LockListScreen extends Activity {
         // TODO: Allow buttons to do something like lock door on click
 
         // Initialize the array adapter for the lock list
-        mLockArrayAdapter = new ArrayAdapter<String>(this, R.layout.message);
+        mLockArrayAdapter = new ArrayAdapter<SmartLock>(this, R.layout.message, lockManager.getLocks());
         mLockView = (ListView) findViewById(R.id.listView);
         mLockView.setAdapter(mLockArrayAdapter);
-        
+
         // Initialize the compose field with a listener for the return key
         // mOutEditText = (EditText) findViewById(R.id.edit_text_out);
         // mOutEditText.setOnEditorActionListener(mWriteListener);
