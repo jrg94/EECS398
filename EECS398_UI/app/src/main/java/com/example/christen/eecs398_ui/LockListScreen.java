@@ -49,6 +49,7 @@ public class LockListScreen extends Activity {
     // Debugging
     private static final String TAG = "BluetoothChat";
     private static final boolean D = true;
+    private static final boolean USING_EMULATOR = true;
 
     // Message types sent from the BluetoothLockService Handler
     public static final int LOCK_STATE_CHANGE = 1;
@@ -94,11 +95,14 @@ public class LockListScreen extends Activity {
         // Get local Bluetooth adapter
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
-        // If the adapter is null, then Bluetooth is not supported
-        if (mBluetoothAdapter == null) {
-            Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
-            finish();
-            return;
+        // For development purposes, lets app keep running despite lack of bluetooth support
+        if (!USING_EMULATOR) {
+            // If the adapter is null, then Bluetooth is not supported
+            if (mBluetoothAdapter == null) {
+                Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
+                finish();
+                return;
+            }
         }
     }
 
@@ -110,15 +114,18 @@ public class LockListScreen extends Activity {
             Log.e(TAG, "++ ON START ++");
         }
 
-        // If BT is not on, request that it be enabled.
-        // setupChat() will then be called during onActivityResult
-        if (!mBluetoothAdapter.isEnabled()) {
-            Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
-            // Otherwise, setup the chat session
-        } else {
-            if (mLockService == null) {
-                setupLockScreenAndService();
+        // For development purposes, lets app keep running despite lack of bluetooth support
+        if (!USING_EMULATOR) {
+            // If BT is not on, request that it be enabled.
+            // setupChat() will then be called during onActivityResult
+            if (!mBluetoothAdapter.isEnabled()) {
+                Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
+                // Otherwise, setup the chat session
+            } else {
+                if (mLockService == null) {
+                    setupLockScreenAndService();
+                }
             }
         }
     }
@@ -131,14 +138,17 @@ public class LockListScreen extends Activity {
             Log.e(TAG, "+ ON RESUME +");
         }
 
-        // Performing this check in onResume() covers the case in which BT was
-        // not enabled during onStart(), so we were paused to enable it...
-        // onResume() will be called when ACTION_REQUEST_ENABLE activity returns.
-        if (mLockService != null) {
-            // Only if the state is STATE_NONE, do we know that we haven't started already
-            if (mLockService.getState() == BluetoothLockService.STATE_NONE) {
-                // Start the Bluetooth chat services
-                mLockService.start();
+        // For development purposes, lets app keep running despite lack of bluetooth support
+        if (USING_EMULATOR) {
+            // Performing this check in onResume() covers the case in which BT was
+            // not enabled during onStart(), so we were paused to enable it...
+            // onResume() will be called when ACTION_REQUEST_ENABLE activity returns.
+            if (mLockService != null) {
+                // Only if the state is STATE_NONE, do we know that we haven't started already
+                if (mLockService.getState() == BluetoothLockService.STATE_NONE) {
+                    // Start the Bluetooth chat services
+                    mLockService.start();
+                }
             }
         }
     }
@@ -237,7 +247,6 @@ public class LockListScreen extends Activity {
 
             // Reset out string buffer to zero and clear the edit text field
             mOutStringBuffer.setLength(0);
-            mOutEditText.setText(mOutStringBuffer);
         }
     }
 
@@ -273,18 +282,13 @@ public class LockListScreen extends Activity {
 
                     switch (msg.arg1) {
                         case BluetoothLockService.STATE_CONNECTED:
-                            mTitle.setText(R.string.title_connected_to);
-                            mTitle.append(mConnectedDeviceName);
-                            mConversationArrayAdapter.clear();
                             break;
 
                         case BluetoothLockService.STATE_CONNECTING:
-                            mTitle.setText(R.string.title_connecting);
                             break;
 
                         case BluetoothLockService.STATE_LISTEN:
                         case BluetoothLockService.STATE_NONE:
-                            mTitle.setText(R.string.title_not_connected);
                             break;
                     }
                     break;
@@ -293,14 +297,12 @@ public class LockListScreen extends Activity {
                     byte[] writeBuf = (byte[]) msg.obj;
                     // construct a string from the buffer
                     String writeMessage = new String(writeBuf);
-                    mConversationArrayAdapter.add("Me:  " + writeMessage);
                     break;
 
                 case LOCK_READ:
                     byte[] readBuf = (byte[]) msg.obj;
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
-                    mConversationArrayAdapter.add(mConnectedDeviceName+":  " + readMessage);
                     break;
 
                 case LOCK_DEVICE_NAME:
