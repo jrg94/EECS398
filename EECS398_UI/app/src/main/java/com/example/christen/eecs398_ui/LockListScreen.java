@@ -40,6 +40,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import eecs398_lock.BluetoothLockService;
+import eecs398_lock.LocksAdapter;
 import eecs398_lock.SmartLock;
 import eecs398_lock.SmartLockManager;
 
@@ -72,7 +73,7 @@ public class LockListScreen extends Activity {
     private String mConnectedDeviceName = null;
 
     // Array adapter for the conversation thread
-    private ArrayAdapter<SmartLock> mLockArrayAdapter;
+    private LocksAdapter mLockArrayAdapter;
 
     // The listview component containing all the locks
     private ListView mLockView;
@@ -173,7 +174,7 @@ public class LockListScreen extends Activity {
         // TODO: Allow buttons to do something like lock door on click
 
         // Initialize the array adapter for the lock list
-        mLockArrayAdapter = new ArrayAdapter<SmartLock>(this, R.layout.message, lockManager.getLocks());
+        mLockArrayAdapter = new LocksAdapter(this, lockManager.getLocks());
         mLockView = (ListView) findViewById(R.id.listView);
         mLockView.setAdapter(mLockArrayAdapter);
 
