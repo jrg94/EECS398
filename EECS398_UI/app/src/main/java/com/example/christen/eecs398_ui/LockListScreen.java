@@ -72,6 +72,9 @@ public class LockListScreen extends Activity {
     // Array adapter for the conversation thread
     private ArrayAdapter<String> mLockArrayAdapter;
 
+    // The listview component containing all the locks
+    private ListView mLockView;
+
     // String buffer for outgoing messages
     private StringBuffer mOutStringBuffer;
 
@@ -159,11 +162,11 @@ public class LockListScreen extends Activity {
         // TODO: Initialize the list of locks available to the user
         // TODO: Allow buttons to do something like lock door on click
 
-        // Initialize the array adapter for the conversation thread
-        // mConversationArrayAdapter = new ArrayAdapter<String>(this, R.layout.message);
-        // mConversationView = (ListView) findViewById(R.id.in);
-        // mConversationView.setAdapter(mConversationArrayAdapter);
-
+        // Initialize the array adapter for the lock list
+        mLockArrayAdapter = new ArrayAdapter<String>(this, R.layout.message);
+        mLockView = (ListView) findViewById(R.id.listView);
+        mLockView.setAdapter(mLockArrayAdapter);
+        
         // Initialize the compose field with a listener for the return key
         // mOutEditText = (EditText) findViewById(R.id.edit_text_out);
         // mOutEditText.setOnEditorActionListener(mWriteListener);
