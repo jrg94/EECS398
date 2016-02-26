@@ -20,6 +20,7 @@
 
     <!-- LockListScreen -->
     <string name="title_activity_lock_list_screen">Lock List</string>
+    <string name="lock_label">Label</string>
     <string name="lock_id">ID</string>
     <string name="lock_latitude">Latitude</string>
     <string name="lock_longitude">Longitude</string>

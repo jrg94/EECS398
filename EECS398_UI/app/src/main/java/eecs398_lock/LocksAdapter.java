@@ -28,10 +28,6 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        if (D) {
-            Log.e(TAG, "getView");
-        }
-
         // Retrieve lock from position
         SmartLock lock = getItem(position);
 
@@ -39,10 +35,12 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.lock_ui, parent, false);
         }
 
+        TextView lockLabel = (TextView) convertView.findViewById(R.id.lockLabel);
         TextView lockID = (TextView) convertView.findViewById(R.id.lockID);
         TextView lockLat = (TextView) convertView.findViewById(R.id.lockLat);
         TextView lockLong = (TextView) convertView.findViewById(R.id.lockLong);
 
+        lockLabel.setText(String.format("%s: %s", "Label", lock.getLabel()));
         lockID.setText(String.format("%s: %d", "ID", lock.getID()));
         lockLat.setText(String.format("%s: %f", "Latitude", lock.getLocation().getLatitude()));
         lockLong.setText(String.format("%s: %f", "Longitude", lock.getLocation().getLongitude()));
