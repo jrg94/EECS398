@@ -13,6 +13,7 @@ public class SmartLock {
 
     private int id;
     private String address;
+    private String label;
     private GPSLocation location;
     private boolean isLocked;
     private boolean isInLowPowerMode;
@@ -22,66 +23,58 @@ public class SmartLock {
 
     public SmartLock(int id, GPSLocation location) {
         this.id = id;
+        this.address = "At what address is this lock?";
+        this.label = "What would you like to name this lock?";
         this.location = location;
-        // Determine address from GPSLocation
+        this.isLocked = false;
+        this.isInLowPowerMode = false;
     }
 
     public SmartLock(int id, double latitude, double longitude) {
         this.id = id;
+        this.address = "At what address is this lock?";
+        this.label = "What would you like to name this lock?";
         this.location = new GPSLocation(latitude, longitude);
-        // Determine address from GPSLocation
+        this.isLocked = false;
+        this.isInLowPowerMode = false;
     }
 
     // GETTER/SETTERS //
 
-    /**
-     * The ID getter method
-     * There exists no setter method because we do not
-     * want to be able to change the ID for this lock
-     * @return the identification number for this lock
-     */
     public int getID() {
         return this.id;
     }
 
-    /**
-     * The address getter method
-     * @return the address of this lock
-     */
     public String getAddress() {
         return this.address;
     }
 
-    /**
-     * The address setter method
-     * @param address a string that marks the general location of the lock
-     */
     public void setAddress(String address) {
         this.address = address;
     }
 
-    /**
-     * The location getter method
-     * @return the GPSLocation for the lock
-     */
+    public String getLabel() {
+        return this.label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
     public GPSLocation getLocation() {
         return this.location;
     }
 
-    /**
-     * The location setter method
-     * @param location the GPSLocation of the lock
-     */
     public void setLocation(GPSLocation location) {
         this.location = location;
     }
 
     // FUNCTIONALITY //
 
+    @Override
     public String toString() {
-        return this.id + ":" + getLocation().toString();
+        return String.format("%d: %s", this.id, getLocation().toString());
     }
-
 
     /**
      * Toggles the state of the lock
