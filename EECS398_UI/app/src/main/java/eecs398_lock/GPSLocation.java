@@ -22,4 +22,8 @@ public class GPSLocation {
     public double getLongitude() {
         return this.longitude;
     }
+
+    public String toString() {
+        return latitude + "," + longitude;
+    }
 }

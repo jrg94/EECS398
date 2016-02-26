@@ -15,5 +15,7 @@ public class SmartLockManager {
         locks = new ArrayList<SmartLock>();
     }
 
-
+    public ArrayList<SmartLock> getLocks() {
+        return locks;
+    }
 }

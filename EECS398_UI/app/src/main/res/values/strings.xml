@@ -13,6 +13,17 @@
 <resources>
     <string name="app_name">Bluetooth Lock</string>
 
+    <!-- SplashScreen -->
+    <string name="title_activity_splash_screen">Heimlock</string>
+    <string name="logo">Logo</string>
+    <string name="passcode_string">Please enter your passcode</string>
+
+    <!-- LockListScreen -->
+    <string name="title_activity_lock_list_screen">Lock List</string>
+    <string name="lock_id">ID</string>
+    <string name="lock_latitude">Latitude</string>
+    <string name="lock_longitude">Longitude</string>
+
     <!--  BluetoothChat -->
     <string name="send">Send</string>
     <string name="not_connected">You are not connected to a device</string>
@@ -36,6 +47,5 @@
 
     <!-- Other -->
     <string name="action_settings">Settings</string>
-    <string name="title_activity_activity2">Activity2</string>
 
 </resources>

@@ -78,6 +78,11 @@ public class SmartLock {
 
     // FUNCTIONALITY //
 
+    public String toString() {
+        return this.id + ":" + getLocation().toString();
+    }
+
+
     /**
      * Toggles the state of the lock
      * @return the state of the lock after the toggle

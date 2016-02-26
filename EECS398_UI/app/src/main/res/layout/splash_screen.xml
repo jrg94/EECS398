@@ -5,7 +5,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".SplashScreen"
-    android:id="@+id/R"
     android:background="#ff9c9a9d">
 
     <RelativeLayout
@@ -27,24 +26,21 @@
                 android:id="@+id/imageView"
                 android:src="@drawable/key_image"
                 android:layout_gravity="center_horizontal|top"
-                android:contentDescription="Logo" />
+                android:contentDescription="@string/logo" />
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="58dp"
                 android:id="@+id/editText"
-                android:layout_alignParentBottom="true"
                 android:layout_marginBottom="53dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="false"
-                android:text="Please enter your passcode"
+                android:text="@string/passcode_string"
                 android:gravity="center"
-                android:layout_centerInParent="true"
                 android:textAlignment="center"
                 android:width="@dimen/activity_horizontal_margin"
                 android:elegantTextHeight="false"
                 android:typeface="normal"
-                android:layout_gravity="center_horizontal|bottom" />
+                android:layout_gravity="center_horizontal|bottom"
+                android:textSize="20sp" />
         </FrameLayout>
 
     </RelativeLayout>
