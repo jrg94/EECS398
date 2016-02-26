@@ -52,7 +52,7 @@ public class LockListScreen extends Activity {
     // Debugging
     private static final String TAG = "BluetoothChat";
     private static final boolean D = true;
-    private static final boolean USING_EMULATOR = false;
+    private static final boolean USING_EMULATOR = true;
 
     // Message types sent from the BluetoothLockService Handler
     public static final int LOCK_STATE_CHANGE = 1;
