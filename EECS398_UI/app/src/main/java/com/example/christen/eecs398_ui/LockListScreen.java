@@ -129,18 +129,16 @@ public class LockListScreen extends Activity {
             Log.e(TAG, "++ ON START ++");
         }
 
-        // For development purposes, lets app keep running despite lack of bluetooth support
-        if (!USING_EMULATOR) {
-            // If BT is not on, request that it be enabled.
-            // setupChat() will then be called during onActivityResult
-            if (!mBluetoothAdapter.isEnabled()) {
-                Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
-                // Otherwise, setup the chat session
-            } else {
-                if (mLockService == null) {
-                    setupLockScreenAndService();
-                }
+
+        // If BT is not on, request that it be enabled.
+        // setupChat() will then be called during onActivityResult
+        if (!USING_EMULATOR && !mBluetoothAdapter.isEnabled()) {
+            Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
+            // Otherwise, setup the chat session
+        } else {
+            if (mLockService == null) {
+                setupLockScreenAndService();
             }
         }
     }
@@ -177,6 +175,7 @@ public class LockListScreen extends Activity {
         mLockArrayAdapter = new LocksAdapter(this, lockManager.getLocks());
         mLockView = (ListView) findViewById(R.id.listView);
         mLockView.setAdapter(mLockArrayAdapter);
+        Log.e(TAG, mLockArrayAdapter.getCount() + "");
 
         // Initialize the compose field with a listener for the return key
         // mOutEditText = (EditText) findViewById(R.id.edit_text_out);
@@ -194,8 +193,10 @@ public class LockListScreen extends Activity {
         //    }
         // });
 
-        // Initialize the BluetoothChatService to perform bluetooth connections
-        mLockService = new BluetoothLockService(this, mHandler);
+        if (!USING_EMULATOR) {
+            // Initialize the BluetoothChatService to perform bluetooth connections
+            mLockService = new BluetoothLockService(this, mHandler);
+        }
 
         // Initialize the buffer for outgoing messages
         mOutStringBuffer = new StringBuffer("");
