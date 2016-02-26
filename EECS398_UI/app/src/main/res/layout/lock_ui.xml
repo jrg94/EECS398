@@ -8,15 +8,15 @@
         android:id="@+id/lockID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ID" />
+        android:text="@string/lock_id" />
     <TextView
         android:id="@+id/lockLat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Latitude" />
+        android:text="@string/lock_latitude" />
     <TextView
         android:id="@+id/lockLong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Longitude" />
+        android:text="@string/lock_longitude" />
 </LinearLayout>

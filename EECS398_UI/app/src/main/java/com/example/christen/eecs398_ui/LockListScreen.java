@@ -50,7 +50,7 @@ import eecs398_lock.SmartLockManager;
 public class LockListScreen extends Activity {
 
     // Debugging
-    private static final String TAG = "BluetoothChat";
+    private static final String TAG = "LockListScreen";
     private static final boolean D = true;
     private static final boolean USING_EMULATOR = true;
 

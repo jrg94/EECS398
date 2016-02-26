@@ -1,6 +1,7 @@
 package eecs398_lock;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,17 +17,26 @@ import java.util.ArrayList;
  */
 public class LocksAdapter extends ArrayAdapter<SmartLock> {
 
+    // Debugging
+    private static final String TAG = "LocksAdapter";
+    private static final boolean D = true;
+
     public LocksAdapter(Context context, ArrayList<SmartLock> locks) {
-        super(context, R.layout.message, locks);
+        super(context, R.layout.lock_ui, locks);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
+        if (D) {
+            Log.e(TAG, "getView");
+        }
+
         // Retrieve lock from position
         SmartLock lock = getItem(position);
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.message, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.lock_ui, parent, false);
         }
 
         TextView lockID = (TextView) convertView.findViewById(R.id.lockID);
