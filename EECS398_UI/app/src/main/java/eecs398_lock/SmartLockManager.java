@@ -1,5 +1,9 @@
 package eecs398_lock;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import com.example.christen.eecs398_ui.R;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -10,18 +14,69 @@ import java.util.ArrayList;
  */
 public class SmartLockManager {
 
+    // FIELDS //
+
     private ArrayList<SmartLock> locks;
+    private static final String PREFS_NAME = "com.example.christen.eecs398_ui";
+
+    // CONSTRUCTORS //
 
     // An empty constructor for initializes the list of locks
     public SmartLockManager() {
         locks = new ArrayList<SmartLock>();
     }
 
+    // GETTER/SETTERS //
+
     public ArrayList<SmartLock> getLocks() {
         return locks;
     }
 
-    public void localSave() {
+    // METHODS //
+
+    /**
+     * The local save method for the set of locks
+     * TODO: Create a database version of this that would push data to a server
+     * @param context
+     */
+    public void localSave(Context context) {
+
+        // Create a google json object
         Gson gson = new Gson();
+
+        // Initialize user preferences
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+
+        // Initialize editor
+        SharedPreferences.Editor editor = prefs.edit();
+
+        // Store the number of locks
+        editor.putInt(context.getResources().getString(R.string.number_of_locks), locks.size());
+
+        // Run through list of locks
+        for (SmartLock lock : locks) {
+            // Convert each lock to json
+            String lock_json = gson.toJson(lock);
+
+            // Save the new json by an id
+            editor.putString(lock.getID() + "", lock_json);
+        }
+
+        // Save
+        editor.apply();
+    }
+
+    public void localLoad(Context context) {
+
+        // Create a google json object
+        Gson gson = new Gson();
+
+        // Initialize user preferences
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+
+        // Initialize editor
+        SharedPreferences.Editor editor = prefs.edit();
+
+
     }
 }

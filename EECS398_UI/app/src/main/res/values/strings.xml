@@ -24,6 +24,7 @@
     <string name="lock_id">ID</string>
     <string name="lock_latitude">Latitude</string>
     <string name="lock_longitude">Longitude</string>
+    <string name="number_of_locks">Number of Locks</string>
 
     <!--  BluetoothChat -->
     <string name="send">Send</string>

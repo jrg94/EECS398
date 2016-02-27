@@ -28,13 +28,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.Window;
-import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -111,6 +105,9 @@ public class LockListScreen extends Activity {
         lockManager.getLocks().add(new SmartLock(1, 6.3, 7.2));
         lockManager.getLocks().get(0).setLabel("Front Door");
         lockManager.getLocks().get(1).setLabel("Garage Door");
+
+        lockManager.localSave(this);
+        Log.e(TAG, "SAVING");
 
         // For development purposes, lets app keep running despite lack of bluetooth support
         if (!USING_EMULATOR) {
