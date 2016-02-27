@@ -38,10 +38,13 @@ public class SmartLockManager {
 
     // METHODS //
 
+    public int GenerateID() {
+        return (int)(Math.random() * 100);
+    }
+
     public void addLock() {
-        int id = 0;
-
-
+        int id = GenerateID();
+        locks.add(new SmartLock(id, 0.0, 0.0));
     }
 
     /**
