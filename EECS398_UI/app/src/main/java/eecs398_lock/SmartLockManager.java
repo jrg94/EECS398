@@ -70,6 +70,10 @@ public class SmartLockManager {
         editor.apply();
     }
 
+    /**
+     * Loads all of the lock data
+     * @param context
+     */
     public void localLoad(Context context) {
 
         // Create a google json object
@@ -93,5 +97,25 @@ public class SmartLockManager {
                 locks.add(tempLock);
             }
         }
+    }
+
+    /**
+     * Deletes the item based on the key
+     * @param context
+     * @param key
+     */
+    public void localDelete(Context context, String key) {
+
+        // Initialize user preferences
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+
+        // Initialize editor
+        SharedPreferences.Editor editor = prefs.edit();
+
+        // Removes a piece of data by the key
+        editor.remove(key);
+
+        // Applies the removal
+        editor.apply();
     }
 }
