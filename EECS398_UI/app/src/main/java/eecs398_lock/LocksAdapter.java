@@ -14,6 +14,8 @@ import java.util.ArrayList;
 
 /**
  * Created by JRG94 on 2/25/2016.
+ * Overrides the functionality of ArrayAdapter to provide
+ * custom functionality for the way locks are displayed
  */
 public class LocksAdapter extends ArrayAdapter<SmartLock> {
 
