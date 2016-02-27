@@ -72,6 +72,20 @@ public class SmartLock {
     // FUNCTIONALITY //
 
     @Override
+    public boolean equals(Object o) {
+        if (o instanceof SmartLock) {
+            SmartLock tempLock = (SmartLock)o;
+
+            boolean testID = tempLock.id == this.id;
+
+            if (testID) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
     public String toString() {
         return String.format("%d: %s", this.id, getLocation().toString());
     }

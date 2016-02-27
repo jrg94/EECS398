@@ -2,6 +2,7 @@ package eecs398_lock;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.example.christen.eecs398_ui.R;
 import com.google.gson.Gson;
@@ -15,6 +16,9 @@ import java.util.ArrayList;
 public class SmartLockManager {
 
     // FIELDS //
+
+    private static final String TAG = "SmartLockManager";
+    private static final boolean D = true;
 
     private ArrayList<SmartLock> locks;
     private static final String PREFS_NAME = "com.example.christen.eecs398_ui";
@@ -74,9 +78,20 @@ public class SmartLockManager {
         // Initialize user preferences
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
 
-        // Initialize editor
-        SharedPreferences.Editor editor = prefs.edit();
+        int numLocks = prefs.getInt(context.getResources().getString(R.string.number_of_locks), 0);
 
+        for (int i = 0; i < numLocks; i++) {
 
+            Log.e(TAG, "Reading lock");
+
+            // Generate the lock based on the key
+            SmartLock tempLock = gson.fromJson(prefs.getString(i + "", ""), SmartLock.class);
+
+            // If the list does not contain this new lock, add it
+            if (!locks.contains(tempLock)) {
+                Log.e(TAG, "Adding lock");
+                locks.add(tempLock);
+            }
+        }
     }
 }
