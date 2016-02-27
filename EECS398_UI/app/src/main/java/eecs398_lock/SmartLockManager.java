@@ -38,6 +38,12 @@ public class SmartLockManager {
 
     // METHODS //
 
+    public void addLock() {
+        int id = 0;
+
+
+    }
+
     /**
      * The local save method for the set of locks
      * TODO: Create a database version of this that would push data to a server
