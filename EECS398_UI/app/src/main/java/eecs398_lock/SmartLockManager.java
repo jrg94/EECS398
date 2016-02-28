@@ -61,6 +61,8 @@ public class SmartLockManager {
      */
     public void localSave(Context context) {
 
+        Log.e(TAG, "Saving lock list");
+
         // Create a google json object
         Gson gson = new Gson();
 
@@ -95,6 +97,8 @@ public class SmartLockManager {
      */
     public void localLoad(Context context) {
 
+        Log.e(TAG, "Loading lock list");
+
         // Create a google json object
         Gson gson = new Gson();
 
@@ -104,7 +108,7 @@ public class SmartLockManager {
         int numLocks = prefs.getInt(context.getResources().getString(R.string.number_of_locks), 0);
 
         String list_of_keys = prefs.getString(context.getResources().getString(R.string.list_of_keys), "");
-        keys = gson.fromJson(list_of_keys, new TypeToken<ArrayList<SmartLock>>() {}.getType());
+        keys = gson.fromJson(list_of_keys, new TypeToken<ArrayList<UUID>>() {}.getType());
 
         for (int i = 0; i < numLocks; i++) {
 

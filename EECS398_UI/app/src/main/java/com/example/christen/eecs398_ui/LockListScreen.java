@@ -101,13 +101,12 @@ public class LockListScreen extends Activity {
         // Initialize our lock manager
         lockManager = new SmartLockManager();
 
-        // TODO: DELETE THIS
-        lockManager.addLock();
-        //lockManager.localSave(this);
-
         // Load data from file
         lockManager.localLoad(this);
-        Log.e(TAG, "Loading");
+
+        // TODO: DELETE THIS
+        lockManager.addLock();
+        lockManager.localSave(this);
 
         // For development purposes, lets app keep running despite lack of bluetooth support
         if (!USING_EMULATOR) {
