@@ -103,7 +103,10 @@ public class LockListScreen extends Activity {
 
         // Load data from file
         lockManager.localLoad(this);
-        Log.e(TAG, "Loading");
+
+        // TODO: DELETE THIS
+        lockManager.addLock();
+        lockManager.localSave(this);
 
         // For development purposes, lets app keep running despite lack of bluetooth support
         if (!USING_EMULATOR) {
@@ -123,7 +126,6 @@ public class LockListScreen extends Activity {
         if(D) {
             Log.e(TAG, "++ ON START ++");
         }
-
 
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult

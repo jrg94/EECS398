@@ -1,5 +1,7 @@
 package eecs398_lock;
 
+import java.util.UUID;
+
 /**
  * Created by JRG94 on 2/17/2016.
  * The representation of the SmartLock in code
@@ -11,7 +13,7 @@ public class SmartLock {
 
     // FIELDS //
 
-    private int id;
+    private UUID id;
     private String address;
     private String label;
     private GPSLocation location;
@@ -21,8 +23,17 @@ public class SmartLock {
 
     // CONSTRUCTORS //
 
-    public SmartLock(int id, GPSLocation location) {
-        this.id = id;
+    public SmartLock() {
+        this.id = UUID.randomUUID();
+        this.address = "At what address is this lock?";
+        this.label = "What would you like to name this lock?";
+        this.location = new GPSLocation(0.0, 0.0);
+        this.isLocked = false;
+        this.isInLowPowerMode = false;
+    }
+
+    public SmartLock(GPSLocation location) {
+        this.id = UUID.randomUUID();
         this.address = "At what address is this lock?";
         this.label = "What would you like to name this lock?";
         this.location = location;
@@ -30,8 +41,8 @@ public class SmartLock {
         this.isInLowPowerMode = false;
     }
 
-    public SmartLock(int id, double latitude, double longitude) {
-        this.id = id;
+    public SmartLock(double latitude, double longitude) {
+        this.id = UUID.randomUUID();
         this.address = "At what address is this lock?";
         this.label = "What would you like to name this lock?";
         this.location = new GPSLocation(latitude, longitude);
@@ -41,7 +52,7 @@ public class SmartLock {
 
     // GETTER/SETTERS //
 
-    public int getID() {
+    public UUID getID() {
         return this.id;
     }
 
@@ -76,7 +87,7 @@ public class SmartLock {
         if (o instanceof SmartLock) {
             SmartLock tempLock = (SmartLock)o;
 
-            boolean testID = tempLock.id == this.id;
+            boolean testID = tempLock.id.equals(this.id);
 
             if (testID) {
                 return true;
@@ -87,7 +98,7 @@ public class SmartLock {
 
     @Override
     public String toString() {
-        return String.format("%d: %s", this.id, getLocation().toString());
+        return String.format("%s: %s", this.id.toString(), getLocation().toString());
     }
 
     /**

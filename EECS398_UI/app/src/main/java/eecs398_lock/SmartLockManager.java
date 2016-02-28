@@ -4,10 +4,13 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
+import com.example.christen.eecs398_ui.LockListScreen;
 import com.example.christen.eecs398_ui.R;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Created by JRG94 on 2/17/2016.
@@ -21,6 +24,7 @@ public class SmartLockManager {
     private static final boolean D = true;
 
     private ArrayList<SmartLock> locks;
+    private ArrayList<UUID> keys;
     private static final String PREFS_NAME = "com.example.christen.eecs398_ui";
 
     // CONSTRUCTORS //
@@ -28,6 +32,7 @@ public class SmartLockManager {
     // An empty constructor for initializes the list of locks
     public SmartLockManager() {
         locks = new ArrayList<SmartLock>();
+        keys = new ArrayList<UUID>();
     }
 
     // GETTER/SETTERS //
@@ -44,7 +49,9 @@ public class SmartLockManager {
 
     public void addLock() {
         int id = GenerateID();
-        locks.add(new SmartLock(id, 0.0, 0.0));
+        SmartLock tempLock = new SmartLock();
+        locks.add(tempLock);
+        keys.add(tempLock.getID());
     }
 
     /**
@@ -53,6 +60,8 @@ public class SmartLockManager {
      * @param context
      */
     public void localSave(Context context) {
+
+        Log.e(TAG, "Saving lock list");
 
         // Create a google json object
         Gson gson = new Gson();
@@ -66,13 +75,16 @@ public class SmartLockManager {
         // Store the number of locks
         editor.putInt(context.getResources().getString(R.string.number_of_locks), locks.size());
 
+        // Store the array of keys
+        editor.putString(context.getResources().getString(R.string.list_of_keys), gson.toJson(keys));
+
         // Run through list of locks
         for (SmartLock lock : locks) {
             // Convert each lock to json
             String lock_json = gson.toJson(lock);
 
             // Save the new json by an id
-            editor.putString(lock.getID() + "", lock_json);
+            editor.putString(lock.getID().toString(), lock_json);
         }
 
         // Save
@@ -85,6 +97,8 @@ public class SmartLockManager {
      */
     public void localLoad(Context context) {
 
+        Log.e(TAG, "Loading lock list");
+
         // Create a google json object
         Gson gson = new Gson();
 
@@ -93,12 +107,15 @@ public class SmartLockManager {
 
         int numLocks = prefs.getInt(context.getResources().getString(R.string.number_of_locks), 0);
 
+        String list_of_keys = prefs.getString(context.getResources().getString(R.string.list_of_keys), "");
+        keys = gson.fromJson(list_of_keys, new TypeToken<ArrayList<UUID>>() {}.getType());
+
         for (int i = 0; i < numLocks; i++) {
 
             Log.e(TAG, "Reading lock");
 
             // Generate the lock based on the key
-            SmartLock tempLock = gson.fromJson(prefs.getString(i + "", ""), SmartLock.class);
+            SmartLock tempLock = gson.fromJson(prefs.getString(keys.get(i).toString(), ""), SmartLock.class);
 
             // If the list does not contain this new lock, add it
             if (!locks.contains(tempLock)) {
