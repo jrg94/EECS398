@@ -43,7 +43,7 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
         TextView lockLong = (TextView) convertView.findViewById(R.id.lockLong);
 
         lockLabel.setText(String.format("%s: %s", "Label", lock.getLabel()));
-        lockID.setText(String.format("%s: %d", "ID", lock.getID()));
+        lockID.setText(String.format("%s: %s", "ID", lock.getID().toString()));
         lockLat.setText(String.format("%s: %f", "Latitude", lock.getLocation().getLatitude()));
         lockLong.setText(String.format("%s: %f", "Longitude", lock.getLocation().getLongitude()));
 
