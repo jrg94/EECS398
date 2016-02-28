@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
+import com.example.christen.eecs398_ui.LockListScreen;
 import com.example.christen.eecs398_ui.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -31,6 +32,7 @@ public class SmartLockManager {
     // An empty constructor for initializes the list of locks
     public SmartLockManager() {
         locks = new ArrayList<SmartLock>();
+        keys = new ArrayList<UUID>();
     }
 
     // GETTER/SETTERS //

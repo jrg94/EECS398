@@ -101,6 +101,10 @@ public class LockListScreen extends Activity {
         // Initialize our lock manager
         lockManager = new SmartLockManager();
 
+        // TODO: DELETE THIS
+        lockManager.addLock();
+        //lockManager.localSave(this);
+
         // Load data from file
         lockManager.localLoad(this);
         Log.e(TAG, "Loading");
@@ -123,7 +127,6 @@ public class LockListScreen extends Activity {
         if(D) {
             Log.e(TAG, "++ ON START ++");
         }
-
 
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
