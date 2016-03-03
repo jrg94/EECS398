@@ -2,26 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#b1ca0905"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/lockLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:singleLine="true"
         android:text="@string/lock_label" />
     <TextView
         android:id="@+id/lockID"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:singleLine="true"
         android:text="@string/lock_id" />
     <TextView
         android:id="@+id/lockLat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:singleLine="true"
         android:text="@string/lock_latitude" />
     <TextView
         android:id="@+id/lockLong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:singleLine="true"
         android:text="@string/lock_longitude" />
 </LinearLayout>
