@@ -8,10 +8,13 @@
     tools:context=".LockListScreen"
     android:background="#ffc0c0c0">
 
-    <ListView
+    <GridView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
+        android:numColumns="2"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"
+        android:id="@+id/gridView"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 

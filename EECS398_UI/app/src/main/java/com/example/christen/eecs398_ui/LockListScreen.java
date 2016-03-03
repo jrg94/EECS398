@@ -29,6 +29,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.inputmethod.EditorInfo;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -70,7 +71,7 @@ public class LockListScreen extends Activity {
     private LocksAdapter mLockArrayAdapter;
 
     // The listview component containing all the locks
-    private ListView mLockView;
+    private GridView mLockView;
 
     // String buffer for outgoing messages
     private StringBuffer mOutStringBuffer;
@@ -101,6 +102,7 @@ public class LockListScreen extends Activity {
         // Initialize our lock manager
         lockManager = new SmartLockManager();
 
+        // WARNING - THIS WILL FAIL IF A FILE DOESN'T EXIST
         // Load data from file
         lockManager.localLoad(this);
 
@@ -170,7 +172,7 @@ public class LockListScreen extends Activity {
 
         // Initialize the array adapter for the lock list
         mLockArrayAdapter = new LocksAdapter(this, lockManager.getLocks());
-        mLockView = (ListView) findViewById(R.id.listView);
+        mLockView = (GridView) findViewById(R.id.gridView);
         mLockView.setAdapter(mLockArrayAdapter);
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
 
