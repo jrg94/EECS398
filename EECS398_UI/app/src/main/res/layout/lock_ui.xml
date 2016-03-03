@@ -13,6 +13,7 @@
         android:id="@+id/lockID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:singleLine="true"
         android:text="@string/lock_id" />
     <TextView
         android:id="@+id/lockLat"
