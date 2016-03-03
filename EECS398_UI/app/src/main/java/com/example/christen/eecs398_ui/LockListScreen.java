@@ -29,13 +29,17 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import eecs398_lock.BluetoothLockService;
+import eecs398_lock.GPSLocation;
 import eecs398_lock.LocksAdapter;
 import eecs398_lock.SmartLock;
 import eecs398_lock.SmartLockManager;
@@ -176,6 +180,16 @@ public class LockListScreen extends Activity {
         mLockView = (GridView) findViewById(R.id.gridView);
         mLockView.setAdapter(mLockArrayAdapter);
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
+
+        mLockView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                SmartLock temp = (SmartLock)parent.getItemAtPosition(position);
+                temp.setLocation(new GPSLocation(Math.random() * 180, Math.random() * 180));
+                parent.getAdapter().getView(position, view, parent);
+               //lockManager.localSave(this);
+            }
+        });
 
         // Initialize the compose field with a listener for the return key
         // mOutEditText = (EditText) findViewById(R.id.edit_text_out);
