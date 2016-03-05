@@ -19,13 +19,16 @@ package com.example.christen.eecs398_ui;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -36,6 +39,7 @@ import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupMenu;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -219,16 +223,9 @@ public class LockListScreen extends Activity {
     }
 
     public void showPopUp(View view) {
-        PopupMenu popupMenu = new PopupMenu(this, view);
-        MenuInflater menuInflater = popupMenu.getMenuInflater();
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                return false;
-            }
-        });
-        menuInflater.inflate(R.menu.lock_menu, popupMenu.getMenu());
-        popupMenu.show();
+        LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        PopupWindow popupMenu = new PopupWindow(inflator.inflate(R.layout.lock_menu, null, false), 100, 100, true);
+        popupMenu.showAtLocation(this.findViewById(R.id.gridView), Gravity.CENTER, 0, 0);
     }
 
     @Override
