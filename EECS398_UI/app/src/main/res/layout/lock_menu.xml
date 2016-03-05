@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="How?"
-        android:gravity="center"
-        android:layout_gravity="center" />
-</LinearLayout>
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:text="X"
+        android:textSize="5dp"
+        android:layout_row="0"
+        android:layout_column="25" />
+
+    <EditText
+        android:text="Set this lock name automatically"
+        android:layout_row="1"
+        android:layout_column="24" />
+</GridLayout>
