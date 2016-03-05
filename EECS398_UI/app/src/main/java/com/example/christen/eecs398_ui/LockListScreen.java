@@ -224,8 +224,8 @@ public class LockListScreen extends Activity {
 
     public void showPopUp(View view) {
         LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        PopupWindow popupMenu = new PopupWindow(inflator.inflate(R.layout.lock_menu, null, false), 100, 100, true);
-        popupMenu.showAtLocation(this.findViewById(R.id.gridView), Gravity.CENTER, 0, 0);
+        PopupWindow popupMenu = new PopupWindow(inflator.inflate(R.layout.lock_menu, null, false), 500, 500, true);
+        popupMenu.showAtLocation(view, Gravity.CENTER, 0, 0);
     }
 
     @Override
