@@ -35,6 +35,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -187,6 +188,7 @@ public class LockListScreen extends Activity {
                 SmartLock temp = (SmartLock)parent.getItemAtPosition(position);
                 temp.setLocation(new GPSLocation(Math.random() * 180, Math.random() * 180));
                 parent.getAdapter().getView(position, view, parent);
+                showPopUp(mLockView);
                //lockManager.localSave(this);
             }
         });
@@ -214,6 +216,19 @@ public class LockListScreen extends Activity {
 
         // Initialize the buffer for outgoing messages
         mOutStringBuffer = new StringBuffer("");
+    }
+
+    public void showPopUp(View view) {
+        PopupMenu popupMenu = new PopupMenu(this, view);
+        MenuInflater menuInflater = popupMenu.getMenuInflater();
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                return false;
+            }
+        });
+        menuInflater.inflate(R.menu.lock_menu, popupMenu.getMenu());
+        popupMenu.show();
     }
 
     @Override
