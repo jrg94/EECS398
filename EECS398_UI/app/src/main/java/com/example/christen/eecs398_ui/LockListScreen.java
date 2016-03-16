@@ -37,6 +37,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -233,9 +234,20 @@ public class LockListScreen extends Activity {
         Point size = new Point();
         display.getSize(size);
 
+        // Make the window popup
         LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        PopupWindow popupMenu = new PopupWindow(inflator.inflate(R.layout.lock_menu, null, false), (int)(size.x/1.5), size.y/2, true);
+        final PopupWindow popupMenu = new PopupWindow(inflator.inflate(R.layout.lock_menu, null, false), (int)(size.x/1.5), size.y/2, true);
         popupMenu.showAtLocation(view, Gravity.CENTER, 0, 0);
+
+        // Get the close button from this popup window
+        Button close = (Button)popupMenu.getContentView().findViewById(R.id.close);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Close popup window
+                popupMenu.dismiss();
+            }
+        });
     }
 
     @Override
