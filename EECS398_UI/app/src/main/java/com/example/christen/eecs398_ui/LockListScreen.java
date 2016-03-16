@@ -22,10 +22,12 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -222,9 +224,17 @@ public class LockListScreen extends Activity {
         mOutStringBuffer = new StringBuffer("");
     }
 
+    /**
+     * Creates a popup window
+     * @param view
+     */
     public void showPopUp(View view) {
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+
         LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        PopupWindow popupMenu = new PopupWindow(inflator.inflate(R.layout.lock_menu, null, false), 500, 500, true);
+        PopupWindow popupMenu = new PopupWindow(inflator.inflate(R.layout.lock_menu, null, false), (int)(size.x/1.5), size.y/2, true);
         popupMenu.showAtLocation(view, Gravity.CENTER, 0, 0);
     }
 

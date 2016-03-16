@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <Button
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:text="X"
-        android:textSize="5dp"
-        android:layout_row="0"
-        android:layout_column="25" />
+    android:layout_height="match_parent"
+    android:background="#ffc0c0c0">
 
     <EditText
         android:text="Set this lock name automatically"
         android:layout_row="1"
-        android:layout_column="24" />
-</GridLayout>
+        android:layout_column="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp" />
+
+    <Button
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:text="X"
+        android:textSize="12sp"
+        android:layout_row="0"
+        android:layout_column="3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/close" />
+</RelativeLayout>
