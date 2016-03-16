@@ -28,12 +28,14 @@
                 android:layout_height="wrap_content"
                 android:text="Name"
                 android:id="@+id/textView"
+                android:singleLine="true"
                 android:layout_column="0" />
 
             <EditText
                 android:text="Set this lock name automatically"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
                 android:textSize="12sp"
                 android:inputType="text"
                 android:layout_column="1"
@@ -48,12 +50,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Location"
+                android:singleLine="true"
                 android:id="@+id/textView2"
-                android:layout_column="0" />
+                android:layout_column="0"
+                android:paddingRight="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
                 android:text="Location Placeholder"
                 android:id="@+id/popup_lock_location"
                 android:layout_column="1" />
