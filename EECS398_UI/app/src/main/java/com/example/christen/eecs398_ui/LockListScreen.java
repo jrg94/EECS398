@@ -38,6 +38,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -45,6 +46,8 @@ import android.widget.PopupMenu;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import eecs398_lock.BluetoothLockService;
 import eecs398_lock.GPSLocation;
@@ -195,7 +198,7 @@ public class LockListScreen extends Activity {
                 SmartLock temp = (SmartLock)parent.getItemAtPosition(position);
                 temp.setLocation(new GPSLocation(Math.random() * 180, Math.random() * 180));
                 parent.getAdapter().getView(position, view, parent);
-                showPopUp(mLockView);
+                showPopUp(mLockView, temp);
                //lockManager.localSave(this);
             }
         });
@@ -229,7 +232,7 @@ public class LockListScreen extends Activity {
      * Creates a popup window
      * @param view
      */
-    public void showPopUp(View view) {
+    public void showPopUp(View view, SmartLock lock) {
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
@@ -238,6 +241,14 @@ public class LockListScreen extends Activity {
         LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final PopupWindow popupMenu = new PopupWindow(inflator.inflate(R.layout.lock_menu, null, false), (int)(size.x/1.5), size.y/2, true);
         popupMenu.showAtLocation(view, Gravity.CENTER, 0, 0);
+
+        // Get lock name and set it
+        EditText nameText = (EditText)popupMenu.getContentView().findViewById(R.id.popup_lock_name);
+        nameText.setText(lock.getLabel());
+
+        // Get the gps location text box and set it
+        TextView locationText = (TextView)popupMenu.getContentView().findViewById(R.id.popup_lock_location);
+        locationText.setText(lock.getLocation().toString());
 
         // Get the close button from this popup window
         Button close = (Button)popupMenu.getContentView().findViewById(R.id.close);
