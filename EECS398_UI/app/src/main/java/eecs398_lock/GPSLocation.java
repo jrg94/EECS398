@@ -1,5 +1,7 @@
 package eecs398_lock;
 
+import java.text.DecimalFormat;
+
 /**
  * Created by JRG94 on 2/17/2016.
  * A public class to act as the location of lock
@@ -24,6 +26,7 @@ public class GPSLocation {
     }
 
     public String toString() {
-        return latitude + "," + longitude;
+        DecimalFormat clean = new DecimalFormat("#.###");
+        return clean.format(latitude) + ", " + clean.format(longitude);
     }
 }
