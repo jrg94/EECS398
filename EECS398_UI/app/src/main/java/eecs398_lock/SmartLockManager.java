@@ -105,9 +105,16 @@ public class SmartLockManager {
         // Initialize user preferences
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
 
-        int numLocks = prefs.getInt(context.getResources().getString(R.string.number_of_locks), 0);
+        // Test if the file is corrupt
+        if (isCorrupt(gson, prefs, context)) {
+            return;
+        }
+
+        // Otherwise, load the file
+        int numLocks = prefs.getInt(context.getResources().getString(R.string.number_of_locks), -1);
 
         String list_of_keys = prefs.getString(context.getResources().getString(R.string.list_of_keys), "");
+
         keys = gson.fromJson(list_of_keys, new TypeToken<ArrayList<UUID>>() {}.getType());
 
         for (int i = 0; i < numLocks; i++) {
@@ -143,5 +150,25 @@ public class SmartLockManager {
 
         // Applies the removal
         editor.apply();
+    }
+
+    /**
+     *
+     * @return true if the save file is corrupt
+     */
+    public boolean isCorrupt(Gson gson, SharedPreferences prefs, Context context) {
+
+        // The number of locks in the file
+        int numLocks = prefs.getInt(context.getResources().getString(R.string.number_of_locks), -1);
+
+        // Retrieve the json of the list of keys from the
+        String list_of_keys = prefs.getString(context.getResources().getString(R.string.list_of_keys), "");
+
+        if (numLocks < 0 || list_of_keys.length() == 0) {
+            Log.e(TAG, "NumLocksKeyListMismatch: Save file is corrupt");
+            return true;
+        }
+
+        return false;
     }
 }

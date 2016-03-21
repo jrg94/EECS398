@@ -192,14 +192,14 @@ public class LockListScreen extends Activity {
         mLockView.setAdapter(mLockArrayAdapter);
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
 
+        Button mLockViewPopup = (Button) findViewById(R.id.popup_lock_menu_button);
+
         mLockView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 SmartLock temp = (SmartLock)parent.getItemAtPosition(position);
                 temp.setLocation(new GPSLocation(Math.random() * 180, Math.random() * 180));
-                parent.getAdapter().getView(position, view, parent);
-                showPopUp(mLockView, temp);
-               //lockManager.localSave(this);
+                temp.toggleLock();
             }
         });
 
