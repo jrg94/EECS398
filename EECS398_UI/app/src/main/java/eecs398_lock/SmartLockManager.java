@@ -4,8 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-import com.example.christen.eecs398_ui.LockListScreen;
-import com.example.christen.eecs398_ui.R;
+import app.lock.bluetooth.smart_lock_app.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

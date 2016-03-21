@@ -31,7 +31,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
-import com.example.christen.eecs398_ui.LockListScreen;
+import app.lock.bluetooth.smart_lock_app.LockListScreen;
 
 /**
  * This class does all the work for setting up and managing Bluetooth

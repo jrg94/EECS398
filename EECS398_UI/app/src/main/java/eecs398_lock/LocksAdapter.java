@@ -1,7 +1,6 @@
 package eecs398_lock;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,8 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.christen.eecs398_ui.LockListScreen;
-import com.example.christen.eecs398_ui.R;
+import app.lock.bluetooth.smart_lock_app.LockListScreen;
+import app.lock.bluetooth.smart_lock_app.R;
 
 import java.util.ArrayList;
 
