@@ -26,7 +26,9 @@ public class GPSLocation {
     }
 
     public String toString() {
-        DecimalFormat clean = new DecimalFormat("#.###");
-        return clean.format(latitude) + ", " + clean.format(longitude);
+        DecimalFormat clean = new DecimalFormat("#.####");
+        String lat = clean.format(latitude);
+        String lon = clean.format(longitude);
+        return String.format("%s, %s", lat, lon);
     }
 }

@@ -241,8 +241,12 @@ public class LockListScreen extends Activity {
         nameText.setText(lock.getLabel());
 
         // Get the gps location text box and set it
-        TextView locationText = (TextView)popupMenu.getContentView().findViewById(R.id.popup_lock_location);
+        TextView locationText = (TextView)popupMenu.getContentView().findViewById(R.id.popup_lock_loc);
         locationText.setText(lock.getLocation().toString());
+
+        // Get the id text and set it
+        TextView idText = (TextView)popupMenu.getContentView().findViewById(R.id.popup_id);
+        idText.setText(lock.getID().toString());
 
         // Get the close button from this popup window
         Button close = (Button)popupMenu.getContentView().findViewById(R.id.close);
