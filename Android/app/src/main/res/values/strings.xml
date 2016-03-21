@@ -12,6 +12,7 @@
 -->
 <resources>
     <string name="app_name">Bluetooth Lock</string>
+    <string name="title_activity_device_list">Device List</string>
 
     <!-- SplashScreen -->
     <string name="title_activity_splash_screen">Heimlock</string>

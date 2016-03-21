@@ -23,6 +23,10 @@
             android:name=".LockListScreen"
             android:label="@string/title_activity_lock_list_screen" >
         </activity>
+        <activity
+            android:name=".DeviceListActivity"
+            android:label="@string/title_activity_device_list" >
+        </activity>
     </application>
 
 </manifest>
