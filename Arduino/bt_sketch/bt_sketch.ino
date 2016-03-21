@@ -1,8 +1,5 @@
 #include <SPI.h>
 
-
-#include <SPI.h>
-
 #define RxD 0
 #define TxD 1
 
