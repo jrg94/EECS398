@@ -1,4 +1,4 @@
-package com.example.christen.eecs398_ui;
+package app.lock.bluetooth.smart_lock_app;
 
 /*
  * Copyright (C) 2009 The Android Open Source Project

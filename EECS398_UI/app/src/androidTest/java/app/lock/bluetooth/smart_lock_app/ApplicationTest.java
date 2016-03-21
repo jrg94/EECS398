@@ -1,4 +1,4 @@
-package com.example.christen.eecs398_ui;
+package app.lock.bluetooth.smart_lock_app;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

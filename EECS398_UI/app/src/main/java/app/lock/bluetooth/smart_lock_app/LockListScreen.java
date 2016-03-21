@@ -1,4 +1,4 @@
-package com.example.christen.eecs398_ui;
+package app.lock.bluetooth.smart_lock_app;
 
 /*
  * Copyright (C) 2009 The Android Open Source Project
@@ -21,7 +21,6 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
@@ -40,14 +39,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.PopupMenu;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import eecs398_lock.BluetoothLockService;
 import eecs398_lock.GPSLocation;
