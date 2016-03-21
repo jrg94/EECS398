@@ -4,6 +4,7 @@ This directory contains an Android Studio project for an application that will b
 # Authors 
 * Jeremy Griffith
 * Christen Sacucci
+* Miriam Crichlow
 
 # Updates
 3/20/16
