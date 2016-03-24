@@ -57,7 +57,7 @@ public class LockListScreen extends Activity {
     // Debugging
     private static final String TAG = "LockListScreen";
     private static final boolean D = true;
-    private static final boolean USING_EMULATOR = true;
+    private static final boolean USING_EMULATOR = false;
 
     // Message types sent from the BluetoothLockService Handler
     public static final int LOCK_STATE_CHANGE = 1;
@@ -194,6 +194,7 @@ public class LockListScreen extends Activity {
                 SmartLock temp = (SmartLock)parent.getItemAtPosition(position);
                 temp.setLocation(new GPSLocation(Math.random() * 180, Math.random() * 180));
                 temp.toggleLock();
+                Log.e(TAG, "Toggling Lock");
             }
         });
 
@@ -309,7 +310,7 @@ public class LockListScreen extends Activity {
      * Sends a message.
      * @param message  A string of text to send.
      */
-    private void sendMessage(String message) {
+    public void sendMessage(String message) {
 
         // Check that we're actually connected before trying anything
         if (mLockService.getState() != BluetoothLockService.STATE_CONNECTED) {
@@ -382,6 +383,8 @@ public class LockListScreen extends Activity {
                     byte[] readBuf = (byte[]) msg.obj;
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
+                    Toast.makeText(getApplicationContext(), readMessage, Toast.LENGTH_SHORT).show();
+                    Log.e(TAG, readMessage);
                     break;
 
                 case LOCK_DEVICE_NAME:
