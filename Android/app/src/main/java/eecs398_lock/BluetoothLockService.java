@@ -49,7 +49,7 @@ public class BluetoothLockService {
     private static final String NAME = "BluetoothLock";
 
     // Unique UUID for this application
-    private static final UUID MY_UUID = UUID.fromString("fa87c0d0-afac-11de-8a39-0800200c9a66");
+    private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
     // Member fields
     private final BluetoothAdapter mAdapter;
@@ -315,6 +315,7 @@ public class BluetoothLockService {
                             case STATE_LISTEN:
                             case STATE_CONNECTING:
                                 // Situation normal. Start the connected thread.
+                                Log.e(TAG, "Attempting to start a connected thread");
                                 connected(socket, socket.getRemoteDevice());
                                 break;
                             case STATE_NONE:
@@ -382,6 +383,7 @@ public class BluetoothLockService {
                 mmSocket.connect();
             } catch (IOException e) {
                 connectionFailed();
+                Log.e(TAG, "Failed to connect", e);
                 // Close the socket
                 try {
                     mmSocket.close();

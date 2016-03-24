@@ -58,6 +58,7 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
                 if (mContext instanceof LockListScreen) {
                     LockListScreen lls = (LockListScreen)mContext;
                     lls.showPopUp(lls.findViewById(R.id.gridView), lock);
+                    lls.sendMessage("Toggling Lock");
                 }
             }
         });

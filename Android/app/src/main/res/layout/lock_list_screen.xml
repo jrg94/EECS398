@@ -18,6 +18,7 @@
         android:id="@+id/gridView"
         android:background="#ffc0c0c0"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:clickable="true" />
 
 </RelativeLayout>
