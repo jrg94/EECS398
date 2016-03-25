@@ -43,6 +43,9 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import eecs398_lock.BluetoothLockService;
 import eecs398_lock.GPSLocation;
 import eecs398_lock.LocksAdapter;
@@ -107,10 +110,6 @@ public class LockListScreen extends Activity {
 
         // Load data from file
         lockManager.localLoad(this);
-
-        // TODO: DELETE THIS
-        lockManager.addLock();
-        lockManager.localSave(this);
 
         // If the adapter is null, then Bluetooth is not supported
         if (mBluetoothAdapter == null) {
@@ -182,12 +181,10 @@ public class LockListScreen extends Activity {
         // TODO: Allow buttons to do something like lock door on click
 
         // Initialize the array adapter for the lock list
-        LocksAdapter mLockArrayAdapter = new LocksAdapter(this, lockManager.getLocks());
+        LocksAdapter mLockArrayAdapter = new LocksAdapter(this, (ArrayList<SmartLock>)lockManager.getLocks().values());
         GridView mLockView = (GridView) findViewById(R.id.gridView);
         mLockView.setAdapter(mLockArrayAdapter);
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
-
-        Button mLockViewPopup = (Button) findViewById(R.id.popup_lock_menu_button);
 
         mLockView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -388,6 +385,7 @@ public class LockListScreen extends Activity {
                     // Save the connected device's name and write it to the screen
                     String mConnectedDeviceName = msg.getData().getString(DEVICE_NAME);
                     Toast.makeText(getApplicationContext(), "Connected to " + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
+                    CheckForNewLock();
 
                     break;
 
@@ -475,5 +473,19 @@ public class LockListScreen extends Activity {
                 return true;
         }
         return false;
+    }
+
+    /**
+     * Runs through the list of connected devices to see if a new one
+     * has been added
+     */
+    private void CheckForNewLock() {
+        List<BluetoothDevice> devices = mLockService.getDevices();
+        for (BluetoothDevice bd : devices) {
+            if (!lockManager.getLocks().containsKey(bd.getAddress())) {
+                lockManager.addLock(bd.getAddress());
+                lockManager.localSave(this);
+            }
+        }
     }
 }

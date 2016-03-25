@@ -9,6 +9,10 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
 /**
@@ -22,21 +26,19 @@ public class SmartLockManager {
     private static final String TAG = "SmartLockManager";
     private static final boolean D = true;
 
-    private ArrayList<SmartLock> locks;
-    private ArrayList<UUID> keys;
+    private HashMap<String, SmartLock> locks;
     private static final String PREFS_NAME = "com.example.christen.eecs398_ui";
 
     // CONSTRUCTORS //
 
     // An empty constructor for initializes the list of locks
     public SmartLockManager() {
-        locks = new ArrayList<SmartLock>();
-        keys = new ArrayList<UUID>();
+        locks = new HashMap<String, SmartLock>();
     }
 
     // GETTER/SETTERS //
 
-    public ArrayList<SmartLock> getLocks() {
+    public HashMap<String, SmartLock> getLocks() {
         return locks;
     }
 
@@ -46,11 +48,10 @@ public class SmartLockManager {
         return (int)(Math.random() * 100);
     }
 
-    public void addLock() {
+    public void addLock(String address) {
         int id = GenerateID();
         SmartLock tempLock = new SmartLock();
-        locks.add(tempLock);
-        keys.add(tempLock.getID());
+        locks.put(address, tempLock);
     }
 
     /**
@@ -75,15 +76,19 @@ public class SmartLockManager {
         editor.putInt(context.getResources().getString(R.string.number_of_locks), locks.size());
 
         // Store the array of keys
-        editor.putString(context.getResources().getString(R.string.list_of_keys), gson.toJson(keys));
+        editor.putString(context.getResources().getString(R.string.list_of_keys), gson.toJson(locks.keySet()));
+
+        Iterator it = locks.entrySet().iterator();
 
         // Run through list of locks
-        for (SmartLock lock : locks) {
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry)it.next();
+
             // Convert each lock to json
-            String lock_json = gson.toJson(lock);
+            String lock_json = gson.toJson((SmartLock)pair.getValue());
 
             // Save the new json by an id
-            editor.putString(lock.getID().toString(), lock_json);
+            editor.putString((String)pair.getKey(), lock_json);
         }
 
         // Save
@@ -114,19 +119,20 @@ public class SmartLockManager {
 
         String list_of_keys = prefs.getString(context.getResources().getString(R.string.list_of_keys), "");
 
-        keys = gson.fromJson(list_of_keys, new TypeToken<ArrayList<UUID>>() {}.getType());
+        Set<String> keySet = gson.fromJson(list_of_keys, new TypeToken<Set<String>>() {}.getType());
+        String[] keys = (String[])keySet.toArray();
 
         for (int i = 0; i < numLocks; i++) {
 
             Log.e(TAG, "Reading lock");
 
             // Generate the lock based on the key
-            SmartLock tempLock = gson.fromJson(prefs.getString(keys.get(i).toString(), ""), SmartLock.class);
+            SmartLock tempLock = gson.fromJson(prefs.getString(keys[i], ""), SmartLock.class);
 
             // If the list does not contain this new lock, add it
-            if (!locks.contains(tempLock)) {
+            if (!locks.containsValue(tempLock)) {
                 Log.e(TAG, "Adding lock");
-                locks.add(tempLock);
+                locks.put(keys[i], tempLock);
             }
         }
     }
