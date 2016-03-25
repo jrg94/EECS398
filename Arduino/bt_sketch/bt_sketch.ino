@@ -3,7 +3,8 @@
 #define RXD 0               // Recieve
 #define TXD 1               // Transmit
 #define START_CMD_CHAR '*'  // The character that signals a command
-#define CMD_DIGITALWRITE 10 // The value of a digital write command
+#define CMD_LOCK 10         // The value of a lock command
+#define CMD_UNLOCK 11       // The value of an unlock command
 #define LOCK_PIN 6          // TODO: Map these correctly
 #define UNLOCK_PIN 7        // TODO: Map these correctly
 #define PIN_COUNT 14        // The total number of digital pins
@@ -24,12 +25,8 @@ void setup() {
   Serial.println("Smart Lock Technology 0.10 (2016)");
   Serial.flush(); // Blocks until outgoing transmission is complete
   
-  pinMode(LOCK_PIN, OUTPUT);
-  pinMode(UNLOCK_PIN, OUTPUT);
   pinMode(RXD,INPUT);
   pinMode(TXD,OUTPUT);
-  pinMode(13,OUTPUT);
-  digitalWrite(LOCK_PIN, HIGH); // default lock to locked state
 }
 
 /**
@@ -59,27 +56,10 @@ void loop() {
 
   // Parse the command type, pin number, and value
   command = Serial.parseInt();
-  pin_num = Serial.parseInt();
-  pin_val = Serial.parseInt();
 
-  // If the command type is digital write
-  if (command == CMD_DIGITALWRITE) {
-    
-    // Converts the incoming pin value to LOW or HIGH
-    if (pin_val = PIN_LOW) {
-      pin_val = LOW;
-    }
-    else if (pin_val = PIN_HIGH) {
-      pin_val = HIGH;
-    }
-    else {
-      return;
-    }
-
-    set_digitalwrite(pin_num, pin_val);
-    return;
-  }
-  
+  // Takes the command and attempts to run it
+  run_command(command);
+   
   /**
   while (Serial.available()) {
     for (int i = 0; i < 4; i++) { //when data is available read it
@@ -107,6 +87,28 @@ void loop() {
   {
     digitalWrite(lock_pin, HIGH); //password did not match keep door locked
   }*/
+}
+
+void lock() {
+  
+}
+
+void unlock() {
+  
+}
+
+void run_command(int command) {
+  switch (command) {
+    case CMD_LOCK:
+      lock();
+      break;
+    case CMD_UNLOCK:
+      unlock();
+      break;
+    default:
+      Serial.println("Failed to find this command");
+      break;
+  }
 }
 
 /**
