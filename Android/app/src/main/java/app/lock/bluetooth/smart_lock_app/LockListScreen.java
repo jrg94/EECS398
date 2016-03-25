@@ -83,8 +83,12 @@ public class LockListScreen extends Activity {
     private SmartLockManager lockManager = null;
 
     /**
+     * The onCreate method which can be overridden in all activity code
+     * In our case, we treat it like a constructor and initialize various fields
+     * like the bluetooth adapter and the smart lock manager
+     * We also inform the user if bluetooth is unavailable and kill the app if so
      *
-     * @param savedInstanceState
+     * @param savedInstanceState the saved mapping of String values to parcelable types
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
