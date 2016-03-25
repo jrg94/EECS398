@@ -27,7 +27,7 @@ public class SmartLockManager {
     private static final boolean D = true;
 
     private HashMap<String, SmartLock> locks;
-    private static final String PREFS_NAME = "com.example.christen.eecs398_ui";
+    private static final String PREFS_NAME = "app.lock.bluetooth.smart_lock";
 
     // CONSTRUCTORS //
 
@@ -44,12 +44,7 @@ public class SmartLockManager {
 
     // METHODS //
 
-    public int GenerateID() {
-        return (int)(Math.random() * 100);
-    }
-
     public void addLock(String address) {
-        int id = GenerateID();
         SmartLock tempLock = new SmartLock();
         locks.put(address, tempLock);
     }

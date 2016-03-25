@@ -84,6 +84,8 @@ public class LockListScreen extends Activity {
     // The manager of all the locks
     private SmartLockManager lockManager = null;
 
+    private LockListScreen mLLS = this;
+
     /**
      * The onCreate method which can be overridden in all Activity classes
      * In our case, we treat it like a constructor and initialize various fields
@@ -178,8 +180,6 @@ public class LockListScreen extends Activity {
     private void setupLockScreenAndService() {
         Log.d(TAG, "setupLockScreenAndService()");
 
-        // TODO: Allow buttons to do something like lock door on click
-
         // Initialize the array adapter for the lock list
         LocksAdapter mLockArrayAdapter = new LocksAdapter(this, (ArrayList<SmartLock>)lockManager.getLocks().values());
         GridView mLockView = (GridView) findViewById(R.id.gridView);
@@ -191,8 +191,7 @@ public class LockListScreen extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 SmartLock temp = (SmartLock) parent.getItemAtPosition(position);
                 temp.setLocation(new GPSLocation(Math.random() * 180, Math.random() * 180));
-                temp.toggleLock();
-                Log.e(TAG, "Toggling Lock");
+                temp.toggleLock(mLLS);
             }
         });
 
@@ -480,6 +479,9 @@ public class LockListScreen extends Activity {
      * has been added
      */
     private void CheckForNewLock() {
+
+        Log.d(TAG, "A device has been connected. Checking the device list to see if it is new");
+
         List<BluetoothDevice> devices = mLockService.getDevices();
         for (BluetoothDevice bd : devices) {
             if (!lockManager.getLocks().containsKey(bd.getAddress())) {

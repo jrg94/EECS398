@@ -2,6 +2,8 @@ package eecs398_lock;
 
 import java.util.UUID;
 
+import app.lock.bluetooth.smart_lock_app.LockListScreen;
+
 /**
  * Created by JRG94 on 2/17/2016.
  * The representation of the SmartLock in code
@@ -105,9 +107,14 @@ public class SmartLock {
      * Toggles the state of the lock
      * @return the state of the lock after the toggle
      */
-    public boolean toggleLock() {
-        // TODO: Signal the circuit to flip the state of the lock
-        // TODO: Set the state of isLocked after the signal
+    public boolean toggleLock(LockListScreen lls) {
+        if (isLocked) {
+            lls.sendMessage("*11");
+        }
+        else {
+            lls.sendMessage("*10");
+        }
+        isLocked = !isLocked;
         // TODO: Test to see if the lock has changed state - Report an error if not (exception?)
         return isLocked;
     }
