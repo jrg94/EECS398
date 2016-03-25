@@ -116,7 +116,6 @@ public class LockListScreen extends Activity {
         if (mBluetoothAdapter == null) {
             Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
             finish();
-            return;
         }
     }
 
