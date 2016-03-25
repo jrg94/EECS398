@@ -73,15 +73,6 @@ public class LockListScreen extends Activity {
     private static final int REQUEST_CONNECT_DEVICE = 1;
     private static final int REQUEST_ENABLE_BT = 2;
 
-    // Name of the connected device
-    private String mConnectedDeviceName = null;
-
-    // Array adapter for the conversation thread
-    private LocksAdapter mLockArrayAdapter;
-
-    // The listview component containing all the locks
-    private GridView mLockView;
-
     // Local Bluetooth adapter
     private BluetoothAdapter mBluetoothAdapter = null;
 
@@ -187,8 +178,8 @@ public class LockListScreen extends Activity {
         // TODO: Allow buttons to do something like lock door on click
 
         // Initialize the array adapter for the lock list
-        mLockArrayAdapter = new LocksAdapter(this, lockManager.getLocks());
-        mLockView = (GridView) findViewById(R.id.gridView);
+        LocksAdapter mLockArrayAdapter = new LocksAdapter(this, lockManager.getLocks());
+        GridView mLockView = (GridView) findViewById(R.id.gridView);
         mLockView.setAdapter(mLockArrayAdapter);
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
 
@@ -397,7 +388,7 @@ public class LockListScreen extends Activity {
                     Log.d(TAG, "LOCK_DEVICE_NAME");
 
                     // Save the connected device's name and write it to the screen
-                    mConnectedDeviceName = msg.getData().getString(DEVICE_NAME);
+                    String mConnectedDeviceName = msg.getData().getString(DEVICE_NAME);
                     Toast.makeText(getApplicationContext(), "Connected to " + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
 
                     break;
@@ -466,7 +457,7 @@ public class LockListScreen extends Activity {
     }
 
     /**
-     * 
+     *
      * @param item
      * @return
      */
