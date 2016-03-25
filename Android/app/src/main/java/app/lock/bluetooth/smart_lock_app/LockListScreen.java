@@ -83,9 +83,6 @@ public class LockListScreen extends Activity {
     // The listview component containing all the locks
     private GridView mLockView;
 
-    // String buffer for outgoing messages
-    private StringBuffer mOutStringBuffer;
-
     // Local Bluetooth adapter
     private BluetoothAdapter mBluetoothAdapter = null;
 
@@ -198,29 +195,10 @@ public class LockListScreen extends Activity {
             }
         });
 
-        // Initialize the compose field with a listener for the return key
-        // mOutEditText = (EditText) findViewById(R.id.edit_text_out);
-        // mOutEditText.setOnEditorActionListener(mWriteListener);
-
-        // Initialize the send button with a listener that for click events
-        // mSendButton = (Button) findViewById(R.id.button_send);
-
-        // mSendButton.setOnClickListener(new OnClickListener() {
-        //    public void onClick(View v) {
-        //        // Send a message using content of the edit text widget
-        //        TextView view = (TextView) findViewById(R.id.edit_text_out);
-        //        String message = view.getText().toString();
-        //        sendMessage(message);
-        //    }
-        // });
-
         if (!USING_EMULATOR) {
             // Initialize the BluetoothChatService to perform bluetooth connections
             mLockService = new BluetoothLockService(this, mHandler);
         }
-
-        // Initialize the buffer for outgoing messages
-        mOutStringBuffer = new StringBuffer("");
     }
 
     /**
@@ -324,9 +302,6 @@ public class LockListScreen extends Activity {
             // Get the message bytes and tell the BluetoothChatService to write
             byte[] send = message.getBytes();
             mLockService.write(send);
-
-            // Reset out string buffer to zero and clear the edit text field
-            mOutStringBuffer.setLength(0);
         }
     }
 
