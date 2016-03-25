@@ -38,8 +38,6 @@ void loop() {
 
   // Default values for incoming transmission
   int command = -1;
-  int pin_num = -1;
-  int pin_val = -1;
 
   char get_char = ' ';
 
@@ -59,44 +57,39 @@ void loop() {
 
   // Takes the command and attempts to run it
   run_command(command);
-   
-  /**
-  while (Serial.available()) {
-    for (int i = 0; i < 4; i++) { //when data is available read it
-      password[i] = Serial.read(); //read bytes to password array
-    }
-    for (int i = 0; i < 4; i++) {
-      if (password[i] == correct_pw [i]) { // compare received password to actual password
-        test_pw = 1; //passwords match set =1
-      }
-      else
-      {
-        test_pw = 0; //passwords do not match set =0
-        break;
-      }
-    }
-  }
-  if (test_pw == 1) { //unlock the lock for 10s
-    Serial.println("The door has been unlocked");
-    digitalWrite(lock_pin, LOW);
-    delay(10000);
-    Serial.println("The door has been locked");
-    test_pw = 0;
-  }
-  else
-  {
-    digitalWrite(lock_pin, HIGH); //password did not match keep door locked
-  }*/
 }
 
+/**
+ * MUST AVOID SETTING UNLOCK_PIN AND LOCK_PIN TO 1
+ * 
+ * The first line is redundant since we make sure that
+ * both pins are set to LOW before we exit
+ */
 void lock() {
-  
+  set_digitalwrite(UNLOCK_PIN, LOW);
+  set_digitalwrite(LOCK_PIN, HIGH);
+  delay(1000);
+  set_digitalwrite(LOCK_PIN, LOW);
+  Serial.println("Lock was successful");
 }
 
+/**
+ * MUST AVOID SETTING UNLOCK_PIN AND LOCK_PIN TO 1
+ * 
+ * The first line is redundant since we make sure that
+ * both pins are set to LOW before we exit
+ */
 void unlock() {
-  
+  set_digitalwrite(LOCK_PIN, LOW);
+  set_digitalwrite(UNLOCK_PIN, HIGH);
+  delay(1000);
+  set_digitalwrite(LOCK_PIN, LOW);
+  Serial.println("Unlock was successful");
 }
 
+/**
+ * Takes an integer command and attempts to run it
+ */
 void run_command(int command) {
   switch (command) {
     case CMD_LOCK:
