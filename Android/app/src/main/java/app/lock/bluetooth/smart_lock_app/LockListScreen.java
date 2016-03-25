@@ -125,7 +125,10 @@ public class LockListScreen extends Activity {
     }
 
     /**
-     *
+     * The onStart method which can be overridden in all Activity classes
+     * In our case, the method handles setting up bluetooth if it is not
+     * already
+     * Then it initializes the lock screen and bluetooth service
      */
     @Override
     public void onStart() {
@@ -139,8 +142,10 @@ public class LockListScreen extends Activity {
         if (!USING_EMULATOR && !mBluetoothAdapter.isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
-            // Otherwise, setup the chat session
-        } else {
+        }
+        
+        // Otherwise, setup the chat session
+        else {
             if (mLockService == null) {
                 setupLockScreenAndService();
             }
