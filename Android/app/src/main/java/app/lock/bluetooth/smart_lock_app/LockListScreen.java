@@ -56,7 +56,6 @@ public class LockListScreen extends Activity {
 
     // Debugging
     private static final String TAG = "LockListScreen";
-    private static final boolean USING_EMULATOR = false;
 
     // Message types sent from the BluetoothLockService Handler
     public static final int LOCK_STATE_CHANGE = 1;
@@ -83,7 +82,7 @@ public class LockListScreen extends Activity {
     private SmartLockManager lockManager = null;
 
     /**
-     * The onCreate method which can be overridden in all activity code
+     * The onCreate method which can be overridden in all Activity classes
      * In our case, we treat it like a constructor and initialize various fields
      * like the bluetooth adapter and the smart lock manager
      * We also inform the user if bluetooth is unavailable and kill the app if so
@@ -113,14 +112,11 @@ public class LockListScreen extends Activity {
         lockManager.addLock();
         lockManager.localSave(this);
 
-        // For development purposes, lets app keep running despite lack of bluetooth support
-        if (!USING_EMULATOR) {
-            // If the adapter is null, then Bluetooth is not supported
-            if (mBluetoothAdapter == null) {
-                Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
-                finish();
-                return;
-            }
+        // If the adapter is null, then Bluetooth is not supported
+        if (mBluetoothAdapter == null) {
+            Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
+            finish();
+            return;
         }
     }
 
@@ -139,11 +135,11 @@ public class LockListScreen extends Activity {
 
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
-        if (!USING_EMULATOR && !mBluetoothAdapter.isEnabled()) {
+        if (!mBluetoothAdapter.isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
         }
-        
+
         // Otherwise, setup the chat session
         else {
             if (mLockService == null) {
@@ -153,7 +149,9 @@ public class LockListScreen extends Activity {
     }
 
     /**
-     *
+     * The onResume method which can be overridden in all Activity classes
+     * In our case, the method just makes sure that bluetooth is enabled
+     * and begins the BluetoothLockService if it hasn't already been enabled
      */
     @Override
     public synchronized void onResume() {
@@ -162,17 +160,15 @@ public class LockListScreen extends Activity {
         Log.e(TAG, "+ ON RESUME +");
         super.onResume();
 
-        // For development purposes, lets app keep running despite lack of bluetooth support
-        if (!USING_EMULATOR) {
-            // Performing this check in onResume() covers the case in which BT was
-            // not enabled during onStart(), so we were paused to enable it...
-            // onResume() will be called when ACTION_REQUEST_ENABLE activity returns.
-            if (mLockService != null) {
-                // Only if the state is STATE_NONE, do we know that we haven't started already
-                if (mLockService.getState() == BluetoothLockService.STATE_NONE) {
-                    // Start the Bluetooth chat services
-                    mLockService.start();
-                }
+
+        // Performing this check in onResume() covers the case in which BT was
+        // not enabled during onStart(), so we were paused to enable it...
+        // onResume() will be called when ACTION_REQUEST_ENABLE activity returns.
+        if (mLockService != null) {
+            // Only if the state is STATE_NONE, do we know that we haven't started already
+            if (mLockService.getState() == BluetoothLockService.STATE_NONE) {
+                // Start the Bluetooth chat services
+                mLockService.start();
             }
         }
     }
@@ -204,10 +200,8 @@ public class LockListScreen extends Activity {
             }
         });
 
-        if (!USING_EMULATOR) {
-            // Initialize the BluetoothChatService to perform bluetooth connections
-            mLockService = new BluetoothLockService(this, mHandler);
-        }
+        // Initialize the BluetoothChatService to perform bluetooth connections
+        mLockService = new BluetoothLockService(this, mHandler);
     }
 
     /**
@@ -293,14 +287,10 @@ public class LockListScreen extends Activity {
         // Print this information to the log
         Log.d(TAG, "ensure discoverable");
 
-        // For development purposes, lets app keep running despite lack of bluetooth support
-        if (!USING_EMULATOR) {
-            if (mBluetoothAdapter.getScanMode() !=
-                    BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
-                Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-                discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
-                startActivity(discoverableIntent);
-            }
+        if (mBluetoothAdapter.getScanMode() != BluetoothAdapter.SCAN_MODE_CONNECTABLE_DISCOVERABLE) {
+            Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+            discoverableIntent.putExtra(BluetoothAdapter.EXTRA_DISCOVERABLE_DURATION, 300);
+            startActivity(discoverableIntent);
         }
     }
 
