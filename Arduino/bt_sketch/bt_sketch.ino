@@ -11,12 +11,6 @@
 #define PIN_LOW 0           // The low value to be recieved over serial
 #define PIN_HIGH 1          // The high value to be recieved over serial
 
-char password[4]; //chars arduino receives
-char correct_pw[4] = {'A', 'B', 'C', 'D'}; //user defines password
-int test_pw = 0; //test if correct pw was used 0 = false, 1 = true
-
-int incomingByte = 0;
-
 /**
  * Runs during initial  setup
  */
