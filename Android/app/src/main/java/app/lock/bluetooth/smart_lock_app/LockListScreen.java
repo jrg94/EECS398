@@ -56,7 +56,6 @@ public class LockListScreen extends Activity {
 
     // Debugging
     private static final String TAG = "LockListScreen";
-    private static final boolean D = true;
     private static final boolean USING_EMULATOR = false;
 
     // Message types sent from the BluetoothLockService Handler
@@ -92,13 +91,16 @@ public class LockListScreen extends Activity {
     // The manager of all the locks
     private SmartLockManager lockManager = null;
 
+    /**
+     *
+     * @param savedInstanceState
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
 
-        if(D) {
-            Log.e(TAG, "+++ ON CREATE +++");
-        }
+        // Initialize the saved instance and send that information to the log
+        Log.d(TAG, "+++ ON CREATE +++");
+        super.onCreate(savedInstanceState);
 
         // Set up the window layout
         setContentView(R.layout.lock_list_screen);
@@ -109,7 +111,6 @@ public class LockListScreen extends Activity {
         // Initialize our lock manager
         lockManager = new SmartLockManager();
 
-        // WARNING - THIS WILL FAIL IF A FILE DOESN'T EXIST
         // Load data from file
         lockManager.localLoad(this);
 
@@ -128,13 +129,15 @@ public class LockListScreen extends Activity {
         }
     }
 
+    /**
+     *
+     */
     @Override
     public void onStart() {
-        super.onStart();
 
-        if(D) {
-            Log.e(TAG, "++ ON START ++");
-        }
+        // Call onStart and print this information to the log
+        Log.e(TAG, "++ ON START ++");
+        super.onStart();
 
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
@@ -149,13 +152,15 @@ public class LockListScreen extends Activity {
         }
     }
 
+    /**
+     *
+     */
     @Override
     public synchronized void onResume() {
-        super.onResume();
 
-        if(D) {
-            Log.e(TAG, "+ ON RESUME +");
-        }
+        // Call onResume and print this information to the log
+        Log.e(TAG, "+ ON RESUME +");
+        super.onResume();
 
         // For development purposes, lets app keep running despite lack of bluetooth support
         if (!USING_EMULATOR) {
@@ -172,6 +177,10 @@ public class LockListScreen extends Activity {
         }
     }
 
+    /**
+     * Builds the lock screen dynamically using an adapter
+     * Initializes bluetooth service
+     */
     private void setupLockScreenAndService() {
         Log.d(TAG, "setupLockScreenAndService()");
 
@@ -188,7 +197,7 @@ public class LockListScreen extends Activity {
         mLockView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                SmartLock temp = (SmartLock)parent.getItemAtPosition(position);
+                SmartLock temp = (SmartLock) parent.getItemAtPosition(position);
                 temp.setLocation(new GPSLocation(Math.random() * 180, Math.random() * 180));
                 temp.toggleLock();
                 Log.e(TAG, "Toggling Lock");
@@ -238,29 +247,41 @@ public class LockListScreen extends Activity {
         });
     }
 
+    /**
+     *
+     */
     @Override
     public synchronized void onPause() {
+        // Call onPause and print this information to the log
+        Log.e(TAG, "- ON PAUSE -");
         super.onPause();
-        if(D) Log.e(TAG, "- ON PAUSE -");
     }
 
+    /**
+     *
+     */
     @Override
     public void onStop() {
+        // Call onStop and print this information to the log
+        Log.e(TAG, "-- ON STOP --");
         super.onStop();
-        if(D) Log.e(TAG, "-- ON STOP --");
     }
 
+    /**
+     *
+     */
     @Override
     public void onDestroy() {
+
+        // TODO: Should we save?
+
+        // Call onDestroy and print this information to the log
+        Log.e(TAG, "--- ON DESTROY ---");
         super.onDestroy();
 
         // Stop the Bluetooth chat services
         if (mLockService != null) {
             mLockService.stop();
-        }
-
-        if(D) {
-            Log.e(TAG, "--- ON DESTROY ---");
         }
     }
 
@@ -269,9 +290,8 @@ public class LockListScreen extends Activity {
      */
     private void ensureDiscoverable() {
 
-        if(D) {
-            Log.d(TAG, "ensure discoverable");
-        }
+        // Print this information to the log
+        Log.d(TAG, "ensure discoverable");
 
         // For development purposes, lets app keep running despite lack of bluetooth support
         if (!USING_EMULATOR) {
@@ -305,6 +325,7 @@ public class LockListScreen extends Activity {
         }
     }
 
+    // TODO: KEEP - use for saving edit text stuff
     // The action listener for the EditText widget, to listen for the return key
     private TextView.OnEditorActionListener mWriteListener =
             new TextView.OnEditorActionListener() {
@@ -316,14 +337,13 @@ public class LockListScreen extends Activity {
                         sendMessage(message);
                     }
 
-                    if(D) {
-                        Log.i(TAG, "END onEditorAction");
-                    }
                     return true;
                 }
             };
 
-    // The Handler that gets information back from the BluetoothChatService
+    /**
+     * The Handler that gets information back from the BluetoothLockService
+     */
     private final Handler mHandler = new Handler() {
 
         @Override
@@ -331,9 +351,7 @@ public class LockListScreen extends Activity {
             switch (msg.what) {
                 case LOCK_STATE_CHANGE:
 
-                    if(D) {
-                        Log.i(TAG, "LOCK_STATE_CHANGE: " + msg.arg1);
-                    }
+                    Log.d(TAG, "LOCK_STATE_CHANGE: " + msg.arg1);
 
                     switch (msg.arg1) {
                         case BluetoothLockService.STATE_CONNECTED:
@@ -349,39 +367,62 @@ public class LockListScreen extends Activity {
                     break;
 
                 case LOCK_WRITE:
+
+                    Log.d(TAG, "LOCK_WRITE");
+
                     byte[] writeBuf = (byte[]) msg.obj;
                     // construct a string from the buffer
                     String writeMessage = new String(writeBuf);
+
+                    // TODO: Do something with writeMessage
+                    // BluetoothChat was using it to write to your screen
+
                     break;
 
                 case LOCK_READ:
+
+                    Log.d(TAG, "LOCK_READ");
+
                     byte[] readBuf = (byte[]) msg.obj;
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
-                    Toast.makeText(getApplicationContext(), readMessage, Toast.LENGTH_SHORT).show();
-                    Log.e(TAG, readMessage);
+
+                    // TODO: Do something with readMessage
+                    // BluetoothChat was using it to write to your screen
+
                     break;
 
                 case LOCK_DEVICE_NAME:
-                    // save the connected device's name
+
+                    Log.d(TAG, "LOCK_DEVICE_NAME");
+
+                    // Save the connected device's name and write it to the screen
                     mConnectedDeviceName = msg.getData().getString(DEVICE_NAME);
-                    Toast.makeText(getApplicationContext(), "Connected to "
-                            + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Connected to " + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
+
                     break;
 
                 case LOCK_TOAST:
-                    Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST),
-                            Toast.LENGTH_SHORT).show();
+
+                    Log.d(TAG, "LOCK_TOAST");
+
+                    // Write the message data to the screen
+                    Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST), Toast.LENGTH_SHORT).show();
+
                     break;
             }
         }
     };
 
+    /**
+     *
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        if(D) {
-            Log.d(TAG, "onActivityResult " + resultCode);
-        }
+        Log.d(TAG, "onActivityResult " + resultCode);
 
         switch (requestCode) {
 
@@ -412,6 +453,11 @@ public class LockListScreen extends Activity {
         }
     }
 
+    /**
+     *
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -419,6 +465,11 @@ public class LockListScreen extends Activity {
         return true;
     }
 
+    /**
+     * 
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
