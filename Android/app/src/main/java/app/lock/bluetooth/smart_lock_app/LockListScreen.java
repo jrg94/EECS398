@@ -181,7 +181,7 @@ public class LockListScreen extends Activity {
         Log.d(TAG, "setupLockScreenAndService()");
 
         // Initialize the array adapter for the lock list
-        LocksAdapter mLockArrayAdapter = new LocksAdapter(this, (ArrayList<SmartLock>)lockManager.getLocks().values());
+        LocksAdapter mLockArrayAdapter = new LocksAdapter(this, new ArrayList<SmartLock>(lockManager.getLocks().values()));
         GridView mLockView = (GridView) findViewById(R.id.gridView);
         mLockView.setAdapter(mLockArrayAdapter);
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
@@ -374,6 +374,7 @@ public class LockListScreen extends Activity {
 
                     // TODO: Do something with readMessage
                     // BluetoothChat was using it to write to your screen
+                    Toast.makeText(getApplicationContext(), readMessage, Toast.LENGTH_SHORT).show();
 
                     break;
 

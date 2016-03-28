@@ -115,7 +115,7 @@ public class SmartLockManager {
         String list_of_keys = prefs.getString(context.getResources().getString(R.string.list_of_keys), "");
 
         Set<String> keySet = gson.fromJson(list_of_keys, new TypeToken<Set<String>>() {}.getType());
-        String[] keys = (String[])keySet.toArray();
+        String[] keys = keySet.toArray(new String[keySet.size()]);
 
         for (int i = 0; i < numLocks; i++) {
 

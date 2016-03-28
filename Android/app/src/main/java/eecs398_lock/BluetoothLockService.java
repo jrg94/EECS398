@@ -52,7 +52,7 @@ public class BluetoothLockService {
     // Unique UUID for this application
     private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
-    private ArrayList<BluetoothDevice> devices;
+    private ArrayList<BluetoothDevice> devices = new ArrayList<BluetoothDevice>();
 
     // Member fields
     private final BluetoothAdapter mAdapter;
