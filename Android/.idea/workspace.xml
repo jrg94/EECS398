@@ -7,7 +7,7 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07ecd6ad-0b79-48f1-91c8-72b9a809a35f" name="Default" comment="" />
@@ -40,17 +40,77 @@
       <file leaf-file-name="LockListScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.5827813">
-              <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.4834437">
+              <caret line="376" column="91" selection-start-line="376" selection-start-column="91" selection-end-line="376" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6714#7148#0" expanded="true" />
-                <element signature="e#7147#7148#0" expanded="true" />
-                <element signature="e#11049#11577#0" expanded="true" />
-                <element signature="e#11576#11577#0" expanded="true" />
-                <element signature="e#11709#14002#0" expanded="true" />
-                <element signature="e#14001#14002#0" expanded="true" />
-                <element signature="e#15384#15415#0" expanded="true" />
+                <element signature="docComment;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmartLockManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="117" column="64" selection-start-line="117" selection-start-column="64" selection-end-line="117" selection-end-column="64" />
+              <folding>
+                <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmartLock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="142" column="29" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <folding>
+                <element signature="e#646#664#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,30 +120,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lock_list_screen.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+              <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -104,10 +141,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="152" column="14" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
-              <folding>
-                <element signature="e#5777#6531#0" expanded="true" />
-                <element signature="e#6530#6531#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,34 +150,50 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="80" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BluetoothSocket.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/bluetooth/BluetoothSocket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="477" column="0" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
+              <caret line="310" column="0" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
               <folding>
-                <element signature="e#0#21253#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#9190#9191#0" expanded="false" />
-                <element signature="e#9220#9221#0" expanded="false" />
-                <element signature="e#10249#10250#0" expanded="false" />
-                <element signature="e#10309#10310#0" expanded="false" />
-                <element signature="e#10361#10362#0" expanded="false" />
-                <element signature="e#10396#10397#0" expanded="false" />
-                <element signature="e#19174#19175#0" expanded="false" />
-                <element signature="e#19202#19203#0" expanded="false" />
+                <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
+                <element signature="e#1904#1921#0" expanded="true" />
+                <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#connect#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#write#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#write#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#ConnectThread#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="e#12223#12273#0" expanded="false" />
+                <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#cancel#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Users\JRG94\Desktop\fragment_keystore\fragment.jks" />
+    <option name="KEY_ALIAS" value="fragmentkeystore" />
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -1557,12 +1607,21 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="NamedScopeManager">
@@ -1585,7 +1644,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="AndroidView" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -1597,9 +1656,43 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EECS398_UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EECS398_UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EECS398_UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1610,7 +1703,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1618,12 +1710,15 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/sdk" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="05157df50c5f7427" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="06157df64c965201" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_23_x86" />
-    <property name="android.project.structure.last.selected" value="app" />
+    <property name="android.project.structure.last.selected" value="Authentication" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Arduino" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/build/outputs/apk" />
+    <property name="ExportApk.ApkPath" value="C:\Users\JRG94\Documents\CWRU\Courses\Year_4\EECS398\Android\app\build\outputs\apk" />
+    <property name="ExportApk.Flavors" value="" />
+    <property name="ExportApk.BuildType" value="debug" />
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1797,27 +1892,37 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="916" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32674572" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.4974293" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5117647" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.50771207" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.4922879" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938075" sideWeight="0.4974293" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.4882353" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1829,8 +1934,40 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32938075" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1844,23 +1981,357 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="8" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="490" column="10" selection-start-line="490" selection-start-column="10" selection-end-line="490" selection-end-column="10" />
+          <folding>
+            <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#1904#1921#0" expanded="true" />
+            <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding>
+            <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6714#7148#0" expanded="true" />
-            <element signature="e#7147#7148#0" expanded="true" />
-            <element signature="e#11049#11577#0" expanded="true" />
-            <element signature="e#11576#11577#0" expanded="true" />
-            <element signature="e#11709#14002#0" expanded="true" />
-            <element signature="e#14001#14002#0" expanded="true" />
-            <element signature="e#15384#15415#0" expanded="true" />
+            <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="152" column="14" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="490" column="10" selection-start-line="490" selection-start-column="10" selection-end-line="490" selection-end-column="10" />
+          <folding>
+            <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#1904#1921#0" expanded="true" />
+            <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding>
+            <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="152" column="14" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="490" column="10" selection-start-line="490" selection-start-column="10" selection-end-line="490" selection-end-column="10" />
+          <folding>
+            <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#1904#1921#0" expanded="true" />
+            <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1888,7 +2359,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
-          <folding />
+          <folding>
+            <element signature="e#646#664#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1904,10 +2377,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="152" column="14" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
-          <folding>
-            <element signature="e#5777#6531#0" expanded="true" />
-            <element signature="e#6530#6531#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1915,7 +2385,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="80" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
-          <folding />
+          <folding>
+            <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#1904#1921#0" expanded="true" />
+            <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1923,18 +2426,133 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="477" column="0" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21253#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#9190#9191#0" expanded="false" />
-            <element signature="e#9220#9221#0" expanded="false" />
-            <element signature="e#10249#10250#0" expanded="false" />
-            <element signature="e#10309#10310#0" expanded="false" />
-            <element signature="e#10361#10362#0" expanded="false" />
-            <element signature="e#10396#10397#0" expanded="false" />
-            <element signature="e#19174#19175#0" expanded="false" />
-            <element signature="e#19202#19203#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+          <folding>
+            <element signature="e#646#664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="152" column="14" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="80" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
+          <folding>
+            <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#1904#1921#0" expanded="true" />
+            <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/bluetooth/BluetoothSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="477" column="0" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1944,13 +2562,30 @@
           <caret line="450" column="0" selection-start-line="450" selection-start-column="0" selection-end-line="450" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6714#7148#0" expanded="true" />
-            <element signature="e#7147#7148#0" expanded="true" />
-            <element signature="e#11049#11577#0" expanded="true" />
-            <element signature="e#11576#11577#0" expanded="true" />
-            <element signature="e#11709#14002#0" expanded="true" />
-            <element signature="e#14001#14002#0" expanded="true" />
-            <element signature="e#15384#15415#0" expanded="true" />
+            <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1959,7 +2594,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
-          <folding />
+          <folding>
+            <element signature="e#646#664#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1975,10 +2612,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-          <folding>
-            <element signature="e#5777#6531#0" expanded="true" />
-            <element signature="e#6530#6531#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1986,7 +2620,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#1904#1921#0" expanded="true" />
+            <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1996,14 +2663,56 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6714#7148#0" expanded="true" />
-            <element signature="e#7147#7148#0" expanded="true" />
-            <element signature="e#11049#11577#0" expanded="true" />
-            <element signature="e#11576#11577#0" expanded="true" />
-            <element signature="e#11709#14002#0" expanded="true" />
-            <element signature="e#14001#14002#0" expanded="true" />
-            <element signature="e#15384#15415#0" expanded="true" />
+            <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/bluetooth/BluetoothSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="477" column="0" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50829875">
+          <caret line="1057" column="26" selection-start-line="1057" selection-start-column="26" selection-end-line="1057" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2015,75 +2724,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="63" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="152" column="14" selection-start-line="152" selection-start-column="14" selection-end-line="152" selection-end-column="14" />
-          <folding>
-            <element signature="e#5777#6531#0" expanded="true" />
-            <element signature="e#6530#6531#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/android/bluetooth/BluetoothSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="477" column="0" selection-start-line="477" selection-start-column="0" selection-end-line="477" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21253#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#9190#9191#0" expanded="false" />
-            <element signature="e#9220#9221#0" expanded="false" />
-            <element signature="e#10249#10250#0" expanded="false" />
-            <element signature="e#10309#10310#0" expanded="false" />
-            <element signature="e#10361#10362#0" expanded="false" />
-            <element signature="e#10396#10397#0" expanded="false" />
-            <element signature="e#19174#19175#0" expanded="false" />
-            <element signature="e#19202#19203#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.572614">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-22/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50829875">
-          <caret line="1057" column="26" selection-start-line="1057" selection-start-column="26" selection-end-line="1057" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="80" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -2091,24 +2735,126 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/ApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="e#646#664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="142" column="29" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="310" column="0" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#1904#1921#0" expanded="true" />
+            <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="64" selection-start-line="117" selection-start-column="64" selection-end-line="117" selection-end-column="64" />
+          <folding>
+            <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5827813">
-          <caret line="89" column="23" selection-start-line="89" selection-start-column="23" selection-end-line="89" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.4834437">
+          <caret line="376" column="91" selection-start-line="376" selection-start-column="91" selection-end-line="376" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6714#7148#0" expanded="true" />
-            <element signature="e#7147#7148#0" expanded="true" />
-            <element signature="e#11049#11577#0" expanded="true" />
-            <element signature="e#11576#11577#0" expanded="true" />
-            <element signature="e#11709#14002#0" expanded="true" />
-            <element signature="e#14001#14002#0" expanded="true" />
-            <element signature="e#15384#15415#0" expanded="true" />
+            <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>

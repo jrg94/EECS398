@@ -43,6 +43,9 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import eecs398_lock.BluetoothLockService;
 import eecs398_lock.GPSLocation;
 import eecs398_lock.LocksAdapter;
@@ -81,6 +84,8 @@ public class LockListScreen extends Activity {
     // The manager of all the locks
     private SmartLockManager lockManager = null;
 
+    private LockListScreen mLLS = this;
+
     /**
      * The onCreate method which can be overridden in all Activity classes
      * In our case, we treat it like a constructor and initialize various fields
@@ -107,10 +112,6 @@ public class LockListScreen extends Activity {
 
         // Load data from file
         lockManager.localLoad(this);
-
-        // TODO: DELETE THIS
-        lockManager.addLock();
-        lockManager.localSave(this);
 
         // If the adapter is null, then Bluetooth is not supported
         if (mBluetoothAdapter == null) {
@@ -179,23 +180,18 @@ public class LockListScreen extends Activity {
     private void setupLockScreenAndService() {
         Log.d(TAG, "setupLockScreenAndService()");
 
-        // TODO: Allow buttons to do something like lock door on click
-
         // Initialize the array adapter for the lock list
-        LocksAdapter mLockArrayAdapter = new LocksAdapter(this, lockManager.getLocks());
+        LocksAdapter mLockArrayAdapter = new LocksAdapter(this, new ArrayList<SmartLock>(lockManager.getLocks().values()));
         GridView mLockView = (GridView) findViewById(R.id.gridView);
         mLockView.setAdapter(mLockArrayAdapter);
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
-
-        Button mLockViewPopup = (Button) findViewById(R.id.popup_lock_menu_button);
 
         mLockView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 SmartLock temp = (SmartLock) parent.getItemAtPosition(position);
                 temp.setLocation(new GPSLocation(Math.random() * 180, Math.random() * 180));
-                temp.toggleLock();
-                Log.e(TAG, "Toggling Lock");
+                temp.toggleLock(mLLS);
             }
         });
 
@@ -378,6 +374,7 @@ public class LockListScreen extends Activity {
 
                     // TODO: Do something with readMessage
                     // BluetoothChat was using it to write to your screen
+                    Toast.makeText(getApplicationContext(), readMessage, Toast.LENGTH_SHORT).show();
 
                     break;
 
@@ -388,6 +385,7 @@ public class LockListScreen extends Activity {
                     // Save the connected device's name and write it to the screen
                     String mConnectedDeviceName = msg.getData().getString(DEVICE_NAME);
                     Toast.makeText(getApplicationContext(), "Connected to " + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
+                    CheckForNewLock();
 
                     break;
 
@@ -475,5 +473,22 @@ public class LockListScreen extends Activity {
                 return true;
         }
         return false;
+    }
+
+    /**
+     * Runs through the list of connected devices to see if a new one
+     * has been added
+     */
+    private void CheckForNewLock() {
+
+        Log.d(TAG, "A device has been connected. Checking the device list to see if it is new");
+
+        List<BluetoothDevice> devices = mLockService.getDevices();
+        for (BluetoothDevice bd : devices) {
+            if (!lockManager.getLocks().containsKey(bd.getAddress())) {
+                lockManager.addLock(bd.getAddress());
+                lockManager.localSave(this);
+            }
+        }
     }
 }

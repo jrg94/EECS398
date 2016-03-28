@@ -46,7 +46,7 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
         TextView lockID = (TextView) convertView.findViewById(R.id.lockID);
         TextView lockLat = (TextView) convertView.findViewById(R.id.lockLat);
         TextView lockLong = (TextView) convertView.findViewById(R.id.lockLong);
-        Button popupMenuButton = (Button) convertView.findViewById(R.id.popup_lock_menu_button);
+        final Button popupMenuButton = (Button) convertView.findViewById(R.id.popup_lock_menu_button);
 
         lockLabel.setText(String.format("%s: %s", "Label", lock.getLabel()));
         lockID.setText(String.format("%s: %s", "ID", lock.getID().toString()));
@@ -58,7 +58,7 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
                 if (mContext instanceof LockListScreen) {
                     LockListScreen lls = (LockListScreen)mContext;
                     lls.showPopUp(lls.findViewById(R.id.gridView), lock);
-                    lls.sendMessage("Toggling Lock");
+                    lock.toggleLock(lls);
                 }
             }
         });

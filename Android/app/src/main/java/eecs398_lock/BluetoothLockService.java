@@ -21,6 +21,7 @@ import android.util.Log;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.UUID;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -50,6 +51,8 @@ public class BluetoothLockService {
 
     // Unique UUID for this application
     private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+
+    private ArrayList<BluetoothDevice> devices = new ArrayList<BluetoothDevice>();
 
     // Member fields
     private final BluetoothAdapter mAdapter;
@@ -92,7 +95,8 @@ public class BluetoothLockService {
     }
 
     /**
-     * Return the current connection state. */
+     * Return the current connection state.
+     */
     public synchronized int getState() {
         return mState;
     }
@@ -192,6 +196,8 @@ public class BluetoothLockService {
         msg.setData(bundle);
         mHandler.sendMessage(msg);
         setState(STATE_CONNECTED);
+
+        devices.add(device);
     }
 
     /**
@@ -480,5 +486,9 @@ public class BluetoothLockService {
                 Log.e(TAG, "close() of connect socket failed", e);
             }
         }
+    }
+
+    public ArrayList<BluetoothDevice> getDevices() {
+        return devices;
     }
 }
