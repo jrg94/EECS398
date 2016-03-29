@@ -1,5 +1,6 @@
 package eecs398_lock;
 
+import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
@@ -44,9 +45,10 @@ public class SmartLockManager {
 
     // METHODS //
 
-    public void addLock(String address) {
-        SmartLock tempLock = new SmartLock();
-        locks.put(address, tempLock);
+    public SmartLock addLock(BluetoothDevice device) {
+        SmartLock tempLock = new SmartLock(device);
+        locks.put(device.getAddress(), tempLock);
+        return tempLock;
     }
 
     /**
@@ -149,6 +151,20 @@ public class SmartLockManager {
         editor.remove(key);
 
         // Applies the removal
+        editor.apply();
+    }
+
+    public void localWipe(Context context) {
+        // Initialize user preferences
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+
+        // Initialize editor
+        SharedPreferences.Editor editor = prefs.edit();
+
+        // Wipe the file
+        editor.clear();
+
+        // Apply the wipe
         editor.apply();
     }
 

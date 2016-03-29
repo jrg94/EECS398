@@ -1,8 +1,12 @@
 package eecs398_lock;
 
+import android.bluetooth.BluetoothDevice;
+import android.widget.Switch;
+
 import java.util.UUID;
 
 import app.lock.bluetooth.smart_lock_app.LockListScreen;
+import app.lock.bluetooth.smart_lock_app.R;
 
 /**
  * Created by JRG94 on 2/17/2016.
@@ -19,37 +23,45 @@ public class SmartLock {
     private String address;
     private String label;
     private GPSLocation location;
+    private BluetoothDevice device;
     private boolean isLocked;
     private boolean isInLowPowerMode;
+    private boolean isConnected;
     // Possible list field for owners
 
     // CONSTRUCTORS //
 
-    public SmartLock() {
+    public SmartLock(BluetoothDevice device) {
+        this.device = device;
         this.id = UUID.randomUUID();
         this.address = "At what address is this lock?";
         this.label = "What would you like to name this lock?";
         this.location = new GPSLocation(0.0, 0.0);
         this.isLocked = false;
         this.isInLowPowerMode = false;
+        this.isConnected = false;
     }
 
-    public SmartLock(GPSLocation location) {
+    public SmartLock(BluetoothDevice device, GPSLocation location) {
+        this.device = device;
         this.id = UUID.randomUUID();
         this.address = "At what address is this lock?";
         this.label = "What would you like to name this lock?";
         this.location = location;
         this.isLocked = false;
         this.isInLowPowerMode = false;
+        this.isConnected = false;
     }
 
-    public SmartLock(double latitude, double longitude) {
+    public SmartLock(BluetoothDevice device, double latitude, double longitude) {
+        this.device = device;
         this.id = UUID.randomUUID();
         this.address = "At what address is this lock?";
         this.label = "What would you like to name this lock?";
         this.location = new GPSLocation(latitude, longitude);
         this.isLocked = false;
         this.isInLowPowerMode = false;
+        this.isConnected = false;
     }
 
     // GETTER/SETTERS //
@@ -82,6 +94,14 @@ public class SmartLock {
         this.location = location;
     }
 
+    public boolean getIsLocked() { return isLocked; }
+
+    public boolean getIsConnected() { return isConnected; }
+
+    public void setIsConnected(boolean isConnected) { this.isConnected = isConnected; }
+
+    public BluetoothDevice getDevice() { return device; }
+
     // FUNCTIONALITY //
 
     @Override
@@ -108,13 +128,17 @@ public class SmartLock {
      * @return the state of the lock after the toggle
      */
     public boolean toggleLock(LockListScreen lls) {
+        Switch lockState = (Switch) lls.findViewById(R.id.lockState);
+
         if (isLocked) {
             lls.sendMessage("*11");
         }
         else {
             lls.sendMessage("*10");
         }
+
         isLocked = !isLocked;
+
         // TODO: Test to see if the lock has changed state - Report an error if not (exception?)
         return isLocked;
     }
