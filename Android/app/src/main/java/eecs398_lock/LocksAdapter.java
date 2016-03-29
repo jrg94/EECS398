@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -16,13 +17,14 @@ import app.lock.bluetooth.smart_lock_app.LockListScreen;
 import app.lock.bluetooth.smart_lock_app.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by JRG94 on 2/25/2016.
  * Overrides the functionality of ArrayAdapter to provide
  * custom functionality for the way locks are displayed
  */
-public class LocksAdapter extends ArrayAdapter<SmartLock> {
+public class LocksAdapter extends BaseAdapter {
 
     // Debugging
     private static final String TAG = "LocksAdapter";
@@ -31,16 +33,38 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
     // Fields //
     private Context mContext;
 
-    public LocksAdapter(Context context, ArrayList<SmartLock> locks) {
-        super(context, R.layout.lock_ui, locks);
+    private HashMap<String, SmartLock> locks = new HashMap<String, SmartLock>();
+    private String[] keys;
+
+    public LocksAdapter(Context context, HashMap<String, SmartLock> locks) {
+        this.locks = locks;
+        keys = this.locks.keySet().toArray(new String[locks.size()]);
         this.mContext = context;
+    }
+
+    @Override
+    public int getCount() {
+        return locks.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return locks.get(keys[position]);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
+        // CRUCIAL
+        keys = this.locks.keySet().toArray(new String[locks.size()]);
+
         // Retrieve lock from position
-        final SmartLock lock = getItem(position);
+        final SmartLock lock = (SmartLock) getItem(position);
         final LockListScreen lls = (LockListScreen) mContext;
 
         // TODO: Try to connect to this lock
@@ -48,7 +72,7 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
         //lls.mLockService.connect(lock.getDevice());
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.lock_ui, parent, false);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.lock_ui, parent, false);
         }
 
         // Initialize UI elements
@@ -65,9 +89,7 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
         lockStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    lock.toggleLock((LockListScreen)mContext);
-                }
+                lock.toggleLock((LockListScreen)mContext);
             }
         });
 

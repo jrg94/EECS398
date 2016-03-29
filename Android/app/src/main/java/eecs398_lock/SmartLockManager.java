@@ -154,6 +154,20 @@ public class SmartLockManager {
         editor.apply();
     }
 
+    public void localWipe(Context context) {
+        // Initialize user preferences
+        SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+
+        // Initialize editor
+        SharedPreferences.Editor editor = prefs.edit();
+
+        // Wipe the file
+        editor.clear();
+
+        // Apply the wipe
+        editor.apply();
+    }
+
     /**
      *
      * @return true if the save file is corrupt

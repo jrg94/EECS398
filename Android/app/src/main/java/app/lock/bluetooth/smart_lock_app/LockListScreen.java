@@ -110,6 +110,8 @@ public class LockListScreen extends Activity {
         // Initialize our lock manager
         lockManager = new SmartLockManager();
 
+        // lockManager.localWipe(this);
+
         // Load data from file
         lockManager.localLoad(this);
 
@@ -181,7 +183,7 @@ public class LockListScreen extends Activity {
         Log.d(TAG, "setupLockScreenAndService()");
 
         // Initialize the array adapter for the lock list
-        mLockArrayAdapter = new LocksAdapter(this, new ArrayList<SmartLock>(lockManager.getLocks().values()));
+        mLockArrayAdapter = new LocksAdapter(this, lockManager.getLocks());
         GridView mLockView = (GridView) findViewById(R.id.gridView);
         mLockView.setAdapter(mLockArrayAdapter);
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
@@ -470,7 +472,7 @@ public class LockListScreen extends Activity {
      * Runs through the list of connected devices to see if a new one
      * has been added
      */
-    private void CheckForNewLock(BluetoothDevice device) {
+    private synchronized void CheckForNewLock(BluetoothDevice device) {
 
         Log.d(TAG, "A device has been connected. Checking the device list to see if it is new");
 
