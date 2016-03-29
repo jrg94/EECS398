@@ -138,7 +138,6 @@ public class SmartLock {
         }
 
         isLocked = !isLocked;
-        //lockState.setChecked(isLocked);
 
         // TODO: Test to see if the lock has changed state - Report an error if not (exception?)
         return isLocked;

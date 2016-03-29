@@ -84,7 +84,7 @@ public class LockListScreen extends Activity {
     // The manager of all the locks
     private SmartLockManager lockManager = null;
 
-    private LockListScreen mLLS = this;
+    private LocksAdapter mLockArrayAdapter;
 
     /**
      * The onCreate method which can be overridden in all Activity classes
@@ -181,7 +181,7 @@ public class LockListScreen extends Activity {
         Log.d(TAG, "setupLockScreenAndService()");
 
         // Initialize the array adapter for the lock list
-        LocksAdapter mLockArrayAdapter = new LocksAdapter(this, new ArrayList<SmartLock>(lockManager.getLocks().values()));
+        mLockArrayAdapter = new LocksAdapter(this, new ArrayList<SmartLock>(lockManager.getLocks().values()));
         GridView mLockView = (GridView) findViewById(R.id.gridView);
         mLockView.setAdapter(mLockArrayAdapter);
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
@@ -473,14 +473,18 @@ public class LockListScreen extends Activity {
     private void CheckForNewLock(BluetoothDevice device) {
 
         Log.d(TAG, "A device has been connected. Checking the device list to see if it is new");
+
+        SmartLock sl;
+
         if (!lockManager.getLocks().containsKey(device.getAddress())) {
-            SmartLock sl = lockManager.addLock(device);
-            sl.setIsConnected(true);
+            sl = lockManager.addLock(device);
             lockManager.localSave(this);
         }
         else {
-            SmartLock sl = lockManager.getLocks().get(device.getAddress());
-            sl.setIsConnected(true);
+            sl = lockManager.getLocks().get(device.getAddress());
         }
+
+        sl.setIsConnected(true);
+        mLockArrayAdapter.notifyDataSetChanged();
     }
 }
