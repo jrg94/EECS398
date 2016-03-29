@@ -77,7 +77,7 @@ void unlock() {
   set_digitalwrite(LOCK_PIN, LOW);
   set_digitalwrite(UNLOCK_PIN, HIGH);
   delay(1000);
-  set_digitalwrite(LOCK_PIN, LOW);
+  set_digitalwrite(UNLOCK_PIN, LOW);
   Serial.println("Unlock was successful");
 }
 
