@@ -79,7 +79,7 @@ public class LockListScreen extends Activity {
     private BluetoothAdapter mBluetoothAdapter = null;
 
     // Member object for the chat services
-    private BluetoothLockService mLockService = null;
+    public BluetoothLockService mLockService = null;
 
     // The manager of all the locks
     private SmartLockManager lockManager = null;
@@ -376,7 +376,6 @@ public class LockListScreen extends Activity {
                     // Save the connected device's name and write it to the screen
                     String mConnectedDeviceName = msg.getData().getString(DEVICE_NAME);
                     Toast.makeText(getApplicationContext(), "Connected to " + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
-                    CheckForNewLock();
 
                     break;
 
@@ -414,6 +413,7 @@ public class LockListScreen extends Activity {
                     BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
                     // Attempt to connect to the device
                     mLockService.connect(device);
+                    CheckForNewLock(device);
                 }
                 break;
 
@@ -470,16 +470,17 @@ public class LockListScreen extends Activity {
      * Runs through the list of connected devices to see if a new one
      * has been added
      */
-    private void CheckForNewLock() {
+    private void CheckForNewLock(BluetoothDevice device) {
 
         Log.d(TAG, "A device has been connected. Checking the device list to see if it is new");
-
-        List<BluetoothDevice> devices = mLockService.getDevices();
-        for (BluetoothDevice bd : devices) {
-            if (!lockManager.getLocks().containsKey(bd.getAddress())) {
-                lockManager.addLock(bd.getAddress());
-                lockManager.localSave(this);
-            }
+        if (!lockManager.getLocks().containsKey(device.getAddress())) {
+            SmartLock sl = lockManager.addLock(device);
+            sl.setIsConnected(true);
+            lockManager.localSave(this);
+        }
+        else {
+            SmartLock sl = lockManager.getLocks().get(device.getAddress());
+            sl.setIsConnected(true);
         }
     }
 }

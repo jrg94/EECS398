@@ -1,6 +1,8 @@
 package eecs398_lock;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,9 +41,11 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
 
         // Retrieve lock from position
         final SmartLock lock = getItem(position);
+        final LockListScreen lls = (LockListScreen) mContext;
 
         // TODO: Try to connect to this lock
         // TODO: Display connected or not
+        //lls.mLockService.connect(lock.getDevice());
 
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.lock_ui, parent, false);
@@ -49,11 +53,13 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
 
         // Initialize UI elements
         TextView lockLabel = (TextView) convertView.findViewById(R.id.lockLabel);
+        TextView connectedStatus = (TextView) convertView.findViewById(R.id.connectedStatus);
         Switch lockStatus = (Switch) convertView.findViewById(R.id.lockState);
         final Button popupMenuButton = (Button) convertView.findViewById(R.id.popup_lock_menu_button);
 
         // Set the UI elements up
         lockLabel.setText(lock.getLabel());
+        connectedStatus.setText(lock.getIsConnected() ? "connected" : "disconnected");
 
         lockStatus.setChecked(lock.getIsLocked());
         lockStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -69,7 +75,6 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
             @Override
             public void onClick(View v) {
                 if (mContext instanceof LockListScreen) {
-                    LockListScreen lls = (LockListScreen) mContext;
                     lls.showPopUp(lls.findViewById(R.id.gridView), lock);
                 }
             }
