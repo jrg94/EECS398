@@ -1,8 +1,11 @@
 package eecs398_lock;
 
+import android.widget.Switch;
+
 import java.util.UUID;
 
 import app.lock.bluetooth.smart_lock_app.LockListScreen;
+import app.lock.bluetooth.smart_lock_app.R;
 
 /**
  * Created by JRG94 on 2/17/2016.
@@ -82,6 +85,8 @@ public class SmartLock {
         this.location = location;
     }
 
+    public boolean getIsLocked() { return isLocked; }
+
     // FUNCTIONALITY //
 
     @Override
@@ -108,13 +113,18 @@ public class SmartLock {
      * @return the state of the lock after the toggle
      */
     public boolean toggleLock(LockListScreen lls) {
+        Switch lockState = (Switch) lls.findViewById(R.id.lockState);
+
         if (isLocked) {
             lls.sendMessage("*11");
         }
         else {
             lls.sendMessage("*10");
         }
+
         isLocked = !isLocked;
+        //lockState.setChecked(isLocked);
+
         // TODO: Test to see if the lock has changed state - Report an error if not (exception?)
         return isLocked;
     }

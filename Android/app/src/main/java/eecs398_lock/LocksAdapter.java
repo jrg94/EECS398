@@ -40,6 +40,9 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
         // Retrieve lock from position
         final SmartLock lock = getItem(position);
 
+        // TODO: Try to connect to this lock
+        // TODO: Display connected or not
+
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.lock_ui, parent, false);
         }
@@ -52,6 +55,7 @@ public class LocksAdapter extends ArrayAdapter<SmartLock> {
         // Set the UI elements up
         lockLabel.setText(lock.getLabel());
 
+        lockStatus.setChecked(lock.getIsLocked());
         lockStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

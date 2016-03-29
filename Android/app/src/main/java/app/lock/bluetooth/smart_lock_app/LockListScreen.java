@@ -186,15 +186,6 @@ public class LockListScreen extends Activity {
         mLockView.setAdapter(mLockArrayAdapter);
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
 
-        mLockView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                SmartLock temp = (SmartLock) parent.getItemAtPosition(position);
-                temp.setLocation(new GPSLocation(Math.random() * 180, Math.random() * 180));
-                temp.toggleLock(mLLS);
-            }
-        });
-
         // Initialize the BluetoothChatService to perform bluetooth connections
         mLockService = new BluetoothLockService(this, mHandler);
     }
