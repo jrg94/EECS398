@@ -89,10 +89,9 @@
       <file leaf-file-name="SmartLock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36514524">
-              <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.42323652">
+              <caret line="138" column="66" selection-start-line="138" selection-start-column="66" selection-end-line="138" selection-end-column="66" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
               </folding>
             </state>
@@ -2189,7 +2188,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
           </folding>
         </state>
@@ -2321,7 +2319,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
           </folding>
         </state>
@@ -2947,10 +2944,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36514524">
-          <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.42323652">
+          <caret line="138" column="66" selection-start-line="138" selection-start-column="66" selection-end-line="138" selection-end-column="66" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
           </folding>
         </state>

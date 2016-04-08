@@ -27,7 +27,9 @@ public class SmartLock {
     private boolean isLocked;
     private boolean isInLowPowerMode;
     private boolean isConnected;
-    // Possible list field for owners
+
+    private static final int LOCK_CODE = 0xEF93;
+    private static final int UNLOCK_CODE = 0x081D;
 
     // CONSTRUCTORS //
 
@@ -131,10 +133,10 @@ public class SmartLock {
         Switch lockState = (Switch) lls.findViewById(R.id.lockState);
 
         if (isLocked) {
-            lls.sendMessage("*" + 0x081D);
+            lls.sendMessage(String.format("%s%d", "*", UNLOCK_CODE));
         }
         else {
-            lls.sendMessage("*" + 0xEF93);
+            lls.sendMessage(String.format("%s%d", "*", LOCK_CODE));
         }
 
         isLocked = !isLocked;
