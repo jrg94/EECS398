@@ -1,17 +1,18 @@
 #include <SPI.h>
 
-#define RXD 0               // Recieve
-#define TXD 1               // Transmit
 #define START_CMD_CHAR '*'  // The character that signals a command
 #define CMD_LOCK 0xEF93     // The value of a lock command
 #define CMD_UNLOCK 0x081D   // The value of an unlock command
-#define LOCK_PIN 6          // TODO: Map these correctly
-#define UNLOCK_PIN 7        // TODO: Map these correctly
-#define PIN_COUNT 14        // The total number of digital pins
+
+#define RXD 0               // Recieve
+#define TXD 1               // Transmit
 #define PIN_LOW 0           // The low value to be recieved over serial
 #define PIN_HIGH 1          // The high value to be recieved over serial
+#define LOCK_PIN 6          // Lock pin
+#define UNLOCK_PIN 7        // Unlock pin
 
 int failed_attempt_count;
+int device_id;
 
 /**
  * Runs during initial  setup
@@ -23,6 +24,12 @@ void setup() {
   
   pinMode(RXD,INPUT);
   pinMode(TXD,OUTPUT);
+
+  // Wait for device id
+  while (Serial.available() < 1) {
+  }
+    
+  device_id = Serial.parseInt();
 }
 
 /**
@@ -34,6 +41,7 @@ void loop() {
 
   // Default values for incoming transmission
   int command = -1;
+  int attempted_id = -1;
 
   char get_char = ' ';
 
@@ -59,9 +67,18 @@ void loop() {
 
   // Parse the command type, pin number, and value
   command = Serial.parseInt();
+  
+  attempted_id = Serial.parseInt();
 
-  // Takes the command and attempts to run it
-  run_command(command);
+  // Tests the device ID against the string passed to the device
+  if (attempted_id == device_id) {
+    // Takes the command and attempts to run it
+    run_command(command);
+  }
+  else {
+    Serial.println("Invalid user ID");
+    Serial.flush();
+  }
 }
 
 /**
