@@ -6,7 +6,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".LockListScreen"
-    android:gravity="center"
     android:background="#ffc0c0c0">
 
     <GridView

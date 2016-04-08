@@ -35,6 +35,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -196,7 +197,7 @@ public class LockListScreen extends Activity {
      * Creates a popup window
      * @param view
      */
-    public void showPopUp(View view, SmartLock lock) {
+    public void showPopUp(final View view, final SmartLock lock) {
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
@@ -209,6 +210,25 @@ public class LockListScreen extends Activity {
         // Get lock name and set it
         EditText nameText = (EditText)popupMenu.getContentView().findViewById(R.id.popup_lock_name);
         nameText.setText(lock.getLabel());
+        nameText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                // If the action is a key-up event on the return key, send the message
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    String message = v.getText().toString();
+                    lock.setLabel(message);
+                    mLockArrayAdapter.notifyDataSetChanged();
+                    lockManager.localSave(getApplicationContext());
+
+                    InputMethodManager inputManager = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    inputManager.toggleSoftInput(0, 0);
+
+                    return true;
+                }
+
+                return false;
+            }
+        });
 
         // Get the gps location text box and set it
         TextView locationText = (TextView)popupMenu.getContentView().findViewById(R.id.popup_lock_loc);
@@ -303,22 +323,6 @@ public class LockListScreen extends Activity {
         }
     }
 
-    // TODO: KEEP - use for saving edit text stuff
-    // The action listener for the EditText widget, to listen for the return key
-    private TextView.OnEditorActionListener mWriteListener =
-            new TextView.OnEditorActionListener() {
-                public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
-
-                    // If the action is a key-up event on the return key, send the message
-                    if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_UP) {
-                        String message = view.getText().toString();
-                        sendMessage(message);
-                    }
-
-                    return true;
-                }
-            };
-
     /**
      * The Handler that gets information back from the BluetoothLockService
      */
@@ -396,7 +400,7 @@ public class LockListScreen extends Activity {
      * @param msg an input string that needs to be handled
      */
     private void handleRead(String msg) {
-        if (msg.contains("successful")) {
+        if (msg.contains("success") || msg.contains("fail")) {
             Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
         }
     }
