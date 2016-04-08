@@ -503,7 +503,7 @@ public class LockListScreen extends Activity {
         }
 
         sl.setIsConnected(true);
-        sendMessage(sl.getID() + "");
+        sendMessage(device.getAddress());
         mLockArrayAdapter.notifyDataSetChanged();
     }
 }
