@@ -3,8 +3,8 @@
 #define RXD 0               // Recieve
 #define TXD 1               // Transmit
 #define START_CMD_CHAR '*'  // The character that signals a command
-#define CMD_LOCK 10         // The value of a lock command
-#define CMD_UNLOCK 11       // The value of an unlock command
+#define CMD_LOCK 0xEF93     // The value of a lock command
+#define CMD_UNLOCK 0x081D   // The value of an unlock command
 #define LOCK_PIN 6          // TODO: Map these correctly
 #define UNLOCK_PIN 7        // TODO: Map these correctly
 #define PIN_COUNT 14        // The total number of digital pins
