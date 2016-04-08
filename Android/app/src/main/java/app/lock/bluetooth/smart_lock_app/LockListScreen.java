@@ -396,7 +396,9 @@ public class LockListScreen extends Activity {
      * @param msg an input string that needs to be handled
      */
     private void handleRead(String msg) {
-        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        if (msg.contains("successful")) {
+            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**
@@ -405,7 +407,7 @@ public class LockListScreen extends Activity {
      * @param msg
      */
     private void handleWrite(String msg) {
-        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 
     /**
