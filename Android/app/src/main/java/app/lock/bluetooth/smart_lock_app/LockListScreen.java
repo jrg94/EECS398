@@ -352,8 +352,7 @@ public class LockListScreen extends Activity {
                     // construct a string from the buffer
                     String writeMessage = new String(writeBuf);
 
-                    // TODO: Do something with writeMessage
-                    // BluetoothChat was using it to write to your screen
+                    handleWrite(writeMessage);
 
                     break;
 
@@ -365,9 +364,7 @@ public class LockListScreen extends Activity {
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
 
-                    // TODO: Do something with readMessage
-                    // BluetoothChat was using it to write to your screen
-                    Toast.makeText(getApplicationContext(), readMessage, Toast.LENGTH_SHORT).show();
+                    handleRead(readMessage);
 
                     break;
 
@@ -392,6 +389,26 @@ public class LockListScreen extends Activity {
             }
         }
     };
+
+    /**
+     * A method for handling all incoming data so that it
+     * doesn't always get written to the screen
+     * @param msg an input string that needs to be handled
+     */
+    private void handleRead(String msg) {
+        if (msg.contains("successful")) {
+            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * A method for handling all outgoing data so that
+     * it doesn't always get written to the screen
+     * @param msg
+     */
+    private void handleWrite(String msg) {
+        //Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+    }
 
     /**
      *
