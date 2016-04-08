@@ -11,6 +11,8 @@
 #define PIN_LOW 0           // The low value to be recieved over serial
 #define PIN_HIGH 1          // The high value to be recieved over serial
 
+int failed_attempt_count;
+
 /**
  * Runs during initial  setup
  */
@@ -36,7 +38,12 @@ void loop() {
   char get_char = ' ';
 
   // Reruns loop until there is data to read
-  if (Serial.available() < 1) {
+  if (Serial.available() < 1 || failed_attempt_count >= 3) {
+    /**
+     * Currently serves as our lockup loop to protect from brute forcing
+     * It may be beneficial to just turn of the device, so we don't run
+     * the battery dry on this loop
+     */
     return; 
   }
 
@@ -93,7 +100,8 @@ void run_command(int command) {
       unlock();
       break;
     default:
-      Serial.println("Failed to find this command");
+      failed_attempt_count++;
+      Serial.println(failed_attempt_count >= 3 ? "Entering failure mode!" : "Failed to find command");
       break;
   }
 }
