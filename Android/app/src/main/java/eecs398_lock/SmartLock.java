@@ -131,10 +131,10 @@ public class SmartLock {
         Switch lockState = (Switch) lls.findViewById(R.id.lockState);
 
         if (isLocked) {
-            lls.sendMessage("*11");
+            lls.sendMessage("*" + 0x081D);
         }
         else {
-            lls.sendMessage("*10");
+            lls.sendMessage("*" + 0xEF93);
         }
 
         isLocked = !isLocked;
