@@ -106,6 +106,7 @@ void run_command(int command) {
     default:
       failed_attempt_count++;
       Serial.println(failed_attempt_count >= 3 ? "Entering failure mode!" : "Failed to find command");
+      Serial.flush();
       break;
   }
 }
