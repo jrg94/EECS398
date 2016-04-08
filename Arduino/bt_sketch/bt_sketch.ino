@@ -43,6 +43,10 @@ void loop() {
      * Currently serves as our lockup loop to protect from brute forcing
      * It may be beneficial to just turn of the device, so we don't run
      * the battery dry on this loop
+     * Definitely not a huge fan of this implementation, but it does provide
+     * a level of security
+     * Of course, someone could easily use this is as a prank and just keep
+     * locking up someones door
      */
     return; 
   }
