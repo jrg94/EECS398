@@ -1,18 +1,32 @@
 #include <SPI.h>
 
-#define START_CMD_CHAR '*'  // The character that signals a command
-#define CMD_LOCK 0xEF93     // The value of a lock command
-#define CMD_UNLOCK 0x081D   // The value of an unlock command
+/**
+ * Currently serves as our lockup loop to protect from brute forcing
+ * It may be beneficial to just turn of the device, so we don't run
+ * the battery dry on this loop
+ * Definitely not a huge fan of this implementation, but it does provide
+ * a level of security
+ * Of course, someone could easily use this is as a prank and just keep
+ * locking up someones door
+ * EDIT: Added some base level security by storing a mac address
+ * Now the hacker cannot even attempt to brute force commands until they 
+ * have the MAC address of the owner (eventually owners?)
+ */
 
-#define RXD 0               // Recieve
-#define TXD 1               // Transmit
-#define PIN_LOW 0           // The low value to be recieved over serial
-#define PIN_HIGH 1          // The high value to be recieved over serial
-#define LOCK_PIN 6          // Lock pin
-#define UNLOCK_PIN 7        // Unlock pin
+#define START_CMD_CHAR '*'    // The character that signals a command
+#define CMD_LOCK 0xEF93       // The value of a lock command
+#define CMD_UNLOCK 0x081D     // The value of an unlock command
+#define MAC_BUFFER_SIZE 18    // Holds the size of the mac address buffer
+
+#define RXD 0                 // Recieve
+#define TXD 1                 // Transmit
+#define PIN_LOW 0             // The low value to be recieved over serial
+#define PIN_HIGH 1            // The high value to be recieved over serial
+#define LOCK_PIN 6            // Lock pin
+#define UNLOCK_PIN 7          // Unlock pin
 
 int failed_attempt_count;
-int device_id;
+char device_id[MAC_BUFFER_SIZE] = "00:11:22:AA:BB:CC";
 
 /**
  * Runs during initial  setup
@@ -24,12 +38,9 @@ void setup() {
   
   pinMode(RXD,INPUT);
   pinMode(TXD,OUTPUT);
-
-  // Wait for device id
-  while (Serial.available() < 1) {
-  }
-    
-  device_id = Serial.parseInt();
+  
+  // Get MAC Address
+  readAddress(device_id, true);
 }
 
 /**
@@ -41,21 +52,12 @@ void loop() {
 
   // Default values for incoming transmission
   int command = -1;
-  int attempted_id = -1;
+  char attempt_address[MAC_BUFFER_SIZE];
 
   char get_char = ' ';
 
   // Reruns loop until there is data to read
   if (Serial.available() < 1 || failed_attempt_count >= 3) {
-    /**
-     * Currently serves as our lockup loop to protect from brute forcing
-     * It may be beneficial to just turn of the device, so we don't run
-     * the battery dry on this loop
-     * Definitely not a huge fan of this implementation, but it does provide
-     * a level of security
-     * Of course, someone could easily use this is as a prank and just keep
-     * locking up someones door
-     */
     return; 
   }
 
@@ -67,17 +69,48 @@ void loop() {
 
   // Parse the command type, pin number, and value
   command = Serial.parseInt();
-  
-  attempted_id = Serial.parseInt();
+
+  readAddress(attempt_address, false);
 
   // Tests the device ID against the string passed to the device
-  if (attempted_id == device_id) {
+  if (strcmp(attempt_address, device_id) == 0) {
     // Takes the command and attempts to run it
     run_command(command);
   }
   else {
     Serial.println("Invalid user ID");
     Serial.flush();
+  }
+}
+
+/**
+ * Reads in the MAC address into an array
+ * 
+ * TODO: Fix freezing for failure cases
+ */
+void readAddress(char inData[], boolean isSetup) {
+  
+  // Allocate some space for the device ID
+  char inChar;
+  int index = 0;
+
+  // Busy loop until we have what we need of the MAC Address
+  while (Serial.available() <= MAC_BUFFER_SIZE - 1) {}
+
+  if (!isSetup) {
+    // Dump the separator
+    Serial.read();
+  }
+
+  if (Serial.available() == MAC_BUFFER_SIZE - 1) {
+    // Read the device id
+    while (index < MAC_BUFFER_SIZE - 1) {
+        inChar = Serial.read(); // Read a character
+        inData[index] = inChar; // Store it
+        index++; // Increment where to write next
+        inData[index] = '\0'; // Null terminate the string
+    }
+    Serial.println(inData);
   }
 }
 
