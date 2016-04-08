@@ -3,13 +3,15 @@
 #define RXD 0               // Recieve
 #define TXD 1               // Transmit
 #define START_CMD_CHAR '*'  // The character that signals a command
-#define CMD_LOCK 10         // The value of a lock command
-#define CMD_UNLOCK 11       // The value of an unlock command
+#define CMD_LOCK 0xEF93     // The value of a lock command
+#define CMD_UNLOCK 0x081D   // The value of an unlock command
 #define LOCK_PIN 6          // TODO: Map these correctly
 #define UNLOCK_PIN 7        // TODO: Map these correctly
 #define PIN_COUNT 14        // The total number of digital pins
 #define PIN_LOW 0           // The low value to be recieved over serial
 #define PIN_HIGH 1          // The high value to be recieved over serial
+
+int failed_attempt_count;
 
 /**
  * Runs during initial  setup
@@ -36,7 +38,16 @@ void loop() {
   char get_char = ' ';
 
   // Reruns loop until there is data to read
-  if (Serial.available() < 1) {
+  if (Serial.available() < 1 || failed_attempt_count >= 3) {
+    /**
+     * Currently serves as our lockup loop to protect from brute forcing
+     * It may be beneficial to just turn of the device, so we don't run
+     * the battery dry on this loop
+     * Definitely not a huge fan of this implementation, but it does provide
+     * a level of security
+     * Of course, someone could easily use this is as a prank and just keep
+     * locking up someones door
+     */
     return; 
   }
 
@@ -93,7 +104,8 @@ void run_command(int command) {
       unlock();
       break;
     default:
-      Serial.println("Failed to find this command");
+      failed_attempt_count++;
+      Serial.println(failed_attempt_count >= 3 ? "Entering failure mode!" : "Failed to find command");
       break;
   }
 }
