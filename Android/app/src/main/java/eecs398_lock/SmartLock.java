@@ -38,7 +38,7 @@ public class SmartLock {
         this.id = UUID.randomUUID();
         this.address = "At what address is this lock?";
         this.label = "What would you like to name this lock?";
-        this.location = new GPSLocation(0.0, 0.0);
+        this.location = new GPSLocation(Math.random()*180, Math.random()*180);
         this.isLocked = false;
         this.isInLowPowerMode = false;
         this.isConnected = false;

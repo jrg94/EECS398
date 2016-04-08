@@ -1,36 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#b1ca0905">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b1ca0905"
+    android:layout_columnSpan="1"
+    android:layout_rowSpan="1">
 
-    <TextView
-        android:id="@+id/lockLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:text="@string/lock_label"
-        android:layout_gravity="top|center_horizontal"
-        android:layout_marginBottom="50dp" />
+        <TextView
+            android:id="@+id/lockLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/lock_label"
+            android:layout_gravity="center_horizontal" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:id="@+id/popup_lock_menu_button"
-        android:background="@drawable/gear"
-        android:layout_gravity="right|bottom" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="disconnected"
+            android:id="@+id/connectedStatus"
+            android:layout_gravity="center" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="disconnected"
-        android:id="@+id/connectedStatus"
-        android:layout_gravity="center" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
 
-    <Switch
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lockState"
-        android:layout_gravity="bottom" />
-</FrameLayout>
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lockState"
+                android:checked="false" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/popup_lock_menu_button"
+                android:background="@drawable/gear" />
+
+        </LinearLayout>
+
+
+</LinearLayout>
