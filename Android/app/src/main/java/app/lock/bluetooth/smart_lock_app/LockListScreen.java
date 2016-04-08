@@ -35,6 +35,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -209,6 +210,7 @@ public class LockListScreen extends Activity {
         // Get lock name and set it
         EditText nameText = (EditText)popupMenu.getContentView().findViewById(R.id.popup_lock_name);
         nameText.setText(lock.getLabel());
+        nameText.setOnEditorActionListener(mWriteListener);
 
         // Get the gps location text box and set it
         TextView locationText = (TextView)popupMenu.getContentView().findViewById(R.id.popup_lock_loc);
@@ -310,12 +312,17 @@ public class LockListScreen extends Activity {
                 public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
 
                     // If the action is a key-up event on the return key, send the message
-                    if (actionId == EditorInfo.IME_NULL && event.getAction() == KeyEvent.ACTION_UP) {
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
                         String message = view.getText().toString();
                         sendMessage(message);
+
+                        InputMethodManager inputManager = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+                        inputManager.toggleSoftInput(0, 0);
+
+                        return true;
                     }
 
-                    return true;
+                    return false;
                 }
             };
 
