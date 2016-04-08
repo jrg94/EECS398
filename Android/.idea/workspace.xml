@@ -37,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LockListScreen.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LockListScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.2413793">
-              <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4370861">
+              <caret line="233" column="61" selection-start-line="233" selection-start-column="61" selection-end-line="233" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#LockListScreen#0" expanded="false" />
@@ -50,8 +50,8 @@
                 <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-                <element signature="e#7577#8419#0" expanded="true" />
-                <element signature="e#8418#8419#0" expanded="true" />
+                <element signature="e#7458#8300#0" expanded="true" />
+                <element signature="e#8299#8300#0" expanded="true" />
                 <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -61,20 +61,20 @@
                 <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-                <element signature="e#15521#15552#0" expanded="true" />
+                <element signature="e#15426#15457#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lock_menu.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_menu.xml">
-          <provider editor-type-id="android-designer">
+      <file leaf-file-name="popup_menu.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup_menu.xml">
+          <provider selected="true" editor-type-id="android-designer">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15011038">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -99,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/lock_tile.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="8" />
+              <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -109,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/popup_tile.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+              <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -1641,11 +1641,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/border.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/lock_tile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_ui.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/popup_tile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/lock_tile.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/popup_tile.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
       </list>
     </option>
   </component>
@@ -2289,8 +2290,8 @@
             <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#7577#8419#0" expanded="true" />
-            <element signature="e#8418#8419#0" expanded="true" />
+            <element signature="e#7458#8300#0" expanded="true" />
+            <element signature="e#8299#8300#0" expanded="true" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2300,7 +2301,7 @@
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#15521#15552#0" expanded="true" />
+            <element signature="e#15426#15457#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2419,8 +2420,8 @@
             <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#7577#8419#0" expanded="true" />
-            <element signature="e#8418#8419#0" expanded="true" />
+            <element signature="e#7458#8300#0" expanded="true" />
+            <element signature="e#8299#8300#0" expanded="true" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2430,7 +2431,7 @@
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#15521#15552#0" expanded="true" />
+            <element signature="e#15426#15457#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2542,8 +2543,8 @@
             <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#7577#8419#0" expanded="true" />
-            <element signature="e#8418#8419#0" expanded="true" />
+            <element signature="e#7458#8300#0" expanded="true" />
+            <element signature="e#8299#8300#0" expanded="true" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2553,7 +2554,7 @@
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#15521#15552#0" expanded="true" />
+            <element signature="e#15426#15457#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2665,8 +2666,8 @@
             <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#7577#8419#0" expanded="true" />
-            <element signature="e#8418#8419#0" expanded="true" />
+            <element signature="e#7458#8300#0" expanded="true" />
+            <element signature="e#8299#8300#0" expanded="true" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2676,7 +2677,7 @@
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#15521#15552#0" expanded="true" />
+            <element signature="e#15426#15457#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2762,8 +2763,8 @@
             <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#7577#8419#0" expanded="true" />
-            <element signature="e#8418#8419#0" expanded="true" />
+            <element signature="e#7458#8300#0" expanded="true" />
+            <element signature="e#8299#8300#0" expanded="true" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2773,7 +2774,7 @@
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#15521#15552#0" expanded="true" />
+            <element signature="e#15426#15457#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2936,7 +2937,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/lock_tile.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="8" />
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -2944,15 +2945,26 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/popup_tile.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup_menu.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.2413793">
-          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4370861">
+          <caret line="233" column="61" selection-start-line="233" selection-start-column="61" selection-end-line="233" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
@@ -2961,8 +2973,8 @@
             <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#7577#8419#0" expanded="true" />
-            <element signature="e#8418#8419#0" expanded="true" />
+            <element signature="e#7458#8300#0" expanded="true" />
+            <element signature="e#8299#8300#0" expanded="true" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2972,19 +2984,8 @@
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#15521#15552#0" expanded="true" />
+            <element signature="e#15426#15457#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_menu.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15011038">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>

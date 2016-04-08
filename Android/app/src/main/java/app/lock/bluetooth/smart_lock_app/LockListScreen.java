@@ -36,7 +36,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
@@ -44,11 +43,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import eecs398_lock.BluetoothLockService;
-import eecs398_lock.GPSLocation;
 import eecs398_lock.LocksAdapter;
 import eecs398_lock.SmartLock;
 import eecs398_lock.SmartLockManager;
@@ -204,7 +199,7 @@ public class LockListScreen extends Activity {
 
         // Make the window popup
         LayoutInflater inflator = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final PopupWindow popupMenu = new PopupWindow(inflator.inflate(R.layout.lock_menu, null, false), (int)(size.x/1.5), size.y/2, true);
+        final PopupWindow popupMenu = new PopupWindow(inflator.inflate(R.layout.popup_menu, null, false), (int)(size.x/1.5), size.y/3, true);
         popupMenu.showAtLocation(view, Gravity.CENTER, 0, 0);
 
         // Get lock name and set it
@@ -236,7 +231,7 @@ public class LockListScreen extends Activity {
 
         // Get the id text and set it
         TextView idText = (TextView)popupMenu.getContentView().findViewById(R.id.popup_id);
-        idText.setText(lock.getID().toString());
+        idText.setText(lock.getID().toString().substring(0, 8) + "...");
 
         // Get the close button from this popup window
         Button close = (Button)popupMenu.getContentView().findViewById(R.id.close);
