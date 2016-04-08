@@ -22,9 +22,9 @@
             android:id="@+id/connectedStatus"
             android:layout_gravity="center" />
 
-        <LinearLayout
+        <RelativeLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
 
@@ -32,16 +32,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/lockState"
-                android:checked="false" />
+                android:checked="false"
+                android:layout_gravity="left"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:id="@+id/popup_lock_menu_button"
-                android:background="@drawable/gear" />
+                android:background="@drawable/gear"
+                android:gravity="end"
+                android:layout_marginLeft="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
 </LinearLayout>
