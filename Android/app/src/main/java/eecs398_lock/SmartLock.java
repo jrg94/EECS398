@@ -133,10 +133,10 @@ public class SmartLock {
         Switch lockState = (Switch) lls.findViewById(R.id.lockState);
 
         if (isLocked) {
-            lls.sendMessage(String.format("%s%d", "*", UNLOCK_CODE));
+            lls.sendMessage(String.format("%s%d:%s", "*", UNLOCK_CODE, getDevice().getAddress()));
         }
         else {
-            lls.sendMessage(String.format("%s%d", "*", LOCK_CODE));
+            lls.sendMessage(String.format("%s%d:%s", "*", LOCK_CODE, getDevice().getAddress()));
         }
 
         isLocked = !isLocked;
