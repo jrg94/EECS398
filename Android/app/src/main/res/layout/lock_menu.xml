@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffc0c0c0">
+    android:background="@drawable/popup_tile">
 
     <Button
         android:layout_width="40sp"
@@ -93,13 +93,4 @@
 
     </TableLayout>
 
-    <Button
-        android:layout_width="60sp"
-        android:layout_height="40sp"
-        android:text="save"
-        android:textSize="12sp"
-        android:id="@+id/popup_save"
-        android:layout_marginTop="79dp"
-        android:layout_below="@+id/close"
-        android:layout_alignParentEnd="true" />
 </RelativeLayout>

@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#b1ca0905"
+    android:background="@drawable/lock_tile"
     android:layout_columnSpan="1"
     android:layout_rowSpan="1">
 
@@ -35,9 +35,8 @@
                 android:checked="false"
                 android:layout_gravity="left"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="0dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="0dp" />
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentTop="true" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"
@@ -46,11 +45,9 @@
                 android:id="@+id/popup_lock_menu_button"
                 android:background="@drawable/gear"
                 android:gravity="end"
-                android:layout_marginLeft="0dp"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="5dp" />
 
         </RelativeLayout>
-
-
 </LinearLayout>
