@@ -25,6 +25,12 @@
 #define LOCK_PIN 6            // Lock pin
 #define UNLOCK_PIN 7          // Unlock pin
 
+#define LOCK_SUCCESS "SUCCESS: Lock"
+#define UNLOCK_SUCCESS "SUCCESS: Unlock"
+#define FAILURE_MODE "FAILURE: Entering failure mode"
+#define CMD_FAILURE "FAILURE: Cannot find command"
+#define UID_FAILURE "FAILURE: Invalid user ID"
+
 int failed_attempt_count;
 char device_id[MAC_BUFFER_SIZE] = "00:11:22:AA:BB:CC";
 
@@ -78,7 +84,7 @@ void loop() {
     run_command(command);
   }
   else {
-    Serial.println("Invalid user ID");
+    Serial.println(UID_FAILURE);
     Serial.flush();
   }
 }
@@ -110,7 +116,6 @@ void readAddress(char inData[], boolean isSetup) {
         index++; // Increment where to write next
         inData[index] = '\0'; // Null terminate the string
     }
-    Serial.println(inData);
   }
 }
 
@@ -125,7 +130,7 @@ void lock() {
   set_digitalwrite(LOCK_PIN, HIGH);
   delay(1000);
   set_digitalwrite(LOCK_PIN, LOW);
-  Serial.println("Lock was successful");
+  Serial.println(LOCK_SUCCESS);
 }
 
 /**
@@ -139,7 +144,7 @@ void unlock() {
   set_digitalwrite(UNLOCK_PIN, HIGH);
   delay(1000);
   set_digitalwrite(UNLOCK_PIN, LOW);
-  Serial.println("Unlock was successful");
+  Serial.println(UNLOCK_SUCCESS);
 }
 
 /**
@@ -155,7 +160,7 @@ void run_command(int command) {
       break;
     default:
       failed_attempt_count++;
-      Serial.println(failed_attempt_count >= 3 ? "Entering failure mode!" : "Failed to find command");
+      Serial.println(failed_attempt_count >= 3 ? FAILURE_MODE : CMD_FAILURE);
       Serial.flush();
       break;
   }

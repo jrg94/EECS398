@@ -152,6 +152,9 @@ public class SmartLockManager {
 
         // Applies the removal
         editor.apply();
+
+        // Removes item from manager
+        locks.remove(key);
     }
 
     public void localWipe(Context context) {
@@ -166,6 +169,9 @@ public class SmartLockManager {
 
         // Apply the wipe
         editor.apply();
+
+        // Clear the hash map
+        locks.clear();
     }
 
     /**

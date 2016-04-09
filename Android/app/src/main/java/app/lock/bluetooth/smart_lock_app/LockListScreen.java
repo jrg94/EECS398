@@ -242,6 +242,16 @@ public class LockListScreen extends Activity {
                 popupMenu.dismiss();
             }
         });
+
+        Button unlink = (Button)popupMenu.getContentView().findViewById(R.id.unlink);
+        unlink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lockManager.localDelete(getApplicationContext(), lock.getMacAddress());
+                lockManager.localWipe(getApplicationContext());
+                mLockArrayAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     /**
@@ -395,7 +405,7 @@ public class LockListScreen extends Activity {
      * @param msg an input string that needs to be handled
      */
     private void handleRead(String msg) {
-        if (msg.contains("success") || msg.contains("fail")) {
+        if (msg.contains("SUCCESS") || msg.contains("FAILURE")) {
             Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
         }
     }
