@@ -11,22 +11,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
-        android:background="#b1ca0905">
+        android:background="#ccf1ef98">
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="132dp">
+            android:layout_marginBottom="132dp"
+            android:background="#ccf1ef98">
 
             <ImageView
-                android:layout_width="279dp"
-                android:layout_height="218dp"
+                android:layout_width="134dp"
+                android:layout_height="106dp"
                 android:id="@+id/imageView"
-                android:src="@drawable/key_image"
-                android:layout_gravity="center_horizontal|top"
-                android:contentDescription="@string/logo" />
+                android:src="@drawable/heimdall_logo"
+                android:layout_gravity="right_horizontal|top"
+                android:contentDescription="@string/logo"
+                android:background="#daffffff" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -41,6 +43,7 @@
                 android:typeface="normal"
                 android:layout_gravity="center_horizontal|bottom"
                 android:textSize="20sp" />
+
         </FrameLayout>
 
     </RelativeLayout>
