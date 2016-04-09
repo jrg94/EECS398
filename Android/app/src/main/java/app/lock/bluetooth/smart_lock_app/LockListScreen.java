@@ -82,6 +82,8 @@ public class LockListScreen extends Activity {
 
     private LocksAdapter mLockArrayAdapter;
 
+    private String currentAddress = "??:??:??:??:??:??";
+
     /**
      * The onCreate method which can be overridden in all Activity classes
      * In our case, we treat it like a constructor and initialize various fields
@@ -408,6 +410,14 @@ public class LockListScreen extends Activity {
         if (msg.contains("SUCCESS") || msg.contains("FAILURE")) {
             Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
         }
+        else if (msg.contains("REQUEST")) {
+            sendMessage(getCurrentAddress());
+            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private String getCurrentAddress() {
+        return currentAddress;
     }
 
     /**
@@ -441,6 +451,7 @@ public class LockListScreen extends Activity {
                     BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
                     // Attempt to connect to the device
                     mLockService.connect(device);
+                    currentAddress = device.getAddress();
                     CheckForNewLock(device);
                 }
                 break;
@@ -513,7 +524,8 @@ public class LockListScreen extends Activity {
         }
 
         sl.setIsConnected(true);
-        sendMessage(device.getAddress());
         mLockArrayAdapter.notifyDataSetChanged();
+        while (!mLockService.checkIfConnected()) {}
+        sendMessage(device.getAddress());
     }
 }

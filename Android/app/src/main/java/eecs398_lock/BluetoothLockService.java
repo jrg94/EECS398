@@ -130,6 +130,10 @@ public class BluetoothLockService {
         setState(STATE_LISTEN);
     }
 
+    public synchronized boolean checkIfConnected() {
+        return mConnectedThread != null;
+    }
+
     /**
      * Start the ConnectThread to initiate a connection to a remote device.
      * @param device  The BluetoothDevice to connect

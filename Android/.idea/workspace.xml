@@ -40,26 +40,25 @@
       <file leaf-file-name="LockListScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2593361">
-              <caret line="407" column="62" selection-start-line="407" selection-start-column="62" selection-end-line="407" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.73730683">
+              <caret line="528" column="39" selection-start-line="528" selection-start-column="39" selection-end-line="528" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-                <element signature="e#9213#9539#0" expanded="true" />
-                <element signature="e#9538#9539#0" expanded="true" />
+                <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+                <element signature="e#14464#14465#0" expanded="true" />
+                <element signature="e#14501#14502#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,19 +109,19 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="229" column="12" selection-start-line="229" selection-start-column="7" selection-end-line="229" selection-end-column="12" />
+              <caret line="461" column="0" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
                 <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
                 <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
                 <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
-                <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
                 <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="e#3549#3550#0" expanded="true" />
+                <element signature="e#3578#3579#0" expanded="true" />
                 <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
-                <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
-                <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="e#4498#4499#0" expanded="true" />
+                <element signature="e#4545#4546#0" expanded="true" />
                 <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
-                <element signature="method#connected#0;class#BluetoothLockService#0" expanded="false" />
                 <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
                 <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
                 <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
@@ -134,7 +133,7 @@
                 <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
                 <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
                 <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
-                <element signature="e#12223#12273#0" expanded="false" />
+                <element signature="e#12324#12374#0" expanded="false" />
                 <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
                 <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
                 <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
@@ -1571,7 +1570,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/border.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_ui.xml" />
@@ -1581,6 +1579,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
       </list>
     </option>
@@ -2070,7 +2069,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.50771207" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.4922879" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.4922879" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.4974293" order="2" side_tool="false" content_ui="tabs" />
@@ -2156,6 +2155,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2181,13 +2181,13 @@
             <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#3549#3550#0" expanded="true" />
+            <element signature="e#3578#3579#0" expanded="true" />
             <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#4498#4499#0" expanded="true" />
+            <element signature="e#4545#4546#0" expanded="true" />
             <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connected#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
@@ -2199,7 +2199,7 @@
             <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="e#12324#12374#0" expanded="false" />
             <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
@@ -2216,20 +2216,19 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#9213#9539#0" expanded="true" />
-            <element signature="e#9538#9539#0" expanded="true" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="e#14464#14465#0" expanded="true" />
+            <element signature="e#14501#14502#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2281,6 +2280,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2306,13 +2306,13 @@
             <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#3549#3550#0" expanded="true" />
+            <element signature="e#3578#3579#0" expanded="true" />
             <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#4498#4499#0" expanded="true" />
+            <element signature="e#4545#4546#0" expanded="true" />
             <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connected#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
@@ -2324,7 +2324,7 @@
             <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="e#12324#12374#0" expanded="false" />
             <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
@@ -2341,20 +2341,19 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#9213#9539#0" expanded="true" />
-            <element signature="e#9538#9539#0" expanded="true" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="e#14464#14465#0" expanded="true" />
+            <element signature="e#14501#14502#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2390,6 +2389,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2415,13 +2415,13 @@
             <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#3549#3550#0" expanded="true" />
+            <element signature="e#3578#3579#0" expanded="true" />
             <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#4498#4499#0" expanded="true" />
+            <element signature="e#4545#4546#0" expanded="true" />
             <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connected#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
@@ -2433,7 +2433,7 @@
             <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="e#12324#12374#0" expanded="false" />
             <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
@@ -2457,20 +2457,19 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#9213#9539#0" expanded="true" />
-            <element signature="e#9538#9539#0" expanded="true" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="e#14464#14465#0" expanded="true" />
+            <element signature="e#14501#14502#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2506,6 +2505,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2531,13 +2531,13 @@
             <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#3549#3550#0" expanded="true" />
+            <element signature="e#3578#3579#0" expanded="true" />
             <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#4498#4499#0" expanded="true" />
+            <element signature="e#4545#4546#0" expanded="true" />
             <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connected#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
@@ -2549,7 +2549,7 @@
             <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="e#12324#12374#0" expanded="false" />
             <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
@@ -2573,20 +2573,19 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#9213#9539#0" expanded="true" />
-            <element signature="e#9538#9539#0" expanded="true" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="e#14464#14465#0" expanded="true" />
+            <element signature="e#14501#14502#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2603,6 +2602,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2628,13 +2628,13 @@
             <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#3549#3550#0" expanded="true" />
+            <element signature="e#3578#3579#0" expanded="true" />
             <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#4498#4499#0" expanded="true" />
+            <element signature="e#4545#4546#0" expanded="true" />
             <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connected#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
@@ -2646,7 +2646,7 @@
             <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="e#12223#12273#0" expanded="false" />
+            <element signature="e#12324#12374#0" expanded="false" />
             <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
             <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
@@ -2663,20 +2663,19 @@
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#9213#9539#0" expanded="true" />
-            <element signature="e#9538#9539#0" expanded="true" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="e#14464#14465#0" expanded="true" />
+            <element signature="e#14501#14502#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2706,6 +2705,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2789,38 +2789,14 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="229" column="12" selection-start-line="229" selection-start-column="7" selection-end-line="229" selection-end-column="12" />
+          <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
           <folding>
-            <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connected#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="e#12223#12273#0" expanded="false" />
-            <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#cancel#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#2270#2271#0" expanded="true" />
+            <element signature="e#2300#2301#0" expanded="true" />
+            <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2836,14 +2812,38 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
+          <caret line="461" column="0" selection-start-line="461" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
           <folding>
-            <element signature="e#2270#2271#0" expanded="true" />
-            <element signature="e#2300#2301#0" expanded="true" />
-            <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#3549#3550#0" expanded="true" />
+            <element signature="e#3578#3579#0" expanded="true" />
+            <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#4498#4499#0" expanded="true" />
+            <element signature="e#4545#4546#0" expanded="true" />
+            <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#AcceptThread#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="e#12324#12374#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2862,26 +2862,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2593361">
-          <caret line="407" column="62" selection-start-line="407" selection-start-column="62" selection-end-line="407" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.73730683">
+          <caret line="528" column="39" selection-start-line="528" selection-start-column="39" selection-end-line="528" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#9213#9539#0" expanded="true" />
-            <element signature="e#9538#9539#0" expanded="true" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="e#14464#14465#0" expanded="true" />
+            <element signature="e#14501#14502#0" expanded="true" />
           </folding>
         </state>
       </provider>

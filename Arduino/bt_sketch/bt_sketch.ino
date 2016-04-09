@@ -30,9 +30,10 @@
 #define FAILURE_MODE "FAILURE: Entering failure mode"
 #define CMD_FAILURE "FAILURE: Cannot find command"
 #define UID_FAILURE "FAILURE: Invalid user ID"
+#define UID_REQUEST "REQUEST: User ID"
 
 int failed_attempt_count;
-char device_id[MAC_BUFFER_SIZE] = "00:11:22:AA:BB:CC";
+char device_id[MAC_BUFFER_SIZE] = "??:??:??:??:??:??";
 
 /**
  * Runs during initial  setup
@@ -46,6 +47,11 @@ void setup() {
   pinMode(TXD,OUTPUT);
   
   // Get MAC Address
+  reset();
+}
+
+void reset() {
+  Serial.println(UID_REQUEST);
   readAddress(device_id, true);
 }
 
@@ -55,6 +61,10 @@ void setup() {
 void loop() {
 
   Serial.flush();
+
+  if (strcmp(device_id, "??:??:??:??:??:??") == 0) {
+    reset();
+  }
 
   // Default values for incoming transmission
   int command = -1;
@@ -108,7 +118,7 @@ void readAddress(char inData[], boolean isSetup) {
     Serial.read();
   }
 
-  if (Serial.available() == MAC_BUFFER_SIZE - 1) {
+  if (Serial.available() >= MAC_BUFFER_SIZE - 1) {
     // Read the device id
     while (index < MAC_BUFFER_SIZE - 1) {
         inChar = Serial.read(); // Read a character
