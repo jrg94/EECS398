@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="@drawable/popup_tile">
 
     <Button
@@ -31,7 +31,8 @@
                 android:text="Name"
                 android:id="@+id/popup_lock_name_title"
                 android:singleLine="true"
-                android:layout_column="0" />
+                android:layout_column="0"
+                android:layout_marginLeft="5dp" />
 
             <EditText
                 android:text="Set this lock name automatically"
@@ -56,7 +57,8 @@
                 android:singleLine="true"
                 android:id="@+id/popup_lock_loc_title"
                 android:layout_column="0"
-                android:paddingRight="5dp" />
+                android:paddingRight="5dp"
+                android:layout_marginLeft="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,7 +77,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ID"
-                android:id="@+id/popup_id_title" />
+                android:id="@+id/popup_id_title"
+                android:layout_marginLeft="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,5 +95,13 @@
         </TableRow>
 
     </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:text="Unlink"
+        android:id="@+id/unlink"
+        android:layout_above="@+id/tableLayout"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
