@@ -24,6 +24,7 @@ public class SmartLock {
     private String label;
     private GPSLocation location;
     private BluetoothDevice device;
+    private String macAddress;
     private boolean isLocked;
     private boolean isInLowPowerMode;
     private boolean isConnected;
@@ -35,6 +36,7 @@ public class SmartLock {
 
     public SmartLock(BluetoothDevice device) {
         this.device = device;
+        macAddress = device.getAddress();
         this.id = UUID.randomUUID();
         this.address = "At what address is this lock?";
         this.label = "What would you like to name this lock?";
@@ -104,6 +106,8 @@ public class SmartLock {
 
     public BluetoothDevice getDevice() { return device; }
 
+    public String getMacAddress() { return macAddress; }
+
     // FUNCTIONALITY //
 
     @Override
@@ -133,10 +137,10 @@ public class SmartLock {
         Switch lockState = (Switch) lls.findViewById(R.id.lockState);
 
         if (isLocked) {
-            lls.sendMessage(String.format("%s%d", "*", UNLOCK_CODE));
+            lls.sendMessage(String.format("%s%d:%s", "*", UNLOCK_CODE, macAddress));
         }
         else {
-            lls.sendMessage(String.format("%s%d", "*", LOCK_CODE));
+            lls.sendMessage(String.format("%s%d:%s", "*", LOCK_CODE, macAddress));
         }
 
         isLocked = !isLocked;
