@@ -13,24 +13,26 @@
  * have the MAC address of the owner (eventually owners?)
  */
 
-#define START_CMD_CHAR '*'    // The character that signals a command
-#define CMD_LOCK 0xEF93       // The value of a lock command
-#define CMD_UNLOCK 0x081D     // The value of an unlock command
-#define MAC_BUFFER_SIZE 18    // Holds the size of the mac address buffer
+#define START_CMD_CHAR    '*'       // The character that signals a command
+#define CMD_LOCK          0xEF93    // The value of a lock command
+#define CMD_UNLOCK        0x081D    // The value of an unlock command
+#define MAC_BUFFER_SIZE   18        // Holds the size of the mac address buffer
 
-#define RXD 0                 // Recieve
-#define TXD 1                 // Transmit
-#define PIN_LOW 0             // The low value to be recieved over serial
-#define PIN_HIGH 1            // The high value to be recieved over serial
-#define LOCK_PIN 6            // Lock pin
-#define UNLOCK_PIN 7          // Unlock pin
+#define RXD           0       // Recieve
+#define TXD           1       // Transmit
+#define PIN_LOW       0       // The low value to be recieved over serial
+#define PIN_HIGH      1       // The high value to be recieved over serial
+#define LOCK_PIN      6       // Lock pin
+#define UNLOCK_PIN    7       // Unlock pin
 
-#define LOCK_SUCCESS "SUCCESS: Lock"
-#define UNLOCK_SUCCESS "SUCCESS: Unlock"
-#define FAILURE_MODE "FAILURE: Entering failure mode"
-#define CMD_FAILURE "FAILURE: Cannot find command"
-#define UID_FAILURE "FAILURE: Invalid user ID"
-#define UID_REQUEST "REQUEST: User ID"
+#define LOCK_SUCCESS          "SUCCESS: Lock"
+#define UNLOCK_SUCCESS        "SUCCESS: Unlock"
+#define FAILURE_MODE          "FAILURE: Entering failure mode"
+#define CMD_FAILURE           "FAILURE: Cannot find command"
+#define UID_FAILURE           "FAILURE: Invalid user ID"
+#define UID_REQUEST           "REQUEST: User ID"
+#define UID_SUCCESS           "SUCCESS: Saved User ID"
+#define CONNECT_SUCCESS       "SUCCESS: Smart Lock Technology 0.20 (2016)"
 
 int failed_attempt_count;
 char device_id[MAC_BUFFER_SIZE] = "??:??:??:??:??:??";
@@ -39,10 +41,16 @@ char device_id[MAC_BUFFER_SIZE] = "??:??:??:??:??:??";
  * Runs during initial  setup
  */
 void setup() {
+
+  // Wait for device to establish a connection
+  delay(2000);
+
+  // Setup serial baud rate and send a success string
   Serial.begin(9600);
-  Serial.println("Smart Lock Technology 0.10 (2016)");
-  Serial.flush(); // Blocks until outgoing transmission is complete
-  
+  Serial.println(CONNECT_SUCCESS);
+  Serial.flush();
+
+  // Initialize transmit and receive pins
   pinMode(RXD,INPUT);
   pinMode(TXD,OUTPUT);
   
@@ -50,9 +58,14 @@ void setup() {
   reset();
 }
 
+/**
+ * Sends a request message for the user ID
+ * Stores the user id in the device id field
+ */
 void reset() {
   Serial.println(UID_REQUEST);
-  readAddress(device_id, true);
+  read_address(device_id, true);
+  Serial.println(UID_SUCCESS);
 }
 
 /**
@@ -86,7 +99,7 @@ void loop() {
   // Parse the command type, pin number, and value
   command = Serial.parseInt();
 
-  readAddress(attempt_address, false);
+  read_address(attempt_address, false);
 
   // Tests the device ID against the string passed to the device
   if (strcmp(attempt_address, device_id) == 0) {
@@ -104,7 +117,7 @@ void loop() {
  * 
  * TODO: Fix freezing for failure cases
  */
-void readAddress(char inData[], boolean isSetup) {
+void read_address(char inData[], boolean isSetup) {
   
   // Allocate some space for the device ID
   char inChar;
