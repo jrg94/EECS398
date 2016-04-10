@@ -26,7 +26,6 @@
                 android:layout_height="106dp"
                 android:id="@+id/imageView"
                 android:src="@drawable/heimdall_logo"
-                android:layout_gravity="right_horizontal|top"
                 android:contentDescription="@string/logo"
                 android:background="#daffffff" />
 

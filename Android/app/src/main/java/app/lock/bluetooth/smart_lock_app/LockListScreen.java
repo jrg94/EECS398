@@ -288,6 +288,11 @@ public class LockListScreen extends Activity {
         Log.e(TAG, "--- ON DESTROY ---");
         super.onDestroy();
 
+        // Kill connection on locks
+        for (SmartLock l : lockManager.getLocks().values()) {
+            l.setIsConnected(false);
+        }
+
         // Stop the Bluetooth chat services
         if (mLockService != null) {
             mLockService.stop();
