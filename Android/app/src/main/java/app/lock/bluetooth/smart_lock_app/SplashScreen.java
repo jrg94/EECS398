@@ -86,7 +86,6 @@ public class SplashScreen extends Activity {
         }
 
         RatingBar buttonsClicked = (RatingBar)findViewById(R.id.buttons_clicked);
-        buttonsClicked
     }
 
     @Override
