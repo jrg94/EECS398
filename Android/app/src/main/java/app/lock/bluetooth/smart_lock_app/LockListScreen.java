@@ -282,16 +282,22 @@ public class LockListScreen extends Activity {
     @Override
     public void onDestroy() {
 
-        // TODO: Should we save?
-
         // Call onDestroy and print this information to the log
         Log.e(TAG, "--- ON DESTROY ---");
         super.onDestroy();
+
+        // Kill connection on locks
+        for (SmartLock l : lockManager.getLocks().values()) {
+            l.setIsConnected(false);
+        }
 
         // Stop the Bluetooth chat services
         if (mLockService != null) {
             mLockService.stop();
         }
+
+        // Save on close
+        lockManager.localSave(this);
     }
 
     /**
