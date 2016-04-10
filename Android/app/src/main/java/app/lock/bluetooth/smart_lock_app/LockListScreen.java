@@ -282,8 +282,6 @@ public class LockListScreen extends Activity {
     @Override
     public void onDestroy() {
 
-        // TODO: Should we save?
-
         // Call onDestroy and print this information to the log
         Log.e(TAG, "--- ON DESTROY ---");
         super.onDestroy();
@@ -297,6 +295,9 @@ public class LockListScreen extends Activity {
         if (mLockService != null) {
             mLockService.stop();
         }
+
+        // Save on close
+        lockManager.localSave(this);
     }
 
     /**
