@@ -526,6 +526,6 @@ public class LockListScreen extends Activity {
         sl.setIsConnected(true);
         mLockArrayAdapter.notifyDataSetChanged();
         while (!mLockService.checkIfConnected()) {}
-        sendMessage(device.getAddress());
+        sl.setLockUID(this);
     }
 }
