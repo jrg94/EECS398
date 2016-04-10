@@ -42,7 +42,8 @@
             android:id="@+id/buttons_clicked"
             android:layout_below="@+id/editText"
             android:layout_centerHorizontal="true"
-            android:numStars="4" />
+            android:numStars="4"
+            android:isIndicator="true"/>
 
     </RelativeLayout>
 

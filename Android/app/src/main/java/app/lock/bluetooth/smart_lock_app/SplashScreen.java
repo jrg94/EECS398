@@ -58,14 +58,20 @@ public class SplashScreen extends Activity {
             b.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    // Holds a reference to the buttons clicked indicator
+                    RatingBar buttonsClicked = (RatingBar)findViewById(R.id.buttons_clicked);
+
                     attemptedLogin[pressCount] = Integer.parseInt(((Button)v).getText().toString());
                     pressCount++;
+                    buttonsClicked.setRating(pressCount);
 
                     // We have reached the required number of digits
                     if (pressCount == passcode.length) {
 
                         // Reset pressCount
                         pressCount = 0;
+                        buttonsClicked.setRating(pressCount);
 
                         // Test that the two passcodes match
                         for (int i = 0; i < passcode.length; i++) {
@@ -85,7 +91,6 @@ public class SplashScreen extends Activity {
             keypad.add(b);
         }
 
-        RatingBar buttonsClicked = (RatingBar)findViewById(R.id.buttons_clicked);
     }
 
     @Override
