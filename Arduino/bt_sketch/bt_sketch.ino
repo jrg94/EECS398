@@ -11,6 +11,7 @@
  * EDIT: Added some base level security by storing a mac address
  * Now the hacker cannot even attempt to brute force commands until they 
  * have the MAC address of the owner (eventually owners?)
+ * EDIT: Standardized incoming commands: *<size>:<command>:<address>
  */
 
 /* Pins */
@@ -70,10 +71,6 @@ void setup() {
  */
 void loop() {
 
-  // Default values for incoming transmission
-  int inDataSize = 0;
-  char attempt_address[MAC_BUFFER_SIZE];
-
   // Reruns loop until there is data to read
   if (Serial.available() < 1 || failed_attempt_count >= 3) {
     return; 
@@ -88,6 +85,14 @@ void loop() {
   parse_string_and_run_command();
 }
 
+/**
+ * Reads as follows:
+ * Parses the first integer as the command
+ * Parses the second integer as the address size
+ * Ignores the separator
+ * Reads the address
+ * Runs the command
+ */
 void parse_string_and_run_command() {
   // Read in the command and size of string
   int command = Serial.parseInt();
@@ -114,21 +119,21 @@ boolean is_command() {
 /**
  * A generic method for reading strings
  */
-void read_string(int inDataSize, char inData[]) {
+void read_string(int in_data_size, char in_data[]) {
 
   // Allocate some space for the incoming characters
-  char inChar;
+  char in_char;
   int index = 0;
 
   // Busy loop until the arduino has received all the data
-  while (Serial.available() < inDataSize) {}
+  while (Serial.available() < in_data_size) {}
 
   // Read the incoming string
-  while (index < inDataSize) {
-    inChar = Serial.read();   // Read a character
-    inData[index] = inChar;   // Store it
+  while (index < in_data_size) {
+    in_char = Serial.read();   // Read a character
+    in_data[index] = in_char;   // Store it
     index++;                  // Increment where to write next
-    inData[index] = '\0';     // Null terminate the string
+    in_data[index] = '\0';     // Null terminate the string
   }
 }
 
@@ -199,16 +204,16 @@ void set_address(char* in_data) {
 /**
  * Takes an integer command and attempts to run it
  */
-void run_command(int command, char* inData) {
+void run_command(int command, char* in_data) {
   switch (command) {
     case CMD_LOCK:
-      lock(inData);
+      lock(in_data);
       break;
     case CMD_UNLOCK:
-      unlock(inData);
+      unlock(in_data);
       break;
     case CMD_SET:
-      set_address(inData);
+      set_address(in_data);
       break;
     default:
       failed_attempt_count++;
