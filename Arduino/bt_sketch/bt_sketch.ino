@@ -198,7 +198,7 @@ void unlock() {
 void set_address(char* in_data) {
   // If device ID is set, don't listen to this command
   if (strcmp(device_id, EMPTY_MAC) != 0) {
-    Serial.println(UID_SET_FAILURE);
+    // Serial.println(UID_SET_FAILURE);
     return;
   }
   // Otherwise, set the address
