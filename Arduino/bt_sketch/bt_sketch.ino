@@ -38,6 +38,7 @@
 #define UID_REQUEST             "REQUEST: User ID"
 #define UID_SUCCESS             "SUCCESS: Saved User ID"
 #define CONNECT_SUCCESS         "SUCCESS: Smart Lock Technology 0.20 (2016)"
+#define NO_UID_FAILURE           "FAILURE: User ID has not been set"
 
 /* Special Constants */
 #define START_CMD_CHAR    '*'   // The character that signals a command
@@ -96,16 +97,20 @@ void loop() {
 void parse_string_and_run_command() {
   // Read in the command and size of string
   int command = Serial.parseInt();
-  int inDataSize = Serial.parseInt();
+  int in_data_size = Serial.parseInt();
 
   // Toss the separator
   Serial.read();
 
-  char inData[inDataSize + 1];
-  read_string(inDataSize, inData);
+  // Read MAC address
+  char in_data[in_data_size + 1];
+  read_string(in_data_size, in_data);
 
-  // Run that command
-  run_command(command, inData);
+  // If the MAC address is correct
+  if (authenticate(command, in_data)) {
+    // Run that command
+    run_command(command, in_data);
+  }
 }
 
 /**
@@ -141,8 +146,16 @@ void read_string(int in_data_size, char in_data[]) {
  * Returns true if the incoming address matches
  * the stored address
  */
-boolean authenticate(char* in_data) {
+boolean authenticate(int command, char* in_data) {
+
+  boolean mac_not_setup = strcmp(device_id, EMPTY_MAC);
+  boolean cmd_set = command == CMD_SET;
+  boolean mac_match = strcmp(in_data, device_id);
+  
   if (strcmp(in_data, device_id) == 0) {
+    return true;
+  }
+  else if (strcmp(device_id, EMPTY_MAC) == 0 && command == CMD_SET) {
     return true;
   }
   else {
@@ -157,10 +170,7 @@ boolean authenticate(char* in_data) {
  * The first line is redundant since we make sure that
  * both pins are set to LOW before we exit
  */
-void lock(char* in_data) {
-  if (!authenticate(in_data)) {
-    return;
-  }
+void lock() {
   set_digitalwrite(UNLOCK_PIN, LOW);
   set_digitalwrite(LOCK_PIN, HIGH);
   delay(1000);
@@ -174,10 +184,7 @@ void lock(char* in_data) {
  * The first line is redundant since we make sure that
  * both pins are set to LOW before we exit
  */
-void unlock(char* in_data) {
-  if (!authenticate(in_data)) {
-    return;
-  }
+void unlock() {
   set_digitalwrite(LOCK_PIN, LOW);
   set_digitalwrite(UNLOCK_PIN, HIGH);
   delay(1000);
@@ -207,10 +214,10 @@ void set_address(char* in_data) {
 void run_command(int command, char* in_data) {
   switch (command) {
     case CMD_LOCK:
-      lock(in_data);
+      lock();
       break;
     case CMD_UNLOCK:
-      unlock(in_data);
+      unlock();
       break;
     case CMD_SET:
       set_address(in_data);
