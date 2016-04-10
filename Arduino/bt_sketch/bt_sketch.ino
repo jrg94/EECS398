@@ -38,7 +38,8 @@
 #define UID_REQUEST             "REQUEST: User ID"
 #define UID_SUCCESS             "SUCCESS: Saved User ID"
 #define CONNECT_SUCCESS         "SUCCESS: Smart Lock Technology 0.20 (2016)"
-#define NO_UID_FAILURE           "FAILURE: User ID has not been set"
+#define NO_UID_FAILURE          "FAILURE: User ID has not been set"
+#define UID_SET_FAILURE         "FAILURE: User ID is already set"
 
 /* Special Constants */
 #define START_CMD_CHAR    '*'   // The character that signals a command
@@ -148,14 +149,12 @@ void read_string(int in_data_size, char in_data[]) {
  */
 boolean authenticate(int command, char* in_data) {
 
-  boolean mac_not_setup = strcmp(device_id, EMPTY_MAC);
-  boolean cmd_set = command == CMD_SET;
-  boolean mac_match = strcmp(in_data, device_id);
-  
-  if (strcmp(in_data, device_id) == 0) {
+  // Or if the MAC address has not been set and the command is set
+  if (strcmp(device_id, EMPTY_MAC) == 0 && command == CMD_SET) {
     return true;
   }
-  else if (strcmp(device_id, EMPTY_MAC) == 0 && command == CMD_SET) {
+  // If the input matches the stored MAC address
+  else if (strcmp(in_data, device_id) == 0) {
     return true;
   }
   else {
@@ -199,6 +198,7 @@ void unlock() {
 void set_address(char* in_data) {
   // If device ID is set, don't listen to this command
   if (strcmp(device_id, EMPTY_MAC) != 0) {
+    Serial.println(UID_SET_FAILURE);
     return;
   }
   // Otherwise, set the address
