@@ -29,8 +29,12 @@ public class SmartLock {
     private boolean isInLowPowerMode;
     private boolean isConnected;
 
+    private static final int SET_CODE = 0xDEAD;
     private static final int LOCK_CODE = 0xEF93;
     private static final int UNLOCK_CODE = 0x081D;
+
+    private static final String CMD_CHAR = "*";
+    private static final String CMD_FORMAT = "%s%d:%d:%s";
 
     // CONSTRUCTORS //
 
@@ -137,16 +141,20 @@ public class SmartLock {
         Switch lockState = (Switch) lls.findViewById(R.id.lockState);
 
         if (isLocked) {
-            lls.sendMessage(String.format("%s%d:%s", "*", UNLOCK_CODE, macAddress));
+            lls.sendMessage(String.format(CMD_FORMAT, CMD_CHAR, UNLOCK_CODE, macAddress.length(), macAddress));
         }
         else {
-            lls.sendMessage(String.format("%s%d:%s", "*", LOCK_CODE, macAddress));
+            lls.sendMessage(String.format(CMD_FORMAT, CMD_CHAR, LOCK_CODE, macAddress.length(), macAddress));
         }
 
         isLocked = !isLocked;
 
         // TODO: Test to see if the lock has changed state - Report an error if not (exception?)
         return isLocked;
+    }
+
+    public void setLockUID(LockListScreen lls) {
+        lls.sendMessage(String.format(CMD_FORMAT, CMD_CHAR, SET_CODE, macAddress.length(), macAddress));
     }
 
     /**
