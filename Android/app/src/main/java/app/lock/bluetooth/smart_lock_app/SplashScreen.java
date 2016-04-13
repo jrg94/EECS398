@@ -1,8 +1,10 @@
 package app.lock.bluetooth.smart_lock_app;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -79,6 +81,9 @@ public class SplashScreen extends Activity {
                             // If at any point they don't match, return
                             if (passcode[i] != attemptedLogin[i]) {
                                 Toast.makeText(SplashScreen.this, "Failed to enter the correct passcode", Toast.LENGTH_SHORT).show();
+                                Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                                // Vibrate for 500 milliseconds
+                                vib.vibrate(500);
                                 return;
                             }
                         }
