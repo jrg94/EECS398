@@ -3,13 +3,16 @@ package app.lock.bluetooth.smart_lock_app;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RatingBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -28,9 +31,10 @@ public class SplashScreen extends Activity {
     private List<Button> keypad;
     private int pressCount = 0;
     private int[] attemptedLogin = new int[4];
+    private boolean changingPassword = false;
 
     // Constants
-    private static final int[] passcode = {1, 2, 3, 4};
+    private int[] passcode = {1, 2, 3, 4};
 
     private static final int[] BUTTON_IDS = {
             R.id.buttonZero,
@@ -66,6 +70,18 @@ public class SplashScreen extends Activity {
             }
         });
 
+        ImageButton changePassword = (ImageButton)findViewById(R.id.imageButtonSettings);
+        changePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pressCount = 0;
+
+                TextView passcodeString = (TextView)findViewById(R.id.passcode_text);
+                passcodeString.setText("New Password Mode:\nEnter Old Password");
+                changingPassword = true;
+            }
+        });
+
         keypad = new ArrayList<Button>(BUTTON_IDS.length);
 
         for (int id : BUTTON_IDS) {
@@ -87,6 +103,20 @@ public class SplashScreen extends Activity {
                         // Reset pressCount
                         pressCount = 0;
                         buttonsClicked.setRating(pressCount);
+
+                        // If changing password
+                        if (changingPassword) {
+
+                            // Set password
+                            passcode[0] = attemptedLogin[0];
+                            passcode[1] = attemptedLogin[1];
+                            passcode[2] = attemptedLogin[2];
+                            passcode[3] = attemptedLogin[3];
+
+                            // Turn off changing changing password
+                            changingPassword = false;
+                            return;
+                        }
 
                         // Test that the two passcodes match
                         for (int i = 0; i < passcode.length; i++) {
