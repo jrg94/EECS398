@@ -33,6 +33,7 @@ public class SplashScreen extends Activity {
     private static final int[] passcode = {1, 2, 3, 4};
 
     private static final int[] BUTTON_IDS = {
+            R.id.buttonZero,
             R.id.buttonOne,
             R.id.buttonTwo,
             R.id.buttonThree,
@@ -52,6 +53,18 @@ public class SplashScreen extends Activity {
 
         // Sets up the window layout
         setContentView(R.layout.splash_screen);
+
+        Button erase = (Button)findViewById(R.id.buttonErase);
+        erase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                decrementPressCount();
+
+                // Holds a reference to the buttons clicked indicator
+                RatingBar buttonsClicked = (RatingBar)findViewById(R.id.buttons_clicked);
+                buttonsClicked.setRating(pressCount);
+            }
+        });
 
         keypad = new ArrayList<Button>(BUTTON_IDS.length);
 
@@ -118,5 +131,14 @@ public class SplashScreen extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * A helper method to avoid running pressCount negative
+     */
+    private void decrementPressCount() {
+        if (pressCount > 0) {
+            pressCount--;
+        }
     }
 }
