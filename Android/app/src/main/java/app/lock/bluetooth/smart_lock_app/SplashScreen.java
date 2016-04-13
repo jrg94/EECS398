@@ -1,12 +1,18 @@
 package app.lock.bluetooth.smart_lock_app;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.RatingBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -25,11 +31,14 @@ public class SplashScreen extends Activity {
     private List<Button> keypad;
     private int pressCount = 0;
     private int[] attemptedLogin = new int[4];
+    private boolean authenticatingCurrentPassword = false;
+    private boolean changingPassword = false;
 
     // Constants
-    private static final int[] passcode = {1, 2, 3, 4};
+    private int[] passcode = {1, 2, 3, 4};
 
     private static final int[] BUTTON_IDS = {
+            R.id.buttonZero,
             R.id.buttonOne,
             R.id.buttonTwo,
             R.id.buttonThree,
@@ -50,6 +59,38 @@ public class SplashScreen extends Activity {
         // Sets up the window layout
         setContentView(R.layout.splash_screen);
 
+        Button erase = (Button)findViewById(R.id.buttonErase);
+        erase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                decrementPressCount();
+
+                // Holds a reference to the buttons clicked indicator
+                RatingBar buttonsClicked = (RatingBar)findViewById(R.id.buttons_clicked);
+                buttonsClicked.setRating(pressCount);
+            }
+        });
+
+        // Handles image button behavior
+        ImageButton changePassword = (ImageButton)findViewById(R.id.imageButtonSettings);
+        changePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Stops the user from interrupting the process of changing the password
+                if (!authenticatingCurrentPassword && !changingPassword) {
+                    RatingBar buttonsClicked = (RatingBar)findViewById(R.id.buttons_clicked);
+
+                    pressCount = 0;
+                    buttonsClicked.setRating(pressCount);
+
+                    TextView passcodeString = (TextView) findViewById(R.id.passcode_text);
+                    passcodeString.setText("New Password Mode:\nEnter Old Password");
+                    authenticatingCurrentPassword = true;
+                }
+            }
+        });
+
         keypad = new ArrayList<Button>(BUTTON_IDS.length);
 
         for (int id : BUTTON_IDS) {
@@ -57,21 +98,58 @@ public class SplashScreen extends Activity {
             b.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    // Holds a reference to the buttons clicked indicator and passcode string
+                    RatingBar buttonsClicked = (RatingBar)findViewById(R.id.buttons_clicked);
+                    TextView passcodeString = (TextView)findViewById(R.id.passcode_text);
+
                     attemptedLogin[pressCount] = Integer.parseInt(((Button)v).getText().toString());
                     pressCount++;
+                    buttonsClicked.setRating(pressCount);
 
                     // We have reached the required number of digits
                     if (pressCount == passcode.length) {
 
                         // Reset pressCount
                         pressCount = 0;
+                        buttonsClicked.setRating(pressCount);
 
-                        // Test that the two passcodes match
-                        for (int i = 0; i < passcode.length; i++) {
+                        // If we are authenticating the current password
+                        if (authenticatingCurrentPassword) {
 
-                            // If at any point they don't match, return
-                            if (passcode[i] != attemptedLogin[i]) {
-                                Toast.makeText(SplashScreen.this, "Failed to enter the correct passcode", Toast.LENGTH_SHORT).show();
+                            // If the entered password is correct
+                            if (checkPassword()) {
+                                changingPassword = true;
+                                passcodeString.setText("New Password Mode:\nNow Enter New Password");
+                            }
+                            else {
+                                passcodeString.setText("New Password Mode FAILED:\nTry Again");
+                            }
+
+                            // Regardless, turn off current password
+                            authenticatingCurrentPassword = false;
+
+                            return;
+                        }
+                        // If changing password
+                        else if (changingPassword) {
+
+                            // Set password
+                            passcode[0] = attemptedLogin[0];
+                            passcode[1] = attemptedLogin[1];
+                            passcode[2] = attemptedLogin[2];
+                            passcode[3] = attemptedLogin[3];
+
+                            passcodeString.setText("Successfully Changed Password");
+
+                            // Turn off changing changing password
+                            changingPassword = false;
+                            return;
+                        }
+                        // We're just logging in
+                        else {
+                            // If the wrong password was entered, return
+                            if (!checkPassword()) {
                                 return;
                             }
                         }
@@ -83,6 +161,7 @@ public class SplashScreen extends Activity {
             });
             keypad.add(b);
         }
+
     }
 
     @Override
@@ -105,5 +184,36 @@ public class SplashScreen extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * A helper method to avoid running pressCount negative
+     */
+    private void decrementPressCount() {
+        if (pressCount > 0) {
+            pressCount--;
+        }
+    }
+
+    /**
+     * A helper method for checking the entered password against
+     * the actual password
+     * TODO: DO NOT store password raw
+     * @return
+     */
+    private boolean checkPassword() {
+        // Test that the two passcodes match
+        for (int i = 0; i < passcode.length; i++) {
+
+            // If at any point they don't match, return
+            if (passcode[i] != attemptedLogin[i]) {
+                Toast.makeText(SplashScreen.this, "Failed to enter the correct passcode", Toast.LENGTH_SHORT).show();
+                Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                // Vibrate for 500 milliseconds
+                vib.vibrate(500);
+                return false;
+            }
+        }
+        return true;
     }
 }
