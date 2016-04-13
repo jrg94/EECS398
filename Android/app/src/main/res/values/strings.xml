@@ -17,7 +17,7 @@
     <!-- SplashScreen -->
     <string name="title_activity_splash_screen">Heimlock</string>
     <string name="logo">Logo</string>
-    <string name="passcode_string">Please enter your passcode</string>
+    <string name="passcode_string">Please Enter Your Passcode</string>
 
     <!-- LockListScreen -->
     <string name="title_activity_lock_list_screen">Lock List</string>

@@ -76,11 +76,18 @@ public class SplashScreen extends Activity {
         changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pressCount = 0;
 
-                TextView passcodeString = (TextView)findViewById(R.id.passcode_text);
-                passcodeString.setText("New Password Mode:\nEnter Old Password");
-                authenticatingCurrentPassword = true;
+                // Stops the user from interrupting the process of changing the password
+                if (!authenticatingCurrentPassword && !changingPassword) {
+                    RatingBar buttonsClicked = (RatingBar)findViewById(R.id.buttons_clicked);
+
+                    pressCount = 0;
+                    buttonsClicked.setRating(pressCount);
+
+                    TextView passcodeString = (TextView) findViewById(R.id.passcode_text);
+                    passcodeString.setText("New Password Mode:\nEnter Old Password");
+                    authenticatingCurrentPassword = true;
+                }
             }
         });
 
@@ -92,8 +99,9 @@ public class SplashScreen extends Activity {
                 @Override
                 public void onClick(View v) {
 
-                    // Holds a reference to the buttons clicked indicator
+                    // Holds a reference to the buttons clicked indicator and passcode string
                     RatingBar buttonsClicked = (RatingBar)findViewById(R.id.buttons_clicked);
+                    TextView passcodeString = (TextView)findViewById(R.id.passcode_text);
 
                     attemptedLogin[pressCount] = Integer.parseInt(((Button)v).getText().toString());
                     pressCount++;
@@ -108,13 +116,19 @@ public class SplashScreen extends Activity {
 
                         // If we are authenticating the current password
                         if (authenticatingCurrentPassword) {
+
                             // If the entered password is correct
                             if (checkPassword()) {
-                                authenticatingCurrentPassword = false;
                                 changingPassword = true;
-                                TextView passcodeString = (TextView)findViewById(R.id.passcode_text);
                                 passcodeString.setText("New Password Mode:\nNow Enter New Password");
                             }
+                            else {
+                                passcodeString.setText("New Password Mode FAILED:\nTry Again");
+                            }
+
+                            // Regardless, turn off current password
+                            authenticatingCurrentPassword = false;
+
                             return;
                         }
                         // If changing password
@@ -125,6 +139,8 @@ public class SplashScreen extends Activity {
                             passcode[1] = attemptedLogin[1];
                             passcode[2] = attemptedLogin[2];
                             passcode[3] = attemptedLogin[3];
+
+                            passcodeString.setText("Successfully Changed Password");
 
                             // Turn off changing changing password
                             changingPassword = false;
