@@ -118,18 +118,7 @@ public class SplashScreen extends Activity {
                             return;
                         }
 
-                        // Test that the two passcodes match
-                        for (int i = 0; i < passcode.length; i++) {
-
-                            // If at any point they don't match, return
-                            if (passcode[i] != attemptedLogin[i]) {
-                                Toast.makeText(SplashScreen.this, "Failed to enter the correct passcode", Toast.LENGTH_SHORT).show();
-                                Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                                // Vibrate for 500 milliseconds
-                                vib.vibrate(500);
-                                return;
-                            }
-                        }
+                        checkPassword();
 
                         // If so, change to the next activity (lock list screen)
                         startActivity(new Intent(SplashScreen.this, LockListScreen.class));
@@ -170,5 +159,27 @@ public class SplashScreen extends Activity {
         if (pressCount > 0) {
             pressCount--;
         }
+    }
+
+    /**
+     * A helper method for checking the entered password against
+     * the actual password
+     * TODO: DO NOT store password raw
+     * @return
+     */
+    private boolean checkPassword() {
+        // Test that the two passcodes match
+        for (int i = 0; i < passcode.length; i++) {
+
+            // If at any point they don't match, return
+            if (passcode[i] != attemptedLogin[i]) {
+                Toast.makeText(SplashScreen.this, "Failed to enter the correct passcode", Toast.LENGTH_SHORT).show();
+                Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                // Vibrate for 500 milliseconds
+                vib.vibrate(500);
+                return false;
+            }
+        }
+        return true;
     }
 }
