@@ -31,6 +31,7 @@ public class SplashScreen extends Activity {
     private List<Button> keypad;
     private int pressCount = 0;
     private int[] attemptedLogin = new int[4];
+    private boolean authenticatingCurrentPassword = false;
     private boolean changingPassword = false;
 
     // Constants
@@ -70,6 +71,7 @@ public class SplashScreen extends Activity {
             }
         });
 
+        // Handles image button behavior
         ImageButton changePassword = (ImageButton)findViewById(R.id.imageButtonSettings);
         changePassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +80,7 @@ public class SplashScreen extends Activity {
 
                 TextView passcodeString = (TextView)findViewById(R.id.passcode_text);
                 passcodeString.setText("New Password Mode:\nEnter Old Password");
-                changingPassword = true;
+                authenticatingCurrentPassword = true;
             }
         });
 
@@ -104,8 +106,19 @@ public class SplashScreen extends Activity {
                         pressCount = 0;
                         buttonsClicked.setRating(pressCount);
 
+                        // If we are authenticating the current password
+                        if (authenticatingCurrentPassword) {
+                            // If the entered password is correct
+                            if (checkPassword()) {
+                                authenticatingCurrentPassword = false;
+                                changingPassword = true;
+                                TextView passcodeString = (TextView)findViewById(R.id.passcode_text);
+                                passcodeString.setText("New Password Mode:\nNow Enter New Password");
+                            }
+                            return;
+                        }
                         // If changing password
-                        if (changingPassword) {
+                        else if (changingPassword) {
 
                             // Set password
                             passcode[0] = attemptedLogin[0];
@@ -117,8 +130,13 @@ public class SplashScreen extends Activity {
                             changingPassword = false;
                             return;
                         }
-
-                        checkPassword();
+                        // We're just logging in
+                        else {
+                            // If the wrong password was entered, return
+                            if (!checkPassword()) {
+                                return;
+                            }
+                        }
 
                         // If so, change to the next activity (lock list screen)
                         startActivity(new Intent(SplashScreen.this, LockListScreen.class));
