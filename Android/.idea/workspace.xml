@@ -81,14 +81,11 @@
       <file leaf-file-name="LocksAdapter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41450068">
-              <caret line="84" column="50" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.76744187">
+              <caret line="60" column="74" selection-start-line="60" selection-start-column="74" selection-end-line="60" selection-end-column="74" />
               <folding>
                 <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
-                <element signature="e#2709#3393#0" expanded="true" />
-                <element signature="e#3392#3393#0" expanded="true" />
-                <element signature="e#3473#3739#0" expanded="true" />
-                <element signature="e#3738#3739#0" expanded="true" />
+                <element signature="method#getView#0;class#LocksAdapter#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1850,7 +1847,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2176,14 +2173,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41450068">
-          <caret line="84" column="50" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.76744187">
+          <caret line="60" column="74" selection-start-line="60" selection-start-column="74" selection-end-line="60" selection-end-column="74" />
           <folding>
             <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
-            <element signature="e#2709#3393#0" expanded="true" />
-            <element signature="e#3392#3393#0" expanded="true" />
-            <element signature="e#3473#3739#0" expanded="true" />
-            <element signature="e#3738#3739#0" expanded="true" />
+            <element signature="method#getView#0;class#LocksAdapter#0" expanded="false" />
           </folding>
         </state>
       </provider>

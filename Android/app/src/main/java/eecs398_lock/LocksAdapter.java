@@ -87,14 +87,21 @@ public class LocksAdapter extends BaseAdapter {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (mContext instanceof LockListScreen) {
+                    // If locked
                     if (lock.getIsLocked()) {
+
+                        // Unlock
                         lock.unlock(lls);
+
+                        // Freeze for 3 seconds
                         try {
                             wait(3000);
                         }
                         catch(InterruptedException e) {
                             // Do nothing
                         }
+
+                        // Set lock false and notify view
                         lock.setIsLocked(false);
                         notifyDataSetChanged();
                     }
