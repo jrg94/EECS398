@@ -415,6 +415,9 @@ public class LockListScreen extends Activity {
     private void handleRead(String msg) {
         if (msg.contains("SUCCESS") || msg.contains("FAILURE")) {
             Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+            if (msg.contains("SUCCESS: Lock")){
+
+            }
         }
         else if (msg.contains("REQUEST")) {
             sendMessage(getCurrentAddress());
