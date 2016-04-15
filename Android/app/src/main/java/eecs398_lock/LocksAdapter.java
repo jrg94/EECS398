@@ -92,18 +92,11 @@ public class LocksAdapter extends BaseAdapter {
 
                         // Unlock
                         lock.unlock(lls);
-
-                        // Freeze for 3 seconds
-                        try {
-                            wait(3000);
-                        }
-                        catch(InterruptedException e) {
-                            // Do nothing
-                        }
-
-                        // Set lock false and notify view
-                        lock.setIsLocked(false);
                         notifyDataSetChanged();
+
+                    }
+                    else {
+                        lock.setIsLocked(true);
                     }
                 }
             }
