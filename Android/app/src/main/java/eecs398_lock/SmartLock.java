@@ -42,7 +42,7 @@ public class SmartLock {
         this.id = UUID.randomUUID();
         this.label = "What would you like to name this lock?";
         this.location = new GPSLocation(Math.random()*180, Math.random()*180);
-        this.isLocked = false;
+        this.isLocked = true;
         this.isConnected = false;
     }
 
@@ -51,7 +51,7 @@ public class SmartLock {
         this.id = UUID.randomUUID();
         this.label = "What would you like to name this lock?";
         this.location = location;
-        this.isLocked = false;
+        this.isLocked = true;
         this.isConnected = false;
     }
 
@@ -60,7 +60,7 @@ public class SmartLock {
         this.id = UUID.randomUUID();
         this.label = "What would you like to name this lock?";
         this.location = new GPSLocation(latitude, longitude);
-        this.isLocked = false;
+        this.isLocked = true;
         this.isConnected = false;
     }
 
@@ -87,6 +87,8 @@ public class SmartLock {
     }
 
     public boolean getIsLocked() { return isLocked; }
+
+    public void setIsLocked(boolean isLocked) { this.isLocked = isLocked; }
 
     public boolean getIsConnected() { return isConnected; }
 
@@ -123,11 +125,12 @@ public class SmartLock {
      */
     public boolean unlock(LockListScreen lls) {
 
+        // Sends the unlock message to the arduino
         lls.sendMessage(String.format(CMD_FORMAT, CMD_CHAR, UNLOCK_CODE, macAddress.length(), macAddress));
 
-        isLocked
+        // Set isLocked to false
+        isLocked = false;
 
-        // TODO: Test to see if the lock has changed state - Report an error if not (exception?)
         return isLocked;
     }
 

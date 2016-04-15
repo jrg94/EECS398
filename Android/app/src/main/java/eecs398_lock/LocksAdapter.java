@@ -67,10 +67,6 @@ public class LocksAdapter extends BaseAdapter {
         final SmartLock lock = (SmartLock) getItem(position);
         final LockListScreen lls = (LockListScreen) mContext;
 
-        // TODO: Try to connect to this lock
-        // TODO: Display connected or not
-        //lls.mLockService.connect(lock.getDevice());
-
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.lock_ui, parent, false);
         }
@@ -85,14 +81,28 @@ public class LocksAdapter extends BaseAdapter {
         lockLabel.setText(lock.getLabel());
         connectedStatus.setText(lock.getIsConnected() ? "connected" : "disconnected");
 
+        // Handle switch behavior
         lockStatus.setChecked(lock.getIsLocked());
         lockStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                lock.toggleLock((LockListScreen)mContext);
+                if (mContext instanceof LockListScreen) {
+                    if (lock.getIsLocked()) {
+                        lock.unlock(lls);
+                        try {
+                            wait(3000);
+                        }
+                        catch(InterruptedException e) {
+                            // Do nothing
+                        }
+                        lock.setIsLocked(false);
+                        notifyDataSetChanged();
+                    }
+                }
             }
         });
 
+        // Handle popup behavior
         popupMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
