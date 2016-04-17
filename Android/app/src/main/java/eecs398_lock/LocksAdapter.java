@@ -74,8 +74,16 @@ public class LocksAdapter extends BaseAdapter {
         // Initialize UI elements
         TextView lockLabel = (TextView) convertView.findViewById(R.id.lockLabel);
         TextView connectedStatus = (TextView) convertView.findViewById(R.id.connectedStatus);
-        Switch lockStatus = (Switch) convertView.findViewById(R.id.lockState);
+        final Switch lockStatus = (Switch) convertView.findViewById(R.id.lockState);
         final Button popupMenuButton = (Button) convertView.findViewById(R.id.popup_lock_menu_button);
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lock.unlock(lls);
+                lockStatus.setChecked(lock.getIsLocked());
+            }
+        });
 
         // Set the UI elements up
         lockLabel.setText(lock.getLabel());
@@ -83,24 +91,7 @@ public class LocksAdapter extends BaseAdapter {
 
         // Handle switch behavior
         lockStatus.setChecked(lock.getIsLocked());
-        lockStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (mContext instanceof LockListScreen) {
-                    // If locked
-                    if (lock.getIsLocked()) {
-
-                        // Unlock
-                        lock.unlock(lls);
-                        notifyDataSetChanged();
-
-                    }
-                    else {
-                        lock.setIsLocked(true);
-                    }
-                }
-            }
-        });
+        lockStatus.setEnabled(false);
 
         // Handle popup behavior
         popupMenuButton.setOnClickListener(new View.OnClickListener() {

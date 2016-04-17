@@ -26,7 +26,6 @@ public class SmartLock {
     private String macAddress;
     private boolean isLocked;
     private boolean isConnected;
-//    private Switch lockState;
 
     private static final int SET_CODE = 0xDEAD;
     private static final int LOCK_CODE = 0xEF93;
@@ -98,14 +97,6 @@ public class SmartLock {
     public BluetoothDevice getDevice() { return device; }
 
     public String getMacAddress() { return macAddress; }
-    /*
-    public void setLockState(Switch lockState) {
-        this.lockState = lockState;
-    }
-
-    public Switch getLockState() {
-        return lockState;
-    }*/
 
     // FUNCTIONALITY //
 
