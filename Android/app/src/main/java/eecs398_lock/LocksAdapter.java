@@ -86,11 +86,11 @@ public class LocksAdapter extends BaseAdapter {
         // Sets the status message and color
         if (lock.getIsConnected()) {
             connectedStatus.setText("connected");
-            connectedStatus.setTextColor(Color.GREEN);
+            connectedStatus.setTextColor(Color.parseColor("#029E02"));
         }
         else {
             connectedStatus.setText("disconnected");
-            connectedStatus.setTextColor(Color.RED);
+            connectedStatus.setTextColor(Color.parseColor("#E53715"));
         }
 
         // Handle switch behavior
