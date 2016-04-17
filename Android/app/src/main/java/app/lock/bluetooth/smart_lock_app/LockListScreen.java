@@ -113,12 +113,6 @@ public class LockListScreen extends Activity {
         // Load data from file
         lockManager.localLoad(this);
 
-        lockManager.addLock(mBluetoothAdapter.getRemoteDevice("FC:62:B9:47:A8:63"));
-
-        lockManager.addLock(mBluetoothAdapter.getRemoteDevice("08:DF:1F:D0:CB:A2"));
-
-        lockManager.addLock(mBluetoothAdapter.getRemoteDevice("A0:E9:DB:03:36:64"));
-
         // If the adapter is null, then Bluetooth is not supported
         if (mBluetoothAdapter == null) {
             Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();

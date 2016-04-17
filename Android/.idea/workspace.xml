@@ -55,8 +55,8 @@
       <file leaf-file-name="LockListScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6846473">
-              <caret line="119" column="80" selection-start-line="119" selection-start-column="80" selection-end-line="119" selection-end-column="80" />
+            <state vertical-scroll-proportion="0.47302905">
+              <caret line="113" column="36" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
@@ -1634,9 +1634,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_ui.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/lock_tile.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
       </list>
     </option>
@@ -2563,17 +2563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2638,10 +2627,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6846473">
-          <caret line="119" column="80" selection-start-line="119" selection-start-column="80" selection-end-line="119" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.47302905">
+          <caret line="113" column="36" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
