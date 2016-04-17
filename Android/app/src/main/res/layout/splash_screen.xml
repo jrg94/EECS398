@@ -13,14 +13,6 @@
         android:layout_alignParentEnd="true"
         android:background="#ccf1ef98">
 
-        <ImageView
-            android:layout_width="134dp"
-            android:layout_height="106dp"
-            android:id="@+id/imageView"
-            android:src="@drawable/heimdall_logo"
-            android:contentDescription="@string/logo"
-            android:background="#daffffff" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -138,5 +130,51 @@
         </GridLayout>
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/heimdall_logo_edited"
+            android:contentDescription="@string/logo"
+            android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_gravity="bottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heimdall"
+                android:id="@+id/lock_name_text"
+                android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/buttons_clicked"
+                android:layout_gravity="left"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smart Lock System"
+                android:id="@+id/lock_detail_text"
+                android:layout_gravity="left"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:layout_marginBottom="5dp" />
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>
