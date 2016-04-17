@@ -3,6 +3,7 @@ package eecs398_lock;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -81,7 +82,16 @@ public class LocksAdapter extends BaseAdapter {
 
         // Set the UI elements up
         lockLabel.setText(lock.getLabel());
-        connectedStatus.setText(lock.getIsConnected() ? "connected" : "disconnected");
+
+        // Sets the status message and color
+        if (lock.getIsConnected()) {
+            connectedStatus.setText("connected");
+            connectedStatus.setTextColor(Color.parseColor("#029E02"));
+        }
+        else {
+            connectedStatus.setText("disconnected");
+            connectedStatus.setTextColor(Color.parseColor("#E53715"));
+        }
 
         // Handle switch behavior
         lockStatus.setChecked(lock.getIsLocked());
@@ -111,7 +121,6 @@ public class LocksAdapter extends BaseAdapter {
 
                 lock.unlock(lls);
                 lockStatus.setChecked(lock.getIsLocked());
-                //v.setEnabled(false);
             }
         });
 

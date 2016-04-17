@@ -31,6 +31,7 @@ public class SmartLock {
     private static final int LOCK_CODE = 0xEF93;
     private static final int UNLOCK_CODE = 0x081D;
 
+    private static final String EMPTY_LOCK_NAME = "Insert Label Here";
     private static final String CMD_CHAR = "*";
     private static final String CMD_FORMAT = "%s%d:%d:%s";
 
@@ -40,7 +41,7 @@ public class SmartLock {
         this.device = device;
         macAddress = device.getAddress();
         this.id = UUID.randomUUID();
-        this.label = "What would you like to name this lock?";
+        this.label = EMPTY_LOCK_NAME;
         this.location = new GPSLocation(Math.random()*180, Math.random()*180);
         this.isLocked = true;
         this.isConnected = false;

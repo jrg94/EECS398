@@ -6,7 +6,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".LockListScreen"
-    android:background="#ffc0c0c0">
+    android:background="#ff9c9a9d">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/watermark_key"
+        android:src="@drawable/key_image"
+        android:contentDescription="key"
+        android:layout_centerInParent="true"
+        android:focusable="true"
+        android:tint="#b6b6b6" />
 
     <GridView
         android:layout_width="wrap_content"
@@ -15,10 +25,9 @@
         android:horizontalSpacing="5dp"
         android:verticalSpacing="5dp"
         android:id="@+id/gridView"
-        android:background="#ffc0c0c0"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:clickable="true"
-        android:descendantFocusability="blocksDescendants"/>
+        android:descendantFocusability="blocksDescendants" />
 
 </RelativeLayout>
