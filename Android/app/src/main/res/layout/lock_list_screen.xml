@@ -8,24 +8,26 @@
     tools:context=".LockListScreen"
     android:background="#ff9c9a9d">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#ff9c9a9d"
-        android:elevation="10dp">
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"
+        android:id="@+id/gridView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:descendantFocusability="blocksDescendants" />
 
-        <GridView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:numColumns="2"
-            android:horizontalSpacing="5dp"
-            android:verticalSpacing="5dp"
-            android:id="@+id/gridView"
-            android:background="@android:color/transparent"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:clickable="true"
-            android:descendantFocusability="blocksDescendants" />
-    </RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/watermark_key"
+        android:src="@drawable/key_image"
+        android:contentDescription="key"
+        android:layout_centerInParent="true"
+        android:focusable="true"
+        android:tint="#b6b6b6" />
 
 </RelativeLayout>
