@@ -415,6 +415,13 @@ public class LockListScreen extends Activity {
     private void handleRead(String msg) {
         if (msg.contains("SUCCESS") || msg.contains("FAILURE")) {
             Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+            if (msg.contains("SUCCESS: Lock")){
+                // Just force all locks to true
+                for(SmartLock sl:lockManager.getLocks().values()) {
+                    sl.setIsLocked(true);
+                }
+                mLockArrayAdapter.notifyDataSetChanged();
+            }
         }
         else if (msg.contains("REQUEST")) {
             sendMessage(getCurrentAddress());

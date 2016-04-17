@@ -3,6 +3,7 @@ package eecs398_lock;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,8 @@ public class LocksAdapter extends BaseAdapter {
 
     // Fields //
     private Context mContext;
-
+    // variable to track event time
+    private long mLastClickTime = 0;
     private HashMap<String, SmartLock> locks = new HashMap<String, SmartLock>();
     private String[] keys;
 
@@ -67,10 +69,6 @@ public class LocksAdapter extends BaseAdapter {
         final SmartLock lock = (SmartLock) getItem(position);
         final LockListScreen lls = (LockListScreen) mContext;
 
-        // TODO: Try to connect to this lock
-        // TODO: Display connected or not
-        //lls.mLockService.connect(lock.getDevice());
-
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.lock_ui, parent, false);
         }
@@ -78,27 +76,42 @@ public class LocksAdapter extends BaseAdapter {
         // Initialize UI elements
         TextView lockLabel = (TextView) convertView.findViewById(R.id.lockLabel);
         TextView connectedStatus = (TextView) convertView.findViewById(R.id.connectedStatus);
-        Switch lockStatus = (Switch) convertView.findViewById(R.id.lockState);
+        final Switch lockStatus = (Switch) convertView.findViewById(R.id.lockState);
         final Button popupMenuButton = (Button) convertView.findViewById(R.id.popup_lock_menu_button);
 
         // Set the UI elements up
         lockLabel.setText(lock.getLabel());
         connectedStatus.setText(lock.getIsConnected() ? "connected" : "disconnected");
 
+        // Handle switch behavior
         lockStatus.setChecked(lock.getIsLocked());
-        lockStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                lock.toggleLock((LockListScreen)mContext);
-            }
-        });
+        lockStatus.setEnabled(false);
 
+        // Handle popup behavior
         popupMenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mContext instanceof LockListScreen) {
                     lls.showPopUp(lls.findViewById(R.id.gridView), lock);
                 }
+            }
+        });
+
+        // Handle tile behavior
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 3000) {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
+
+                lock.unlock(lls);
+                lockStatus.setChecked(lock.getIsLocked());
+                //v.setEnabled(false);
             }
         });
 

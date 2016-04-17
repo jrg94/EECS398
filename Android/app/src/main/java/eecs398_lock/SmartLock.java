@@ -20,13 +20,11 @@ public class SmartLock {
     // FIELDS //
 
     private UUID id;
-    private String address;
     private String label;
     private GPSLocation location;
     private BluetoothDevice device;
     private String macAddress;
     private boolean isLocked;
-    private boolean isInLowPowerMode;
     private boolean isConnected;
 
     private static final int SET_CODE = 0xDEAD;
@@ -42,33 +40,27 @@ public class SmartLock {
         this.device = device;
         macAddress = device.getAddress();
         this.id = UUID.randomUUID();
-        this.address = "At what address is this lock?";
         this.label = "What would you like to name this lock?";
         this.location = new GPSLocation(Math.random()*180, Math.random()*180);
-        this.isLocked = false;
-        this.isInLowPowerMode = false;
+        this.isLocked = true;
         this.isConnected = false;
     }
 
     public SmartLock(BluetoothDevice device, GPSLocation location) {
         this.device = device;
         this.id = UUID.randomUUID();
-        this.address = "At what address is this lock?";
         this.label = "What would you like to name this lock?";
         this.location = location;
-        this.isLocked = false;
-        this.isInLowPowerMode = false;
+        this.isLocked = true;
         this.isConnected = false;
     }
 
     public SmartLock(BluetoothDevice device, double latitude, double longitude) {
         this.device = device;
         this.id = UUID.randomUUID();
-        this.address = "At what address is this lock?";
         this.label = "What would you like to name this lock?";
         this.location = new GPSLocation(latitude, longitude);
-        this.isLocked = false;
-        this.isInLowPowerMode = false;
+        this.isLocked = true;
         this.isConnected = false;
     }
 
@@ -76,14 +68,6 @@ public class SmartLock {
 
     public UUID getID() {
         return this.id;
-    }
-
-    public String getAddress() {
-        return this.address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getLabel() {
@@ -103,6 +87,8 @@ public class SmartLock {
     }
 
     public boolean getIsLocked() { return isLocked; }
+
+    public void setIsLocked(boolean isLocked) { this.isLocked = isLocked; }
 
     public boolean getIsConnected() { return isConnected; }
 
@@ -137,35 +123,19 @@ public class SmartLock {
      * Toggles the state of the lock
      * @return the state of the lock after the toggle
      */
-    public boolean toggleLock(LockListScreen lls) {
-        Switch lockState = (Switch) lls.findViewById(R.id.lockState);
+    public boolean unlock(LockListScreen lls) {
 
-        if (isLocked) {
-            lls.sendMessage(String.format(CMD_FORMAT, CMD_CHAR, UNLOCK_CODE, macAddress.length(), macAddress));
-        }
-        else {
-            lls.sendMessage(String.format(CMD_FORMAT, CMD_CHAR, LOCK_CODE, macAddress.length(), macAddress));
-        }
+        // Sends the unlock message to the arduino
+        lls.sendMessage(String.format(CMD_FORMAT, CMD_CHAR, UNLOCK_CODE, macAddress.length(), macAddress));
 
-        isLocked = !isLocked;
+        // Set isLocked to false
+        isLocked = false;
 
-        // TODO: Test to see if the lock has changed state - Report an error if not (exception?)
         return isLocked;
     }
 
     public void setLockUID(LockListScreen lls) {
         lls.sendMessage(String.format(CMD_FORMAT, CMD_CHAR, SET_CODE, macAddress.length(), macAddress));
-    }
-
-    /**
-     * Toggles the low power mode for the BlueTooth Shield
-     * @return the state of the low power mode after the toggle
-     */
-    public boolean toggleLowPowerMode() {
-        // TODO: Signal the circuit to flip the state of its low power mode
-        // TODO: Set the state of isInLowPowerMode after the signal
-        // TODO: Test to see if the lock has changed state - Report an error if not (exception?)
-        return isInLowPowerMode;
     }
 
     /**
@@ -194,17 +164,5 @@ public class SmartLock {
         double d = radius * c;
 
         return d;
-    }
-
-    /**
-     * This method should interface directly with the physical lock circuit through BlueTooth
-     * @return true if the update was successful
-     */
-    public boolean updateLockData() {
-        // TODO: Establish connection with lock circuit
-        // TODO: Update GPSLocation field to ensure the lock hasn't moved
-        // TODO: Update isLocked field to ensure lock is in the expected state
-        // TODO: Update isInLowPowerMode field to ensure lock is in expected state
-        return true;
     }
 }

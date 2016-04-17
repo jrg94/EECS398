@@ -164,31 +164,19 @@ boolean authenticate(int command, char* in_data) {
 }
 
 /**
- * MUST AVOID SETTING UNLOCK_PIN AND LOCK_PIN TO 1
- * 
- * The first line is redundant since we make sure that
- * both pins are set to LOW before we exit
- */
-void lock() {
-  set_digitalwrite(UNLOCK_PIN, LOW);
-  set_digitalwrite(LOCK_PIN, HIGH);
-  delay(1000);
-  set_digitalwrite(LOCK_PIN, LOW);
-  Serial.println(LOCK_SUCCESS);
-}
-
-/**
- * MUST AVOID SETTING UNLOCK_PIN AND LOCK_PIN TO 1
- * 
- * The first line is redundant since we make sure that
- * both pins are set to LOW before we exit
+ * With the new solenoid lock, do the following:
+ * 1. Set the unlock pin high
+ * 2. Send unlock success message
+ * 3. Delay for 3 seconds
+ * 4. Send the unlock pin low
+ * 5. Send lock success message
  */
 void unlock() {
-  set_digitalwrite(LOCK_PIN, LOW);
   set_digitalwrite(UNLOCK_PIN, HIGH);
-  delay(1000);
-  set_digitalwrite(UNLOCK_PIN, LOW);
   Serial.println(UNLOCK_SUCCESS);
+  delay(3000);
+  set_digitalwrite(UNLOCK_PIN, LOW);
+  Serial.println(LOCK_SUCCESS);
 }
 
 /**
@@ -213,9 +201,6 @@ void set_address(char* in_data) {
  */
 void run_command(int command, char* in_data) {
   switch (command) {
-    case CMD_LOCK:
-      lock();
-      break;
     case CMD_UNLOCK:
       unlock();
       break;
