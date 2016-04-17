@@ -22,6 +22,8 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
+import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -97,11 +99,10 @@ public class LockListScreen extends Activity {
         // Set up the window layout
         setContentView(R.layout.lock_list_screen);
 
-        // Get local Bluetooth adapter
-        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-
-        // Initialize our lock manager
-        lockManager = new SmartLockManager();
+        /* Initialize some variables */
+        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();                               // Get local Bluetooth adapter
+        lockManager = new SmartLockManager();                                                   // Initialize our lock manager
+        locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);    // Initialize the location manager
 
         // lockManager.localWipe(this);
 
@@ -111,6 +112,11 @@ public class LockListScreen extends Activity {
         // If the adapter is null, then Bluetooth is not supported
         if (mBluetoothAdapter == null) {
             Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
+            finish();
+        }
+
+        if (locationManager == null) {
+            Toast.makeText(this, "Location services are not available", Toast.LENGTH_LONG).show();
             finish();
         }
     }
@@ -127,6 +133,29 @@ public class LockListScreen extends Activity {
         // Call onStart and print this information to the log
         Log.e(TAG, "++ ON START ++");
         super.onStart();
+
+        // Define a listener that responds to location updates
+        LocationListener locationListener = new LocationListener() {
+            public void onLocationChanged(Location location) {
+                // Called when a new location is found by the network location provider.
+                //makeUseOfNewLocation(location);
+            }
+
+            public void onStatusChanged(String provider, int status, Bundle extras) {}
+
+            public void onProviderEnabled(String provider) {}
+
+            public void onProviderDisabled(String provider) {}
+        };
+
+        // Register the listener with the Location Manager to receive location updates
+        try {
+            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+        }
+        catch (SecurityException e) {
+            Toast.makeText(this, "SecurityException: Location services are not available", Toast.LENGTH_LONG).show();
+            finish();
+        }
 
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
