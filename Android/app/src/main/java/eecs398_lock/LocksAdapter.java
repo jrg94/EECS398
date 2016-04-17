@@ -3,6 +3,7 @@ package eecs398_lock;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,8 @@ public class LocksAdapter extends BaseAdapter {
 
     // Fields //
     private Context mContext;
-
+    // variable to track event time
+    private long mLastClickTime = 0;
     private HashMap<String, SmartLock> locks = new HashMap<String, SmartLock>();
     private String[] keys;
 
@@ -77,14 +79,6 @@ public class LocksAdapter extends BaseAdapter {
         final Switch lockStatus = (Switch) convertView.findViewById(R.id.lockState);
         final Button popupMenuButton = (Button) convertView.findViewById(R.id.popup_lock_menu_button);
 
-        convertView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                lock.unlock(lls);
-                lockStatus.setChecked(lock.getIsLocked());
-            }
-        });
-
         // Set the UI elements up
         lockLabel.setText(lock.getLabel());
         connectedStatus.setText(lock.getIsConnected() ? "connected" : "disconnected");
@@ -100,6 +94,24 @@ public class LocksAdapter extends BaseAdapter {
                 if (mContext instanceof LockListScreen) {
                     lls.showPopUp(lls.findViewById(R.id.gridView), lock);
                 }
+            }
+        });
+
+        // Handle tile behavior
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Preventing multiple clicks, using threshold of 1 second
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 3000) {
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
+
+                lock.unlock(lls);
+                lockStatus.setChecked(lock.getIsLocked());
+                //v.setEnabled(false);
             }
         });
 

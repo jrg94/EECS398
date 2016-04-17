@@ -40,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="418" column="42" selection-start-line="418" selection-start-column="42" selection-end-line="418" selection-end-column="42" />
+              <caret line="420" column="41" selection-start-line="420" selection-start-column="41" selection-end-line="420" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
@@ -109,14 +109,15 @@
       <file leaf-file-name="LocksAdapter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8153527">
-              <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.49377593">
+              <caret line="105" column="70" selection-start-line="105" selection-start-column="70" selection-end-line="105" selection-end-column="70" />
               <folding>
-                <element signature="e#2457#2666#0" expanded="true" />
-                <element signature="e#2665#2666#0" expanded="true" />
-                <element signature="e#3036#3302#0" expanded="true" />
-                <element signature="e#3301#3302#0" expanded="true" />
-                <marker date="1460859403619" expanded="true" signature="2678:2682" placeholder="//..." />
+                <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
+                <element signature="e#2887#3153#0" expanded="true" />
+                <element signature="e#3152#3153#0" expanded="true" />
+                <element signature="e#3228#3741#0" expanded="true" />
+                <element signature="e#3740#3741#0" expanded="true" />
+                <marker date="1460860044823" expanded="true" signature="2529:2533" placeholder="//..." />
               </folding>
             </state>
           </provider>
@@ -1567,8 +1568,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/SplashScreen.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java" />
       </list>
     </option>
@@ -2021,11 +2022,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
           <folding>
-            <element signature="e#2457#2666#0" expanded="true" />
-            <element signature="e#2665#2666#0" expanded="true" />
-            <element signature="e#3036#3302#0" expanded="true" />
-            <element signature="e#3301#3302#0" expanded="true" />
-            <marker date="1460859403619" expanded="true" signature="2678:2682" placeholder="//..." />
+            <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="e#2887#3153#0" expanded="true" />
+            <element signature="e#3152#3153#0" expanded="true" />
+            <element signature="e#3228#3741#0" expanded="true" />
+            <element signature="e#3740#3741#0" expanded="true" />
+            <marker date="1460860044823" expanded="true" signature="2529:2533" placeholder="//..." />
           </folding>
         </state>
       </provider>
@@ -2297,14 +2299,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="314" column="0" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2324,10 +2318,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/SplashScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="418" column="42" selection-start-line="418" selection-start-column="42" selection-end-line="418" selection-end-column="42" />
+          <caret line="420" column="41" selection-start-line="420" selection-start-column="41" selection-end-line="420" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
@@ -2377,24 +2379,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/SplashScreen.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+          <caret line="314" column="0" selection-start-line="314" selection-start-column="0" selection-end-line="314" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8153527">
-          <caret line="93" column="37" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.49377593">
+          <caret line="105" column="70" selection-start-line="105" selection-start-column="70" selection-end-line="105" selection-end-column="70" />
           <folding>
-            <element signature="e#2457#2666#0" expanded="true" />
-            <element signature="e#2665#2666#0" expanded="true" />
-            <element signature="e#3036#3302#0" expanded="true" />
-            <element signature="e#3301#3302#0" expanded="true" />
-            <marker date="1460859403619" expanded="true" signature="2678:2682" placeholder="//..." />
+            <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="e#2887#3153#0" expanded="true" />
+            <element signature="e#3152#3153#0" expanded="true" />
+            <element signature="e#3228#3741#0" expanded="true" />
+            <element signature="e#3740#3741#0" expanded="true" />
+            <marker date="1460860044823" expanded="true" signature="2529:2533" placeholder="//..." />
           </folding>
         </state>
       </provider>
