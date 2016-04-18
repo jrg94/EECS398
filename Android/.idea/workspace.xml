@@ -52,10 +52,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SmartLock.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SmartLock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.012448133">
               <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#SmartLock#0" expanded="false" />
@@ -88,17 +88,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocksAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LocksAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2095436">
-              <caret line="115" column="78" selection-start-line="115" selection-start-column="78" selection-end-line="115" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#LocksAdapter#0" expanded="false" />
-                <element signature="e#3287#3553#0" expanded="true" />
-                <element signature="e#3552#3553#0" expanded="true" />
-                <element signature="e#3628#4128#0" expanded="true" />
-                <element signature="e#4127#4128#0" expanded="true" />
+                <element signature="docComment;method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
+                <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
+                <element signature="method#getView#0;class#LocksAdapter#0" expanded="false" />
+                <element signature="e#3391#3657#0" expanded="true" />
+                <element signature="e#3656#3657#0" expanded="true" />
+                <element signature="e#3732#4232#0" expanded="true" />
+                <element signature="e#4231#4232#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2194,7 +2197,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2930,9 +2933,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="method#getView#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="e#3391#3657#0" expanded="true" />
+            <element signature="e#3656#3657#0" expanded="true" />
+            <element signature="e#3732#4232#0" expanded="true" />
+            <element signature="e#4231#4232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.012448133">
           <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
           <folding>
             <element signature="docComment;class#SmartLock#0" expanded="false" />
@@ -2960,20 +2980,6 @@
             <element signature="method#setLockUID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
             <element signature="method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2095436">
-          <caret line="115" column="78" selection-start-line="115" selection-start-column="78" selection-end-line="115" selection-end-column="78" />
-          <folding>
-            <element signature="docComment;class#LocksAdapter#0" expanded="false" />
-            <element signature="e#3287#3553#0" expanded="true" />
-            <element signature="e#3552#3553#0" expanded="true" />
-            <element signature="e#3628#4128#0" expanded="true" />
-            <element signature="e#4127#4128#0" expanded="true" />
           </folding>
         </state>
       </provider>

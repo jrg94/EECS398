@@ -35,11 +35,12 @@ public class LocksAdapter extends BaseAdapter {
     private static final String DISCONNECTED_COLOR = "#E53715";
 
     /**
-     *
-     * @param context
-     * @param locks
+     * Initializes the variables for this adapter
+     * @param context the app context
+     * @param locks the map of locks
      */
     public LocksAdapter(Context context, HashMap<String, SmartLock> locks) {
+        mLastClickTime = 0;
         this.locks = locks;
         keys = this.locks.keySet().toArray(new String[locks.size()]);
         this.mContext = context;
