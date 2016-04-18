@@ -35,31 +35,27 @@ public class SmartLock {
     private static final String CMD_CHAR = "*";
     private static final String CMD_FORMAT = "%s%d:%d:%s";
 
+    // Hardcoded data for GPS proof-of-concept
+    private static final double SUITE_314C_LAT = 41.513417;
+    private static final double SUITE_314C_LON = -81.60438909999999;
+
     // CONSTRUCTORS //
 
     public SmartLock(BluetoothDevice device) {
         this.device = device;
-        macAddress = device.getAddress();
+        this.macAddress = device.getAddress();
         this.id = UUID.randomUUID();
         this.label = EMPTY_LOCK_NAME;
-        this.location = new GPSLocation(Math.random()*180, Math.random()*180);
-        this.isLocked = true;
-        this.isConnected = false;
-    }
-
-    public SmartLock(BluetoothDevice device, GPSLocation location) {
-        this.device = device;
-        this.id = UUID.randomUUID();
-        this.label = "What would you like to name this lock?";
-        this.location = location;
+        this.location = new GPSLocation(SUITE_314C_LAT, SUITE_314C_LON);
         this.isLocked = true;
         this.isConnected = false;
     }
 
     public SmartLock(BluetoothDevice device, double latitude, double longitude) {
         this.device = device;
+        this.macAddress = device.getAddress();
         this.id = UUID.randomUUID();
-        this.label = "What would you like to name this lock?";
+        this.label = EMPTY_LOCK_NAME;
         this.location = new GPSLocation(latitude, longitude);
         this.isLocked = true;
         this.isConnected = false;
@@ -147,7 +143,7 @@ public class SmartLock {
      */
     public double computeDistanceFromKey(GPSLocation keyLoc) {
         // The radius of the earth in meters
-        double radius = 6371000;
+        double radius = 6_371_000;
 
         // Converts the coordinates in degrees to radians
         double phi1 = Math.toRadians(this.location.getLatitude());

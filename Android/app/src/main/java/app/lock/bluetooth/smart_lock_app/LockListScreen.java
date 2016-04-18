@@ -16,15 +16,19 @@ package app.lock.bluetooth.smart_lock_app;
  * limitations under the License.
  */
 
+import android.Manifest;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Point;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
@@ -44,6 +48,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import eecs398_lock.BluetoothLockService;
+import eecs398_lock.GPSTracker;
 import eecs398_lock.LocksAdapter;
 import eecs398_lock.SmartLock;
 import eecs398_lock.SmartLockManager;
@@ -71,18 +76,15 @@ public class LockListScreen extends Activity {
     private static final int REQUEST_CONNECT_DEVICE = 1;
     private static final int REQUEST_ENABLE_BT = 2;
 
-    // Local Bluetooth adapter
-    private BluetoothAdapter mBluetoothAdapter = null;
+    private static final int LOC_UPDATE_TIME_MS = 3000;
 
-    // Member object for the chat services
-    public BluetoothLockService mLockService = null;
-
-    // The manager of all the locks
-    private SmartLockManager lockManager = null;
-
-    private LocksAdapter mLockArrayAdapter;
-
-    private String currentAddress = "??:??:??:??:??:??";
+    public BluetoothLockService mLockService = null;        // Member object for the chat services
+    private BluetoothAdapter mBluetoothAdapter = null;      // Local Bluetooth adapter
+    private SmartLockManager lockManager = null;            // The manager of all the locks
+    private LocksAdapter mLockArrayAdapter;                 // The adapter for the grid of locks
+    private String currentAddress = "??:??:??:??:??:??";    // An empty address
+    private LocationManager locationManager = null;         // Handles location services for the app
+    private GPSTracker gpsTracker = null;
 
     /**
      * The onCreate method which can be overridden in all Activity classes
@@ -102,20 +104,26 @@ public class LockListScreen extends Activity {
         // Set up the window layout
         setContentView(R.layout.lock_list_screen);
 
-        // Get local Bluetooth adapter
-        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-
-        // Initialize our lock manager
-        lockManager = new SmartLockManager();
+        /* Initialize some variables */
+        mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();                               // Get local Bluetooth adapter
+        lockManager = new SmartLockManager();                                                   // Initialize our lock manager
+        locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);    // Initialize the location manager
 
         // lockManager.localWipe(this);
 
         // Load data from file
         lockManager.localLoad(this);
 
+        // lockManager.addLock(mBluetoothAdapter.getRemoteDevice("98:76:B6:00:88:A8"));
+
         // If the adapter is null, then Bluetooth is not supported
         if (mBluetoothAdapter == null) {
             Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
+            finish();
+        }
+
+        if (locationManager == null) {
+            Toast.makeText(this, "Location services are not available", Toast.LENGTH_LONG).show();
             finish();
         }
     }
@@ -132,6 +140,14 @@ public class LockListScreen extends Activity {
         // Call onStart and print this information to the log
         Log.e(TAG, "++ ON START ++");
         super.onStart();
+
+        if (locationManager != null) {
+            if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                    || checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                gpsTracker = new GPSTracker(this, lockManager.getLocks().values());
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOC_UPDATE_TIME_MS, 0, gpsTracker);
+            }
+        }
 
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
@@ -529,7 +545,7 @@ public class LockListScreen extends Activity {
         SmartLock sl;
 
         if (!lockManager.getLocks().containsKey(device.getAddress())) {
-            sl = lockManager.addLock(device);
+            sl = lockManager.addLock(device, gpsTracker);
             lockManager.localSave(this);
         }
         else {
