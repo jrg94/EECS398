@@ -1,17 +1,13 @@
 package eecs398_lock;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.SystemClock;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -28,18 +24,23 @@ import java.util.HashMap;
  */
 public class LocksAdapter extends BaseAdapter {
 
-    // Debugging
-    private static final String TAG = "LocksAdapter";
-    private static final boolean D = true;
+    /* Adapter Fields */
+    private Context mContext;                       // Holds the app context
+    private long mLastClickTime;                    // Variable to track event time
+    private HashMap<String, SmartLock> locks;       // Holds the hashmap of locks
+    private String[] keys;                          // Holds a list of keys
 
-    // Fields //
-    private Context mContext;
-    // variable to track event time
-    private long mLastClickTime = 0;
-    private HashMap<String, SmartLock> locks = new HashMap<String, SmartLock>();
-    private String[] keys;
+    /* Constants */
+    private static final String CONNECTED_COLOR = "#029E02";
+    private static final String DISCONNECTED_COLOR = "#E53715";
 
+    /**
+     * Initializes the variables for this adapter
+     * @param context the app context
+     * @param locks the map of locks
+     */
     public LocksAdapter(Context context, HashMap<String, SmartLock> locks) {
+        mLastClickTime = 0;
         this.locks = locks;
         keys = this.locks.keySet().toArray(new String[locks.size()]);
         this.mContext = context;
@@ -86,11 +87,11 @@ public class LocksAdapter extends BaseAdapter {
         // Sets the status message and color
         if (lock.getIsConnected()) {
             connectedStatus.setText("connected");
-            connectedStatus.setTextColor(Color.parseColor("#029E02"));
+            connectedStatus.setTextColor(Color.parseColor(CONNECTED_COLOR));
         }
         else {
             connectedStatus.setText("disconnected");
-            connectedStatus.setTextColor(Color.parseColor("#E53715"));
+            connectedStatus.setTextColor(Color.parseColor(DISCONNECTED_COLOR));
         }
 
         // Handle switch behavior
@@ -113,7 +114,7 @@ public class LocksAdapter extends BaseAdapter {
             public void onClick(View v) {
 
                 // Preventing multiple clicks, using threshold of 1 second
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 3000) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 3000 || !lock.getIsConnected()) {
                     return;
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
