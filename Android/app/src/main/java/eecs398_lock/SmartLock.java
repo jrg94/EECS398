@@ -71,8 +71,8 @@ public class SmartLock {
     }
 
     /**
-     *
-     * @return
+     * Retrieves the UUID that is generated at lock creation
+     * @return the UUID for this lock
      */
     public UUID getID() {
         return this.id;
