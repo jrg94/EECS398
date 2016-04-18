@@ -79,16 +79,16 @@ public class SmartLock {
     }
 
     /**
-     *
-     * @return
+     * Retrieves the name of this lock
+     * @return the label field for the lock
      */
     public String getLabel() {
         return this.label;
     }
 
     /**
-     *
-     * @param label
+     * Sets the name of this lock
+     * @param label the name to give to this lock
      */
     public void setLabel(String label) {
         this.label = label;
@@ -100,14 +100,6 @@ public class SmartLock {
      */
     public GPSLocation getLocation() {
         return this.location;
-    }
-
-    /**
-     *
-     * @param location
-     */
-    public void setLocation(GPSLocation location) {
-        this.location = location;
     }
 
     /**

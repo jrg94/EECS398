@@ -55,19 +55,17 @@
       <file leaf-file-name="SmartLock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29045644">
-              <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.38589212">
+              <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
               <folding>
                 <element signature="docComment;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
                 <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
-                <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#getLocation#0;class#SmartLock#0" expanded="false" />
-                <element signature="docComment;method#setLocation#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#getIsLocked#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#setIsLocked#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#getIsConnected#0;class#SmartLock#0" expanded="false" />
@@ -1944,12 +1942,10 @@
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
-            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLocation#0;class#SmartLock#0" expanded="false" />
-            <element signature="docComment;method#setLocation#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getIsLocked#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setIsLocked#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getIsConnected#0;class#SmartLock#0" expanded="false" />
@@ -2050,12 +2046,10 @@
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
-            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLocation#0;class#SmartLock#0" expanded="false" />
-            <element signature="docComment;method#setLocation#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getIsLocked#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setIsLocked#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getIsConnected#0;class#SmartLock#0" expanded="false" />
@@ -2163,12 +2157,10 @@
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
-            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLocation#0;class#SmartLock#0" expanded="false" />
-            <element signature="docComment;method#setLocation#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getIsLocked#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setIsLocked#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getIsConnected#0;class#SmartLock#0" expanded="false" />
@@ -2566,19 +2558,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29045644">
-          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.38589212">
+          <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
           <folding>
             <element signature="docComment;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
-            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLocation#0;class#SmartLock#0" expanded="false" />
-            <element signature="docComment;method#setLocation#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getIsLocked#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setIsLocked#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getIsConnected#0;class#SmartLock#0" expanded="false" />
