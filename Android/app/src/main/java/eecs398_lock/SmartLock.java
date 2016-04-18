@@ -39,8 +39,9 @@ public class SmartLock {
     private static final double SUITE_314C_LON = -81.60438909999999;
 
     /**
-     *
-     * @param device
+     * The standard constructor which takes in the Bluetooth
+     * Device and stores its macAddress for later use
+     * @param device the bluetooth device that this code represents
      */
     public SmartLock(BluetoothDevice device) {
         this.device = device;
@@ -53,10 +54,11 @@ public class SmartLock {
     }
 
     /**
-     *
-     * @param device
-     * @param latitude
-     * @param longitude
+     * A more advanced constructor which is used to
+     * store the location of the physical lock
+     * @param device the bluetooth device that this code represents
+     * @param latitude the latitude of the physical device
+     * @param longitude the longitude of the physical device
      */
     public SmartLock(BluetoothDevice device, double latitude, double longitude) {
         this.device = device;

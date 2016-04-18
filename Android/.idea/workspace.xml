@@ -55,9 +55,10 @@
       <file leaf-file-name="SmartLock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.574689">
-              <caret line="153" column="26" selection-start-line="153" selection-start-column="26" selection-end-line="153" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.33817428">
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
+                <element signature="docComment;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
                 <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
@@ -1939,6 +1940,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
+            <element signature="docComment;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
@@ -2044,6 +2046,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
+            <element signature="docComment;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
@@ -2156,6 +2159,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
           <folding>
+            <element signature="docComment;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
@@ -2562,9 +2566,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.574689">
-          <caret line="153" column="26" selection-start-line="153" selection-start-column="26" selection-end-line="153" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.33817428">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
+            <element signature="docComment;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
