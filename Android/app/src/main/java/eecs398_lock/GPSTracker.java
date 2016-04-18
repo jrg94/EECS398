@@ -1,9 +1,11 @@
 package eecs398_lock;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Location;
 import android.location.LocationListener;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.widget.Toast;
 
 /**
@@ -19,7 +21,10 @@ public class GPSTracker implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
+        String msg = "New Latitude: " + location.getLatitude()
+                + "New Longitude: " + location.getLongitude();
 
+        Toast.makeText(mContext, msg, Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -34,6 +39,8 @@ public class GPSTracker implements LocationListener {
 
     @Override
     public void onProviderDisabled(String provider) {
-
+        Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+        mContext.startActivity(intent);
+        Toast.makeText(mContext, "Gps is turned off!! ", Toast.LENGTH_SHORT).show();
     }
 }

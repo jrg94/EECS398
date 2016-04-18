@@ -22,8 +22,6 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Point;
-import android.location.Location;
-import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -48,6 +46,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import eecs398_lock.BluetoothLockService;
+import eecs398_lock.GPSTracker;
 import eecs398_lock.LocksAdapter;
 import eecs398_lock.SmartLock;
 import eecs398_lock.SmartLockManager;
@@ -110,6 +109,8 @@ public class LockListScreen extends Activity {
         // Load data from file
         lockManager.localLoad(this);
 
+        // lockManager.addLock(mBluetoothAdapter.getRemoteDevice("98:76:B6:00:88:A8"));
+
         // If the adapter is null, then Bluetooth is not supported
         if (mBluetoothAdapter == null) {
             Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
@@ -135,38 +136,13 @@ public class LockListScreen extends Activity {
         Log.e(TAG, "++ ON START ++");
         super.onStart();
 
-        // Define a listener that responds to location updates
-        LocationListener locationListener = new LocationListener() {
-            public void onLocationChanged(Location location) {
-                // Called when a new location is found by the network location provider.
-                //makeUseOfNewLocation(location);
-            }
-
-            public void onStatusChanged(String provider, int status, Bundle extras) {}
-
-            public void onProviderEnabled(String provider) {
-                Toast.makeText(getBaseContext(), "Gps is turned on!! ", Toast.LENGTH_SHORT).show();
-            }
-
-            public void onProviderDisabled(String provider) {
-                Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                startActivity(intent);
-                Toast.makeText(getBaseContext(), "Gps is turned off!! ", Toast.LENGTH_SHORT).show();
-            }
-        };
-
-        // Register the listener with the Location Manager to receive location updates
-        try {
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-        }
-        catch (SecurityException e) {
-            Toast.makeText(this, "SecurityException: Location services are not available", Toast.LENGTH_LONG).show();
-            finish();
-        }
-
         if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || !locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
             Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
             startActivity(intent);
+        }
+
+        else {
+            //locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new GPSTracker(this));
         }
 
         // If BT is not on, request that it be enabled.
