@@ -43,27 +43,19 @@ public class SmartLock {
 
     public SmartLock(BluetoothDevice device) {
         this.device = device;
-        macAddress = device.getAddress();
+        this.macAddress = device.getAddress();
         this.id = UUID.randomUUID();
         this.label = EMPTY_LOCK_NAME;
         this.location = new GPSLocation(SUITE_314C_LAT, SUITE_314C_LON);
         this.isLocked = true;
         this.isConnected = false;
     }
-
-    public SmartLock(BluetoothDevice device, GPSLocation location) {
-        this.device = device;
-        this.id = UUID.randomUUID();
-        this.label = "What would you like to name this lock?";
-        this.location = location;
-        this.isLocked = true;
-        this.isConnected = false;
-    }
-
+    
     public SmartLock(BluetoothDevice device, double latitude, double longitude) {
         this.device = device;
+        this.macAddress = device.getAddress();
         this.id = UUID.randomUUID();
-        this.label = "What would you like to name this lock?";
+        this.label = EMPTY_LOCK_NAME;
         this.location = new GPSLocation(latitude, longitude);
         this.isLocked = true;
         this.isConnected = false;

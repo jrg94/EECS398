@@ -55,8 +55,8 @@
       <file leaf-file-name="LockListScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="113" column="10" selection-start-line="113" selection-start-column="10" selection-end-line="113" selection-end-column="10" />
+            <state vertical-scroll-proportion="-40.827587">
+              <caret line="147" column="103" selection-start-line="147" selection-start-column="103" selection-end-line="147" selection-end-column="103" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
@@ -72,7 +72,7 @@
                 <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-                <element signature="e#12724#12746#0" expanded="true" />
+                <element signature="e#12878#12900#0" expanded="true" />
                 <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
@@ -80,7 +80,7 @@
                 <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-                <element signature="e#18038#18069#0" expanded="true" />
+                <element signature="e#18192#18223#0" expanded="true" />
                 <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
@@ -91,14 +91,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmartLock.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
+      <file leaf-file-name="SmartLockManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
+              <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
               <folding>
-                <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
-                <element signature="method#SmartLock#2;class#SmartLock#0" expanded="false" />
+                <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#addLock#1;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmartLock.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.50829875">
+              <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+              <folding>
                 <element signature="method#setIsLocked#0;class#SmartLock#0" expanded="false" />
                 <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
                 <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
@@ -109,10 +128,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GPSLocation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GPSLocation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSLocation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11825726">
+            <state vertical-scroll-proportion="0.0">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
@@ -123,9 +142,13 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSTracker.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="83" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="83" />
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#866#867#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1562,8 +1585,9 @@
         <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/ApplicationTest.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSTracker.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
       </list>
     </option>
   </component>
@@ -1987,8 +2011,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
-            <element signature="method#SmartLock#2;class#SmartLock#0" expanded="false" />
             <element signature="method#setIsLocked#0;class#SmartLock#0" expanded="false" />
             <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
             <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
@@ -2017,7 +2039,7 @@
             <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#12724#12746#0" expanded="true" />
+            <element signature="e#12878#12900#0" expanded="true" />
             <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
@@ -2025,7 +2047,7 @@
             <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#18038#18069#0" expanded="true" />
+            <element signature="e#18192#18223#0" expanded="true" />
             <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
@@ -2076,8 +2098,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
-            <element signature="method#SmartLock#2;class#SmartLock#0" expanded="false" />
             <element signature="method#setIsLocked#0;class#SmartLock#0" expanded="false" />
             <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
             <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
@@ -2116,7 +2136,7 @@
             <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#12724#12746#0" expanded="true" />
+            <element signature="e#12878#12900#0" expanded="true" />
             <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
@@ -2124,7 +2144,7 @@
             <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#18038#18069#0" expanded="true" />
+            <element signature="e#18192#18223#0" expanded="true" />
             <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
@@ -2175,8 +2195,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
           <folding>
-            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
-            <element signature="method#SmartLock#2;class#SmartLock#0" expanded="false" />
             <element signature="method#setIsLocked#0;class#SmartLock#0" expanded="false" />
             <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
             <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
@@ -2215,7 +2233,7 @@
             <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#12724#12746#0" expanded="true" />
+            <element signature="e#12878#12900#0" expanded="true" />
             <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
@@ -2223,7 +2241,7 @@
             <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#18038#18069#0" expanded="true" />
+            <element signature="e#18192#18223#0" expanded="true" />
             <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
@@ -2313,7 +2331,7 @@
             <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#12724#12746#0" expanded="true" />
+            <element signature="e#12878#12900#0" expanded="true" />
             <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
@@ -2321,7 +2339,7 @@
             <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#18038#18069#0" expanded="true" />
+            <element signature="e#18192#18223#0" expanded="true" />
             <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
@@ -2472,24 +2490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2540,33 +2540,48 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSTracker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="83" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="83" />
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSLocation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
           <folding>
-            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
-            <element signature="method#SmartLock#2;class#SmartLock#0" expanded="false" />
-            <element signature="method#setIsLocked#0;class#SmartLock#0" expanded="false" />
-            <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
-            <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
-            <element signature="method#setLockUID#0;class#SmartLock#0" expanded="false" />
-            <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#addLock#1;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="113" column="10" selection-start-line="113" selection-start-column="10" selection-end-line="113" selection-end-column="10" />
+        <state vertical-scroll-proportion="-40.827587">
+          <caret line="147" column="103" selection-start-line="147" selection-start-column="103" selection-end-line="147" selection-end-column="103" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
@@ -2582,7 +2597,7 @@
             <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#12724#12746#0" expanded="true" />
+            <element signature="e#12878#12900#0" expanded="true" />
             <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
@@ -2590,7 +2605,7 @@
             <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-            <element signature="e#18038#18069#0" expanded="true" />
+            <element signature="e#18192#18223#0" expanded="true" />
             <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
@@ -2600,11 +2615,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSLocation.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11825726">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.50829875">
+          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+          <folding>
+            <element signature="method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#setLockUID#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
