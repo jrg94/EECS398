@@ -151,7 +151,7 @@ public class SmartLock {
      */
     public double computeDistanceFromKey(GPSLocation keyLoc) {
         // The radius of the earth in meters
-        double radius = 6371000;
+        double radius = 6_371_000;
 
         // Converts the coordinates in degrees to radians
         double phi1 = Math.toRadians(this.location.getLatitude());

@@ -15,8 +15,10 @@ import java.util.Collection;
  */
 public class GPSTracker implements LocationListener {
 
-    Context mContext;
-    Collection<SmartLock> locks;
+    private Context mContext;
+    private Collection<SmartLock> locks;
+
+    private static final double DIST_FROM_LOCK_TO_KEY = 50;
 
     public GPSTracker(Context mContext, Collection<SmartLock> locks) {
         this.mContext = mContext;
@@ -25,17 +27,20 @@ public class GPSTracker implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
-        String msg = "New Latitude: " + location.getLatitude()
-                + "New Longitude: " + location.getLongitude();
 
+        String msg = null;
+
+        // Runs through list of locks and calculates their distance from the device
         for (SmartLock sl : locks) {
             double distance = sl.computeDistanceFromKey(new GPSLocation(location.getLatitude(), location.getLongitude()));
-            if (distance < 30) {
-                msg = "Super close to a lock";
+            if (distance < DIST_FROM_LOCK_TO_KEY) {
+                msg = "You are " + distance + " meters from " + sl.getLabel();
             }
         }
 
-        Toast.makeText(mContext, msg, Toast.LENGTH_LONG).show();
+        if (msg != null) {
+            Toast.makeText(mContext, msg, Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
