@@ -36,8 +36,8 @@ public class SmartLock {
     private static final String CMD_FORMAT = "%s%d:%d:%s";
 
     // Hardcoded data for GPS proof-of-concept
-    private static final double SUITE_314C_LAT = 41.51346655;
-    private static final double SUITE_314C_LON = -81.60427285;
+    private static final double SUITE_314C_LAT = 41.513417;
+    private static final double SUITE_314C_LON = -81.60438909999999;
 
     // CONSTRUCTORS //
 
