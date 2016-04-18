@@ -95,54 +95,60 @@ public class SmartLock {
     }
 
     /**
-     *
-     * @return
+     * Retrieves the gps location of this lock
+     * @return the location field for this lock
      */
     public GPSLocation getLocation() {
         return this.location;
     }
 
     /**
-     *
-     * @return
+     * Retrieves the state of the lock (locked or unlocked)
+     * @return the isLocked field for this lock
      */
-    public boolean getIsLocked() { return isLocked; }
+    public boolean getIsLocked() {
+        return isLocked;
+    }
 
     /**
-     *
-     * @param isLocked
+     * Sets the state of the lock (locked or unlocked)
+     * @param isLocked the state of the lock as a boolean
      */
     public void setIsLocked(boolean isLocked) {
         this.isLocked = isLocked;
     }
 
     /**
-     *
-     * @return
+     * Retrieves the state of the bluetooth connection between the
+     * physical lock and the app
+     * @return the isConnected field for this lock
      */
     public boolean getIsConnected() {
         return isConnected;
     }
 
     /**
-     *
-     * @param isConnected
+     * Sets the state of connection between the physical lock
+     * and the app
+     * @param isConnected ths state of the bluetooth connection as a boolean
      */
     public void setIsConnected(boolean isConnected) {
         this.isConnected = isConnected;
     }
 
     /**
-     *
-     * @return
+     * Retrieves the bluetooth device object
+     * TODO: Determine if this is being jsonified correctly
+     * @return the device field
      */
     public BluetoothDevice getDevice() {
         return device;
     }
 
     /**
-     *
-     * @return
+     * The MAC Address for the bluetooth device associated
+     * with this lock
+     * @return the macAddress field
      */
     public String getMacAddress() {
         return macAddress;

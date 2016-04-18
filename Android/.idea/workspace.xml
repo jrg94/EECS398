@@ -55,13 +55,14 @@
       <file leaf-file-name="SmartLock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38589212">
-              <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.5062241">
+              <caret line="147" column="4" selection-start-line="147" selection-start-column="4" selection-end-line="147" selection-end-column="4" />
               <folding>
                 <element signature="docComment;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
                 <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+                <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
@@ -1821,7 +1822,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2577121" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1882,7 +1883,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1942,6 +1943,7 @@
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
@@ -2046,6 +2048,7 @@
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
@@ -2157,6 +2160,7 @@
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
@@ -2558,13 +2562,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38589212">
-          <caret line="88" column="4" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.5062241">
+          <caret line="147" column="4" selection-start-line="147" selection-start-column="4" selection-end-line="147" selection-end-column="4" />
           <folding>
             <element signature="docComment;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
