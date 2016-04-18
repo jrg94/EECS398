@@ -52,101 +52,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LockListScreen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="147" column="103" selection-start-line="147" selection-start-column="103" selection-end-line="147" selection-end-column="103" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#handleWrite#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
-                <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
-                <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SmartLockManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-              <folding>
-                <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#addLock#1;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SmartLock.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state vertical-scroll-proportion="2.574689">
+              <caret line="153" column="26" selection-start-line="153" selection-start-column="26" selection-end-line="153" selection-end-column="26" />
               <folding>
-                <element signature="method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
+                <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+                <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#getLocation#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#setLocation#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#getIsLocked#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#getIsConnected#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#setIsConnected#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#getDevice#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#getMacAddress#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#equals#0;class#SmartLock#0" expanded="false" />
                 <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#toString#0;class#SmartLock#0" expanded="false" />
                 <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#unlock#0;class#SmartLock#0" expanded="false" />
+                <element signature="method#unlock#0;class#SmartLock#0" expanded="false" />
+                <element signature="docComment;method#setLockUID#0;class#SmartLock#0" expanded="false" />
                 <element signature="method#setLockUID#0;class#SmartLock#0" expanded="false" />
                 <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GPSLocation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSLocation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GPSTracker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSTracker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#755#756#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#866#867#0" expanded="true" />
+                <element signature="method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1265,7 +1201,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="C:\Users\Christen\Documents\GitHub\EECS398\Android" value="4377576806327" />
-        <entry key="C:\Users\JRG94\Documents\CWRU\Courses\Year_4\EECS398\Android" value="4378124042134" />
+        <entry key="C:\Users\JRG94\Documents\CWRU\Courses\Year_4\EECS398\Android" value="4378176670334" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1638,15 +1574,47 @@
               <option name="myItemId" value="Android" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Android" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eecs398_lock" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1836,7 +1804,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1854,7 +1822,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1915,7 +1883,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1934,6 +1902,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1941,6 +1910,7 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
@@ -1969,11 +1939,31 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <element signature="method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getLocation#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLocation#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getIsConnected#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setIsConnected#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getDevice#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getMacAddress#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#equals#0;class#SmartLock#0" expanded="false" />
             <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#SmartLock#0" expanded="false" />
             <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#unlock#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#unlock#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLockUID#0;class#SmartLock#0" expanded="false" />
             <element signature="method#setLockUID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2054,11 +2044,31 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <element signature="method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getLocation#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLocation#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getIsConnected#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setIsConnected#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getDevice#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getMacAddress#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#equals#0;class#SmartLock#0" expanded="false" />
             <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#SmartLock#0" expanded="false" />
             <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#unlock#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#unlock#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLockUID#0;class#SmartLock#0" expanded="false" />
             <element signature="method#setLockUID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2146,11 +2156,31 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
           <folding>
-            <element signature="method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getLocation#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLocation#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getIsConnected#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setIsConnected#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getDevice#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getMacAddress#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#equals#0;class#SmartLock#0" expanded="false" />
             <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#SmartLock#0" expanded="false" />
             <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#unlock#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#unlock#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLockUID#0;class#SmartLock#0" expanded="false" />
             <element signature="method#setLockUID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2221,6 +2251,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2245,6 +2276,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+          <folding>
+            <element signature="e#722#740#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2368,6 +2402,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2412,6 +2447,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+          <folding>
+            <element signature="e#722#740#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2426,6 +2464,7 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
@@ -2443,28 +2482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -2523,16 +2540,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.012448133">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.07053942">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state vertical-scroll-proportion="2.574689">
+          <caret line="153" column="26" selection-start-line="153" selection-start-column="26" selection-end-line="153" selection-end-column="26" />
           <folding>
-            <element signature="method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getID#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getLocation#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLocation#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getIsConnected#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setIsConnected#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getDevice#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getMacAddress#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#equals#0;class#SmartLock#0" expanded="false" />
             <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#SmartLock#0" expanded="false" />
             <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#unlock#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#unlock#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLockUID#0;class#SmartLock#0" expanded="false" />
             <element signature="method#setLockUID#0;class#SmartLock#0" expanded="false" />
             <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
           </folding>
         </state>
       </provider>

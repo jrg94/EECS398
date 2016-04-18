@@ -1,12 +1,10 @@
 package eecs398_lock;
 
 import android.bluetooth.BluetoothDevice;
-import android.widget.Switch;
 
 import java.util.UUID;
 
 import app.lock.bluetooth.smart_lock_app.LockListScreen;
-import app.lock.bluetooth.smart_lock_app.R;
 
 /**
  * Created by JRG94 on 2/17/2016.
@@ -17,8 +15,7 @@ import app.lock.bluetooth.smart_lock_app.R;
  */
 public class SmartLock {
 
-    // FIELDS //
-
+    /* Smart Lock Criteria */
     private UUID id;
     private String label;
     private GPSLocation location;
@@ -27,20 +24,24 @@ public class SmartLock {
     private boolean isLocked;
     private boolean isConnected;
 
+    /* Command Code Constants */
     private static final int SET_CODE = 0xDEAD;
     private static final int LOCK_CODE = 0xEF93;
     private static final int UNLOCK_CODE = 0x081D;
 
+    /* String Constants */
     private static final String EMPTY_LOCK_NAME = "Insert Label Here";
     private static final String CMD_CHAR = "*";
     private static final String CMD_FORMAT = "%s%d:%d:%s";
 
-    // Hardcoded data for GPS proof-of-concept
+    /* Hardcoded data for GPS proof-of-concept */
     private static final double SUITE_314C_LAT = 41.513417;
     private static final double SUITE_314C_LON = -81.60438909999999;
 
-    // CONSTRUCTORS //
-
+    /**
+     *
+     * @param device
+     */
     public SmartLock(BluetoothDevice device) {
         this.device = device;
         this.macAddress = device.getAddress();
@@ -51,6 +52,12 @@ public class SmartLock {
         this.isConnected = false;
     }
 
+    /**
+     *
+     * @param device
+     * @param latitude
+     * @param longitude
+     */
     public SmartLock(BluetoothDevice device, double latitude, double longitude) {
         this.device = device;
         this.macAddress = device.getAddress();
@@ -61,42 +68,97 @@ public class SmartLock {
         this.isConnected = false;
     }
 
-    // GETTER/SETTERS //
-
+    /**
+     *
+     * @return
+     */
     public UUID getID() {
         return this.id;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLabel() {
         return this.label;
     }
 
+    /**
+     *
+     * @param label
+     */
     public void setLabel(String label) {
         this.label = label;
     }
 
+    /**
+     *
+     * @return
+     */
     public GPSLocation getLocation() {
         return this.location;
     }
 
+    /**
+     *
+     * @param location
+     */
     public void setLocation(GPSLocation location) {
         this.location = location;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean getIsLocked() { return isLocked; }
 
-    public void setIsLocked(boolean isLocked) { this.isLocked = isLocked; }
+    /**
+     *
+     * @param isLocked
+     */
+    public void setIsLocked(boolean isLocked) {
+        this.isLocked = isLocked;
+    }
 
-    public boolean getIsConnected() { return isConnected; }
+    /**
+     *
+     * @return
+     */
+    public boolean getIsConnected() {
+        return isConnected;
+    }
 
-    public void setIsConnected(boolean isConnected) { this.isConnected = isConnected; }
+    /**
+     *
+     * @param isConnected
+     */
+    public void setIsConnected(boolean isConnected) {
+        this.isConnected = isConnected;
+    }
 
-    public BluetoothDevice getDevice() { return device; }
+    /**
+     *
+     * @return
+     */
+    public BluetoothDevice getDevice() {
+        return device;
+    }
 
-    public String getMacAddress() { return macAddress; }
+    /**
+     *
+     * @return
+     */
+    public String getMacAddress() {
+        return macAddress;
+    }
 
-    // FUNCTIONALITY //
-
+    /**
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (o instanceof SmartLock) {
@@ -111,6 +173,10 @@ public class SmartLock {
         return false;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return String.format("%s: %s", this.id.toString(), getLocation().toString());
@@ -131,6 +197,10 @@ public class SmartLock {
         return isLocked;
     }
 
+    /**
+     *
+     * @param lls
+     */
     public void setLockUID(LockListScreen lls) {
         lls.sendMessage(String.format(CMD_FORMAT, CMD_CHAR, SET_CODE, macAddress.length(), macAddress));
     }
