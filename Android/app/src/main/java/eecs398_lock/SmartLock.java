@@ -155,9 +155,10 @@ public class SmartLock {
     }
 
     /**
-     *
-     * @param o
-     * @return
+     * Overrides the equals method to test if two locks are the same
+     * TODO: Make this better (id is unreliable and not used)
+     * @param o the object of comparison
+     * @return true if the two locks are equivalent
      */
     @Override
     public boolean equals(Object o) {
@@ -174,8 +175,8 @@ public class SmartLock {
     }
 
     /**
-     *
-     * @return
+     * Returns the lock as a string
+     * @return the lock as a string
      */
     @Override
     public String toString() {
@@ -198,8 +199,11 @@ public class SmartLock {
     }
 
     /**
-     *
-     * @param lls
+     * The setup function used during lock setup
+     * This command is passed to the device to let it know
+     * that you want to establish a permanent connection with
+     * a password (the password is the MAC address)
+     * @param lls the lock list activity
      */
     public void setLockUID(LockListScreen lls) {
         lls.sendMessage(String.format(CMD_FORMAT, CMD_CHAR, SET_CODE, macAddress.length(), macAddress));
