@@ -46,13 +46,13 @@ public class SmartLockManager {
     // METHODS //
 
     public SmartLock addLock(BluetoothDevice device) {
-        SmartLock tempLock = new SmartLock(device);
+        SmartLock tempLock = new SmartLock(device.getAddress());
         locks.put(device.getAddress(), tempLock);
         return tempLock;
     }
 
     public SmartLock addLock(BluetoothDevice device, GPSTracker gpsTracker) {
-        SmartLock tempLock = new SmartLock(device, gpsTracker.getLastLatitude(), gpsTracker.getLastLongitude());
+        SmartLock tempLock = new SmartLock(device.getAddress(), gpsTracker.getLastLatitude(), gpsTracker.getLastLongitude());
         locks.put(device.getAddress(), tempLock);
         return tempLock;
     }

@@ -19,7 +19,6 @@ public class SmartLock {
     private UUID id;
     private String label;
     private GPSLocation location;
-    private BluetoothDevice device;
     private String macAddress;
     private boolean isLocked;
     private boolean isConnected;
@@ -43,9 +42,8 @@ public class SmartLock {
      * Device and stores its macAddress for later use
      * @param device the bluetooth device that this code represents
      */
-    public SmartLock(BluetoothDevice device) {
-        this.device = device;
-        this.macAddress = device.getAddress();
+    public SmartLock(String macAddress) {
+        this.macAddress = macAddress;
         this.id = UUID.randomUUID();
         this.label = EMPTY_LOCK_NAME;
         this.location = new GPSLocation(SUITE_314C_LAT, SUITE_314C_LON);
@@ -60,9 +58,8 @@ public class SmartLock {
      * @param latitude the latitude of the physical device
      * @param longitude the longitude of the physical device
      */
-    public SmartLock(BluetoothDevice device, double latitude, double longitude) {
-        this.device = device;
-        this.macAddress = device.getAddress();
+    public SmartLock(String macAddress, double latitude, double longitude) {
+        this.macAddress = macAddress;
         this.id = UUID.randomUUID();
         this.label = EMPTY_LOCK_NAME;
         this.location = new GPSLocation(latitude, longitude);
@@ -134,15 +131,6 @@ public class SmartLock {
      */
     public void setIsConnected(boolean isConnected) {
         this.isConnected = isConnected;
-    }
-
-    /**
-     * Retrieves the bluetooth device object
-     * TODO: Determine if this is being jsonified correctly
-     * @return the device field
-     */
-    public BluetoothDevice getDevice() {
-        return device;
     }
 
     /**
