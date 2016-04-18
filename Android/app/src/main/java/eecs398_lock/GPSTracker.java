@@ -17,6 +17,8 @@ public class GPSTracker implements LocationListener {
 
     private Context mContext;
     private Collection<SmartLock> locks;
+    private double lastLatitude;
+    private double lastLongitude;
 
     private static final double DIST_FROM_LOCK_TO_KEY = 50;
 
@@ -25,8 +27,19 @@ public class GPSTracker implements LocationListener {
         this.locks = locks;
     }
 
+    public double getLastLatitude() {
+        return lastLatitude;
+    }
+
+    public double getLastLongitude() {
+        return lastLongitude;
+    }
+
     @Override
     public void onLocationChanged(Location location) {
+
+        lastLatitude = location.getLatitude();
+        lastLongitude = location.getLongitude();
 
         String msg = null;
 

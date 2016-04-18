@@ -51,6 +51,12 @@ public class SmartLockManager {
         return tempLock;
     }
 
+    public SmartLock addLock(BluetoothDevice device, GPSTracker gpsTracker) {
+        SmartLock tempLock = new SmartLock(device, gpsTracker.getLastLatitude(), gpsTracker.getLastLongitude());
+        locks.put(device.getAddress(), tempLock);
+        return tempLock;
+    }
+
     /**
      * The local save method for the set of locks
      * TODO: Create a database version of this that would push data to a server
