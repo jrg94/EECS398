@@ -16,11 +16,13 @@ package app.lock.bluetooth.smart_lock_app;
  * limitations under the License.
  */
 
+import android.Manifest;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -136,13 +138,11 @@ public class LockListScreen extends Activity {
         Log.e(TAG, "++ ON START ++");
         super.onStart();
 
-        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || !locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
-            Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-            startActivity(intent);
-        }
-
-        else {
-            //locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new GPSTracker(this));
+        if (locationManager != null) {
+            if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                    || checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new GPSTracker(this));
+            }
         }
 
         // If BT is not on, request that it be enabled.

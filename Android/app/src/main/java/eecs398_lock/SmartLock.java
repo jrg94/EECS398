@@ -35,6 +35,10 @@ public class SmartLock {
     private static final String CMD_CHAR = "*";
     private static final String CMD_FORMAT = "%s%d:%d:%s";
 
+    // Hardcoded data for GPS proof-of-concept
+    private static final double SUITE_314C_LAT = 41.51346655;
+    private static final double SUITE_314C_LON = -81.60427285;
+
     // CONSTRUCTORS //
 
     public SmartLock(BluetoothDevice device) {
@@ -42,7 +46,7 @@ public class SmartLock {
         macAddress = device.getAddress();
         this.id = UUID.randomUUID();
         this.label = EMPTY_LOCK_NAME;
-        this.location = new GPSLocation(Math.random()*180, Math.random()*180);
+        this.location = new GPSLocation(SUITE_314C_LAT, SUITE_314C_LON);
         this.isLocked = true;
         this.isConnected = false;
     }
