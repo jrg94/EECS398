@@ -141,7 +141,7 @@ public class LockListScreen extends Activity {
         if (locationManager != null) {
             if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                     || checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new GPSTracker(this));
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, new GPSTracker(this, lockManager.getLocks().values()));
             }
         }
 

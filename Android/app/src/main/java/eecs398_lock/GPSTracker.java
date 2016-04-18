@@ -8,21 +8,32 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.widget.Toast;
 
+import java.util.Collection;
+
 /**
  * Created by JRG94 on 4/17/2016.
  */
 public class GPSTracker implements LocationListener {
 
     Context mContext;
+    Collection<SmartLock> locks;
 
-    public GPSTracker(Context mContext) {
+    public GPSTracker(Context mContext, Collection<SmartLock> locks) {
         this.mContext = mContext;
+        this.locks = locks;
     }
 
     @Override
     public void onLocationChanged(Location location) {
         String msg = "New Latitude: " + location.getLatitude()
                 + "New Longitude: " + location.getLongitude();
+
+        for (SmartLock sl : locks) {
+            double distance = sl.computeDistanceFromKey(new GPSLocation(location.getLatitude(), location.getLongitude()));
+            if (distance < 30) {
+                msg = "Super close to a lock";
+            }
+        }
 
         Toast.makeText(mContext, msg, Toast.LENGTH_LONG).show();
     }
