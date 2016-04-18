@@ -50,7 +50,7 @@ public class SmartLock {
         this.isLocked = true;
         this.isConnected = false;
     }
-    
+
     public SmartLock(BluetoothDevice device, double latitude, double longitude) {
         this.device = device;
         this.macAddress = device.getAddress();
