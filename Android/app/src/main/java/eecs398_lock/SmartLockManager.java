@@ -9,12 +9,10 @@ import app.lock.bluetooth.smart_lock_app.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-import java.util.UUID;
 
 /**
  * Created by JRG94 on 2/17/2016.
@@ -22,35 +20,52 @@ import java.util.UUID;
  */
 public class SmartLockManager {
 
-    // FIELDS //
-
+    /* Debug Variables */
     private static final String TAG = "SmartLockManager";
-    private static final boolean D = true;
 
+    /* List of locks */
     private HashMap<String, SmartLock> locks;
+
+    /* Constants */
     private static final String PREFS_NAME = "app.lock.bluetooth.smart_lock";
 
-    // CONSTRUCTORS //
-
-    // An empty constructor for initializes the list of locks
+    /**
+     * An empty constructor for initializes the list of locks
+     */
     public SmartLockManager() {
         locks = new HashMap<String, SmartLock>();
     }
 
-    // GETTER/SETTERS //
-
+    /**
+     * Retrieves the list of locks
+     * @return the locks field
+     */
     public HashMap<String, SmartLock> getLocks() {
         return locks;
     }
 
-    // METHODS //
-
+    /**
+     * The default addlock function
+     * TODO: Change to just a string (we don't need the Bluetooth stuff since we won't use the library)
+     * TODO: Add a check that this is a lock (maybe not here but this needs to be added)
+     * @param device the bluetooth device that represents this lock
+     * @return the new lock just created
+     */
     public SmartLock addLock(BluetoothDevice device) {
         SmartLock tempLock = new SmartLock(device.getAddress());
         locks.put(device.getAddress(), tempLock);
         return tempLock;
     }
 
+    /**
+     * The addlock function used if you want to initialize the
+     * GPSLocation field for the lock based on the current
+     * location of the device
+     * TODO: See above
+     * @param device the bluetooth device that represents this lock
+     * @param gpsTracker the coordinate tracker for the phone
+     * @return the new lock just created
+     */
     public SmartLock addLock(BluetoothDevice device, GPSTracker gpsTracker) {
         SmartLock tempLock = new SmartLock(device.getAddress(), gpsTracker.getLastLatitude(), gpsTracker.getLastLongitude());
         locks.put(device.getAddress(), tempLock);
@@ -60,7 +75,8 @@ public class SmartLockManager {
     /**
      * The local save method for the set of locks
      * TODO: Create a database version of this that would push data to a server
-     * @param context
+     * TODO: Learn what exactly a context is - currently doing this in a naive manner
+     * @param context the context of the app
      */
     public void localSave(Context context) {
 
@@ -100,7 +116,7 @@ public class SmartLockManager {
 
     /**
      * Loads all of the lock data
-     * @param context
+     * @param context the context of the app
      */
     public void localLoad(Context context) {
 
@@ -113,7 +129,7 @@ public class SmartLockManager {
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
 
         // Test if the file is corrupt
-        if (isCorrupt(gson, prefs, context)) {
+        if (isCorrupt(prefs, context)) {
             return;
         }
 
@@ -142,8 +158,8 @@ public class SmartLockManager {
 
     /**
      * Deletes the item based on the key
-     * @param context
-     * @param key
+     * @param context the context of the app
+     * @param key the string used to find the lock to delete
      */
     public void localDelete(Context context, String key) {
 
@@ -163,6 +179,10 @@ public class SmartLockManager {
         locks.remove(key);
     }
 
+    /**
+     * Wipes the preferences file
+     * @param context the context of the app
+     */
     public void localWipe(Context context) {
         // Initialize user preferences
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -181,10 +201,10 @@ public class SmartLockManager {
     }
 
     /**
-     *
+     * A helper method which determines if save file is corrupt
      * @return true if the save file is corrupt
      */
-    public boolean isCorrupt(Gson gson, SharedPreferences prefs, Context context) {
+    private boolean isCorrupt(SharedPreferences prefs, Context context) {
 
         // The number of locks in the file
         int numLocks = prefs.getInt(context.getResources().getString(R.string.number_of_locks), -1);
