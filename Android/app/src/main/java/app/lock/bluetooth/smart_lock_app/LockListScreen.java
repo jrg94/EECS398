@@ -53,37 +53,40 @@ import eecs398_lock.SmartLock;
 import eecs398_lock.SmartLockManager;
 
 /**
- * This is the main Activity that displays the current chat session.
+ * This is the main Activity that displays the list of locks for a user
  */
 public class LockListScreen extends Activity {
 
-    // Debugging
+    /* Debugging */
     private static final String TAG = "LockListScreen";
 
-    // Message types sent from the BluetoothLockService Handler
+    /* Message types sent from the BluetoothLockService Handler */
     public static final int LOCK_STATE_CHANGE = 1;
     public static final int LOCK_READ = 2;
     public static final int LOCK_WRITE = 3;
     public static final int LOCK_DEVICE_NAME = 4;
     public static final int LOCK_TOAST = 5;
 
-    // Key names received from the BluetoothChatService Handler
+    /* Key names received from the BluetoothLockService Handler */
     public static final String DEVICE_NAME = "device_name";
     public static final String TOAST = "toast";
 
-    // Intent request codes
+    /* Intent request codes */
     private static final int REQUEST_CONNECT_DEVICE = 1;
     private static final int REQUEST_ENABLE_BT = 2;
 
+    /* Time and distance constants for location updates */
     private static final int LOC_UPDATE_TIME_MS = 3000;
+    private static final int LOC_UPDATE_DIST_MS = 25;
 
-    public BluetoothLockService mLockService = null;        // Member object for the chat services
+    /* Global fields */
+    private BluetoothLockService mLockService = null;       // Member object for the lock services
     private BluetoothAdapter mBluetoothAdapter = null;      // Local Bluetooth adapter
     private SmartLockManager lockManager = null;            // The manager of all the locks
     private LocksAdapter mLockArrayAdapter;                 // The adapter for the grid of locks
     private String currentAddress = "??:??:??:??:??:??";    // An empty address
     private LocationManager locationManager = null;         // Handles location services for the app
-    private GPSTracker gpsTracker = null;
+    private GPSTracker gpsTracker = null;                   // The GPS listener
 
     /**
      * The onCreate method which can be overridden in all Activity classes
@@ -149,13 +152,13 @@ public class LockListScreen extends Activity {
         }
 
         // If BT is not on, request that it be enabled.
-        // setupChat() will then be called during onActivityResult
+        // setupLockScreenAndService() will then be called during onActivityResult
         if (!mBluetoothAdapter.isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
         }
 
-        // Otherwise, setup the chat session
+        // Otherwise, setup the lock session
         else {
             if (mLockService == null) {
                 setupLockScreenAndService();
@@ -182,7 +185,7 @@ public class LockListScreen extends Activity {
         if (mLockService != null) {
             // Only if the state is STATE_NONE, do we know that we haven't started already
             if (mLockService.getState() == BluetoothLockService.STATE_NONE) {
-                // Start the Bluetooth chat services
+                // Start the Bluetooth lock services
                 mLockService.start();
             }
         }
@@ -201,7 +204,7 @@ public class LockListScreen extends Activity {
         mLockView.setAdapter(mLockArrayAdapter);
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
 
-        // Initialize the BluetoothChatService to perform bluetooth connections
+        // Initialize the BluetoothLockService to perform bluetooth connections
         mLockService = new BluetoothLockService(mHandler);
     }
 
@@ -306,7 +309,7 @@ public class LockListScreen extends Activity {
             l.setIsConnected(false);
         }
 
-        // Stop the Bluetooth chat services
+        // Stop the Bluetooth lock services
         if (mLockService != null) {
             mLockService.stop();
         }
@@ -345,7 +348,7 @@ public class LockListScreen extends Activity {
         // Check that there's actually something to send
         if (message.length() > 0) {
 
-            // Get the message bytes and tell the BluetoothChatService to write
+            // Get the message bytes and tell the BluetoothLockService to write
             byte[] send = message.getBytes();
             mLockService.write(send);
         }
@@ -353,6 +356,7 @@ public class LockListScreen extends Activity {
 
     /**
      * The Handler that gets information back from the BluetoothLockService
+     * TODO: Make this its own class
      */
     private final Handler mHandler = new Handler() {
 
@@ -444,6 +448,10 @@ public class LockListScreen extends Activity {
         }
     }
 
+    /**
+     * Retrieves the current device address
+     * @return the currentAddress field
+     */
     private String getCurrentAddress() {
         return currentAddress;
     }
@@ -487,7 +495,7 @@ public class LockListScreen extends Activity {
             case REQUEST_ENABLE_BT:
                 // When the request to enable Bluetooth returns
                 if (resultCode == Activity.RESULT_OK) {
-                    // Bluetooth is now enabled, so set up a chat session
+                    // Bluetooth is now enabled, so set up a lock service session
                     setupLockScreenAndService();
                 } else {
                     // User did not enable Bluetooth or an error occured
