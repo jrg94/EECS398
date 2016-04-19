@@ -8,9 +8,18 @@ This directory contains an Android Studio project for an application that will b
 
 # Updates
 #### 4/19/16
-* Added a comment to every method (excluded some code that was borrowed such as DeviceListActivity)
-* Removed extraneous imports and cut down on unused variables
-* Standardized style for all code
+* Spent a considerable amount of time making code more readable
+ * Standardized comment structure, fields, and methods
+  * Added a comment to every method (excluded some code that was borrowed such as DeviceListActivity)
+  * Removed extraneous imports and cut down on unused variables
+ * Used primarily Javadoc comments
+* Currently hunting and fixing bugs
+ * Removed a bug that caused the UI to display the lock as unlocked when the lock was disconnected from the app
+ * Looking to remove a freezing bug that occurs when the app fails to connect to the lock
+ * Started learning Android Studio testing
+  * Began basic unit testing of classes that are separate from UI
+* Added proof-of-concept GPS feature
+ * Currently sends streams of distances to the screen as the user gets close to the lock
 
 #### 4/18/16
 * Cleaned up code considerably - added more comments and removed deprecated fields and methods
@@ -35,6 +44,11 @@ This directory contains an Android Studio project for an application that will b
 * Implemented unlink button for deleting locks (will need to implement this fully on the arduino side as well)
 * Removed save button in popup - saving is handled through hitting return
 * Moved and resized lock tiles so they fill about have the screen and begin at the top of the screen
+
+#### 3/25/16
+* Wrote a bit of Arduino code that signals two pins (independently) to drive our lock
+* This code allows us to send a special command for lock and unlock which are packaged to avoid pushing power on both inputs of the circuit
+* Wrote some Android code to match the communication settings on the Arduino (*10 to lock, *11 to unlock)
 
 #### 3/20/16
 * Cleaned up UI - moved click feature from tile to gear symbol (search gear on Google images)
