@@ -1,5 +1,5 @@
 # EECS398
-This directory contains an Android Studio project for an application that will be used to operate bluetooth locks.
+This directory contains an Android Studio project for an application that will be used to operate bluetooth locks. The lock is an Adafruit solenoid lock which is controlled by an Arduino. The Arduino is attached to an Adafruit Bluefruit circuit board which routes all of the bluetooth communication through serial.  
 
 # Authors 
 * Jeremy Griffith
@@ -7,6 +7,11 @@ This directory contains an Android Studio project for an application that will b
 * Miriam Crichlow
 
 # Updates
+4/18/16
+* Cleaned up code considerably - added more comments and removed deprecated fields and methods
+* Began building a testing framework - better late than never
+* Eliminated a bug where the lock switch would change to the unlocked state even when disconnected
+
 3/20/16
 * Cleaned up UI - moved click feature from tile to gear symbol (search gear on Google images)
 * Added a isCorrupt function to help with saving/loading issues
