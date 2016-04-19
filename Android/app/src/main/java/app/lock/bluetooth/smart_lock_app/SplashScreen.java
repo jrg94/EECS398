@@ -3,7 +3,6 @@ package app.lock.bluetooth.smart_lock_app;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Menu;
@@ -25,18 +24,15 @@ import java.util.List;
  */
 public class SplashScreen extends Activity {
 
-    // FIELDS //
-
-    // Variables
+    /* Variables */
     private List<Button> keypad;
     private int pressCount = 0;
     private int[] attemptedLogin = new int[4];
     private boolean authenticatingCurrentPassword = false;
     private boolean changingPassword = false;
-
-    // Constants
     private int[] passcode = {1, 2, 3, 4};
 
+    /* Constant list of button ids */
     private static final int[] BUTTON_IDS = {
             R.id.buttonZero,
             R.id.buttonOne,
@@ -50,8 +46,12 @@ public class SplashScreen extends Activity {
             R.id.buttonNine
     };
 
-    // OVERRIDDEN METHODS //
 
+    /**
+     * Initializes the activity such as the function for each
+     * button on the keypad as well as the erase and the change password buttons
+     * @param savedInstanceState a bundle
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -164,6 +164,11 @@ public class SplashScreen extends Activity {
 
     }
 
+    /**
+     * Handles the menu inflation
+     * @param menu the menu object
+     * @return true if successful
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -171,6 +176,11 @@ public class SplashScreen extends Activity {
         return true;
     }
 
+    /**
+     * Handles behavior if on Options item selected
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

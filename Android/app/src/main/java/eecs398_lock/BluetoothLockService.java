@@ -21,7 +21,6 @@ import android.util.Log;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
 import java.util.UUID;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -39,20 +38,21 @@ import app.lock.bluetooth.smart_lock_app.LockListScreen;
  * connections with other devices. It has a thread that listens for
  * incoming connections, a thread for connecting with a device, and a
  * thread for performing data transmissions when connected.
+ *
+ * This is largely borrowed from BluetoothChatService
  */
 public class BluetoothLockService {
 
-    // Debugging
+    /* Debugging */
     private static final String TAG = "BluetoothLockService";
-    private static final boolean D = true;
 
-    // Name for the SDP record when creating server socket
+    /* Name for the SDP record when creating server socket */
     private static final String NAME = "BluetoothLock";
 
-    // Unique UUID for this application
+    /* Unique UUID for this application */
     private static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
-    // Member fields
+    /* Member fields */
     private final BluetoothAdapter mAdapter;
     private final Handler mHandler;
     private AcceptThread mAcceptThread;
@@ -60,7 +60,7 @@ public class BluetoothLockService {
     private ConnectedThread mConnectedThread;
     private int mState;
 
-    // Constants that indicate the current connection state
+    /* Constants that indicate the current connection state */
     public static final int STATE_NONE = 0;       // we're doing nothing
     public static final int STATE_LISTEN = 1;     // now listening for incoming connections
     public static final int STATE_CONNECTING = 2; // now initiating an outgoing connection
@@ -68,10 +68,9 @@ public class BluetoothLockService {
 
     /**
      * Constructor. Prepares a new BluetoothChat session.
-     * @param context  The UI Activity Context
      * @param handler  A Handler to send messages back to the UI Activity
      */
-    public BluetoothLockService(Context context, Handler handler) {
+    public BluetoothLockService(Handler handler) {
         mAdapter = BluetoothAdapter.getDefaultAdapter();
         mState = STATE_NONE;
         mHandler = handler;
@@ -82,9 +81,8 @@ public class BluetoothLockService {
      * @param state  An integer defining the current connection state
      */
     private synchronized void setState(int state) {
-        if (D) {
-            Log.d(TAG, "setState() " + mState + " -> " + state);
-        }
+
+        Log.d(TAG, "setState() " + mState + " -> " + state);
 
         mState = state;
 
@@ -103,9 +101,8 @@ public class BluetoothLockService {
      * Start the chat service. Specifically start AcceptThread to begin a
      * session in listening (server) mode. Called by the Activity onResume() */
     public synchronized void start() {
-        if (D) {
-            Log.d(TAG, "start");
-        }
+
+        Log.d(TAG, "start");
 
         // Cancel any thread attempting to make a connection
         if (mConnectThread != null) {
@@ -128,6 +125,10 @@ public class BluetoothLockService {
         setState(STATE_LISTEN);
     }
 
+    /**
+     * Checks if the mConnectedThread has begun yet
+     * @return true if the mConnectedThread is not null
+     */
     public synchronized boolean checkIfConnected() {
         return mConnectedThread != null;
     }
@@ -137,9 +138,8 @@ public class BluetoothLockService {
      * @param device  The BluetoothDevice to connect
      */
     public synchronized void connect(BluetoothDevice device) {
-        if (D) {
-            Log.d(TAG, "connect to: " + device);
-        }
+
+        Log.d(TAG, "connect to: " + device);
 
         // Cancel any thread attempting to make a connection
         if (mState == STATE_CONNECTING) {
@@ -167,7 +167,7 @@ public class BluetoothLockService {
      * @param device  The BluetoothDevice that has been connected
      */
     public synchronized void connected(BluetoothSocket socket, BluetoothDevice device) {
-        if (D) Log.d(TAG, "connected");
+        Log.d(TAG, "connected");
 
         // Cancel the thread that completed the connection
         if (mConnectThread != null) {
@@ -204,9 +204,8 @@ public class BluetoothLockService {
      * Stop all threads
      */
     public synchronized void stop() {
-        if (D) {
-            Log.d(TAG, "stop");
-        }
+
+        Log.d(TAG, "stop");
 
         if (mConnectThread != null) {
             mConnectThread.cancel();
@@ -296,9 +295,8 @@ public class BluetoothLockService {
         }
 
         public void run() {
-            if (D) {
-                Log.d(TAG, "BEGIN mAcceptThread" + this);
-            }
+
+            Log.d(TAG, "BEGIN mAcceptThread" + this);
 
             setName("AcceptThread");
             BluetoothSocket socket = null;
@@ -338,13 +336,11 @@ public class BluetoothLockService {
                 }
             }
 
-            if (D) {
-                Log.i(TAG, "END mAcceptThread");
-            }
+            Log.i(TAG, "END mAcceptThread");
         }
 
         public void cancel() {
-            if (D) Log.d(TAG, "cancel " + this);
+            Log.d(TAG, "cancel " + this);
             try {
                 mmServerSocket.close();
             } catch (IOException e) {

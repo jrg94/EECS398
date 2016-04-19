@@ -14,7 +14,6 @@ import android.widget.TextView;
 import app.lock.bluetooth.smart_lock_app.LockListScreen;
 import app.lock.bluetooth.smart_lock_app.R;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -46,21 +45,42 @@ public class LocksAdapter extends BaseAdapter {
         this.mContext = context;
     }
 
+    /**
+     * Retrieves the number of elements in the HashMap
+     * @return an integer that represents the number of elements in the hashmap
+     */
     @Override
     public int getCount() {
         return locks.size();
     }
 
+    /**
+     * Retrieves the item at the position
+     * @param position an integer that serves as an index into the HashMap
+     * @return the object at the position
+     */
     @Override
     public Object getItem(int position) {
         return locks.get(keys[position]);
     }
 
+    /**
+     * Retrieves the id of the item at a position
+     * @param position the index of the item
+     * @return the id of the item which happens to just be the position
+     */
     @Override
     public long getItemId(int position) {
         return position;
     }
 
+    /**
+     * The update function which establishes each view
+     * @param position the index of the view
+     * @param convertView the actual view that is being updated
+     * @param parent the parent of the view
+     * @return the view that was updated
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 

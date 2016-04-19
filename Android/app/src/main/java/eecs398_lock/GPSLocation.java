@@ -8,25 +8,42 @@ import java.text.DecimalFormat;
  */
 public class GPSLocation {
 
-    // The latitude and longitude values are in degrees
+    /* The latitude and longitude values are in degrees */
     private double latitude;
     private double longitude;
 
+    /**
+     * The default constructor which stores the latitude and longitude
+     * @param latitude the first measurement for gps coordinates in degrees
+     * @param longitude the second measurement for gps coordinates in degrees
+     */
     public GPSLocation(double latitude, double longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
+    /**
+     * Retrieves the first part of a GPS coordinate pair
+     * @return the latitude field
+     */
     public double getLatitude() {
         return this.latitude;
     }
 
+    /**
+     * Retrieves the second part of a GPS coordinate pair
+     * @return the longitude field
+     */
     public double getLongitude() {
         return this.longitude;
     }
 
+    /**
+     * A handy override for displaying the truncated coordinates
+     * @return
+     */
     public String toString() {
-        DecimalFormat clean = new DecimalFormat("#.####");
+        DecimalFormat clean = new DecimalFormat("#.#####");
         String lat = clean.format(latitude);
         String lon = clean.format(longitude);
         return String.format("%s, %s", lat, lon);
