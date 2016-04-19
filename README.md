@@ -30,6 +30,12 @@ This directory contains an Android Studio project for an application that will b
       * This could be a major issue in an apartment. Someone could easily just load 3 random commands into the lock to keep someone from getting into their home.
   * Passwords
     * During setup, the app will send a setup command along with the MAC address as the password. Once this link is made, no other device can establish a connection until the arduino is reset.
+* Implemented rounded edges on locks and popups
+* Implemented outlines on locks and popups
+* Implemented unlink button for deleting locks (will need to implement this fully on the arduino side as well)
+* Removed save button in popup - saving is handled through hitting return
+* Moved and resized lock tiles so they fill about have the screen and begin at the top of the screen
+* Christen is handling all of the converting over to Heimdall
 
 #### 3/20/16
 * Cleaned up UI - moved click feature from tile to gear symbol (search gear on Google images)
