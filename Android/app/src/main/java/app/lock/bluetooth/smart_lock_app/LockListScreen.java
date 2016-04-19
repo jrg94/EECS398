@@ -203,7 +203,7 @@ public class LockListScreen extends Activity {
         Log.e(TAG, mLockArrayAdapter.getCount() + "");
 
         // Initialize the BluetoothChatService to perform bluetooth connections
-        mLockService = new BluetoothLockService(this, mHandler);
+        mLockService = new BluetoothLockService(mHandler);
     }
 
     /**
