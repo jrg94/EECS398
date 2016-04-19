@@ -26,7 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a2257bf-2497-4569-a089-528a7cb47937" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -141,18 +141,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocksAdapter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LocksAdapter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.1286308">
+              <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
               <folding>
                 <element signature="docComment;class#LocksAdapter#0" expanded="false" />
                 <element signature="docComment;method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
                 <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
-                <element signature="e#1615#1616#0" expanded="true" />
-                <element signature="e#1650#1651#0" expanded="true" />
+                <element signature="docComment;method#getCount#0;class#LocksAdapter#0" expanded="false" />
+                <element signature="docComment;method#getItem#0;class#LocksAdapter#0" expanded="false" />
+                <element signature="docComment;method#getItemId#0;class#LocksAdapter#0" expanded="false" />
+                <element signature="docComment;method#getView#0;class#LocksAdapter#0" expanded="false" />
                 <element signature="method#getView#0;class#LocksAdapter#0" expanded="false" />
+                <element signature="e#4137#4403#0" expanded="true" />
+                <element signature="e#4402#4403#0" expanded="true" />
+                <element signature="e#4478#4978#0" expanded="true" />
+                <element signature="e#4977#4978#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,34 +171,6 @@
               <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SmartLockManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1286308">
-              <caret line="120" column="43" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
-              <folding>
-                <element signature="docComment;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#SmartLockManager#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#getLocks#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#addLock#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#addLock#1;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#addLock#1;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#localWipe#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
-                <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1796,10 +1774,10 @@
         <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/ApplicationTest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java" />
       </list>
     </option>
   </component>
@@ -2472,9 +2450,15 @@
             <element signature="docComment;class#LocksAdapter#0" expanded="false" />
             <element signature="docComment;method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
             <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
-            <element signature="e#1615#1616#0" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
+            <element signature="docComment;method#getCount#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#getItem#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#getItemId#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#getView#0;class#LocksAdapter#0" expanded="false" />
             <element signature="method#getView#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="e#4137#4403#0" expanded="true" />
+            <element signature="e#4402#4403#0" expanded="true" />
+            <element signature="e#4478#4978#0" expanded="true" />
+            <element signature="e#4977#4978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2595,9 +2579,15 @@
             <element signature="docComment;class#LocksAdapter#0" expanded="false" />
             <element signature="docComment;method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
             <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
-            <element signature="e#1615#1616#0" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
+            <element signature="docComment;method#getCount#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#getItem#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#getItemId#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#getView#0;class#LocksAdapter#0" expanded="false" />
             <element signature="method#getView#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="e#4137#4403#0" expanded="true" />
+            <element signature="e#4402#4403#0" expanded="true" />
+            <element signature="e#4478#4978#0" expanded="true" />
+            <element signature="e#4977#4978#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2974,36 +2964,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24688797">
           <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#LocksAdapter#0" expanded="false" />
-            <element signature="docComment;method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
-            <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
-            <element signature="e#1615#1616#0" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="method#getView#0;class#LocksAdapter#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3062,6 +3027,37 @@
             <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
             <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
             <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1286308">
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="method#LocksAdapter#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#getCount#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#getItem#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#getItemId#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="docComment;method#getView#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="method#getView#0;class#LocksAdapter#0" expanded="false" />
+            <element signature="e#4137#4403#0" expanded="true" />
+            <element signature="e#4402#4403#0" expanded="true" />
+            <element signature="e#4478#4978#0" expanded="true" />
+            <element signature="e#4977#4978#0" expanded="true" />
           </folding>
         </state>
       </provider>
