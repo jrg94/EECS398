@@ -1,7 +1,5 @@
 package eecs398_lock;
 
-import android.bluetooth.BluetoothDevice;
-
 import java.util.UUID;
 
 import app.lock.bluetooth.smart_lock_app.LockListScreen;
