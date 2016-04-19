@@ -35,7 +35,6 @@ This directory contains an Android Studio project for an application that will b
 * Implemented unlink button for deleting locks (will need to implement this fully on the arduino side as well)
 * Removed save button in popup - saving is handled through hitting return
 * Moved and resized lock tiles so they fill about have the screen and begin at the top of the screen
-* Christen is handling all of the converting over to Heimdall
 
 #### 3/20/16
 * Cleaned up UI - moved click feature from tile to gear symbol (search gear on Google images)
