@@ -27,6 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a2257bf-2497-4569-a089-528a7cb47937" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -94,13 +95,9 @@
       <file leaf-file-name="DeviceListActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5209713">
-              <caret line="189" column="79" selection-start-line="189" selection-start-column="79" selection-end-line="189" selection-end-column="79" />
-              <folding>
-                <element signature="e#5875#6629#0" expanded="true" />
-                <element signature="e#6628#6629#0" expanded="true" />
-                <element signature="e#7792#7814#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.5062241">
+              <caret line="189" column="72" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1751,27 +1748,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1918,8 +1896,27 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2250,13 +2247,13 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/lock_tile.xml">
@@ -2267,13 +2264,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
@@ -2331,25 +2328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#SmartLockManager#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#getLocks#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#addLock#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#addLock#1;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#addLock#1;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localWipe#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2429,25 +2407,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#SmartLockManager#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#getLocks#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#addLock#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#addLock#1;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#addLock#1;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localWipe#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2524,23 +2483,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_ui.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="132" column="45" selection-start-line="132" selection-start-column="45" selection-end-line="132" selection-end-column="45" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
@@ -2558,13 +2517,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/device_list.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
@@ -2622,23 +2581,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_ui.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml">
-      <provider editor-type-id="android-designer">
+      <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/SplashScreen.java">
@@ -2649,33 +2608,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_ui.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/device_list.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/device_list.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/heimdall_logo_original.png">
@@ -2696,23 +2655,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_ui.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/lock_tile.xml">
@@ -2733,13 +2692,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/ApplicationTest.java">
@@ -2767,25 +2726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1286308">
           <caret line="120" column="43" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
-          <folding>
-            <element signature="docComment;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#SmartLockManager#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#getLocks#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#addLock#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#addLock#1;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#addLock#1;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#localWipe#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
-            <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2894,15 +2834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7406639">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#GPSLocation#0" expanded="false" />
-            <element signature="docComment;method#GPSLocation#0;class#GPSLocation#0" expanded="false" />
-            <element signature="method#GPSLocation#0;class#GPSLocation#0" expanded="false" />
-            <element signature="docComment;method#getLatitude#0;class#GPSLocation#0" expanded="false" />
-            <element signature="docComment;method#getLongitude#0;class#GPSLocation#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#GPSLocation#0" expanded="false" />
-            <element signature="method#toString#0;class#GPSLocation#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2940,13 +2871,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5209713">
-          <caret line="189" column="79" selection-start-line="189" selection-start-column="79" selection-end-line="189" selection-end-column="79" />
-          <folding>
-            <element signature="e#5875#6629#0" expanded="true" />
-            <element signature="e#6628#6629#0" expanded="true" />
-            <element signature="e#7792#7814#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.5062241">
+          <caret line="189" column="72" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
