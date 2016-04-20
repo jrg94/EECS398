@@ -126,14 +126,6 @@ public class BluetoothLockService {
     }
 
     /**
-     * Checks if the mConnectedThread has begun yet
-     * @return true if the mConnectedThread is not null
-     */
-    public synchronized boolean checkIfConnected() {
-        return mConnectedThread != null;
-    }
-
-    /**
      * Start the ConnectThread to initiate a connection to a remote device.
      * @param device  The BluetoothDevice to connect
      */

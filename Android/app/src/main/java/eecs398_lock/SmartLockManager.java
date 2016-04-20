@@ -1,6 +1,5 @@
 package eecs398_lock;
 
-import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
