@@ -45,19 +45,6 @@ public class SmartLockManager {
     }
 
     /**
-     * The default addlock function
-     * TODO: Change to just a string (we don't need the Bluetooth stuff since we won't use the library)
-     * TODO: Add a check that this is a lock (maybe not here but this needs to be added)
-     * @param device the bluetooth device that represents this lock
-     * @return the new lock just created
-     */
-    public SmartLock addLock(BluetoothDevice device) {
-        SmartLock tempLock = new SmartLock(device.getAddress());
-        locks.put(device.getAddress(), tempLock);
-        return tempLock;
-    }
-
-    /**
      * The addlock function used if you want to initialize the
      * GPSLocation field for the lock based on the current
      * location of the device
