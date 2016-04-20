@@ -550,6 +550,7 @@ public class LockListScreen extends Activity {
 
         SmartLock sl;
 
+        // Checks the lock hashmap for the deviceAddress
         if (!lockManager.getLocks().containsKey(deviceAddress)) {
             sl = lockManager.addLock(deviceAddress, gpsTracker);
             lockManager.localSave(this);
