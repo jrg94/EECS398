@@ -79,11 +79,26 @@ public class SmartLockTest {
         assertEquals(test.getMacAddress(), testMACAdress);
     }
 
+    /**
+     * IMPORTANT TEST
+     * This test makes sure that all of the other tests
+     * actually report correct results
+     */
     @Test
     public void testEquals() {
         SmartLock test1 = new SmartLock(testMACAdress);
         SmartLock test2 = new SmartLock(testMACAdress);
 
         assertTrue(test1.equals(test2));
+    }
+
+    /**
+     * Tests the expected behavior of toString()
+     */
+    @Test
+    public void testToString() {
+        SmartLock test = new SmartLock(testMACAdress);
+
+        assertEquals(test.toString(), testMACAdress + ": " + test.getLocation().toString());
     }
 }
