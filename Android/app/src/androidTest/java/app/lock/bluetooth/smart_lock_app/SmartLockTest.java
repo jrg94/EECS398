@@ -41,6 +41,9 @@ public class SmartLockTest {
         assertEquals(test.getLabel(), "Front Door");
     }
 
+    /**
+     * Runs a test on the getter and setter for isLocked
+     */
     @Test
     public void testGetAndSetIsLocked() {
         SmartLock test = new SmartLock(testMACAdress);
@@ -50,5 +53,29 @@ public class SmartLockTest {
 
         test.setIsLocked(false);
         assertFalse(test.getIsLocked());
+    }
+
+    /**
+     * Runs a test on the getter and setter for isConnected
+     */
+    @Test
+    public void testGetAndSetIsConnected() {
+        SmartLock test = new SmartLock(testMACAdress);
+
+        // Initial state of the lock should be disconnected
+        assertFalse(test.getIsConnected());
+
+        test.setIsConnected(true);
+        assertTrue(test.getIsConnected());
+    }
+
+    /**
+     * Runs a test on the getter for macAddress
+     */
+    @Test
+    public void testGetMacAddress() {
+        SmartLock test = new SmartLock(testMACAdress);
+
+        assertEquals(test.getMacAddress(), testMACAdress);
     }
 }

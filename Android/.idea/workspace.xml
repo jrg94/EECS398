@@ -26,7 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a2257bf-2497-4569-a089-528a7cb47937" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LocksAdapterTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LocksAdapterTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -55,41 +55,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SmartLockTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SmartLockTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.32987553">
+              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#testGetLatitudeAndLongitude#0;class#SmartLockTest#0" expanded="false" />
+                <element signature="method#testGetLatitudeAndLongitude#0;class#SmartLockTest#0" expanded="false" />
                 <element signature="docComment;method#testGetAndSetLabel#0;class#SmartLockTest#0" expanded="false" />
+                <element signature="method#testGetAndSetLabel#0;class#SmartLockTest#0" expanded="false" />
+                <element signature="docComment;method#testGetAndSetIsLocked#0;class#SmartLockTest#0" expanded="false" />
+                <element signature="method#testGetAndSetIsLocked#0;class#SmartLockTest#0" expanded="false" />
+                <element signature="docComment;method#testGetAndSetIsConnected#0;class#SmartLockTest#0" expanded="false" />
+                <element signature="method#testGetAndSetIsConnected#0;class#SmartLockTest#0" expanded="false" />
+                <element signature="docComment;method#testGetMacAddress#0;class#SmartLockTest#0" expanded="false" />
+                <element signature="method#testGetMacAddress#0;class#SmartLockTest#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocksAdapterTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LocksAdapterTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.93153524">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#LocksAdapterTest#0" expanded="false" />
-                <element signature="e#573#574#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocksAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1714,8 +1697,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LocksAdapterTest.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java" />
       </list>
     </option>
   </component>
@@ -1937,7 +1920,7 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
-  <component name="RunManager" selected="Android Tests.LocksAdapterTest">
+  <component name="RunManager" selected="Android Tests.SmartLockTest">
     <configuration default="false" name="ApplicationTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <option name="TESTING_TYPE" value="2" />
@@ -2148,8 +2131,8 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Android Tests.LocksAdapterTest" />
-        <item index="1" class="java.lang.String" itemvalue="Android Tests.SmartLockTest" />
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.SmartLockTest" />
+        <item index="1" class="java.lang.String" itemvalue="Android Tests.LocksAdapterTest" />
         <item index="2" class="java.lang.String" itemvalue="Android Tests.ApplicationTest" />
       </list>
     </recent_temporary>
@@ -2193,7 +2176,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2273,7 +2256,7 @@
           <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="33" />
+      <option name="time" value="35" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2915,33 +2898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
-            <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
-            <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
-            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
-            <element signature="e#2612#2613#0" expanded="true" />
-            <element signature="e#2645#2646#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#testGetLatitudeAndLongitude#0;class#SmartLockTest#0" expanded="false" />
-            <element signature="docComment;method#testGetAndSetLabel#0;class#SmartLockTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/ApplicationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3879668">
@@ -2967,6 +2923,41 @@
             <element signature="docComment;class#LocksAdapterTest#0" expanded="false" />
             <element signature="e#573#574#0" expanded="true" />
             <element signature="e#596#597#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="e#2612#2613#0" expanded="true" />
+            <element signature="e#2645#2646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32987553">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#testGetLatitudeAndLongitude#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="method#testGetLatitudeAndLongitude#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="docComment;method#testGetAndSetLabel#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="method#testGetAndSetLabel#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="docComment;method#testGetAndSetIsLocked#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="method#testGetAndSetIsLocked#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="docComment;method#testGetAndSetIsConnected#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="method#testGetAndSetIsConnected#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="docComment;method#testGetMacAddress#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="method#testGetMacAddress#0;class#SmartLockTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
