@@ -78,4 +78,12 @@ public class SmartLockTest {
 
         assertEquals(test.getMacAddress(), testMACAdress);
     }
+
+    @Test
+    public void testEquals() {
+        SmartLock test1 = new SmartLock(testMACAdress);
+        SmartLock test2 = new SmartLock(testMACAdress);
+
+        assertTrue(test1.equals(test2));
+    }
 }

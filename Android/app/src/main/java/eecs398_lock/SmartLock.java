@@ -142,7 +142,6 @@ public class SmartLock {
 
     /**
      * Overrides the equals method to test if two locks are the same
-     * TODO: Make this better (id is unreliable and not used)
      * @param o the object of comparison
      * @return true if the two locks are equivalent
      */
@@ -151,9 +150,10 @@ public class SmartLock {
         if (o instanceof SmartLock) {
             SmartLock tempLock = (SmartLock)o;
 
-            boolean testID = tempLock.id.equals(this.id);
+            // Two devices are unique if they have different MAC address
+            boolean testMacAddess = tempLock.getMacAddress().equals(this.macAddress);
 
-            if (testID) {
+            if (testMacAddess) {
                 return true;
             }
         }
