@@ -1,6 +1,9 @@
 package app.lock.bluetooth.smart_lock_app;
 
-import android.support.test.espresso.ViewInteraction;
+import android.content.Intent;
+import android.content.ComponentName;
+import android.support.test.espresso.intent.Intents;
+import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -9,10 +12,13 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.support.test.InstrumentationRegistry.getTargetContext;
+import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.withClassName;
+import static android.support.test.espresso.intent.Intents.times;
+import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
@@ -36,20 +42,45 @@ public class SplashScreenTest {
      * Runs a login attempt
      */
     @Test
-    public void testLogin() {
-        // Enter passcode
+    public void testLoginSuccess() {
+        Intents.init();
+        mActivityRule.launchActivity(new Intent());
+
+        // Enter correct passcode
         enterPassword(1,2,3,4);
+
+        // Make sure that LockListScreen happens
+        intended(hasComponent(LockListScreen.class.getName()));
+        Intents.release();
     }
 
     @Test
-    public void testChangePassword() {
+    public void testLoginFail() {
+        Intents.init();
+        mActivityRule.launchActivity(new Intent());
+
+        enterPassword(2, 5, 2, 5);
+
+        // Make sure LockListScreen does not happen
+        intended(hasComponent(LockListScreen.class.getName()), times(0));
+        Intents.release();
+    }
+
+    @Test
+    public void testChangePasswordSuccess() {
         onView(withId(R.id.imageButtonSettings)).perform(click());
 
         onView(withId(R.id.passcode_text)).check(matches(withText(PASSCODE_TEXT_CHANGE1)));
 
-        enterPassword(1,2,3,4);
+        enterPassword(1, 2, 3, 4);
 
         onView(withId(R.id.passcode_text)).check(matches(withText(PASSCODE_TEXT_CHANGE2)));
+
+        enterPassword(2, 5, 2, 5);
+
+        onView(withId(R.id.passcode_text)).check(matches(withText(PASSCODE_TEXT_CHANGE3)));
+
+        enterPassword(2,5,2,5);
     }
 
     /**
