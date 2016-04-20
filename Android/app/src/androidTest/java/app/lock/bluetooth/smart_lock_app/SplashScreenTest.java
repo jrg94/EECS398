@@ -87,6 +87,9 @@ public class SplashScreenTest {
         enterPassword(2, 5, 2, 5);
     }
 
+    /**
+     * Runs a failing password change
+     */
     @Test
     public void testChangePasswordFailure() {
 
