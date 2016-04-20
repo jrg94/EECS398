@@ -135,15 +135,19 @@ public class DeviceListActivity extends Activity {
      */
     private void doDiscovery() {
         if (D) Log.d(TAG, "doDiscovery()");
+
         // Indicate scanning in the title
         setProgressBarIndeterminateVisibility(true);
         setTitle(R.string.scanning);
+
         // Turn on sub-title for new devices
         findViewById(R.id.title_new_devices).setVisibility(View.VISIBLE);
+
         // If we're already discovering, stop it
         if (mBtAdapter.isDiscovering()) {
             mBtAdapter.cancelDiscovery();
         }
+
         // Request discover from BluetoothAdapter
         mBtAdapter.startDiscovery();
     }
@@ -175,12 +179,15 @@ public class DeviceListActivity extends Activity {
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
+
             // When discovery finds a device
             if (BluetoothDevice.ACTION_FOUND.equals(action)) {
+
                 // Get the BluetoothDevice object from the Intent
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+
                 // If it's already paired, skip it, because it's been listed already
-                if (device.getBondState() != BluetoothDevice.BOND_BONDED) {
+                if (device.getBondState() != BluetoothDevice.BOND_BONDED && device.getName().contains("Adafruit")) {
                     mNewDevicesArrayAdapter.add(device.getName() + "\n" + device.getAddress());
                 }
                 // When discovery is finished, change the Activity title

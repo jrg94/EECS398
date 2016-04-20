@@ -94,9 +94,13 @@
       <file leaf-file-name="DeviceListActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42323652">
-              <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
-              <folding />
+            <state vertical-scroll-proportion="0.5209713">
+              <caret line="189" column="79" selection-start-line="189" selection-start-column="79" selection-end-line="189" selection-end-column="79" />
+              <folding>
+                <element signature="e#5875#6629#0" expanded="true" />
+                <element signature="e#6628#6629#0" expanded="true" />
+                <element signature="e#7792#7814#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2936,9 +2940,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42323652">
-          <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="0.5209713">
+          <caret line="189" column="79" selection-start-line="189" selection-start-column="79" selection-end-line="189" selection-end-column="79" />
+          <folding>
+            <element signature="e#5875#6629#0" expanded="true" />
+            <element signature="e#6628#6629#0" expanded="true" />
+            <element signature="e#7792#7814#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
