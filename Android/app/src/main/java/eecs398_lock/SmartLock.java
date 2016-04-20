@@ -1,7 +1,5 @@
 package eecs398_lock;
 
-import java.util.UUID;
-
 import app.lock.bluetooth.smart_lock_app.LockListScreen;
 
 /**
@@ -14,7 +12,6 @@ import app.lock.bluetooth.smart_lock_app.LockListScreen;
 public class SmartLock {
 
     /* Smart Lock Criteria */
-    private UUID id;
     private String label;
     private GPSLocation location;
     private String macAddress;
@@ -42,7 +39,6 @@ public class SmartLock {
      */
     public SmartLock(String macAddress) {
         this.macAddress = macAddress;
-        this.id = UUID.randomUUID();
         this.label = EMPTY_LOCK_NAME;
         this.location = new GPSLocation(SUITE_314C_LAT, SUITE_314C_LON);
         this.isLocked = true;
@@ -58,20 +54,12 @@ public class SmartLock {
      */
     public SmartLock(String macAddress, double latitude, double longitude) {
         this.macAddress = macAddress;
-        this.id = UUID.randomUUID();
         this.label = EMPTY_LOCK_NAME;
         this.location = new GPSLocation(latitude, longitude);
         this.isLocked = true;
         this.isConnected = false;
     }
 
-    /**
-     * Retrieves the UUID that is generated at lock creation
-     * @return the UUID for this lock
-     */
-    public UUID getID() {
-        return this.id;
-    }
 
     /**
      * Retrieves the name of this lock
@@ -166,7 +154,7 @@ public class SmartLock {
      */
     @Override
     public String toString() {
-        return String.format("%s: %s", this.id.toString(), getLocation().toString());
+        return String.format("%s: %s", this.getMacAddress().toString(), getLocation().toString());
     }
 
     /**
