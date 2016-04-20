@@ -27,8 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0a2257bf-2497-4569-a089-528a7cb47937" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" afterPath="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,17 +93,20 @@
       <file leaf-file-name="LockListScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57883817">
-              <caret line="246" column="0" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+            <state vertical-scroll-proportion="2.4688797">
+              <caret line="214" column="65" selection-start-line="214" selection-start-column="65" selection-end-line="214" selection-end-column="65" />
               <folding>
                 <element signature="docComment;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2288,12 +2289,6 @@
           <line>35</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java</url>
-          <line>142</line>
-          <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="35" />
     </breakpoint-manager>
@@ -2331,12 +2326,15 @@
           <folding>
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2423,12 +2421,15 @@
           <folding>
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2515,12 +2516,15 @@
           <folding>
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2608,12 +2612,15 @@
           <folding>
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2956,17 +2963,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57883817">
-          <caret line="246" column="0" selection-start-line="246" selection-start-column="0" selection-end-line="246" selection-end-column="0" />
+        <state vertical-scroll-proportion="2.4688797">
+          <caret line="214" column="65" selection-start-line="214" selection-start-column="65" selection-end-line="214" selection-end-column="65" />
           <folding>
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />

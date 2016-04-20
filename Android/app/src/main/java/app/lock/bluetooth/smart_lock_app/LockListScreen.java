@@ -251,7 +251,7 @@ public class LockListScreen extends Activity {
 
         // Get the id text and set it
         TextView addressText = (TextView)popupMenu.getContentView().findViewById(R.id.popup_id);
-        addressText.setText(lock.getMacAddress().toString().substring(0, 8) + "...");
+        addressText.setText(lock.getMacAddress().substring(0, 8) + "...");
 
         // Get the close button from this popup window
         Button close = (Button)popupMenu.getContentView().findViewById(R.id.close);
