@@ -27,9 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0a2257bf-2497-4569-a089-528a7cb47937" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SplashScreenTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SplashScreenTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,10 +80,17 @@
       <file leaf-file-name="SplashScreenTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SplashScreenTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9294606">
-              <caret line="63" column="51" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
+            <state vertical-scroll-proportion="-0.3879668">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#testLoginSuccess#0;class#SplashScreenTest#0" expanded="false" />
+                <element signature="method#testLoginSuccess#0;class#SplashScreenTest#0" expanded="false" />
+                <element signature="docComment;method#testLoginFail#0;class#SplashScreenTest#0" expanded="false" />
+                <element signature="method#testLoginFail#0;class#SplashScreenTest#0" expanded="false" />
+                <element signature="docComment;method#testChangePasswordSuccess#0;class#SplashScreenTest#0" expanded="false" />
+                <element signature="method#testChangePasswordSuccess#0;class#SplashScreenTest#0" expanded="false" />
+                <element signature="docComment;method#enterPassword#0;class#SplashScreenTest#0" expanded="false" />
+                <element signature="method#enterPassword#0;class#SplashScreenTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -2439,7 +2443,7 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="38" />
+      <option name="time" value="39" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3165,10 +3169,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SplashScreenTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9294606">
-          <caret line="63" column="51" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
+        <state vertical-scroll-proportion="-0.3879668">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#testLoginSuccess#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="method#testLoginSuccess#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="docComment;method#testLoginFail#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="method#testLoginFail#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="docComment;method#testChangePasswordSuccess#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="method#testChangePasswordSuccess#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="docComment;method#enterPassword#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="method#enterPassword#0;class#SplashScreenTest#0" expanded="false" />
           </folding>
         </state>
       </provider>

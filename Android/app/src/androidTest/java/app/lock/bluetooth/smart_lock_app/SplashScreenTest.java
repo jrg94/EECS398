@@ -1,9 +1,7 @@
 package app.lock.bluetooth.smart_lock_app;
 
 import android.content.Intent;
-import android.content.ComponentName;
 import android.support.test.espresso.intent.Intents;
-import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
@@ -12,7 +10,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static android.support.test.InstrumentationRegistry.getTargetContext;
 import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -39,7 +36,7 @@ public class SplashScreenTest {
     public ActivityTestRule<SplashScreen> mActivityRule = new ActivityTestRule<>(SplashScreen.class);
 
     /**
-     * Runs a login attempt
+     * Runs a successful login attempt
      */
     @Test
     public void testLoginSuccess() {
@@ -54,6 +51,9 @@ public class SplashScreenTest {
         Intents.release();
     }
 
+    /**
+     * Runs a failing login attempt
+     */
     @Test
     public void testLoginFail() {
         Intents.init();
@@ -66,6 +66,9 @@ public class SplashScreenTest {
         Intents.release();
     }
 
+    /**
+     * Runs a successful password change
+     */
     @Test
     public void testChangePasswordSuccess() {
         onView(withId(R.id.imageButtonSettings)).perform(click());
