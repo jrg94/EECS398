@@ -13,7 +13,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class SmartLockTest {
 
-    private static final String testMACAdress = "AA:BB:CC:DD:EE:FF";
+    private static final String TEST_MAC_ADDRESS = "AA:BB:CC:DD:EE:FF";
 
     /**
      * Runs a test on the getters for latitude and longitude
@@ -23,7 +23,7 @@ public class SmartLockTest {
         double latitude = 40.0;
         double longitude = 50.0;
 
-        SmartLock test = new SmartLock(testMACAdress, latitude, longitude);
+        SmartLock test = new SmartLock(TEST_MAC_ADDRESS, latitude, longitude);
         assertEquals(test.getLocation().getLatitude(), latitude, .01);
         assertEquals(test.getLocation().getLongitude(), longitude, .01);
     }
@@ -33,7 +33,7 @@ public class SmartLockTest {
      */
     @Test
     public void testGetAndSetLabel() {
-        SmartLock test = new SmartLock(testMACAdress);
+        SmartLock test = new SmartLock(TEST_MAC_ADDRESS);
 
         assertEquals(test.getLabel(), "Insert Label Here");
 
@@ -46,7 +46,7 @@ public class SmartLockTest {
      */
     @Test
     public void testGetAndSetIsLocked() {
-        SmartLock test = new SmartLock(testMACAdress);
+        SmartLock test = new SmartLock(TEST_MAC_ADDRESS);
 
         // Initial state of the lock should be true
         assertTrue(test.getIsLocked());
@@ -60,7 +60,7 @@ public class SmartLockTest {
      */
     @Test
     public void testGetAndSetIsConnected() {
-        SmartLock test = new SmartLock(testMACAdress);
+        SmartLock test = new SmartLock(TEST_MAC_ADDRESS);
 
         // Initial state of the lock should be disconnected
         assertFalse(test.getIsConnected());
@@ -74,9 +74,9 @@ public class SmartLockTest {
      */
     @Test
     public void testGetMacAddress() {
-        SmartLock test = new SmartLock(testMACAdress);
+        SmartLock test = new SmartLock(TEST_MAC_ADDRESS);
 
-        assertEquals(test.getMacAddress(), testMACAdress);
+        assertEquals(test.getMacAddress(), TEST_MAC_ADDRESS);
     }
 
     /**
@@ -86,8 +86,8 @@ public class SmartLockTest {
      */
     @Test
     public void testEquals() {
-        SmartLock test1 = new SmartLock(testMACAdress);
-        SmartLock test2 = new SmartLock(testMACAdress);
+        SmartLock test1 = new SmartLock(TEST_MAC_ADDRESS);
+        SmartLock test2 = new SmartLock(TEST_MAC_ADDRESS);
 
         assertTrue(test1.equals(test2));
     }
@@ -97,8 +97,8 @@ public class SmartLockTest {
      */
     @Test
     public void testToString() {
-        SmartLock test = new SmartLock(testMACAdress);
+        SmartLock test = new SmartLock(TEST_MAC_ADDRESS);
 
-        assertEquals(test.toString(), testMACAdress + ": " + test.getLocation().toString());
+        assertEquals(test.toString(), TEST_MAC_ADDRESS + ": " + test.getLocation().toString());
     }
 }
