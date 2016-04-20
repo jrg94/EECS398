@@ -26,9 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a2257bf-2497-4569-a089-528a7cb47937" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/GPSLocationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/GPSLocationTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/GPSLocationTest.java" />
     </list>
     <ignored path="Android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,16 +110,15 @@
                 <element signature="docComment;method#getLatitude#0;class#GPSLocation#0" expanded="false" />
                 <element signature="docComment;method#getLongitude#0;class#GPSLocation#0" expanded="false" />
                 <element signature="docComment;method#toString#0;class#GPSLocation#0" expanded="false" />
-                <element signature="method#toString#0;class#GPSLocation#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmartLockTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SmartLockTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.0684648">
+            <state vertical-scroll-proportion="0.0">
               <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
               <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
               <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
@@ -145,13 +142,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GPSLocationTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GPSLocationTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/GPSLocationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.7053942">
+              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;method#testGetLatitudeAndLongitude#0;class#GPSLocationTest#0" expanded="false" />
+                <element signature="method#testGetLatitudeAndLongitude#0;class#GPSLocationTest#0" expanded="false" />
+                <element signature="docComment;method#testToString#0;class#GPSLocationTest#0" expanded="false" />
+                <element signature="method#testToString#0;class#GPSLocationTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1761,8 +1762,8 @@
         <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LocksAdapterTest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/GPSLocationTest.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/GPSLocationTest.java" />
       </list>
     </option>
   </component>
@@ -2216,8 +2217,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Android Tests.SmartLockTest" />
-        <item index="1" class="java.lang.String" itemvalue="Android Tests.GPSLocationTest" />
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.GPSLocationTest" />
+        <item index="1" class="java.lang.String" itemvalue="Android Tests.SmartLockTest" />
         <item index="2" class="java.lang.String" itemvalue="Android Tests.LocksAdapterTest" />
         <item index="3" class="java.lang.String" itemvalue="Android Tests.ApplicationTest" />
       </list>
@@ -2262,7 +2263,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2336,7 +2337,7 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="37" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3025,35 +3026,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#GPSLocation#0" expanded="false" />
-            <element signature="docComment;method#GPSLocation#0;class#GPSLocation#0" expanded="false" />
-            <element signature="method#GPSLocation#0;class#GPSLocation#0" expanded="false" />
-            <element signature="docComment;method#getLatitude#0;class#GPSLocation#0" expanded="false" />
-            <element signature="docComment;method#getLongitude#0;class#GPSLocation#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#GPSLocation#0" expanded="false" />
-            <element signature="method#toString#0;class#GPSLocation#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/GPSLocationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="65" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.0684648">
+        <state vertical-scroll-proportion="0.0">
           <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
           <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
           <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
@@ -3072,6 +3047,35 @@
             <element signature="docComment;method#testGetMacAddress#0;class#SmartLockTest#0" expanded="false" />
             <element signature="docComment;method#testEquals#0;class#SmartLockTest#0" expanded="false" />
             <element signature="docComment;method#testToString#0;class#SmartLockTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#GPSLocation#0" expanded="false" />
+            <element signature="docComment;method#GPSLocation#0;class#GPSLocation#0" expanded="false" />
+            <element signature="method#GPSLocation#0;class#GPSLocation#0" expanded="false" />
+            <element signature="docComment;method#getLatitude#0;class#GPSLocation#0" expanded="false" />
+            <element signature="docComment;method#getLongitude#0;class#GPSLocation#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#GPSLocation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/GPSLocationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7053942">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#testGetLatitudeAndLongitude#0;class#GPSLocationTest#0" expanded="false" />
+            <element signature="method#testGetLatitudeAndLongitude#0;class#GPSLocationTest#0" expanded="false" />
+            <element signature="docComment;method#testToString#0;class#GPSLocationTest#0" expanded="false" />
+            <element signature="method#testToString#0;class#GPSLocationTest#0" expanded="false" />
           </folding>
         </state>
       </provider>

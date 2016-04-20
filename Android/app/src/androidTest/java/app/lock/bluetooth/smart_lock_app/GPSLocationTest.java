@@ -13,15 +13,28 @@ import static org.junit.Assert.assertTrue;
  */
 public class GPSLocationTest {
 
-    private static final double TEST_LATITUDE = 50.0;
-    private static final double TEST_LONGITUDE = -80.0;
+    private static final double TEST_LATITUDE = 50.134566;
+    private static final double TEST_LONGITUDE = -80.674321;
     private static final double EPSILON = .01;
 
+    /**
+     * Tests the behavior of the getters for lat and lon
+     */
     @Test
     public void testGetLatitudeAndLongitude() {
         GPSLocation test = new GPSLocation(TEST_LATITUDE, TEST_LONGITUDE);
 
         assertEquals(test.getLatitude(), TEST_LATITUDE, EPSILON);
         assertEquals(test.getLongitude(), TEST_LONGITUDE, EPSILON);
+    }
+
+    /**
+     * Tests the behavior of toString
+     */
+    @Test
+    public void testToString() {
+        GPSLocation test = new GPSLocation(TEST_LATITUDE, TEST_LONGITUDE);
+
+        assertEquals(test.toString(), 50.13457 + ", " + -80.67432);
     }
 }
