@@ -31,6 +31,7 @@ public class SplashScreenTest {
     private static final String PASSCODE_TEXT_CHANGE1 = "New Password Mode:\nEnter Old Password";
     private static final String PASSCODE_TEXT_CHANGE2 = "New Password Mode:\nNow Enter New Password";
     private static final String PASSCODE_TEXT_CHANGE3 = "Successfully Changed Password";
+    private static final String PASSCODE_TEXT_CHANGE4 = "New Password Mode FAILED:\nTry Again";
 
     @Rule
     public ActivityTestRule<SplashScreen> mActivityRule = new ActivityTestRule<>(SplashScreen.class);
@@ -83,7 +84,20 @@ public class SplashScreenTest {
 
         onView(withId(R.id.passcode_text)).check(matches(withText(PASSCODE_TEXT_CHANGE3)));
 
-        enterPassword(2,5,2,5);
+        enterPassword(2, 5, 2, 5);
+    }
+
+    @Test
+    public void testChangePasswordFailure() {
+
+        // Go into password change mode
+        onView(withId(R.id.imageButtonSettings)).perform(click());
+
+        // Enter wrong password
+        enterPassword(5, 5, 5, 5);
+
+        // Check that app thinks this is incorrect
+        onView(withId(R.id.passcode_text)).check(matches(withText(PASSCODE_TEXT_CHANGE4)));
     }
 
     /**

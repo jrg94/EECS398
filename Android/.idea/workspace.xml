@@ -80,16 +80,15 @@
       <file leaf-file-name="SplashScreenTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SplashScreenTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3879668">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.78838176">
+              <caret line="98" column="50" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="docComment;method#testLoginSuccess#0;class#SplashScreenTest#0" expanded="false" />
-                <element signature="method#testLoginSuccess#0;class#SplashScreenTest#0" expanded="false" />
                 <element signature="docComment;method#testLoginFail#0;class#SplashScreenTest#0" expanded="false" />
                 <element signature="method#testLoginFail#0;class#SplashScreenTest#0" expanded="false" />
                 <element signature="docComment;method#testChangePasswordSuccess#0;class#SplashScreenTest#0" expanded="false" />
                 <element signature="method#testChangePasswordSuccess#0;class#SplashScreenTest#0" expanded="false" />
-                <element signature="docComment;method#enterPassword#0;class#SplashScreenTest#0" expanded="false" />
                 <element signature="method#enterPassword#0;class#SplashScreenTest#0" expanded="false" />
               </folding>
             </state>
@@ -2370,7 +2369,7 @@
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2442,8 +2441,14 @@
           <line>35</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SplashScreenTest.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="39" />
+      <option name="time" value="41" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3169,16 +3174,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SplashScreenTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3879668">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.78838176">
+          <caret line="98" column="50" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#testLoginSuccess#0;class#SplashScreenTest#0" expanded="false" />
-            <element signature="method#testLoginSuccess#0;class#SplashScreenTest#0" expanded="false" />
             <element signature="docComment;method#testLoginFail#0;class#SplashScreenTest#0" expanded="false" />
             <element signature="method#testLoginFail#0;class#SplashScreenTest#0" expanded="false" />
             <element signature="docComment;method#testChangePasswordSuccess#0;class#SplashScreenTest#0" expanded="false" />
             <element signature="method#testChangePasswordSuccess#0;class#SplashScreenTest#0" expanded="false" />
-            <element signature="docComment;method#enterPassword#0;class#SplashScreenTest#0" expanded="false" />
             <element signature="method#enterPassword#0;class#SplashScreenTest#0" expanded="false" />
           </folding>
         </state>
