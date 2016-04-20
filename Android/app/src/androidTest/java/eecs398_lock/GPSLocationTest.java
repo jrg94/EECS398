@@ -1,4 +1,4 @@
-package app.lock.bluetooth.smart_lock_app;
+package eecs398_lock;
 
 import org.junit.Test;
 
