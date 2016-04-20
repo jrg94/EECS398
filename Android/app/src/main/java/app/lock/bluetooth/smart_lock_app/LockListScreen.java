@@ -88,6 +88,14 @@ public class LockListScreen extends Activity {
     private LocationManager locationManager = null;         // Handles location services for the app
     private GPSTracker gpsTracker = null;                   // The GPS listener
 
+    public SmartLockManager getLockManager() {
+        return lockManager;
+    }
+
+    public LocksAdapter getLocksAdapter() {
+        return mLockArrayAdapter;
+    }
+
     /**
      * The onCreate method which can be overridden in all Activity classes
      * In our case, we treat it like a constructor and initialize various fields
