@@ -89,7 +89,6 @@ public class LocksAdapter extends BaseAdapter {
 
         // Retrieve lock from position
         final SmartLock lock = (SmartLock) getItem(position);
-        final LockListScreen lls = (LockListScreen) mContext;
 
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.lock_ui, parent, false);
@@ -123,7 +122,7 @@ public class LocksAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 if (mContext instanceof LockListScreen) {
-                    lls.showPopUp(lls.findViewById(R.id.gridView), lock);
+                    ((LockListScreen)mContext).showPopUp(((LockListScreen)mContext).findViewById(R.id.gridView), lock);
                 }
             }
         });
@@ -139,9 +138,10 @@ public class LocksAdapter extends BaseAdapter {
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
 
-
-                lock.unlock(lls);
-                lockStatus.setChecked(lock.getIsLocked());
+                if (mContext instanceof LockListScreen) {
+                    lock.unlock((LockListScreen)mContext);
+                    lockStatus.setChecked(lock.getIsLocked());
+                }
             }
         });
 

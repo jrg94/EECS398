@@ -1,6 +1,7 @@
 package app.lock.bluetooth.smart_lock_app;
 
 import android.test.AndroidTestCase;
+import android.test.UiThreadTest;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
@@ -45,7 +46,7 @@ public class LocksAdapterTest extends AndroidTestCase {
         assertEquals("Lock count incorrect", data.size(), mAdapter.getCount());
     }
 
-    /**
+    @UiThreadTest
     public void testGetView() {
         View view = mAdapter.getView(0, null, null);
 
@@ -61,5 +62,5 @@ public class LocksAdapterTest extends AndroidTestCase {
         assertNotNull("ConnectedStatus TextView is null", connectedStatus);
         assertNotNull("LockStatus Switch is null", lockStatus);
         assertNotNull("PopupMenuButton Button is null", popupMenuButton);
-    }*/
+    }
 }
