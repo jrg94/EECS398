@@ -192,9 +192,9 @@ public class BluetoothLockService {
         mConnectedThread.start();
 
         // Send the name of the connected device back to the UI Activity
-        Message msg = mHandler.obtainMessage(LockListScreen.LOCK_DEVICE_NAME);
+        Message msg = mHandler.obtainMessage(LockListScreen.LOCK_DEVICE_ADDRESS);
         Bundle bundle = new Bundle();
-        bundle.putString(LockListScreen.DEVICE_NAME, device.getName());
+        bundle.putString(LockListScreen.DEVICE_ADDRESS, device.getAddress());
         msg.setData(bundle);
         mHandler.sendMessage(msg);
         setState(STATE_CONNECTED);

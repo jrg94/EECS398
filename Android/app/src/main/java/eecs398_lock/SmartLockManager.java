@@ -66,9 +66,9 @@ public class SmartLockManager {
      * @param gpsTracker the coordinate tracker for the phone
      * @return the new lock just created
      */
-    public SmartLock addLock(BluetoothDevice device, GPSTracker gpsTracker) {
-        SmartLock tempLock = new SmartLock(device.getAddress(), gpsTracker.getLastLatitude(), gpsTracker.getLastLongitude());
-        locks.put(device.getAddress(), tempLock);
+    public SmartLock addLock(String deviceAddress, GPSTracker gpsTracker) {
+        SmartLock tempLock = new SmartLock(deviceAddress, gpsTracker.getLastLatitude(), gpsTracker.getLastLongitude());
+        locks.put(deviceAddress, tempLock);
         return tempLock;
     }
 
