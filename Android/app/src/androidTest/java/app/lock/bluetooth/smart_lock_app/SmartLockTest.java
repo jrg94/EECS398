@@ -13,6 +13,8 @@ import static org.junit.Assert.assertTrue;
  */
 public class SmartLockTest {
 
+    private static final String testMACAdress = "AA:BB:CC:DD:EE:FF";
+
     /**
      * Runs a test on the getters for latitude and longitude
      */
@@ -21,9 +23,32 @@ public class SmartLockTest {
         double latitude = 40.0;
         double longitude = 50.0;
 
-        SmartLock test = new SmartLock("AA:BB:CC:DD:EE:FF", latitude, longitude);
+        SmartLock test = new SmartLock(testMACAdress, latitude, longitude);
         assertEquals(test.getLocation().getLatitude(), latitude, .01);
         assertEquals(test.getLocation().getLongitude(), longitude, .01);
     }
 
+    /**
+     * Runs a test on the getter and setter for label
+     */
+    @Test
+    public void testGetAndSetLabel() {
+        SmartLock test = new SmartLock(testMACAdress);
+
+        assertEquals(test.getLabel(), "Insert Label Here");
+
+        test.setLabel("Front Door");
+        assertEquals(test.getLabel(), "Front Door");
+    }
+
+    @Test
+    public void testGetAndSetIsLocked() {
+        SmartLock test = new SmartLock(testMACAdress);
+
+        // Initial state of the lock should be true
+        assertTrue(test.getIsLocked());
+
+        test.setIsLocked(false);
+        assertFalse(test.getIsLocked());
+    }
 }
