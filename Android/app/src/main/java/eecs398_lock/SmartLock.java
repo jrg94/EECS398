@@ -38,7 +38,7 @@ public class SmartLock {
     /**
      * The standard constructor which takes in the Bluetooth
      * Device and stores its macAddress for later use
-     * @param device the bluetooth device that this code represents
+     * @param macAddress the bluetooth address of the device that this code represents
      */
     public SmartLock(String macAddress) {
         this.macAddress = macAddress;
@@ -52,7 +52,7 @@ public class SmartLock {
     /**
      * A more advanced constructor which is used to
      * store the location of the physical lock
-     * @param device the bluetooth device that this code represents
+     * @param macAddress the bluetooth address of the device that this code represents
      * @param latitude the latitude of the physical device
      * @param longitude the longitude of the physical device
      */
