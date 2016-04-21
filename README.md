@@ -10,6 +10,7 @@ This directory contains an Android Studio project for an application that will b
 #### 4/21/16
 * Resolved an issue where app would crash on login after a lock was unlinked and app was force closed
 * Added some more UI tests
+
 #### 4/20/16
 * TESTING
   * Repository now contains unit and UI testing which can be run using the Unit Testing Suite code
