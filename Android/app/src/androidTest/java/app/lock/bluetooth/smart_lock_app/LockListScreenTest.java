@@ -30,6 +30,7 @@ import eecs398_lock.SmartLockManager;
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.assertion.ViewAssertions.doesNotExist;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.intent.Intents.intended;
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
@@ -43,6 +44,7 @@ import static org.hamcrest.Matchers.hasEntry;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.IsNot.not;
 
 /**
  * Created by JRG94 on 4/20/2016.
@@ -106,6 +108,11 @@ public class LockListScreenTest {
         // Checks that the popup is displayed
         onView(withId(R.id.popup_menu)).check(matches(isDisplayed()));
 
+        // Closes the popup window
+        onView(withId(R.id.close)).perform(click());
+
+        // Checks for its existence
+        onView(withId(R.id.popup_menu)).check(doesNotExist());
     }
 
     /**
