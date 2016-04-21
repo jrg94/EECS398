@@ -27,7 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a2257bf-2497-4569-a089-528a7cb47937" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LockListScreenTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LockListScreenTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
@@ -59,8 +59,8 @@
       <file leaf-file-name="LockListScreenTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LockListScreenTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74896264">
-              <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5062241">
+              <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#setUp#0;class#LockListScreenTest#0" expanded="false" />
@@ -68,10 +68,13 @@
                 <element signature="docComment;method#testOpenDeviceList#0;class#LockListScreenTest#0" expanded="false" />
                 <element signature="method#testOpenDeviceList#0;class#LockListScreenTest#0" expanded="false" />
                 <element signature="docComment;method#testPopupMenuClose#0;class#LockListScreenTest#0" expanded="false" />
+                <element signature="method#testPopupMenuClose#0;class#LockListScreenTest#0" expanded="false" />
                 <element signature="docComment;method#testPopupMenuUnlink#0;class#LockListScreenTest#0" expanded="false" />
                 <element signature="method#testPopupMenuUnlink#0;class#LockListScreenTest#0" expanded="false" />
                 <element signature="docComment;method#testConnect#0;class#LockListScreenTest#0" expanded="false" />
                 <element signature="method#testConnect#0;class#LockListScreenTest#0" expanded="false" />
+                <element signature="docComment;method#testChangeLabel#0;class#LockListScreenTest#0" expanded="false" />
+                <element signature="method#testChangeLabel#0;class#LockListScreenTest#0" expanded="false" />
                 <element signature="docComment;method#tearDown#0;class#LockListScreenTest#0" expanded="false" />
               </folding>
             </state>
@@ -1696,11 +1699,11 @@
         <option value="$PROJECT_DIR$/app/src/androidTest/java/eecs398_lock/LocksAdapterTest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LockListScreenTest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSTracker.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LockListScreenTest.java" />
       </list>
     </option>
   </component>
@@ -1919,7 +1922,7 @@
       <recent name="eecs398_lock" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Tests.UnitTestSuite">
+  <component name="RunManager" selected="Android Tests.LockListScreenTest">
     <configuration default="false" name="SmartLockTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <option name="TESTING_TYPE" value="2" />
@@ -2172,8 +2175,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Android Tests.UnitTestSuite" />
-        <item index="1" class="java.lang.String" itemvalue="Android Tests.LockListScreenTest" />
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.LockListScreenTest" />
+        <item index="1" class="java.lang.String" itemvalue="Android Tests.UnitTestSuite" />
         <item index="2" class="java.lang.String" itemvalue="Android Tests.SmartLockTest" />
         <item index="3" class="java.lang.String" itemvalue="Android Tests.LocksAdapterTest" />
         <item index="4" class="java.lang.String" itemvalue="Android Tests.GPSLocationTest" />
@@ -2293,7 +2296,7 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="49" />
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2919,8 +2922,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LockListScreenTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74896264">
-          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5062241">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#setUp#0;class#LockListScreenTest#0" expanded="false" />
@@ -2928,10 +2931,13 @@
             <element signature="docComment;method#testOpenDeviceList#0;class#LockListScreenTest#0" expanded="false" />
             <element signature="method#testOpenDeviceList#0;class#LockListScreenTest#0" expanded="false" />
             <element signature="docComment;method#testPopupMenuClose#0;class#LockListScreenTest#0" expanded="false" />
+            <element signature="method#testPopupMenuClose#0;class#LockListScreenTest#0" expanded="false" />
             <element signature="docComment;method#testPopupMenuUnlink#0;class#LockListScreenTest#0" expanded="false" />
             <element signature="method#testPopupMenuUnlink#0;class#LockListScreenTest#0" expanded="false" />
             <element signature="docComment;method#testConnect#0;class#LockListScreenTest#0" expanded="false" />
             <element signature="method#testConnect#0;class#LockListScreenTest#0" expanded="false" />
+            <element signature="docComment;method#testChangeLabel#0;class#LockListScreenTest#0" expanded="false" />
+            <element signature="method#testChangeLabel#0;class#LockListScreenTest#0" expanded="false" />
             <element signature="docComment;method#tearDown#0;class#LockListScreenTest#0" expanded="false" />
           </folding>
         </state>

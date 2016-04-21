@@ -48,6 +48,7 @@ import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
@@ -151,10 +152,14 @@ public class LockListScreenTest {
         // Checks for popup existence
         onView(withId(R.id.popup_menu)).check(doesNotExist());
 
-        // TODO: Checks for lock existence
+        // Checks for locks existence in hashmap - JUnit style
+        assertFalse(lockManager.getLocks().containsValue(testLock));
 
         // Re-adds lock
         testLock = lockManager.addLock(TEST_MAC_ADDRESS, new GPSTracker(mContext, lockManager.getLocks().values()));
+
+        // Check that it was properly added back into the map
+        assertTrue(lockManager.getLocks().containsValue(testLock));
     }
 
     /**
