@@ -26,9 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a2257bf-2497-4569-a089-528a7cb47937" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
     </list>
     <ignored path="Android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,11 +54,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SmartLockTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java">
+      <file leaf-file-name="UnitTestSuite.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/UnitTestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,35 +66,145 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GPSTracker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSTracker.java">
+      <file leaf-file-name="LocksAdapterTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/eecs398_lock/LocksAdapterTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="105" column="52" selection-start-line="105" selection-start-column="52" selection-end-line="105" selection-end-column="52" />
+              <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
               <folding>
-                <element signature="docComment;class#GPSTracker#0" expanded="false" />
-                <element signature="docComment;method#GPSTracker#0;class#GPSTracker#0" expanded="false" />
-                <element signature="method#GPSTracker#0;class#GPSTracker#0" expanded="false" />
-                <element signature="docComment;method#getLastLatitude#0;class#GPSTracker#0" expanded="false" />
-                <element signature="docComment;method#getLastLongitude#0;class#GPSTracker#0" expanded="false" />
-                <element signature="docComment;method#onLocationChanged#0;class#GPSTracker#0" expanded="false" />
-                <element signature="method#onLocationChanged#0;class#GPSTracker#0" expanded="false" />
-                <element signature="docComment;method#onStatusChanged#0;class#GPSTracker#0" expanded="false" />
-                <element signature="method#onStatusChanged#0;class#GPSTracker#0" expanded="false" />
-                <element signature="docComment;method#onProviderEnabled#0;class#GPSTracker#0" expanded="false" />
-                <element signature="method#onProviderEnabled#0;class#GPSTracker#0" expanded="false" />
-                <element signature="docComment;method#onProviderDisabled#0;class#GPSTracker#0" expanded="false" />
-                <element signature="method#onProviderDisabled#0;class#GPSTracker#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#LocksAdapterTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeviceListActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java">
+      <file leaf-file-name="LockListScreenTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LockListScreenTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5062241">
-              <caret line="189" column="72" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2275#2422#0" expanded="true" />
+                <element signature="e#2421#2422#0" expanded="true" />
+                <element signature="e#3065#3066#0" expanded="true" />
+                <element signature="e#3140#3141#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SmartLockManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding>
+                <element signature="docComment;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#SmartLockManager#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#getLocks#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#addLock#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#localWipe#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+                <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LockListScreen.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.3598235">
+              <caret line="433" column="102" selection-start-line="433" selection-start-column="102" selection-end-line="433" selection-end-column="102" />
+              <folding>
+                <element signature="docComment;class#LockListScreen#0" expanded="false" />
+                <element signature="e#3498#3499#0" expanded="true" />
+                <element signature="e#3532#3533#0" expanded="true" />
+                <element signature="e#3577#3578#0" expanded="true" />
+                <element signature="e#3617#3618#0" expanded="true" />
+                <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#handleWrite#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+                <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BluetoothLockService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0689654">
+              <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#connected#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#write#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#write#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+                <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SplashScreen.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/SplashScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="178" column="4" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -553,6 +661,11 @@
                 <option name="description" value="Prepare com.android.support.test.espresso:espresso-idling-resource:2.2.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportTestEspressoEspressoIdlingResource221Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test.espresso:espresso-intents:2.2.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportTestEspressoEspressoIntents221Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support.test:exposed-instrumentation-api-publish:0.4.1" />
@@ -1127,6 +1240,11 @@
                 <option name="name" value="prepareComAndroidSupportTestEspressoEspressoIdlingResource221Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test.espresso:espresso-intents:2.2.1" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComAndroidSupportTestEspressoEspressoIntents221Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support.test:exposed-instrumentation-api-publish:0.4.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareComAndroidSupportTestExposedInstrumentationApiPublish041Library" />
@@ -1330,7 +1448,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="C:\Users\Christen\Documents\GitHub\EECS398\Android" value="4377576806327" />
-        <entry key="C:\Users\JRG94\Documents\CWRU\Courses\Year_4\EECS398\Android" value="4380607819416" />
+        <entry key="C:\Users\JRG94\Documents\CWRU\Courses\Year_4\EECS398\Android" value="4380778610920" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1691,21 +1809,29 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_ui.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/lock_tile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/ApplicationTest.java" />
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/SplashScreen.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSLocation.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSTracker.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/GPSLocationTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LocksAdapterTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SplashScreenTest.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/eecs398_lock/SmartLockTest.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/eecs398_lock/GPSLocationTest.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/UnitTestSuite.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/eecs398_lock/LocksAdapterTest.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LockListScreenTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
       </list>
     </option>
   </component>
@@ -1749,7 +1875,27 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1801,6 +1947,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1889,6 +2091,62 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="androidTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eecs398_lock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="androidTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="smart_lock_app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -1896,27 +2154,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1927,13 +2165,18 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="eecs398_lock" />
+    </key>
+  </component>
   <component name="RunManager" selected="Android Application.app">
-    <configuration default="false" name="ApplicationTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="SmartLockTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <option name="TESTING_TYPE" value="2" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="android.support.test.runner.AndroidJUnitRunner" />
       <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="app.lock.bluetooth.smart_lock_app.ApplicationTest" />
+      <option name="CLASS_NAME" value="eecs398_lock.SmartLockTest" />
       <option name="PACKAGE_NAME" value="" />
       <option name="EXTRA_OPTIONS" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
@@ -1948,12 +2191,72 @@
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <method />
     </configuration>
-    <configuration default="false" name="SmartLockTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="LocksAdapterTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <option name="TESTING_TYPE" value="2" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="android.support.test.runner.AndroidJUnitRunner" />
       <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="app.lock.bluetooth.smart_lock_app.SmartLockTest" />
+      <option name="CLASS_NAME" value="eecs398_lock.LocksAdapterTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GPSLocationTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="2" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="android.support.test.runner.AndroidJUnitRunner" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="eecs398_lock.GPSLocationTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LockListScreenTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="2" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="android.support.test.runner.AndroidJUnitRunner" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="app.lock.bluetooth.smart_lock_app.LockListScreenTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="UnitTestSuite" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
+      <module name="app" />
+      <option name="TESTING_TYPE" value="2" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="android.support.test.runner.AndroidJUnitRunner" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="UnitTestSuite" />
       <option name="PACKAGE_NAME" value="" />
       <option name="EXTRA_OPTIONS" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
@@ -2110,15 +2413,21 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Android Application.app" />
-      <item index="1" class="java.lang.String" itemvalue="Android Tests.ApplicationTest" />
-      <item index="2" class="java.lang.String" itemvalue="Android Tests.SmartLockTest" />
+      <item index="1" class="java.lang.String" itemvalue="Android Tests.SmartLockTest" />
+      <item index="2" class="java.lang.String" itemvalue="Android Tests.LocksAdapterTest" />
+      <item index="3" class="java.lang.String" itemvalue="Android Tests.GPSLocationTest" />
+      <item index="4" class="java.lang.String" itemvalue="Android Tests.LockListScreenTest" />
+      <item index="5" class="java.lang.String" itemvalue="Android Tests.UnitTestSuite" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Android Tests.SmartLockTest" />
-        <item index="1" class="java.lang.String" itemvalue="Android Tests.ApplicationTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Android Tests.UnitTestSuite" />
+        <item index="1" class="java.lang.String" itemvalue="Android Tests.LockListScreenTest" />
+        <item index="2" class="java.lang.String" itemvalue="Android Tests.SmartLockTest" />
+        <item index="3" class="java.lang.String" itemvalue="Android Tests.LocksAdapterTest" />
+        <item index="4" class="java.lang.String" itemvalue="Android Tests.GPSLocationTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -2167,7 +2476,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2577121" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20437019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2190,7 +2499,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2205,7 +2514,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
@@ -2235,57 +2544,27 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java</url>
-          <line>142</line>
+          <url>file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SplashScreenTest.java</url>
+          <line>59</line>
           <properties />
-          <option name="timeStamp" value="26" />
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="29" />
+      <option name="time" value="43" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/lock_tile.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/splash_screen.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="420" column="41" selection-start-line="420" selection-start-column="41" selection-end-line="420" selection-end-column="41" />
           <folding>
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="e#3498#3499#0" expanded="true" />
+            <element signature="e#3532#3533#0" expanded="true" />
+            <element signature="e#3577#3578#0" expanded="true" />
+            <element signature="e#3617#3618#0" expanded="true" />
             <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
@@ -2295,7 +2574,6 @@
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2309,17 +2587,14 @@
             <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#getCurrentAddress#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2328,6 +2603,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#SmartLockManager#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#getLocks#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#addLock#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localWipe#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2365,6 +2657,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="e#3498#3499#0" expanded="true" />
+            <element signature="e#3532#3533#0" expanded="true" />
+            <element signature="e#3577#3578#0" expanded="true" />
+            <element signature="e#3617#3618#0" expanded="true" />
             <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
@@ -2374,7 +2670,6 @@
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2388,17 +2683,14 @@
             <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#getCurrentAddress#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2407,6 +2699,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#SmartLockManager#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#getLocks#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#addLock#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localWipe#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2444,6 +2753,10 @@
           <caret line="298" column="24" selection-start-line="298" selection-start-column="24" selection-end-line="298" selection-end-column="24" />
           <folding>
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="e#3498#3499#0" expanded="true" />
+            <element signature="e#3532#3533#0" expanded="true" />
+            <element signature="e#3577#3578#0" expanded="true" />
+            <element signature="e#3617#3618#0" expanded="true" />
             <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
@@ -2453,7 +2766,6 @@
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2467,17 +2779,14 @@
             <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#getCurrentAddress#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2542,6 +2851,10 @@
           <caret line="298" column="24" selection-start-line="298" selection-start-column="24" selection-end-line="298" selection-end-column="24" />
           <folding>
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="e#3498#3499#0" expanded="true" />
+            <element signature="e#3532#3533#0" expanded="true" />
+            <element signature="e#3577#3578#0" expanded="true" />
+            <element signature="e#3617#3618#0" expanded="true" />
             <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
@@ -2551,7 +2864,6 @@
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2565,17 +2877,14 @@
             <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#getCurrentAddress#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2691,159 +3000,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/ApplicationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59958506">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2344398">
-          <caret line="37" column="83" selection-start-line="37" selection-start-column="83" selection-end-line="37" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24688797">
           <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1286308">
-          <caret line="120" column="43" selection-start-line="120" selection-start-column="43" selection-end-line="120" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1286308">
-          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8604652">
-          <caret line="279" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#checkIfConnected#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connect#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connect#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connected#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#write#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#write#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="method#connectionLost#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
-            <element signature="class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.023255814">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1161826">
-          <caret line="139" column="26" selection-start-line="139" selection-start-column="26" selection-end-line="139" selection-end-column="26" />
-          <folding>
-            <element signature="docComment;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#getCurrentAddress#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#handleWrite#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
-            <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
-            <element signature="method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/SplashScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="178" column="4" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7406639">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SmartLockTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2871,9 +3031,278 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/DeviceListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5062241">
-          <caret line="189" column="72" selection-start-line="189" selection-start-column="72" selection-end-line="189" selection-end-column="72" />
+        <state vertical-scroll-proportion="-91.24138">
+          <caret line="189" column="116" selection-start-line="189" selection-start-column="116" selection-end-line="189" selection-end-column="116" />
+          <folding>
+            <element signature="e#6801#8085#0" expanded="true" />
+            <element signature="e#7795#7817#0" expanded="true" />
+            <element signature="e#7922#7965#0" expanded="true" />
+            <element signature="e#8084#8085#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.8215768">
+          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#SmartLock#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#SmartLock#1;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getLabel#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLabel#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getLocation#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setIsLocked#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getIsConnected#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setIsConnected#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#getMacAddress#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#equals#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#equals#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#toString#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#unlock#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#unlock#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#setLockUID#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#setLockUID#0;class#SmartLock#0" expanded="false" />
+            <element signature="docComment;method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+            <element signature="method#computeDistanceFromKey#0;class#SmartLock#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/GPSLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#GPSLocation#0" expanded="false" />
+            <element signature="docComment;method#GPSLocation#0;class#GPSLocation#0" expanded="false" />
+            <element signature="method#GPSLocation#0;class#GPSLocation#0" expanded="false" />
+            <element signature="docComment;method#getLatitude#0;class#GPSLocation#0" expanded="false" />
+            <element signature="docComment;method#getLongitude#0;class#GPSLocation#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#GPSLocation#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8381743">
+          <caret line="39" column="81" selection-start-line="39" selection-start-column="81" selection-end-line="39" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/lock_list_screen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.200883">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/LocksAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.69087136">
+          <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+          <folding>
+            <element signature="e#4462#5066#0" expanded="false" />
+            <element signature="e#5065#5066#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/SplashScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="178" column="4" selection-start-line="178" selection-start-column="4" selection-end-line="178" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/eecs398_lock/SmartLockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#testGetAndSetLabel#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="docComment;method#testGetAndSetIsLocked#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="docComment;method#testGetAndSetIsConnected#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="docComment;method#testGetMacAddress#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="docComment;method#testEquals#0;class#SmartLockTest#0" expanded="false" />
+            <element signature="docComment;method#testToString#0;class#SmartLockTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/eecs398_lock/GPSLocationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30232558">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#testGetLatitudeAndLongitude#0;class#GPSLocationTest#0" expanded="false" />
+            <element signature="method#testGetLatitudeAndLongitude#0;class#GPSLocationTest#0" expanded="false" />
+            <element signature="docComment;method#testToString#0;class#GPSLocationTest#0" expanded="false" />
+            <element signature="method#testToString#0;class#GPSLocationTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/SplashScreenTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#testLoginSuccess#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="docComment;method#testLoginFail#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="method#testLoginFail#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="docComment;method#testChangePasswordSuccess#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="method#testChangePasswordSuccess#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="docComment;method#testChangePasswordFailure#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="method#testChangePasswordFailure#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="docComment;method#enterPassword#0;class#SplashScreenTest#0" expanded="false" />
+            <element signature="method#enterPassword#0;class#SplashScreenTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/UnitTestSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/eecs398_lock/LocksAdapterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LocksAdapterTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/app/lock/bluetooth/smart_lock_app/LockListScreenTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="33" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2275#2422#0" expanded="true" />
+            <element signature="e#2421#2422#0" expanded="true" />
+            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/BluetoothLockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0689654">
+          <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#BluetoothLockService#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#setState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#getState#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#start#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connected#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#connected#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#stop#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#write#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;method#connectionFailed#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="class#AcceptThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="class#ConnectThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#BluetoothLockService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/eecs398_lock/SmartLockManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#SmartLockManager#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#getLocks#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#addLock#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#addLock#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localSave#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localLoad#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localDelete#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#localWipe#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#localWipe#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="docComment;method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+            <element signature="method#isCorrupt#0;class#SmartLockManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.3598235">
+          <caret line="433" column="102" selection-start-line="433" selection-start-column="102" selection-end-line="433" selection-end-column="102" />
+          <folding>
+            <element signature="docComment;class#LockListScreen#0" expanded="false" />
+            <element signature="e#3498#3499#0" expanded="true" />
+            <element signature="e#3532#3533#0" expanded="true" />
+            <element signature="e#3577#3578#0" expanded="true" />
+            <element signature="e#3617#3618#0" expanded="true" />
+            <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onResume#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onStop#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#ensureDiscoverable#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#sendMessage#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;field#mHandler#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#handleRead#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#handleRead#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#handleWrite#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#handleWrite#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onActivityResult#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#LockListScreen#0" expanded="false" />
+            <element signature="docComment;method#CheckForNewLock#0;class#LockListScreen#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

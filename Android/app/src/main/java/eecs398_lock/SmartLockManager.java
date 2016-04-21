@@ -1,6 +1,5 @@
 package eecs398_lock;
 
-import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
@@ -45,19 +44,6 @@ public class SmartLockManager {
     }
 
     /**
-     * The default addlock function
-     * TODO: Change to just a string (we don't need the Bluetooth stuff since we won't use the library)
-     * TODO: Add a check that this is a lock (maybe not here but this needs to be added)
-     * @param device the bluetooth device that represents this lock
-     * @return the new lock just created
-     */
-    public SmartLock addLock(BluetoothDevice device) {
-        SmartLock tempLock = new SmartLock(device.getAddress());
-        locks.put(device.getAddress(), tempLock);
-        return tempLock;
-    }
-
-    /**
      * The addlock function used if you want to initialize the
      * GPSLocation field for the lock based on the current
      * location of the device
@@ -66,9 +52,9 @@ public class SmartLockManager {
      * @param gpsTracker the coordinate tracker for the phone
      * @return the new lock just created
      */
-    public SmartLock addLock(BluetoothDevice device, GPSTracker gpsTracker) {
-        SmartLock tempLock = new SmartLock(device.getAddress(), gpsTracker.getLastLatitude(), gpsTracker.getLastLongitude());
-        locks.put(device.getAddress(), tempLock);
+    public SmartLock addLock(String deviceAddress, GPSTracker gpsTracker) {
+        SmartLock tempLock = new SmartLock(deviceAddress, gpsTracker.getLastLatitude(), gpsTracker.getLastLongitude());
+        locks.put(deviceAddress, tempLock);
         return tempLock;
     }
 

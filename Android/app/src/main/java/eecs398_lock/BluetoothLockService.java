@@ -126,14 +126,6 @@ public class BluetoothLockService {
     }
 
     /**
-     * Checks if the mConnectedThread has begun yet
-     * @return true if the mConnectedThread is not null
-     */
-    public synchronized boolean checkIfConnected() {
-        return mConnectedThread != null;
-    }
-
-    /**
      * Start the ConnectThread to initiate a connection to a remote device.
      * @param device  The BluetoothDevice to connect
      */
@@ -192,9 +184,9 @@ public class BluetoothLockService {
         mConnectedThread.start();
 
         // Send the name of the connected device back to the UI Activity
-        Message msg = mHandler.obtainMessage(LockListScreen.LOCK_DEVICE_NAME);
+        Message msg = mHandler.obtainMessage(LockListScreen.LOCK_DEVICE_ADDRESS);
         Bundle bundle = new Bundle();
-        bundle.putString(LockListScreen.DEVICE_NAME, device.getName());
+        bundle.putString(LockListScreen.DEVICE_ADDRESS, device.getAddress());
         msg.setData(bundle);
         mHandler.sendMessage(msg);
         setState(STATE_CONNECTED);

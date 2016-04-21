@@ -1,7 +1,5 @@
 package eecs398_lock;
 
-import java.util.UUID;
-
 import app.lock.bluetooth.smart_lock_app.LockListScreen;
 
 /**
@@ -14,7 +12,6 @@ import app.lock.bluetooth.smart_lock_app.LockListScreen;
 public class SmartLock {
 
     /* Smart Lock Criteria */
-    private UUID id;
     private String label;
     private GPSLocation location;
     private String macAddress;
@@ -38,11 +35,10 @@ public class SmartLock {
     /**
      * The standard constructor which takes in the Bluetooth
      * Device and stores its macAddress for later use
-     * @param device the bluetooth device that this code represents
+     * @param macAddress the bluetooth address of the device that this code represents
      */
     public SmartLock(String macAddress) {
         this.macAddress = macAddress;
-        this.id = UUID.randomUUID();
         this.label = EMPTY_LOCK_NAME;
         this.location = new GPSLocation(SUITE_314C_LAT, SUITE_314C_LON);
         this.isLocked = true;
@@ -52,26 +48,18 @@ public class SmartLock {
     /**
      * A more advanced constructor which is used to
      * store the location of the physical lock
-     * @param device the bluetooth device that this code represents
+     * @param macAddress the bluetooth address of the device that this code represents
      * @param latitude the latitude of the physical device
      * @param longitude the longitude of the physical device
      */
     public SmartLock(String macAddress, double latitude, double longitude) {
         this.macAddress = macAddress;
-        this.id = UUID.randomUUID();
         this.label = EMPTY_LOCK_NAME;
         this.location = new GPSLocation(latitude, longitude);
         this.isLocked = true;
         this.isConnected = false;
     }
 
-    /**
-     * Retrieves the UUID that is generated at lock creation
-     * @return the UUID for this lock
-     */
-    public UUID getID() {
-        return this.id;
-    }
 
     /**
      * Retrieves the name of this lock
@@ -142,7 +130,6 @@ public class SmartLock {
 
     /**
      * Overrides the equals method to test if two locks are the same
-     * TODO: Make this better (id is unreliable and not used)
      * @param o the object of comparison
      * @return true if the two locks are equivalent
      */
@@ -151,9 +138,10 @@ public class SmartLock {
         if (o instanceof SmartLock) {
             SmartLock tempLock = (SmartLock)o;
 
-            boolean testID = tempLock.id.equals(this.id);
+            // Two devices are unique if they have different MAC address
+            boolean testMacAddess = tempLock.getMacAddress().equals(this.macAddress);
 
-            if (testID) {
+            if (testMacAddess) {
                 return true;
             }
         }
@@ -166,7 +154,7 @@ public class SmartLock {
      */
     @Override
     public String toString() {
-        return String.format("%s: %s", this.id.toString(), getLocation().toString());
+        return String.format("%s: %s", this.getMacAddress().toString(), getLocation().toString());
     }
 
     /**

@@ -64,11 +64,11 @@ public class LockListScreen extends Activity {
     public static final int LOCK_STATE_CHANGE = 1;
     public static final int LOCK_READ = 2;
     public static final int LOCK_WRITE = 3;
-    public static final int LOCK_DEVICE_NAME = 4;
+    public static final int LOCK_DEVICE_ADDRESS = 4;
     public static final int LOCK_TOAST = 5;
 
     /* Key names received from the BluetoothLockService Handler */
-    public static final String DEVICE_NAME = "device_name";
+    public static final String DEVICE_ADDRESS = "device_address";
     public static final String TOAST = "toast";
 
     /* Intent request codes */
@@ -87,6 +87,14 @@ public class LockListScreen extends Activity {
     private String currentAddress = "??:??:??:??:??:??";    // An empty address
     private LocationManager locationManager = null;         // Handles location services for the app
     private GPSTracker gpsTracker = null;                   // The GPS listener
+
+    public SmartLockManager getLockManager() {
+        return lockManager;
+    }
+
+    public LocksAdapter getLocksAdapter() {
+        return mLockArrayAdapter;
+    }
 
     /**
      * The onCreate method which can be overridden in all Activity classes
@@ -250,8 +258,8 @@ public class LockListScreen extends Activity {
         locationText.setText(lock.getLocation().toString());
 
         // Get the id text and set it
-        TextView idText = (TextView)popupMenu.getContentView().findViewById(R.id.popup_id);
-        idText.setText(lock.getID().toString().substring(0, 8) + "...");
+        TextView addressText = (TextView)popupMenu.getContentView().findViewById(R.id.popup_id);
+        addressText.setText(lock.getMacAddress().substring(0, 8) + "...");
 
         // Get the close button from this popup window
         Button close = (Button)popupMenu.getContentView().findViewById(R.id.close);
@@ -268,8 +276,8 @@ public class LockListScreen extends Activity {
             @Override
             public void onClick(View v) {
                 lockManager.localDelete(getApplicationContext(), lock.getMacAddress());
-                lockManager.localWipe(getApplicationContext());
                 mLockArrayAdapter.notifyDataSetChanged();
+                popupMenu.dismiss();
             }
         });
     }
@@ -404,13 +412,15 @@ public class LockListScreen extends Activity {
 
                     break;
 
-                case LOCK_DEVICE_NAME:
+                case LOCK_DEVICE_ADDRESS:
 
                     Log.d(TAG, "LOCK_DEVICE_NAME");
 
                     // Save the connected device's name and write it to the screen
-                    String mConnectedDeviceName = msg.getData().getString(DEVICE_NAME);
-                    Toast.makeText(getApplicationContext(), "Connected to " + mConnectedDeviceName, Toast.LENGTH_SHORT).show();
+                    String mConnectedDeviceAddress = msg.getData().getString(DEVICE_ADDRESS);
+                    CheckForNewLock(mConnectedDeviceAddress);
+                    currentAddress = mConnectedDeviceAddress;
+                    Toast.makeText(getApplicationContext(), "Connected to " + mConnectedDeviceAddress, Toast.LENGTH_SHORT).show();
 
                     break;
 
@@ -420,6 +430,12 @@ public class LockListScreen extends Activity {
 
                     // Write the message data to the screen
                     Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST), Toast.LENGTH_SHORT).show();
+
+                    // This bundle only tells us if we were unable to connect or if we lost connection
+                    for (SmartLock lock : lockManager.getLocks().values()) {
+                        lock.setIsConnected(false);
+                    }
+                    getLocksAdapter().notifyDataSetChanged();;
 
                     break;
             }
@@ -481,14 +497,11 @@ public class LockListScreen extends Activity {
                 // When DeviceListActivity returns with a device to connect
                 if (resultCode == Activity.RESULT_OK) {
                     // Get the device MAC address
-                    String address = data.getExtras()
-                            .getString(DeviceListActivity.EXTRA_DEVICE_ADDRESS);
+                    String address = data.getExtras().getString(DeviceListActivity.EXTRA_DEVICE_ADDRESS);
                     // Get the BLuetoothDevice object
                     BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
                     // Attempt to connect to the device
                     mLockService.connect(device);
-                    currentAddress = device.getAddress();
-                    CheckForNewLock(device);
                 }
                 break;
 
@@ -545,23 +558,25 @@ public class LockListScreen extends Activity {
      * Runs through the list of connected devices to see if a new one
      * has been added
      */
-    private synchronized void CheckForNewLock(BluetoothDevice device) {
+    private synchronized void CheckForNewLock(String deviceAddress) {
 
         Log.d(TAG, "A device has been connected. Checking the device list to see if it is new");
 
         SmartLock sl;
 
-        if (!lockManager.getLocks().containsKey(device.getAddress())) {
-            sl = lockManager.addLock(device, gpsTracker);
+        // Checks the lock hashmap for the deviceAddress
+        if (!lockManager.getLocks().containsKey(deviceAddress)) {
+            sl = lockManager.addLock(deviceAddress, gpsTracker);
             lockManager.localSave(this);
         }
         else {
-            sl = lockManager.getLocks().get(device.getAddress());
+            sl = lockManager.getLocks().get(deviceAddress);
         }
 
+        // No longer have to check if connected because we know that it is connected
+        // by the time this function is called
         sl.setIsConnected(true);
-        mLockArrayAdapter.notifyDataSetChanged();
-        while (!mLockService.checkIfConnected()) {}
         sl.setLockUID(this);
+        mLockArrayAdapter.notifyDataSetChanged();
     }
 }
