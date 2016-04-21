@@ -97,7 +97,7 @@ public class SmartLockManager {
         }
 
         // Save
-        editor.apply();
+        editor.commit();
     }
 
     /**

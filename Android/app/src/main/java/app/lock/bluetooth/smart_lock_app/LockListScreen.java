@@ -76,8 +76,8 @@ public class LockListScreen extends Activity {
     private static final int REQUEST_ENABLE_BT = 2;
 
     /* Time and distance constants for location updates */
-    private static final int LOC_UPDATE_TIME_MS = 5000;
-    private static final int LOC_UPDATE_DIST_MS = 0;
+    private static final int LOC_UPDATE_TIME_MS = 3000;
+    private static final int LOC_UPDATE_DIST_MS = 1;
 
     /* Global fields */
     private BluetoothLockService mLockService = null;       // Member object for the lock services
@@ -290,6 +290,9 @@ public class LockListScreen extends Activity {
         // Call onPause and print this information to the log
         Log.e(TAG, "- ON PAUSE -");
         super.onPause();
+
+        // Save on close
+        lockManager.localSave(this);
     }
 
     /**
