@@ -76,8 +76,8 @@ public class LockListScreen extends Activity {
     private static final int REQUEST_ENABLE_BT = 2;
 
     /* Time and distance constants for location updates */
-    private static final int LOC_UPDATE_TIME_MS = 3000;
-    private static final int LOC_UPDATE_DIST_MS = 5;
+    private static final int LOC_UPDATE_TIME_MS = 5000;
+    private static final int LOC_UPDATE_DIST_MS = 0;
 
     /* Global fields */
     private BluetoothLockService mLockService = null;       // Member object for the lock services
