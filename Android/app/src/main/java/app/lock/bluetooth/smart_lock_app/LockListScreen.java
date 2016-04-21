@@ -77,7 +77,7 @@ public class LockListScreen extends Activity {
 
     /* Time and distance constants for location updates */
     private static final int LOC_UPDATE_TIME_MS = 3000;
-    private static final int LOC_UPDATE_DIST_MS = 25;
+    private static final int LOC_UPDATE_DIST_MS = 5;
 
     /* Global fields */
     private BluetoothLockService mLockService = null;       // Member object for the lock services
@@ -155,7 +155,7 @@ public class LockListScreen extends Activity {
             if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
                     || checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 gpsTracker = new GPSTracker(this, lockManager.getLocks().values());
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOC_UPDATE_TIME_MS, 0, gpsTracker);
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOC_UPDATE_TIME_MS, LOC_UPDATE_DIST_MS, gpsTracker);
             }
         }
 
