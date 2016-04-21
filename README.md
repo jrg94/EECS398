@@ -9,12 +9,16 @@ This directory contains an Android Studio project for an application that will b
 # Updates
 #### 4/20/16
 * TESTING
- * Repository now contains unit and UI testing which can be run using the Unit Testing Suite code
+  * Repository now contains unit and UI testing which can be run using the Unit Testing Suite code
 * Some major bugs were patched
- * Freezing when failing to connect to a device has been resolved
-   * Bluetooth device code has been abstracted from a lot of the source code like SmartLock this allowed us to just pass around a string address
+  * Freezing when failing to connect to a device has been resolved
+    * Bluetooth device code has been abstracted from a lot of the source code like SmartLock this allowed us to just pass around a string address
     * This string address allowed us to asynchronously capture the moment when a connect was successful instead of waiting around for the connection to succeed (if failed -> app would freeze)
- * Unlink button in popup menu no longer deletes all lock data
+  * Unlink button in popup menu no longer deletes all lock data
+* Final commits
+  * Tweaked some constants for GPS updates
+  * Settled on the final product
+  * One last saving bug which can be avoided if the user never force kills the app after an unlink
 
 #### 4/19/16
 * Spent a considerable amount of time making code more readable
