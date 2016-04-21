@@ -22,12 +22,11 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a2257bf-2497-4569-a089-528a7cb47937" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" afterPath="$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -125,14 +124,15 @@
       <file leaf-file-name="LockListScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7759336">
-              <caret line="278" column="0" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.093361">
+              <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#LockListScreen#0" expanded="false" />
                 <element signature="e#3498#3499#0" expanded="true" />
                 <element signature="e#3532#3533#0" expanded="true" />
                 <element signature="e#3577#3578#0" expanded="true" />
                 <element signature="e#3617#3618#0" expanded="true" />
+                <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
@@ -141,6 +141,7 @@
                 <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+                <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
                 <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
                 <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2138,7 +2139,7 @@
       <recent name="eecs398_lock" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Application.app">
+  <component name="RunManager" selected="Android Tests.UnitTestSuite">
     <configuration default="false" name="SmartLockTest" type="AndroidTestRunConfigurationType" factoryName="Android Tests" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <option name="TESTING_TYPE" value="2" />
@@ -2436,9 +2437,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32806325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2533,6 +2534,7 @@
             <element signature="e#3532#3533#0" expanded="true" />
             <element signature="e#3577#3578#0" expanded="true" />
             <element signature="e#3617#3618#0" expanded="true" />
+            <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
@@ -2541,6 +2543,7 @@
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2629,6 +2632,7 @@
             <element signature="e#3532#3533#0" expanded="true" />
             <element signature="e#3577#3578#0" expanded="true" />
             <element signature="e#3617#3618#0" expanded="true" />
+            <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
@@ -2637,6 +2641,7 @@
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2725,6 +2730,7 @@
             <element signature="e#3532#3533#0" expanded="true" />
             <element signature="e#3577#3578#0" expanded="true" />
             <element signature="e#3617#3618#0" expanded="true" />
+            <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
@@ -2733,6 +2739,7 @@
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -2823,6 +2830,7 @@
             <element signature="e#3532#3533#0" expanded="true" />
             <element signature="e#3577#3578#0" expanded="true" />
             <element signature="e#3617#3618#0" expanded="true" />
+            <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
@@ -2831,6 +2839,7 @@
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />
@@ -3237,14 +3246,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/app/lock/bluetooth/smart_lock_app/LockListScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7759336">
-          <caret line="278" column="0" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.093361">
+          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#LockListScreen#0" expanded="false" />
             <element signature="e#3498#3499#0" expanded="true" />
             <element signature="e#3532#3533#0" expanded="true" />
             <element signature="e#3577#3578#0" expanded="true" />
             <element signature="e#3617#3618#0" expanded="true" />
+            <element signature="docComment;method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onCreate#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStart#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onStart#0;class#LockListScreen#0" expanded="false" />
@@ -3253,6 +3263,7 @@
             <element signature="docComment;method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#setupLockScreenAndService#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#showPopUp#0;class#LockListScreen#0" expanded="false" />
+            <element signature="method#showPopUp#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="method#onPause#0;class#LockListScreen#0" expanded="false" />
             <element signature="docComment;method#onStop#0;class#LockListScreen#0" expanded="false" />

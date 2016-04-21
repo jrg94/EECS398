@@ -277,6 +277,7 @@ public class LockListScreen extends Activity {
             public void onClick(View v) {
                 lockManager.localDelete(getApplicationContext(), lock.getMacAddress());
                 mLockArrayAdapter.notifyDataSetChanged();
+                popupMenu.dismiss();
             }
         });
     }
