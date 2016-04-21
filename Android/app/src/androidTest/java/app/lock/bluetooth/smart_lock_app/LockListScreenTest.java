@@ -8,21 +8,14 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.espresso.intent.Intents;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.LargeTest;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 
-import java.util.HashMap;
-
-import eecs398_lock.GPSLocation;
 import eecs398_lock.GPSTracker;
 import eecs398_lock.LocksAdapter;
 import eecs398_lock.SmartLock;
@@ -30,7 +23,10 @@ import eecs398_lock.SmartLockManager;
 
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
+import static android.support.test.espresso.action.ViewActions.clearText;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.pressImeActionButton;
+import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.doesNotExist;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.intent.Intents.intended;
@@ -39,19 +35,15 @@ import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
-import static org.hamcrest.Matchers.allOf;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.hasEntry;
 import static org.hamcrest.Matchers.hasToString;
-import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.startsWith;
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.hamcrest.core.IsNot.not;
 
 /**
  * Created by JRG94 on 4/20/2016.
+ * Tests the behavior of the UI for LockListScreen
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
@@ -142,10 +134,14 @@ public class LockListScreenTest {
         // Checks for popup existence
         onView(withId(R.id.popup_menu)).check(doesNotExist());
 
-        // TODO: Checks for lock existence
+        // Checks for locks existence in hashmap - JUnit style
+        assertFalse(lockManager.getLocks().containsValue(testLock));
 
         // Re-adds lock
         testLock = lockManager.addLock(TEST_MAC_ADDRESS, new GPSTracker(mContext, lockManager.getLocks().values()));
+
+        // Check that it was properly added back into the map
+        assertTrue(lockManager.getLocks().containsValue(testLock));
     }
 
     /**
@@ -168,6 +164,24 @@ public class LockListScreenTest {
 
         // Check that we're connected
         onData(is(adaLock)).onChildView(withId(R.id.connectedStatus)).check(matches(withText("connected")));
+    }
+
+    /**
+     * Tests that label gets saved on change
+     */
+    @Test
+    public void testChangeLabel() {
+        // Finds the popup menu button for our test lock and clicks it
+        onData(is(testLock)).onChildView(withId(R.id.popup_lock_menu_button)).perform(click());
+
+        // Change label by clearing text, typing text, then pressing done
+        onView(withId(R.id.popup_lock_name)).perform(clearText(), typeText("Garage Door"), pressImeActionButton());
+
+        // Closes the popup window
+        onView(withId(R.id.close)).perform(click());
+
+        // Tests that label has changed
+        onData(is(testLock)).onChildView(withId(R.id.lockLabel)).check(matches(withText("Garage Door")));
     }
 
     /**
