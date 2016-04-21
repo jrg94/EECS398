@@ -290,6 +290,9 @@ public class LockListScreen extends Activity {
         // Call onPause and print this information to the log
         Log.e(TAG, "- ON PAUSE -");
         super.onPause();
+
+        // Save on close
+        lockManager.localSave(this);
     }
 
     /**
