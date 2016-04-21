@@ -5,11 +5,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.SystemClock;
 import android.support.test.InstrumentationRegistry;
+import android.support.test.espresso.action.EditorAction;
 import android.support.test.espresso.intent.Intents;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.LargeTest;
+import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -28,9 +31,15 @@ import eecs398_lock.LocksAdapter;
 import eecs398_lock.SmartLock;
 import eecs398_lock.SmartLockManager;
 
+import static android.support.test.espresso.Espresso.closeSoftKeyboard;
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
+import static android.support.test.espresso.action.ViewActions.clearText;
 import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.pressImeActionButton;
+import static android.support.test.espresso.action.ViewActions.pressKey;
+import static android.support.test.espresso.action.ViewActions.replaceText;
+import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.doesNotExist;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.intent.Intents.intended;
@@ -168,6 +177,24 @@ public class LockListScreenTest {
 
         // Check that we're connected
         onData(is(adaLock)).onChildView(withId(R.id.connectedStatus)).check(matches(withText("connected")));
+    }
+
+    /**
+     * Tests that label gets saved on change
+     */
+    @Test
+    public void testChangeLabel() {
+        // Finds the popup menu button for our test lock and clicks it
+        onData(is(testLock)).onChildView(withId(R.id.popup_lock_menu_button)).perform(click());
+
+        // Change label by clearing text, typing text, then pressing done
+        onView(withId(R.id.popup_lock_name)).perform(clearText(), typeText("Garage Door"), pressImeActionButton());
+
+        // Closes the popup window
+        onView(withId(R.id.close)).perform(click());
+
+        // Tests that label has changed
+        onData(is(testLock)).onChildView(withId(R.id.lockLabel)).check(matches(withText("Garage Door")));
     }
 
     /**
