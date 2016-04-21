@@ -431,6 +431,12 @@ public class LockListScreen extends Activity {
                     // Write the message data to the screen
                     Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST), Toast.LENGTH_SHORT).show();
 
+                    // This bundle only tells us if we were unable to connect or if we lost connection
+                    for (SmartLock lock : lockManager.getLocks().values()) {
+                        lock.setIsConnected(false);
+                    }
+                    getLocksAdapter().notifyDataSetChanged();;
+
                     break;
             }
         }
